@@ -1,0 +1,195 @@
+{
+  "domains": [
+    {
+      "id": "foundations",
+      "title": "Foundations of Psychology",
+      "icon": "GraduationCap",
+      "href": "/wiki/foundations",
+      "topics": [
+        {
+          "id": "history-and-systems",
+          "title": "History & Systems of Psychology",
+          "href": "/wiki/foundations/history-and-systems"
+        },
+        {
+          "id": "research-methods",
+          "title": "Research Methods & Statistics",
+          "href": "/wiki/foundations/research-methods"
+        },
+        {
+          "id": "ethics",
+          "title": "Ethics in Psychological Research",
+          "href": "/wiki/foundations/ethics"
+        }
+      ]
+    },
+    {
+      "id": "biological",
+      "title": "Biological Bases of Behavior",
+      "icon": "Brain",
+      "href": "/wiki/biological",
+      "topics": [
+        {
+          "id": "neuropsychology",
+          "title": "Neuropsychology",
+          "href": "/wiki/biological/neuropsychology"
+        },
+        {
+          "id": "sensation-perception",
+          "title": "Sensation & Perception",
+          "href": "/wiki/biological/sensation-perception"
+        },
+        {
+          "id": "psychopharmacology",
+          "title": "Psychopharmacology",
+          "href": "/wiki/biological/psychopharmacology"
+        },
+        {
+          "id": "genetics-evolution",
+          "title": "Genetics & Evolution",
+          "href": "/wiki/biological/genetics-evolution"
+        }
+      ]
+    },
+    {
+      "id": "cognitive",
+      "title": "Cognitive & Affective Aspects",
+      "icon": "Lightbulb",
+      "href": "/wiki/cognitive",
+      "topics": [
+        {
+          "id": "cognitive-psychology",
+          "title": "Cognitive Psychology",
+          "href": "/wiki/cognitive/cognitive-psychology"
+        },
+        {
+          "id": "emotion-motivation",
+          "title": "Psychology of Emotion & Motivation",
+          "href": "/wiki/cognitive/emotion-motivation"
+        },
+        {
+          "id": "psycholinguistics",
+          "title": "Psychology of Language",
+          "href": "/wiki/cognitive/psycholinguistics"
+        }
+      ]
+    },
+    {
+      "id": "developmental",
+      "title": "Developmental Psychology",
+      "icon": "Users",
+      "href": "/wiki/developmental",
+      "topics": [
+        {
+          "id": "prenatal-infant",
+          "title": "Prenatal & Infant Development",
+          "href": "/wiki/developmental/prenatal-infant"
+        },
+        {
+          "id": "child-psychology",
+          "title": "Child Psychology",
+          "href": "/wiki/developmental/child-psychology"
+        },
+        {
+          "id": "adolescent-psychology",
+          "title": "Adolescent Psychology",
+          "href": "/wiki/developmental/adolescent-psychology"
+        },
+        {
+          "id": "adult-psychology",
+          "title": "Adult Psychology & Aging",
+          "href": "/wiki/developmental/adult-psychology"
+        },
+        {
+          "id": "geriatric-psychology",
+          "title": "Geriatric Psychology",
+          "href": "/wiki/developmental/geriatric-psychology"
+        }
+      ]
+    },
+    {
+      "id": "social-personality",
+      "title": "Social & Personality Psychology",
+      "icon": "Heart",
+      "href": "/wiki/social-personality",
+      "topics": [
+        {
+          "id": "social-psychology",
+          "title": "Social Psychology",
+          "href": "/wiki/social-personality/social-psychology"
+        },
+        {
+          "id": "personality-theories",
+          "title": "Personality Theories",
+          "href": "/wiki/social-personality/personality-theories"
+        },
+        {
+          "id": "cross-cultural",
+          "title": "Cross-Cultural Psychology",
+          "href": "/wiki/social-personality/cross-cultural"
+        }
+      ]
+    },
+    {
+      "id": "clinical",
+      "title": "Clinical & Counseling Psychology",
+      "icon": "BookOpen",
+      "href": "/wiki/clinical",
+      "topics": [
+        {
+          "id": "psychopathology",
+          "title": "Psychopathology",
+          "href": "/wiki/clinical/psychopathology"
+        },
+        {
+          "id": "assessment",
+          "title": "Psychological Assessment",
+          "href": "/wiki/clinical/assessment"
+        },
+        {
+          "id": "evidence-based-therapies",
+          "title": "Evidence-Based Psychotherapies",
+          "href": "/wiki/clinical/evidence-based-therapies"
+        },
+        {
+          "id": "rehabilitation",
+          "title": "Rehabilitation Psychology",
+          "href": "/wiki/clinical/rehabilitation"
+        },
+        {
+          "id": "health-psychology",
+          "title": "Health Psychology",
+          "href": "/wiki/clinical/health-psychology"
+        }
+      ]
+    },
+    {
+      "id": "applied",
+      "title": "Applied Psychology",
+      "icon": "Briefcase",
+      "href": "/wiki/applied",
+      "topics": [
+        {
+          "id": "forensic-psychology",
+          "title": "Forensic Psychology",
+          "href": "/wiki/applied/forensic-psychology"
+        },
+        {
+          "id": "industrial-organizational",
+          "title": "Industrial-Organizational Psychology",
+          "href": "/wiki/applied/industrial-organizational"
+        },
+        {
+          "id": "educational-school",
+          "title": "Educational & School Psychology",
+          "href": "/wiki/applied/educational-school"
+        },
+        {
+          "id": "sports-performance",
+          "title": "Sports & Performance Psychology",
+          "href": "/wiki/applied/sports-performance"
+        }
+      ]
+    }
+  ]
+}

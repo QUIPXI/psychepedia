@@ -1,0 +1,190 @@
+{
+  "applied": {
+    "forensic-psychology": {
+      "title": "Forensic Psychology",
+      "description": "Apply psychological principles to legal and criminal justice contexts.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 26,
+      "sections": [
+        {
+          "title": "Introduction to Forensic Psychology",
+          "content": "Forensic psychology applies psychological science to questions and issues relating to law and the legal system. Forensic psychologists work in diverse settings including courts, prisons, law enforcement agencies, and private practice. Key areas include criminal profiling, competency evaluations, risk assessment, eyewitness testimony, and treatment of offenders."
+        },
+        {
+          "title": "Competency and Criminal Responsibility",
+          "content": "**Competency to Stand Trial**:\n- Ability to understand charges and proceedings\n- Ability to assist in one's defense\n- Most common forensic evaluation\n- Can be restored through treatment\n\n**Criminal Responsibility (Insanity Defense)**:\n- Mental state at time of offense\n- Legal standards vary (M'Naghten, ALI, Durham)\n- **M'Naghten Rule**: Did not know nature/quality of act or that it was wrong\n- Rarely used, rarely successful\n\n**Diminished Capacity**: Mental condition reducing culpability without meeting insanity standard.\n\n**Malingering**: Intentional feigning of symptoms; must be assessed."
+        },
+        {
+          "title": "Risk Assessment",
+          "content": "**Violence Risk Assessment**:\n- Prediction of future violent behavior\n- Used for sentencing, parole, civil commitment\n\n**Approaches**:\n- **Unstructured Clinical Judgment**: Lowest accuracy\n- **Actuarial Methods**: Statistical prediction from risk factors\n- **Structured Professional Judgment**: Guided clinical evaluation\n\n**Risk Factors**:\n- Historical: Prior violence, age at first offense, substance abuse\n- Clinical: Psychopathy, mental disorder, lack of insight\n- Dynamic: Current symptoms, social support, treatment compliance\n\n**Common Instruments**:\n- HCR-20 (Historical-Clinical-Risk Management)\n- PCL-R (Psychopathy Checklist-Revised)\n- VRAG (Violence Risk Appraisal Guide)\n- LSI-R (Level of Service Inventory)"
+        },
+        {
+          "title": "Eyewitness Testimony",
+          "content": "**Memory Limitations**:\n- Encoding affected by stress, attention, duration\n- Storage subject to decay and interference\n- Retrieval influenced by questioning and context\n\n**Factors Affecting Accuracy**:\n- Weapon focus effect\n- Cross-race identification\n- Confidence-accuracy relationship is weak\n- Post-event information and misinformation effect\n\n**Lineup Procedures**:\n- Sequential vs. simultaneous presentation\n- Blind administration\n- Filler selection\n- Instructions (perpetrator may not be present)\n\n**Expert Testimony**: Psychologists can educate juries about memory limitations."
+        },
+        {
+          "title": "Psychology of Criminal Behavior",
+          "content": "**Psychopathy**:\n- Interpersonal: Grandiosity, manipulation, superficial charm\n- Affective: Lack of empathy, shallow emotions, lack of remorse\n- Lifestyle: Impulsivity, irresponsibility, stimulation-seeking\n- Antisocial: Early behavior problems, adult antisocial behavior\n- Distinct from Antisocial Personality Disorder\n\n**Criminal Profiling**:\n- Inferring offender characteristics from crime scene evidence\n- Organized vs. disorganized typology (controversial)\n- Statistical approaches becoming more common\n\n**Treatment of Offenders**:\n- Risk-Need-Responsivity model\n- Cognitive-behavioral interventions\n- Therapeutic communities\n- Sex offender treatment programs"
+        },
+        {
+          "title": "Child Custody and Family Court",
+          "content": "**Best Interests of the Child Standard**:\n- Primary consideration in custody decisions\n- Factors: Parent-child relationships, stability, parenting capacity, child preferences\n\n**Custody Evaluation Components**:\n- Parent interviews\n- Child interviews\n- Psychological testing\n- Collateral contacts\n- Observation of parent-child interaction\n\n**Parenting Capacity Evaluations**: Assessment of ability to meet child's needs.\n\n**Allegations of Abuse**: Forensic interviewing protocols for children (e.g., NICHD Protocol)."
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Competency to Stand Trial", "definition": "A defendant's current ability to understand court proceedings and assist in their own defense."},
+        {"term": "Insanity Defense", "definition": "Legal defense arguing that mental disorder prevented understanding of wrongfulness of actions at the time of the offense."},
+        {"term": "Psychopathy", "definition": "Personality construct characterized by interpersonal manipulation, callousness, and antisocial behavior."},
+        {"term": "Risk Assessment", "definition": "Evaluation of the likelihood that an individual will engage in future violent or criminal behavior."},
+        {"term": "Misinformation Effect", "definition": "Incorporation of misleading post-event information into memory of an event."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Bartol, C. R., & Bartol, A. M.", "year": 2019, "title": "Introduction to Forensic Psychology", "source": "SAGE Publications (5th ed.)"},
+        {"id": "2", "authors": "Heilbrun, K., Grisso, T., & Goldstein, A. M.", "year": 2014, "title": "Foundations of Forensic Mental Health Assessment", "source": "Oxford University Press (2nd ed.)"}
+      ]
+    },
+    "industrial-organizational": {
+      "title": "Industrial-Organizational Psychology",
+      "description": "Apply psychology to workplace behavior, leadership, and organizations.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 26,
+      "sections": [
+        {
+          "title": "Introduction to I/O Psychology",
+          "content": "Industrial-Organizational (I/O) psychology applies psychological principles to workplace issues. The 'industrial' side focuses on human resources functions (selection, training, performance), while the 'organizational' side examines workplace behavior (motivation, leadership, teams, culture)."
+        },
+        {
+          "title": "Job Analysis and Personnel Selection",
+          "content": "**Job Analysis**: Systematic study of job requirements\n- Tasks, duties, responsibilities\n- Knowledge, skills, abilities, other characteristics (KSAOs)\n- Methods: Observation, interviews, questionnaires\n\n**Selection Methods**:\n- **Cognitive Ability Tests**: Strong predictor of job performance\n- **Personality Tests**: Conscientiousness predicts performance\n- **Structured Interviews**: Standardized questions and scoring\n- **Work Samples**: Actual job-relevant tasks\n- **Assessment Centers**: Multiple exercises evaluating competencies\n\n**Validity and Fairness**:\n- Criterion-related validity: Does predictor correlate with performance?\n- Content validity: Does method sample job content?\n- Adverse impact: Differential selection rates by group\n- Incremental validity: Added prediction beyond existing methods"
+        },
+        {
+          "title": "Training and Development",
+          "content": "**Training Needs Assessment**:\n- Organizational analysis: Where is training needed?\n- Task analysis: What should be trained?\n- Person analysis: Who needs training?\n\n**Training Design**:\n- Learning objectives\n- Practice opportunities\n- Feedback\n- Transfer climate\n\n**Training Methods**:\n- On-the-job training\n- Simulation\n- E-learning\n- Behavior modeling\n- Mentoring and coaching\n\n**Training Evaluation (Kirkpatrick)**:\n- Reactions: Did trainees like it?\n- Learning: Did they acquire knowledge/skills?\n- Behavior: Do they apply it on the job?\n- Results: Organizational outcomes?"
+        },
+        {
+          "title": "Work Motivation",
+          "content": "**Need Theories**:\n- Maslow's Hierarchy\n- Herzberg's Two-Factor Theory: Hygiene factors vs. motivators\n- McClelland: Achievement, power, affiliation needs\n\n**Cognitive Theories**:\n- **Expectancy Theory (Vroom)**: Motivation = Expectancy × Instrumentality × Valence\n- **Equity Theory (Adams)**: Comparing input/outcome ratios to others\n- **Goal-Setting Theory (Locke)**: Specific, challenging goals increase performance\n\n**Job Characteristics Model (Hackman & Oldham)**:\n- Skill variety, task identity, task significance, autonomy, feedback\n- Lead to meaningfulness, responsibility, knowledge of results\n- Increase motivation, satisfaction, performance\n\n**Self-Determination Theory**: Autonomy, competence, relatedness needs"
+        },
+        {
+          "title": "Leadership",
+          "content": "**Trait Approaches**: Identifying characteristics of effective leaders\n- Intelligence, extraversion, conscientiousness, emotional stability, openness\n\n**Behavioral Approaches**:\n- Consideration (relationship-oriented) vs. Initiating Structure (task-oriented)\n- Ohio State and Michigan studies\n\n**Contingency Theories**:\n- Fiedler: Match leader style to situational favorability\n- Path-Goal Theory: Leader clarifies paths to goals\n- Situational Leadership: Adapt style to follower readiness\n\n**Transformational Leadership (Bass)**:\n- Idealized influence (charisma)\n- Inspirational motivation\n- Intellectual stimulation\n- Individualized consideration\n- Contrasted with transactional leadership"
+        },
+        {
+          "title": "Organizational Behavior",
+          "content": "**Job Satisfaction**:\n- Affective component of work attitudes\n- Related to performance, turnover, absenteeism, well-being\n- Facet vs. global satisfaction\n\n**Organizational Commitment**:\n- Affective: Emotional attachment\n- Continuance: Cost of leaving\n- Normative: Obligation to stay\n\n**Organizational Culture**:\n- Shared values, beliefs, assumptions\n- Artifacts, espoused values, basic assumptions (Schein)\n\n**Work-Life Balance**: Managing demands of work and personal life\n\n**Teams**:\n- Stages of team development\n- Team effectiveness models\n- Virtual teams"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Job Analysis", "definition": "Systematic process of gathering information about job tasks, responsibilities, and requirements."},
+        {"term": "Validity", "definition": "In selection, the extent to which a predictor correlates with job performance."},
+        {"term": "Transformational Leadership", "definition": "Leadership style that inspires followers through vision, intellectual stimulation, and individualized consideration."},
+        {"term": "Expectancy Theory", "definition": "Vroom's theory that motivation depends on expectancy, instrumentality, and valence."},
+        {"term": "Job Satisfaction", "definition": "A positive emotional state resulting from the appraisal of one's job or job experiences."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Spector, P. E.", "year": 2021, "title": "Industrial and Organizational Psychology", "source": "Wiley (8th ed.)"},
+        {"id": "2", "authors": "Landy, F. J., & Conte, J. M.", "year": 2019, "title": "Work in the 21st Century", "source": "Wiley (6th ed.)"}
+      ]
+    },
+    "educational-school": {
+      "title": "Educational Psychology",
+      "description": "Apply psychology to teaching, learning, and educational systems.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 24,
+      "sections": [
+        {
+          "title": "Introduction to Educational Psychology",
+          "content": "Educational psychology applies psychological principles to teaching, learning, and educational systems. This field examines how people learn and teach, cognitive development in educational contexts, motivation in learning, and creating effective learning environments."
+        },
+        {
+          "title": "Learning Theories",
+          "content": "**Behaviorist Theories**:\n- **Classical Conditioning (Pavlov)**: Learning through association\n- **Operant Conditioning (Skinner)**: Learning through consequences\n- Reinforcement schedules shape behavior\n\n**Cognitive Theories**:\n- **Information Processing**: Multi-store model (sensory, short-term, long-term memory)\n- **Cognitive Load**: Limited working memory capacity affects learning\n- **Schema Theory**: Existing knowledge structures new learning\n\n**Social Learning Theory (Bandura)**: Learning through observation and modeling\n\n**Constructivist Theories (Piaget, Bruner)**:\n- Learners actively construct knowledge\n- Discovery learning over direct instruction\n- Scaffolding supports learning zone of proximal development"
+        },
+        {
+          "title": "Memory and Cognition in Learning",
+          "content": "**Memory Processes**:\n- **Encoding**: Attention determines what is stored\n- **Storage**: Consolidation and organization of memories\n- **Retrieval**: Context-dependent and state-dependent effects\n\n- **Forgetting Curve (Ebbinghaus)**: Rapid initial decline, slower later decline\n\n\n**Metacognition**:\n- Awareness and regulation of one's own thinking\n- **Metacognitive strategies**: Planning, monitoring, evaluating\n- **Self-regulation**: Managing learning processes\n\n**Transfer of Learning**:\n- Positive transfer: Training in one context helps in another\n- Negative transfer: Previous learning interferes with new learning\n- Far transfer: Applying learning to different contexts"
+        },
+        {
+          "title": "Motivation in Education",
+          "content": "**Motivational Theories**:\n- **Self-Determination Theory**: Autonomy, competence, relatedness needs\n- **Expectancy-Value Theory**: Effort × probability × value\n- **Goal-Setting Theory**: Specific, challenging goals improve performance\n- **Attribution Theory**: How students explain success and failure\n- **Self-Efficacy Theory**: Beliefs about capabilities affect effort and persistence\n\n**Intrinsic vs. Extrinsic Motivation**: Internal vs. external rewards\n- **Achievement Motivation**: Need for accomplishment and mastery\n\n**Flow Theory (Csikszentmihalyi)**: Optimal experience when challenge matches skill"
+        },
+        {
+          "title": "Teaching and Instruction",
+          "content": "**Direct Instruction**:\n- Explicit teaching of rules and concepts\n- Structured presentation of information\n- Teacher-directed learning\n\n**Inquiry-Based Learning**:\n- Student-driven exploration\n- Generating questions and testing hypotheses\n- Guided discovery with teacher facilitation\n\n\n**Scaffolding**:\n- Temporary support during learning\n- Within Zone of Proximal Development\n- Gradual removal as competence increases\n- More knowledgeable other as support\n\n**Differentiated Instruction**:\n- Adapting to individual differences\n- Flexible grouping strategies\n- Multiple levels of challenge and support\n\n- Universal Design for Learning (UDL)**:\n- Recognition of diverse learner needs\n- Multiple means of engagement and expression\n- Flexibility in methods and materials"
+        },
+        {
+          "title": "Assessment and Measurement",
+          "content": "**Types of Assessment**:\n- **Formative Assessment**: Ongoing assessment for feedback and improvement\n- **Summative Assessment**: End-of-unit or course evaluation\n- **Diagnostic Assessment**: Identifying learning difficulties and disabilities\n- **Standardized Testing**: Achievement tests, aptitude tests, cognitive assessments\n\n\n**Authentic Assessment**:\n- Real-world tasks and applications\n- Performance-based evaluation\n- Problem-solving scenarios\n- Integrates knowledge and skills\n\n**Validity and Reliability**:\n- Content validity: Alignment with curriculum\n- Construct validity: Measuring intended constructs\n- Predictive validity: Forecasting future performance\n- Test-retest reliability: Consistency over time"
+        },
+        {
+          "title": "Classroom Management",
+          "content": "**Learning Environment**:\n- Physical arrangement for interaction and engagement\n- Classroom rules and routines\n- Visual and instructional displays\n- Safe and supportive atmosphere\n\n**Behavior Management**:\n- Establishing clear expectations and procedures\n- Positive reinforcement for desired behaviors\n- Addressing disruptive behavior proactively\n- Consistent and fair discipline\n\n**Instructional Time**:\n- Allocated time for learning activities\n- Maximizing engaged learning time\n- Efficient transitions between activities\n- Pacing and managing cognitive load\n\n**Student Diversity**:\n- Cultural and linguistic diversity\n- Learning disabilities and special needs\n- Gifted and talented students\n- Differentiated instruction for varying abilities"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Zone of Proximal Development", "definition": "The gap between what a learner can do independently and what they can achieve with guidance from a more knowledgeable other."},
+        {"term": "Metacognition", "definition": "Awareness and understanding of one's own cognitive processes, including planning, monitoring, and evaluation."},
+        {"term": "Scaffolding", "definition": "Temporary support provided by a more knowledgeable person to help a learner accomplish tasks they cannot do alone."},
+        {"term": "Self-Efficacy", "definition": "Belief in one's capability to successfully execute tasks or achieve goals in specific situations."},
+        {"term": "Universal Design for Learning", "definition": "Framework for curriculum and instruction that provides multiple means of engagement, representation, and expression to accommodate diverse learner needs."},
+        {"term": "Intrinsic Motivation", "definition": "Engaging in an activity for its inherent satisfaction rather than for external rewards."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Woolfolk, A. E.", "year": 2018, "title": "Educational Psychology", "source": "Pearson (15th ed.)"},
+        {"id": "2", "authors": "Ormrod, R. E.", "year": 2020, "title": "Human Learning", "source": "Cengage Learning (7th ed.)"}
+      ]
+    },
+    "sports-performance": {
+      "title": "Sports Psychology",
+      "description": "Understand psychological factors in athletic performance and physical activity.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 22,
+      "sections": [
+        {
+          "title": "Introduction to Sports Psychology",
+          "content": "Sports psychology applies psychological principles to athletic performance, exercise participation, and physical activity. This field examines mental skills, motivation, anxiety management, team dynamics, and psychological factors affecting sports performance."
+        },
+        {
+          "title": "Arousal and Performance",
+          "content": "Arousal level affects athletic performance.\n\n**Yerkes-Dodson Law**:\n- Performance is optimal at moderate arousal\n- Different optimal levels for different tasks:\n  - Simple/complex tasks: Different curves\n  - Fine vs. gross motor skills: Different optimal arousal\n  - Experienced vs. novices: Novices need lower arousal\n\n**Arousal Regulation**:\n- Pre-performance routines for optimal arousal\n- Mental preparation and visualization\n- Managing anxiety and excitement\n- Physical warm-up and relaxation techniques"
+        },
+        {
+          "title": "Attention and Concentration",
+          "content": "**Attention in Sports**:\n- Selective attention: Focus on relevant cues, ignore distractions\n- Sustained attention: Maintaining focus throughout competition\n- Divided attention: Multiple information processing\n- Attentional control: Ability to shift focus as needed\n\n**Concentration Training**:\n- Focused attention exercises\n- Mindfulness and present-moment awareness\n- Blocking practice: Learning to maintain focus amid distractions\n- Simulated pressure training\n- Concentration routines and triggers"
+        },
+        {
+          "title": "Motivation in Sports",
+          "content": "Psychological factors drive athletic participation and performance.\n\n**Achievement Motivation**:\n- Need for achievement and mastery\n- Competitiveness and goal-setting\n- Social comparison and status\n- Mastery orientation: Focus on skill development\n\n\n**Self-Determination Theory in Sports**:\n- Autonomy: Choice in sports and training\n- Competence: Skill development and improvement\n- Relatedness: Team connection and social belonging\n\n\n**Intrinsic vs. Extrinsic Motivation**:\n- Intrinsic: Love of sport, enjoyment of participation\n- Extrinsic: Rewards, recognition, trophies\n- Overjustification risk: Excessive rewards can undermine intrinsic motivation"
+        },
+        {
+          "title": "Confidence and Self-Efficacy",
+          "content": "**Self-Efficacy in Sports**:\n- Bandura's concept applied to athletic skills\n- Situational vs. general self-efficacy\n- Impact on performance and persistence\n- Sources of self-efficacy: Past performance, vicarious experiences, verbal persuasion\n\n\n**Sports Confidence**:\n- Consistency across situations and competitions\n- Pre-competition confidence building\n- Managing performance slumps and confidence crises\n- Self-talk and positive imagery for confidence\n\n\n**Choking Under Pressure**:\n- Performance failure under stress despite high skill\n- Attentional focus shift from automatic to conscious processing\n- Explicit monitoring disrupts automatic skills\n- Training for pressure situations"
+        },
+        {
+          "title": "Team Dynamics and Leadership",
+          "content": "**Psychological Factors in Team Sports**:\n- Team cohesion and collective efficacy\n- Communication and trust among teammates\n- Role clarity and acceptance of roles\n- Social loafing prevention\n\n\n**Leadership in Sports**:\n- Transformational leadership: Inspiring through vision and motivation\n- Consideration and individualized attention\n- Emotional intelligence: Managing team emotions and conflicts\n- Decision-making under pressure and time constraints\n- Distributed vs. shared leadership models"
+        },
+        {
+          "title": "Injury and Rehabilitation",
+          "content": "**Psychological Aspects of Sports Injury**:\n- Psychological response to injury: Grief, anger, depression\n- Fear of re-injury affecting return to play\n- Identity threats when sport is central to self-concept\n- Kinesiophobia (fear of movement): Psychological barrier to recovery\n\n\n**Rehabilitation Psychology in Sports**:\n- Adherence to rehabilitation protocols and treatment\n- Motivation and goal-setting during recovery\n- Mental imagery and visualization for healing\n- Social support networks during rehabilitation\n- Return-to-play decision-making protocols"
+        },
+        {
+          "title": "Youth Sports Development",
+          "content": "**Developmental Considerations**:\n- Age-appropriate training and competition\n- Early specialization vs. multi-sport participation\n- Burnout prevention in young athletes\n- Positive coaching emphasis on skill development\n\n\n**Talented vs. Elite Youth Athletes**:\n- Talent identification and development programs\n- Pressure and expectations for promising young athletes\n- Balancing academics, athletics, and social development\n- Psychological support systems for elite youth"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Yerkes-Dodson Law", "definition": "Principle stating that performance is optimal at moderate arousal levels, varying by task difficulty and individual differences."},
+        {"term": "Choking Under Pressure", "definition": "Performance failure in high-stakes situations despite having the necessary skills, caused by attentional disruption and overthinking."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Weinberg, R. S., & Gould, D.", "year": 2019, "title": "Foundations of Sport and Exercise Psychology", "source": "Human Kinetics (7th ed.)"},
+        {"id": "2", "authors": "Murphy, S. M.", "year": 2015, "title": "Sport Psychology: A Student's Handbook", "source": "Psychology Press"}
+      ]
+    }
+  }
+}

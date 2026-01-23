@@ -1,0 +1,236 @@
+{
+  "developmental": {
+    "child-psychology": {
+      "title": "Child Psychology",
+      "description": "Understand cognitive, social, and emotional development in childhood.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 28,
+      "sections": [
+        {
+          "title": "Introduction to Child Development",
+          "content": "Child psychology examines physical, cognitive, social, and emotional development from birth through adolescence. Understanding developmental processes helps professionals support healthy development, identify delays, and design effective interventions. Major theoretical frameworks provide different lenses for understanding how children grow and change."
+        },
+        {
+          "title": "Cognitive Development: Piaget's Theory",
+          "content": "**Jean Piaget's** theory describes cognitive development through four stages:\n\n**1. Sensorimotor Stage (0-2 years)**:\n- Intelligence through sensory and motor actions\n- Object permanence develops\n- Beginning of symbolic thought\n\n**2. Preoperational Stage (2-7 years)**:\n- Symbolic representation (language, pretend play)\n- Egocentrism: Difficulty taking others' perspectives\n- Centration: Focus on one aspect\n- Lack of conservation\n\n**3. Concrete Operational Stage (7-11 years)**:\n- Logical operations on concrete objects\n- Conservation achieved\n- Classification and seriation\n- Decentration\n\n**4. Formal Operational Stage (11+ years)**:\n- Abstract and hypothetical thinking\n- Scientific reasoning\n- Systematic problem-solving\n\n**Key Concepts**:\n- **Schemas**: Mental frameworks for organizing knowledge\n- **Assimilation**: Fitting new information into existing schemas\n- **Accommodation**: Modifying schemas for new information\n- **Equilibration**: Balance between assimilation and accommodation"
+        },
+        {
+          "title": "Sociocultural Development: Vygotsky",
+          "content": "**Lev Vygotsky** emphasized social and cultural influences on cognitive development:\n\n**Zone of Proximal Development (ZPD)**:\n- Gap between independent ability and potential with guidance\n- Learning occurs in the ZPD through scaffolding\n- Scaffolding: Temporary support that is gradually withdrawn\n\n**Social Origins of Cognition**:\n- Higher mental functions develop through social interaction\n- Knowledge is co-constructed with more knowledgeable others\n\n**Language and Thought**:\n- Language is the primary tool for thought\n- Private speech guides behavior (becomes inner speech)\n- Cultural tools shape cognition\n\n**Educational Implications**:\n- Collaborative learning\n- Guided participation\n- Culturally responsive teaching"
+        },
+        {
+          "title": "Attachment Theory",
+          "content": "**John Bowlby** proposed that attachment is an evolutionary adaptation ensuring infant survival:\n\n**Attachment Behaviors**: Crying, clinging, following, smiling\n\n**Internal Working Models**: Mental representations of self, others, and relationships\n\n**Mary Ainsworth's Strange Situation**:\n- **Secure Attachment**: Uses caregiver as secure base, distressed by separation, comforted by reunion\n- **Anxious-Avoidant**: Little distress at separation, ignores caregiver at reunion\n- **Anxious-Resistant**: Very distressed, ambivalent at reunion\n- **Disorganized**: Confused, contradictory behaviors\n\n**Factors Affecting Attachment**:\n- Caregiver sensitivity and responsiveness\n- Temperament\n- Cultural context\n\n**Long-Term Outcomes**: Attachment patterns influence later relationships, emotion regulation, and mental health."
+        },
+        {
+          "title": "Social and Emotional Development",
+          "content": "**Emotional Development**:\n- Basic emotions present from birth (joy, sadness, anger, fear, disgust)\n- Self-conscious emotions emerge later (shame, guilt, pride)\n- Emotion regulation develops through childhood\n\n**Theory of Mind**: Understanding that others have mental states (beliefs, desires, intentions) different from one's own. Develops around age 4; assessed by false belief tasks.\n\n**Moral Development (Kohlberg)**:\n- **Preconventional Level**: Self-interest, avoiding punishment\n- **Conventional Level**: Social approval, maintaining order\n- **Postconventional Level**: Universal principles\n\n**Prosocial Development**:\n- Empathy emerges in infancy\n- Helping behaviors increase with age\n- Influenced by socialization and modeling\n\n**Self-Development**:\n- Self-recognition by 18-24 months\n- Self-concept becomes more complex\n- Self-esteem influenced by social comparisons"
+        },
+        {
+          "title": "Language Development",
+          "content": "**Language Milestones**:\n- **0-6 months**: Cooing, babbling\n- **12 months**: First words\n- **18-24 months**: Vocabulary explosion, two-word combinations\n- **3-5 years**: Complex sentences, grammar acquisition\n- **6+ years**: Continued vocabulary growth, pragmatics\n\n**Theories of Language Acquisition**:\n- **Behaviorist (Skinner)**: Learning through reinforcement and imitation\n- **Nativist (Chomsky)**: Innate language acquisition device (LAD)\n- **Interactionist**: Combines biological predisposition and social interaction\n\n**Critical Period Hypothesis**: Language acquisition is easier during early childhood.\n\n**Bilingual Development**: Children can acquire multiple languages simultaneously; cognitive benefits debated."
+        },
+        {
+          "title": "Play and Development",
+          "content": "**Types of Play**:\n- **Functional Play**: Repetitive motor actions\n- **Constructive Play**: Creating or building\n- **Pretend/Dramatic Play**: Role-playing, imagination\n- **Games with Rules**: Organized activities with rules\n\n**Social Play (Parten)**:\n- Solitary play\n- Parallel play: Alongside but not with others\n- Associative play: Interacting but not coordinating\n- Cooperative play: Working together toward goals\n\n**Functions of Play**:\n- Cognitive development: Problem-solving, creativity\n- Social development: Negotiation, cooperation\n- Emotional development: Processing experiences, regulation\n- Physical development: Motor skills\n\n**Play-Based Learning**: Developmentally appropriate practice in early childhood education."
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Zone of Proximal Development", "definition": "The gap between what a child can do independently and what they can achieve with guidance from a more skilled person."},
+        {"term": "Object Permanence", "definition": "Understanding that objects continue to exist even when not directly perceived, typically developing in the first year."},
+        {"term": "Attachment", "definition": "The emotional bond between infant and caregiver that serves as a secure base for exploration."},
+        {"term": "Theory of Mind", "definition": "The ability to understand that others have mental states (beliefs, desires) different from one's own."},
+        {"term": "Scaffolding", "definition": "Temporary support provided by a more skilled person to help a child accomplish a task, gradually withdrawn as competence increases."},
+        {"term": "Conservation", "definition": "Understanding that quantity remains the same despite changes in appearance, achieved in the concrete operational stage."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Siegler, R., et al.", "year": 2020, "title": "How Children Develop", "source": "Worth Publishers (6th ed.)"},
+        {"id": "2", "authors": "Berk, L. E.", "year": 2018, "title": "Development Through the Lifespan", "source": "Pearson (7th ed.)"},
+        {"id": "3", "authors": "Santrock, J. W.", "year": 2021, "title": "Child Development", "source": "McGraw-Hill (15th ed.)"}
+      ]
+    },
+    "adolescent-psychology": {
+      "title": "Adolescent Psychology",
+      "description": "Explore the unique developmental challenges and changes of adolescence.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 24,
+      "sections": [
+        {
+          "title": "Introduction to Adolescence",
+          "content": "Adolescence is the developmental period between childhood and adulthood, typically spanning ages 10-19. This period involves significant biological, cognitive, social, and emotional changes. Understanding adolescent development helps professionals support healthy transitions and address challenges unique to this stage."
+        },
+        {
+          "title": "Biological Changes: Puberty",
+          "content": "**Puberty** involves hormonal changes leading to physical maturation and reproductive capability.\n\n**Physical Changes**:\n- Growth spurt\n- Primary sex characteristics (reproductive organs)\n- Secondary sex characteristics (breast development, facial hair, voice changes)\n\n**Brain Development**:\n- Prefrontal cortex development continues into mid-20s\n- Synaptic pruning and myelination\n- Limbic system matures earlier than prefrontal cortex\n- Imbalance explains risk-taking and emotional intensity\n\n**Timing Effects**:\n- Early maturation: Mixed effects depending on gender and context\n- Late maturation: May face social challenges\n- Secular trend: Earlier puberty over historical time"
+        },
+        {
+          "title": "Cognitive Development",
+          "content": "**Formal Operational Thinking (Piaget)**:\n- Abstract reasoning\n- Hypothetical-deductive reasoning\n- Scientific thinking\n\n**Adolescent Egocentrism (Elkind)**:\n- **Imaginary Audience**: Belief that others are constantly observing\n- **Personal Fable**: Sense of uniqueness and invulnerability\n\n**Moral Development**:\n- Movement toward conventional and postconventional reasoning\n- Increased perspective-taking\n- Development of personal values and beliefs\n\n**Decision-Making**:\n- Emotional influences on judgment\n- Peer influence on choices\n- Dual-process models: Hot vs. cold cognition"
+        },
+        {
+          "title": "Identity Development",
+          "content": "**Erikson's Identity vs. Role Confusion**:\n- Central task of adolescence\n- Exploring and committing to identity\n\n**Marcia's Identity Statuses**:\n- **Identity Diffusion**: No exploration, no commitment\n- **Foreclosure**: Commitment without exploration\n- **Moratorium**: Active exploration, no commitment yet\n- **Identity Achievement**: Exploration followed by commitment\n\n**Identity Domains**:\n- Occupational identity\n- Ideological identity (values, beliefs)\n- Sexual and gender identity\n- Ethnic and cultural identity\n\n**Influences on Identity**:\n- Family relationships\n- Peer relationships\n- Cultural and societal context\n- Historical cohort effects"
+        },
+        {
+          "title": "Social Relationships",
+          "content": "**Family Relationships**:\n- Increased autonomy seeking\n- Continued importance of attachment\n- Parent-adolescent conflict (typically peaks in early adolescence)\n- Authoritative parenting associated with best outcomes\n\n**Peer Relationships**:\n- Increased importance of peers\n- Cliques and crowds\n- Peer pressure and conformity\n- Romantic relationships emerge\n\n**Friendships**:\n- Intimacy and self-disclosure increase\n- Loyalty and mutual support\n- Gender differences in friendship patterns\n\n**Digital Social Connections**:\n- Social media use and identity\n- Cyberbullying concerns\n- Both risks and benefits of online connections"
+        },
+        {
+          "title": "Mental Health in Adolescence",
+          "content": "**Common Challenges**:\n- Mood fluctuations\n- Anxiety and depression (rates increase in adolescence)\n- Eating disorders\n- Substance experimentation\n\n**Risk and Protective Factors**:\n- Family support\n- School connectedness\n- Positive peer relationships\n- Coping skills and resilience\n\n**Warning Signs**:\n- Persistent mood changes\n- Social withdrawal\n- Academic decline\n- Self-harm or suicidal ideation\n\n**Promoting Wellbeing**:\n- Open communication\n- Appropriate autonomy\n- Mental health education\n- Access to support services"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Identity Achievement", "definition": "Marcia's identity status characterized by having explored alternatives and made commitments to identity choices."},
+        {"term": "Imaginary Audience", "definition": "Adolescent belief that others are constantly watching and evaluating them."},
+        {"term": "Personal Fable", "definition": "Adolescent sense of being unique and invulnerable to harm that affects others."},
+        {"term": "Prefrontal Cortex", "definition": "Brain region responsible for executive functions, decision-making, and impulse control; continues developing into the mid-20s."},
+        {"term": "Puberty", "definition": "The period of biological changes leading to physical and sexual maturation."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Steinberg, L.", "year": 2020, "title": "Adolescence", "source": "McGraw-Hill (12th ed.)"},
+        {"id": "2", "authors": "Arnett, J. J.", "year": 2018, "title": "Adolescence and Emerging Adulthood", "source": "Pearson (6th ed.)"}
+      ]
+    },
+    "prenatal-infant": {
+      "title": "Prenatal & Infant Psychology",
+      "description": "Understand development from conception through infancy.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 26,
+      "sections": [
+        {
+          "title": "Prenatal Development",
+          "content": "**Conception to Birth**: Development from fertilization through birth.\n\n**Prenatal Stages**:\n- Germinal stage (weeks 1-2): Fertilization, cell division, implantation\n- Embryonic stage (weeks 3-8): Organ formation, differentiation\n- Fetal stage (weeks 9-birth): Growth, maturation\n\n**Teratogens**: Substances that harm prenatal development\n- Alcohol (Fetal alcohol spectrum disorders)\n- Tobacco (Low birth weight, respiratory issues)\n- Drugs, infections, malnutrition\n\n**Genetic Factors**: Chromosomal abnormalities, single-gene disorders, multifactorial inheritance."
+        },
+        {
+          "title": "Newborn Assessment",
+          "content": "**Apgar Score** (0-10):\n- Appearance, Pulse, Grimace, Activity, Respiration\n- Assessment at 1 and 5 minutes\n\n**Neonatal Behavioral Assessment Scale (NBAS)**:\n- Habituation, orientation, motor performance, range of state, regulation of state, autonomic stability\n- Predicts developmental outcomes\n\n**Brazelton Neonatal Behavioral Assessment Scale (BNBAS)**:\n- Habituation, orientation, motor range, state regulation, range of state, regulation of autonomic stability\n- Better for evaluating high-risk infants\n\n**Newborn Reflexes**: Sucking, rooting, grasping, Moro, stepping, palmar grasp, Babinski, tonic neck."
+        },
+        {
+          "title": "Infant Cognitive Development",
+          "content": "**Perception Development**:\n- Vision: Poor at birth, rapid improvement (acuity by 6 months, depth perception by 7 months)\n- Color vision by 3-4 months\n- Object permanence by 8-12 months\n- Hearing: Prenatal auditory experience, newborn response to sounds\n\n**Memory Development**:\n- Deferred imitation (6 months): Remembering actions after delay\n- Recognition memory: Familiar vs. unfamiliar objects\n\n**Information Processing**: Preference for novel stimuli, habituation, attention to salient features\n\n**Piaget's Sensorimotor Stage**: Birth to 2 years."
+        },
+        {
+          "title": "Social-Emotional Development",
+          "content": "**Attachment Formation**: Secure attachment establishes foundation for relationships.\n\n**Emotional Expressions**:\n- Social smiling (2 months)\n- Stranger anxiety (6-8 months)\n- Full emotional range (6-12 months)\n\n**Social Referencing**: Using caregiver as secure base to explore.\n\n**Temperament**: Individual differences in reactivity and self-regulation\n- Thomas & Chess classification: Easy, difficult, slow-to-warm-up\n- Effortful control, negative affectivity.\n\n**Emotion Regulation**: Co-regulation with caregiver, developing self-regulation."
+        },
+        {
+          "title": "Language Development in Infancy",
+          "content": "**Prelinguistic Communication** (0-12 months):\n- Crying, cooing, laughter\n- Eye contact, facial expressions\n- Gestures, joint attention\n- Babbling (6-12 months)\n\n**First Words**: Typically 10-12 months\n- Vocabulary spurt: 18-24 months\n\n**Language Milestones**:\n- Reduplicated babbling (6-9 months)\n- Jargon (12-18 months)\n- First word combinations (18-24 months)\n- Telegraphic speech (24+ months)\n\n**Importance of Responsive Interaction**: Joint attention, turn-taking, linguistic scaffolding."
+        },
+        {
+          "title": "Motor Development",
+          "content": "**Reflexive Period** (0-4 months): Predominantly reflexive movements.\n\n**Primary Circular Reactions** (1-4 months): Repetitive body-centered movements.\n\n**Secondary Circular Reactions** (4-8 months): More varied movements incorporating external objects.\n\n**Sitting, Crawling, Standing** (6-12 months): Postural control and locomotion.\n\n**Walking** (10-15 months): Independent locomotion.\n\n**Fine Motor Skills**: Grasping precision, pincer grasp, self-feeding, early scribbling.\n\n**Motor Sequences**: Cephalocaudal (head to tail), proximal-distal (center to outward)."
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Teratogen", "definition": "Any agent that causes developmental abnormalities in the embryo or fetus."},
+        {"term": "Apgar Score", "definition": "Quick assessment of newborn health based on appearance, pulse, grimace, activity, and respiration."},
+        {"term": "Object Permanence", "definition": "Understanding that objects continue to exist even when not perceived, typically developing around 8-12 months."},
+        {"term": "Temperament", "definition": "Biologically based individual differences in emotional reactivity and self-regulation evident from early infancy."},
+        {"term": "Joint Attention", "definition": "Developmental milestone where infant and caregiver share focus on same object or event."},
+        {"term": "Co-regulation", "definition": "Process by which caregiver helps infant regulate emotional states before infant can self-regulate independently."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Berk, L. E.", "year": 2018, "title": "Development Through Lifespan", "source": "Pearson (7th ed.)"},
+        {"id": "2", "authors": "Moore, M. K.", "year": 2020, "title": "The Developing Person Through the Lifespan", "source": "Worth Publishers (12th ed.)"},
+        {"id": "3", "authors": "Santrock, J. W.", "year": 2021, "title": "Child Development", "source": "McGraw-Hill (15th ed.)"}
+      ]
+    },
+    "adult-psychology": {
+      "title": "Adult Psychology",
+      "description": "Explore psychological development and challenges in adulthood.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 24,
+      "sections": [
+        {
+          "title": "Introduction to Adult Development",
+          "content": "Adult psychology examines psychological development across the adult lifespan (typically 18-65+ years). This field addresses cognitive, social, emotional, and career development in adulthood, including transitions and challenges specific to different life phases."
+        },
+        {
+          "title": "Early Adulthood (20s-30s)",
+          "content": "**Developmental Tasks**:\n- Establishing independence from family of origin\n- Career exploration and consolidation\n- Forming intimate relationships\n- Developing personal identity separate from family\n\n**Cognitive Changes**:\n- Peak cognitive abilities (early 20s)\n- Practical intelligence increases\n- Expertise development\n\n**Social Development**:\n- Friendship networks stabilize\n- Intimate relationships deepen\n- Work-family balance challenges\n\n**Life Stage Theory (Levinson)**: Intimacy vs. isolation is central theme."
+        },
+        {
+          "title": "Middle Adulthood (30s-40s)",
+          "content": "**Generativity vs. Stagnation (Erikson)**:\n- Generativity: Contributing to next generation through work, creativity, parenting\n- Stagnation: Feeling unproductive, self-absorption\n\n**Career Development**:\n- Peak earning potential and productivity\n- Mid-career reassessment\n- Mentorship roles\n\n**Family Life Cycle**:\n- Sandwich generation: Caring for children and aging parents\n- Empty nest syndrome\n\n**Physical Changes**:\n- Gradual physical decline begins\n- Health maintenance becomes more important"
+        },
+        {
+          "title": "Later Adulthood (50s-60s)",
+          "content": "**Physical Changes**:\n- Accelerated aging processes\n- Sensory and motor decline\n- Chronic health conditions increase\n\n**Cognitive Changes**:\n- Fluid intelligence declines (processing speed, working memory)\n- Crystallized intelligence maintained (knowledge, vocabulary)\n- Wisdom development\n\n**Retirement Transition**:\n- Role loss and identity challenges\n- Financial and social adjustment\n- Finding new meaning and activities\n\n**Social Context**:\n- Grandparenting roles\n- Caregiving for aging parents\n- Social network changes"
+        },
+        {
+          "title": "Aging and Development",
+          "content": "**Theories of Aging**:\n- **Genetic Program Theory**: Biological clock determines lifespan\n- **Wear and Tear Theory**: Accumulated damage to body systems\n- **Cellular Theory**: Hayflick limit on cell division\n- **Error Catastrophe Theory**: Accumulated errors lead to aging\n\n**Optimal Aging**:\n- Healthy lifestyle behaviors\n- Mental and physical activity\n- Social engagement\n- Cognitive stimulation\n\n**Cognitive Reserve**: Education, occupation, lifestyle build neural networks that resist aging effects.\n\n**Selective Optimization with Compensation (SOC)**: Aging involves both neural decline and compensatory strategies."
+        },
+        {
+          "title": "Adult Relationships and Family",
+          "content": "**Intimate Relationships**:\n- Commitment and stability valued more than novelty\n- Conflict resolution strategies\n- Importance of communication and shared activities\n\n**Friendship**:\n- Quality often valued over quantity in adulthood\n- Difficulty forming new deep friendships\n- Maintaining long-term friendships requires effort\n\n**Family Roles**:\n- Changing parent-child relationship to adult-adult\n- Sandwich generation challenges\n- Filial piety: Caring for aging parents\n\n**Divorce and Remarriage**: Life transitions requiring adjustment"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Fluid Intelligence", "definition": "Ability to reason abstractly and solve novel problems, typically peaks in young adulthood and declines with age."},
+        {"term": "Crystallized Intelligence", "definition": "Accumulated knowledge and verbal abilities that tend to remain stable or increase throughout adulthood."},
+        {"term": "Generativity", "definition": "Erikson's concept of contributing to future generations through productivity, creativity, and nurturing."},
+        {"term": "Cognitive Reserve", "definition": "The mind's resistance to neuropathological damage or age-related decline, built through education, occupation, and lifestyle."},
+        {"term": "Sandwich Generation", "definition": "Adults simultaneously caring for aging parents and supporting dependent children."},
+        {"term": "SOC Model", "definition": "Selection, Optimization, and Compensation model explaining how adults adapt to aging through strategies."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Berk, L. E.", "year": 2018, "title": "Development Through Lifespan", "source": "Pearson (7th ed.)"},
+        {"id": "2", "authors": "Arnett, J. J.", "year": 2018, "title": "Emerging Adulthood", "source": "American Psychological Association"},
+        {"id": "3", "authors": "Whitbourne, S. T., & Breytspraak, M. M. P.", "year": 2018, "title": "Adult Development and Aging", "source": "Wiley (7th ed.)"}
+      ]
+    },
+    "geriatric-psychology": {
+      "title": "Geriatric Psychology",
+      "description": "Understand psychological aspects of aging in later life.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 22,
+      "sections": [
+        {
+          "title": "Introduction to Geriatric Psychology",
+          "content": "Geriatric psychology (or psychology of aging) focuses on psychological aspects of aging in later life (typically 65+ years). This field addresses cognitive, emotional, social, and behavioral changes in older adults, and promotes healthy aging and well-being."
+        },
+        {
+          "title": "Cognitive Aging",
+          "content": "**Normal Cognitive Aging**:\n- Processing speed slows significantly\n- Working memory capacity decreases\n- Divided attention becomes more difficult\n- Prospective memory (remembering to do tasks) declines\n\n**Neurocognitive Disorders**:\n- **Mild Cognitive Impairment (MCI)**: Noticeable but not disabling decline\n- **Dementia**: Progressive loss of cognitive function\n  - Alzheimer's disease: Most common\n  - Vascular dementia: Stroke-related\n  - Lewy body dementia: Parkinson's related\n- Assessment: MMSE, MoCA, detailed neuropsychological testing"
+        },
+        {
+          "title": "Emotional Wellbeing in Aging",
+          "content": "**Emotional Regulation**:\n- Older adults often show improved emotion regulation\n- Positivity effect: Preferring positive information\n- Reduced negative affect with age\n\n**Mental Health Concerns**:\n- Depression not normal part of aging\n- Anxiety disorders\n- Loneliness and social isolation\n- Bereavement and grief\n\n**Resilience Factors**:\n- Social support networks\n- Physical activity\n- Cognitive engagement\n- Meaning and purpose in life\n- Adaptation and flexibility"
+        },
+        {
+          "title": "Social Gerontology",
+          "content": "**Social Relationships**:\n- Grandparenting roles and responsibilities\n- Maintaining friendships and social networks\n- Widowhood and relationship transitions\n\n**Family Dynamics**:\n- Changing roles and relationships with adult children\n- Intergenerational support\n- Family caregiving roles\n\n**Ageism and Stereotypes**:\n- Negative attitudes toward older adults\n- Impact on self-perception and opportunities\n- Intersection with other biases\n\n**Housing and Living Arrangements**:\n- Aging in place vs. relocation\n- Assisted living facilities\n- Importance of environmental fit"
+        },
+        {
+          "title": "Successful Aging",
+          "content": "**Physical Health**:\n- Regular exercise and physical activity\n- Healthy nutrition and sleep\n- Preventive healthcare\n- Managing chronic conditions\n\n**Cognitive Engagement**:\n- Lifelong learning and skill development\n- Reading, puzzles, games\n- Social engagement\n- Novelty seeking\n\n**Social Engagement**:\n- Maintaining meaningful relationships\n- Community involvement and volunteering\n- Intergenerational connections\n\n**Psychological Adaptation**:\n- Acceptance of aging changes\n- Maintaining sense of purpose\n- Positive attitude and resilience\n- Flexibility and coping strategies"
+        },
+        {
+          "title": "End-of-Life Issues",
+          "content": "Facing mortality and making meaning of life becomes central tasks. Losses accumulate, and finding purpose through relationships, contribution, and reflection becomes important for psychological wellbeing."
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Mild Cognitive Impairment", "definition": "Noticeable decline in cognitive function beyond normal aging but not severe enough to interfere with daily activities."},
+        {"term": "Cognitive Reserve", "definition": "Built-up neural resilience to age-related damage or decline, enhanced by education, occupation, and mentally stimulating activities."},
+        {"term": "Positivity Effect", "definition": "Tendency for older adults to preferentially attend to and remember positive over negative information."},
+        {"term": "Ageism", "definition": "Stereotyping, prejudice, and discrimination against individuals based on their age."},
+        {"term": "Successful Aging", "definition": "Optimal aging involving physical, cognitive, and social engagement allowing older adults to maintain function and wellbeing."},
+        {"term": "SOC Model", "definition": "Balancing selection, optimization, and compensation to adapt to age-related changes."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Cavanaugh, J. C., & Blanchard-Fields, F.", "year": 2018, "title": "Adult Development and Aging", "source": "Cengage Learning (7th ed.)"},
+        {"id": "2", "authors": "Scheibe, K. W., & Mehr, D. R.", "year": 2014, "title": "Handbook of Psychology of Aging", "source": "Springer"},
+        {"id": "3", "authors": "Molton, J. D.", "year": 2019, "title": "Geropsychology: A Behavioral Science", "source": "American Psychological Association"}
+      ]
+    }
+  }
+}

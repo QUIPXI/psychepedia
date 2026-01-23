@@ -1,0 +1,124 @@
+{
+  "site": {
+    "title": "PsychePedia",
+    "subtitle": "The Psychology Encyclopedia",
+    "description": "A comprehensive academic wiki for psychology students"
+  },
+  "nav": {
+    "home": "Home",
+    "wiki": "Wiki",
+    "search": "Search",
+    "searchPlaceholder": "Search articles...",
+    "searchShortcut": "Press ⌘K to search",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode",
+    "language": "Language"
+  },
+  "theme": {
+    "title": "Theme",
+    "light": "Light",
+    "warm": "Warm",
+    "cool": "Cool",
+    "dark": "Dark",
+    "midnight": "Midnight",
+    "contrast": "High Contrast"
+  },
+  "home": {
+    "hero": {
+      "title": "The Psychology Encyclopedia",
+      "subtitle": "Your comprehensive resource for psychological science",
+      "description": "Explore foundational concepts, clinical applications, and research methods across all domains of psychology. Written for students, by experts.",
+      "cta": "Start Exploring",
+      "browse": "Browse All Topics"
+    },
+    "domains": {
+      "title": "Explore Domains",
+      "subtitle": "Comprehensive coverage of all major areas in psychological science"
+    },
+    "features": {
+      "comprehensive": {
+        "title": "Comprehensive Coverage",
+        "description": "All major domains of psychology covered in depth"
+      },
+      "academic": {
+        "title": "Academic Rigor",
+        "description": "Evidence-based content with proper citations"
+      },
+      "accessible": {
+        "title": "Student-Friendly",
+        "description": "Clear explanations for complex concepts"
+      }
+    }
+  },
+  "domains": {
+    "foundations": {
+      "title": "Foundations of Psychology",
+      "description": "Core concepts, history, research methods, and ethical principles"
+    },
+    "biological": {
+      "title": "Biological Bases",
+      "description": "Neuropsychology, sensation, perception, and psychopharmacology"
+    },
+    "cognitive": {
+      "title": "Cognitive & Affective",
+      "description": "Memory, learning, emotion, motivation, and thinking"
+    },
+    "developmental": {
+      "title": "Developmental Psychology",
+      "description": "Lifespan development from childhood through aging"
+    },
+    "social-personality": {
+      "title": "Social & Personality",
+      "description": "Social behavior, personality theories, and cultural psychology"
+    },
+    "clinical": {
+      "title": "Clinical & Counseling",
+      "description": "Psychopathology, assessment, diagnosis, and treatment"
+    },
+    "applied": {
+      "title": "Applied Psychology",
+      "description": "Forensic, I/O, educational, and sports psychology"
+    },
+    "new-and-now": {
+      "title": "New & Now",
+      "description": "Cutting-edge research and emerging trends in psychology"
+    }
+  },
+  "article": {
+    "readingTime": "{minutes} min read",
+    "lastUpdated": "Updated: {date}",
+    "author": "Author",
+    "keyConcepts": "Key Concepts",
+    "references": "References",
+    "cite": "Cite",
+    "copied": "Citation copied!",
+    "relatedTopics": "Related Topics",
+    "tableOfContents": "Table of Contents"
+  },
+  "wiki": {
+    "title": "Psychology Wiki",
+    "subtitle": "Browse all topics by domain",
+    "viewAll": "View All",
+    "topics": "topics",
+    "explore": "Explore"
+  },
+  "footer": {
+    "tagline": "Empowering psychology students with comprehensive, accessible knowledge.",
+    "domains": "Domains",
+    "resources": "Resources",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "feedback": "Leave Feedback",
+    "copyright": "© {year} PsychePedia. Educational use."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "tryAgain": "Try Again",
+    "backToHome": "Back to Home",
+    "notFound": "Page Not Found",
+    "notFoundDesc": "The page you're looking for doesn't exist."
+  }
+}

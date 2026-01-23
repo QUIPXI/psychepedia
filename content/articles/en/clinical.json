@@ -1,0 +1,254 @@
+{
+  "clinical": {
+    "psychopathology": {
+      "title": "Psychopathology & Abnormal Psychology",
+      "description": "Understand mental disorders, their classification, etiology, and clinical presentations.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 35,
+      "sections": [
+        {
+          "title": "Introduction to Psychopathology",
+          "content": "Psychopathology is the scientific study of mental disorders, including their classification, causes, symptoms, and treatment. Understanding psychopathology requires knowledge of normal psychological functioning, the criteria for defining abnormality, and the biological, psychological, and social factors contributing to mental illness."
+        },
+        {
+          "title": "Defining Abnormality",
+          "content": "**Criteria for Abnormality**:\n\n**Statistical Infrequency**: Behaviors that are rare in the population. Limitation: Some rare behaviors are desirable (genius).\n\n**Violation of Norms**: Behavior that deviates from social or cultural expectations. Limitation: Norms vary across cultures and time.\n\n**Personal Distress**: Subjective suffering or unhappiness. Limitation: Some disorders involve lack of insight; some distress is adaptive.\n\n**Maladaptiveness**: Behavior interferes with functioning. Most useful criterion but still requires judgment.\n\n**The Four Ds**:\n- **Deviance**: Different from cultural norms\n- **Distress**: Causes suffering\n- **Dysfunction**: Impairs daily functioning\n- **Danger**: Risk of harm to self or others\n\n**Dimensional vs. Categorical Approaches**: Mental disorders may exist on continua with normal functioning rather than as discrete categories."
+        },
+        {
+          "title": "Classification Systems",
+          "content": "**DSM-5-TR (Diagnostic and Statistical Manual of Mental Disorders)**:\n- Published by American Psychiatric Association\n- Standard classification in North America\n- Categorical system with diagnostic criteria\n- Includes specifiers for severity and course\n- Organized by disorder categories\n\n**ICD-11 (International Classification of Diseases)**:\n- Published by World Health Organization\n- Global standard for health statistics\n- Chapter 06 covers mental disorders\n- Greater cross-cultural applicability\n\n**Key Changes in DSM-5**:\n- Eliminated multiaxial system\n- Reorganized disorder categories\n- Added dimensional assessments\n- New disorders added (e.g., Disruptive Mood Dysregulation)\n- Bereavement exclusion removed from depression"
+        },
+        {
+          "title": "Mood Disorders",
+          "content": "**Major Depressive Disorder**:\n- Five or more symptoms for 2+ weeks\n- Depressed mood or loss of interest/pleasure required\n- Other symptoms: weight changes, sleep disturbance, fatigue, worthlessness, concentration problems, suicidal ideation\n- Significant distress or impairment\n\n**Persistent Depressive Disorder (Dysthymia)**:\n- Depressed mood most days for 2+ years\n- Less severe but chronic\n\n**Bipolar I Disorder**:\n- At least one manic episode (elevated mood, decreased sleep, grandiosity, racing thoughts, impulsivity)\n- Depressive episodes common but not required\n\n**Bipolar II Disorder**:\n- Hypomanic episodes (less severe than mania)\n- Major depressive episodes\n\n**Cyclothymic Disorder**:\n- Chronic mood fluctuations\n- Hypomanic and depressive symptoms (2+ years)\n\n**Etiology**: Genetic factors, neurotransmitter dysregulation (serotonin, norepinephrine, dopamine), HPA axis dysfunction, cognitive factors (negative schemas, rumination), life stress."
+        },
+        {
+          "title": "Anxiety Disorders",
+          "content": "**Generalized Anxiety Disorder (GAD)**:\n- Excessive worry about multiple domains\n- Difficulty controlling worry\n- Physical symptoms (restlessness, fatigue, concentration problems, irritability, muscle tension, sleep disturbance)\n\n**Panic Disorder**:\n- Recurrent unexpected panic attacks\n- Worry about future attacks or maladaptive behavior changes\n- Panic attacks: Intense fear with physical symptoms (palpitations, sweating, trembling, shortness of breath)\n\n**Specific Phobia**:\n- Marked fear of specific objects or situations\n- Avoidance or intense distress\n- Types: Animal, natural environment, blood-injection-injury, situational, other\n\n**Social Anxiety Disorder**:\n- Fear of social situations where scrutiny is possible\n- Fear of acting in embarrassing ways\n- Avoidance or intense anxiety\n\n**Agoraphobia**:\n- Fear of situations where escape might be difficult\n- Two or more: public transportation, open spaces, enclosed spaces, crowds, being outside alone"
+        },
+        {
+          "title": "Obsessive-Compulsive and Related Disorders",
+          "content": "**Obsessive-Compulsive Disorder (OCD)**:\n- **Obsessions**: Recurrent, intrusive thoughts, urges, or images causing distress\n- **Compulsions**: Repetitive behaviors or mental acts performed to reduce distress\n- Common themes: Contamination, symmetry, forbidden thoughts, harm\n- Time-consuming (>1 hour/day) or causes significant distress/impairment\n\n**Body Dysmorphic Disorder**:\n- Preoccupation with perceived defects in physical appearance\n- Repetitive behaviors (mirror checking, grooming, seeking reassurance)\n\n**Hoarding Disorder**:\n- Persistent difficulty discarding possessions\n- Distress at thought of discarding\n- Accumulation clutters living spaces\n\n**Trichotillomania**: Recurrent hair pulling\n\n**Excoriation Disorder**: Recurrent skin picking"
+        },
+        {
+          "title": "Trauma and Stressor-Related Disorders",
+          "content": "**Post-Traumatic Stress Disorder (PTSD)**:\n- Exposure to actual or threatened death, serious injury, or sexual violence\n- **Intrusion symptoms**: Flashbacks, nightmares, intrusive memories\n- **Avoidance**: Avoiding trauma reminders\n- **Negative alterations in cognitions/mood**: Negative beliefs, persistent negative emotions, detachment\n- **Alterations in arousal/reactivity**: Hypervigilance, exaggerated startle, sleep problems, irritability\n- Duration >1 month\n\n**Acute Stress Disorder**:\n- Similar to PTSD but duration 3 days to 1 month after trauma\n\n**Adjustment Disorders**:\n- Emotional or behavioral symptoms in response to identifiable stressor\n- Symptoms within 3 months of stressor\n- Distress out of proportion to stressor or impairment"
+        },
+        {
+          "title": "Schizophrenia Spectrum Disorders",
+          "content": "**Schizophrenia**:\n- Two or more of the following for 1+ month (at least one from 1-3):\n  1. Delusions (fixed false beliefs)\n  2. Hallucinations (perceptions without external stimuli)\n  3. Disorganized speech\n  4. Grossly disorganized or catatonic behavior\n  5. Negative symptoms (diminished expression, avolition)\n- Continuous signs for 6+ months\n- Significant impairment\n\n**Positive Symptoms**: Excesses (delusions, hallucinations)\n**Negative Symptoms**: Deficits (flat affect, alogia, anhedonia, avolition)\n**Cognitive Symptoms**: Attention, memory, executive function deficits\n\n**Related Disorders**:\n- Schizoaffective Disorder: Mood episode concurrent with schizophrenia symptoms\n- Brief Psychotic Disorder: Duration 1 day to 1 month\n- Schizophreniform Disorder: Duration 1-6 months\n\n**Etiology**: Genetic vulnerability, dopamine hypothesis, neurodevelopmental factors, environmental factors (urban birth, migration, cannabis use)"
+        },
+        {
+          "title": "Personality Disorders",
+          "content": "**Definition**: Enduring patterns of inner experience and behavior that deviate markedly from cultural expectations, are pervasive and inflexible, begin in adolescence or early adulthood, and cause distress or impairment.\n\n**Cluster A (Odd/Eccentric)**:\n- Paranoid: Distrust and suspiciousness\n- Schizoid: Detachment from social relationships\n- Schizotypal: Discomfort with close relationships, cognitive distortions\n\n**Cluster B (Dramatic/Emotional)**:\n- Antisocial: Disregard for rights of others\n- Borderline: Instability in relationships, self-image, emotions; impulsivity\n- Histrionic: Excessive emotionality and attention-seeking\n- Narcissistic: Grandiosity, need for admiration, lack of empathy\n\n**Cluster C (Anxious/Fearful)**:\n- Avoidant: Social inhibition, feelings of inadequacy, hypersensitivity\n- Dependent: Excessive need to be taken care of\n- Obsessive-Compulsive PD: Preoccupation with orderliness, perfectionism, control\n\n**Alternative Model (DSM-5 Section III)**: Dimensional approach assessing personality functioning and pathological traits."
+        }
+      ],
+      "keyConcepts": [
+        {"term": "DSM-5-TR", "definition": "The Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision, published by the American Psychiatric Association for classifying mental disorders."},
+        {"term": "Positive Symptoms", "definition": "Excesses or distortions of normal functions in schizophrenia, including delusions and hallucinations."},
+        {"term": "Negative Symptoms", "definition": "Deficits or absences of normal functions in schizophrenia, such as flat affect, alogia, and avolition."},
+        {"term": "Comorbidity", "definition": "The co-occurrence of two or more disorders in the same individual."},
+        {"term": "Diathesis-Stress Model", "definition": "Theory that disorders result from the interaction of a predisposition (diathesis) and environmental stressors."},
+        {"term": "Differential Diagnosis", "definition": "The process of distinguishing between disorders with similar symptoms to arrive at the correct diagnosis."}
+      ],
+      "references": [
+        {"id": "1", "authors": "American Psychiatric Association", "year": 2022, "title": "Diagnostic and Statistical Manual of Mental Disorders (5th ed., text rev.)", "source": "American Psychiatric Publishing"},
+        {"id": "2", "authors": "Barlow, D. H., & Durand, V. M.", "year": 2021, "title": "Abnormal Psychology: An Integrative Approach", "source": "Cengage Learning (9th ed.)"},
+        {"id": "3", "authors": "Kring, A. M., & Johnson, S. L.", "year": 2021, "title": "Abnormal Psychology: The Science and Treatment of Psychological Disorders", "source": "Wiley (14th ed.)"}
+      ]
+    },
+    "assessment": {
+      "title": "Psychological Assessment",
+      "description": "Learn about psychological testing, clinical interviews, and assessment methods.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 28,
+      "sections": [
+        {
+          "title": "Introduction to Psychological Assessment",
+          "content": "Psychological assessment is a systematic process of gathering information about an individual's psychological functioning. It involves the use of tests, interviews, observations, and collateral information to answer referral questions, make diagnoses, inform treatment planning, and evaluate outcomes. Competent assessment requires understanding of psychometric principles, test administration, interpretation, and ethical considerations."
+        },
+        {
+          "title": "Psychometric Properties",
+          "content": "**Reliability**: Consistency of measurement\n\n- **Test-Retest Reliability**: Consistency over time\n- **Internal Consistency**: Consistency among items (Cronbach's alpha)\n- **Inter-Rater Reliability**: Agreement between evaluators\n- **Parallel Forms Reliability**: Consistency across equivalent test versions\n\n**Validity**: Does the test measure what it claims?\n\n- **Content Validity**: Items sample the full domain\n- **Criterion Validity**: Predicts relevant outcomes\n  - Concurrent: Correlation with current criterion\n  - Predictive: Prediction of future outcomes\n- **Construct Validity**: Theoretical relationships\n  - Convergent: Correlation with related measures\n  - Discriminant: Independence from unrelated measures\n\n**Standardization**: Consistent administration procedures and normative data for interpretation.\n\n**Norms**: Representative comparison groups for interpreting scores."
+        },
+        {
+          "title": "Clinical Interviews",
+          "content": "**Types of Interviews**:\n\n**Unstructured Interview**: Flexible, open-ended exploration. High rapport but variable reliability.\n\n**Semi-Structured Interview**: Standard topics with flexibility. Balances standardization and clinical judgment.\n\n**Structured Interview**: Standardized questions and scoring. High reliability.\n\n**Common Structured Interviews**:\n- SCID-5: Structured Clinical Interview for DSM-5 Disorders\n- MINI: Mini International Neuropsychiatric Interview\n- ADIS-5: Anxiety and Related Disorders Interview Schedule\n\n**Interview Components**:\n- Chief complaint and presenting problem\n- History of present illness\n- Psychiatric history\n- Medical history\n- Substance use history\n- Developmental and social history\n- Family history\n- Mental status examination"
+        },
+        {
+          "title": "Mental Status Examination",
+          "content": "The **Mental Status Examination (MSE)** assesses current psychological functioning:\n\n**Appearance**: Grooming, hygiene, clothing, physical characteristics\n\n**Behavior**: Psychomotor activity, eye contact, mannerisms\n\n**Speech**: Rate, rhythm, volume, tone\n\n**Mood and Affect**:\n- Mood: Subjective emotional state (patient report)\n- Affect: Observable emotional expression\n- Congruence, range, intensity, lability\n\n**Thought Process**: Logic, coherence, associations\n\n**Thought Content**: Delusions, obsessions, suicidal/homicidal ideation\n\n**Perceptions**: Hallucinations, illusions\n\n**Cognition**: Orientation, attention, memory, concentration\n\n**Insight**: Awareness of illness\n\n**Judgment**: Decision-making capacity"
+        },
+        {
+          "title": "Intelligence Testing",
+          "content": "**Wechsler Scales**:\n- WAIS-IV: Wechsler Adult Intelligence Scale (16-90 years)\n- WISC-V: Wechsler Intelligence Scale for Children (6-16 years)\n- WPPSI-IV: Wechsler Preschool and Primary Scale (2.5-7 years)\n\n**WAIS-IV Structure**:\n- **Verbal Comprehension Index**: Vocabulary, Similarities, Information\n- **Perceptual Reasoning Index**: Block Design, Matrix Reasoning, Visual Puzzles\n- **Working Memory Index**: Digit Span, Arithmetic\n- **Processing Speed Index**: Symbol Search, Coding\n- **Full Scale IQ**: Overall cognitive ability\n\n**Interpretation**:\n- Mean = 100, SD = 15\n- 68% of population: 85-115\n- 95% of population: 70-130\n\n**Other Intelligence Tests**:\n- Stanford-Binet Intelligence Scales\n- Kaufman Assessment Battery for Children (KABC-II)\n- Woodcock-Johnson Tests of Cognitive Abilities"
+        },
+        {
+          "title": "Personality Assessment",
+          "content": "**Self-Report Inventories**:\n\n**MMPI-3 (Minnesota Multiphasic Personality Inventory-3)**:\n- 335 true/false items\n- Validity scales detect response styles\n- Clinical scales (RC scales, PSY-5)\n- Extensive research base\n\n**PAI (Personality Assessment Inventory)**:\n- 344 items with 4-point response scale\n- Clinical, treatment, and interpersonal scales\n- Good for treatment planning\n\n**NEO-PI-3**:\n- Measures Big Five personality traits\n- Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism\n- 240 items\n\n**Projective Techniques**:\n\n**Rorschach Inkblot Test**:\n- 10 inkblot cards\n- R-PAS: Rorschach Performance Assessment System\n- Controversial but researched\n\n**TAT (Thematic Apperception Test)**:\n- Story-telling to ambiguous pictures\n- Assesses needs, motives, interpersonal dynamics"
+        },
+        {
+          "title": "Neuropsychological Assessment",
+          "content": "**Purpose**: Evaluate cognitive functioning to detect and characterize brain dysfunction.\n\n**Domains Assessed**:\n- Attention and concentration\n- Learning and memory\n- Language\n- Visuospatial abilities\n- Executive functions\n- Motor functions\n- Processing speed\n\n**Common Tests**:\n- Trail Making Test: Attention, sequencing, flexibility\n- Wisconsin Card Sorting Test: Executive function, set-shifting\n- Rey Complex Figure: Visuospatial construction and memory\n- Boston Naming Test: Language/naming\n- Stroop Color-Word Test: Inhibition\n- California Verbal Learning Test: Verbal memory\n\n**Fixed vs. Flexible Batteries**:\n- Fixed (e.g., Halstead-Reitan): Standardized, comprehensive\n- Flexible: Tailored to referral question\n\n**Interpretation**: Compare to normative data, identify patterns, relate to brain-behavior relationships."
+        },
+        {
+          "title": "Behavioral Assessment",
+          "content": "**Functional Behavioral Analysis**:\n- Identify antecedents, behaviors, and consequences (ABC)\n- Determine function of behavior\n\n**Observation Methods**:\n- Naturalistic observation\n- Systematic behavioral coding\n- Self-monitoring\n\n**Rating Scales**:\n- Behavior Assessment System for Children (BASC-3)\n- Conners Rating Scales (ADHD)\n- Child Behavior Checklist (CBCL)\n\n**Symptom-Specific Measures**:\n- Beck Depression Inventory-II\n- Beck Anxiety Inventory\n- Yale-Brown Obsessive Compulsive Scale\n- PTSD Checklist for DSM-5\n\n**Strengths**: Direct measurement, treatment planning, outcome evaluation\n**Limitations**: Reactivity, observer bias, situational specificity"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Reliability", "definition": "The consistency and stability of test scores across time, items, or raters."},
+        {"term": "Validity", "definition": "The degree to which a test measures what it is intended to measure."},
+        {"term": "Mental Status Examination", "definition": "A systematic assessment of a patient's current psychological functioning covering appearance, behavior, cognition, and more."},
+        {"term": "Standardization", "definition": "The process of administering a test under consistent conditions and developing normative data for interpretation."},
+        {"term": "Full Scale IQ", "definition": "An overall measure of cognitive ability derived from performance on various subtests of an intelligence test."},
+        {"term": "Projective Test", "definition": "Assessment technique using ambiguous stimuli to elicit responses thought to reveal unconscious processes."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Groth-Marnat, G., & Wright, A. J.", "year": 2016, "title": "Handbook of Psychological Assessment", "source": "Wiley (6th ed.)"},
+        {"id": "2", "authors": "Meyer, G. J., et al.", "year": 2001, "title": "Psychological Testing and Psychological Assessment", "source": "American Psychologist, 56(2), 128-165"},
+        {"id": "3", "authors": "Strauss, E., Sherman, E. M. S., & Spreen, O.", "year": 2006, "title": "A Compendium of Neuropsychological Tests", "source": "Oxford University Press (3rd ed.)"}
+      ]
+    },
+    "evidence-based-therapies": {
+      "title": "Evidence-Based Psychotherapies",
+      "description": "Explore CBT, DBT, psychodynamic, and other empirically supported treatments.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 32,
+      "sections": [
+        {
+          "title": "Introduction to Evidence-Based Practice",
+          "content": "Evidence-based practice in psychology (EBPP) involves integrating the best available research with clinical expertise in the context of patient characteristics, culture, and preferences. Understanding major therapeutic approaches, their mechanisms, and the evidence supporting them is essential for competent clinical practice."
+        },
+        {
+          "title": "Cognitive-Behavioral Therapy (CBT)",
+          "content": "**Core Principles**:\n- Thoughts, feelings, and behaviors are interconnected\n- Maladaptive cognitions contribute to psychological problems\n- Changing cognitions and behaviors leads to emotional improvement\n- Skills-based, time-limited, present-focused\n\n**Cognitive Techniques**:\n- Cognitive restructuring: Identifying and challenging distorted thoughts\n- Socratic questioning: Guided discovery\n- Thought records: Documenting and analyzing thoughts\n- Behavioral experiments: Testing beliefs empirically\n\n**Behavioral Techniques**:\n- Behavioral activation: Increasing engagement in rewarding activities\n- Exposure: Gradual confrontation of feared stimuli\n- Skills training: Social skills, problem-solving, relaxation\n\n**Efficacy**: Strong evidence for depression, anxiety disorders, OCD, PTSD, eating disorders, insomnia, and many other conditions. Considered gold-standard treatment for many disorders."
+        },
+        {
+          "title": "Dialectical Behavior Therapy (DBT)",
+          "content": "**Developed by** Marsha Linehan for borderline personality disorder (BPD)\n\n**Core Dialectic**: Balancing acceptance AND change\n\n**Treatment Components**:\n- **Individual Therapy**: Weekly sessions targeting life-threatening behaviors, therapy-interfering behaviors, and quality of life\n- **Skills Training Group**: Weekly group teaching DBT skills\n- **Phone Coaching**: As-needed support for skill generalization\n- **Consultation Team**: Support for therapists\n\n**Four Skills Modules**:\n- **Mindfulness**: Present-moment awareness, nonjudgmental observation\n- **Distress Tolerance**: Crisis survival skills, radical acceptance\n- **Emotion Regulation**: Understanding and managing emotions\n- **Interpersonal Effectiveness**: Assertiveness, relationship skills\n\n**Efficacy**: Strong evidence for BPD, self-harm, suicidal behavior. Adapted for eating disorders, substance use, depression."
+        },
+        {
+          "title": "Acceptance and Commitment Therapy (ACT)",
+          "content": "**Theoretical Foundation**: Relational Frame Theory, psychological flexibility model\n\n**Six Core Processes**:\n- **Acceptance**: Willingness to experience thoughts and feelings\n- **Cognitive Defusion**: Reducing fusion with thoughts\n- **Present Moment Awareness**: Mindful attention to now\n- **Self-as-Context**: Observer perspective on experience\n- **Values**: Clarifying what matters most\n- **Committed Action**: Behavior aligned with values\n\n**Goal**: Increase psychological flexibility rather than symptom reduction per se\n\n**Techniques**:\n- Mindfulness exercises\n- Metaphors and experiential exercises\n- Values clarification\n- Behavioral commitment strategies\n\n**Efficacy**: Evidence for depression, anxiety, chronic pain, substance use, psychosis. Transdiagnostic approach."
+        },
+        {
+          "title": "Psychodynamic Therapies",
+          "content": "**Core Principles**:\n- Unconscious processes influence behavior\n- Early experiences shape current patterns\n- Therapeutic relationship is central\n- Insight leads to change\n\n**Key Concepts**:\n- **Transference**: Patient's feelings toward therapist based on past relationships\n- **Countertransference**: Therapist's emotional reactions\n- **Resistance**: Unconscious opposition to therapeutic progress\n- **Defense Mechanisms**: Unconscious strategies to manage anxiety\n\n**Modern Approaches**:\n- **Short-Term Psychodynamic Therapy**: Time-limited, focused\n- **Mentalization-Based Treatment**: Understanding mental states\n- **Transference-Focused Psychotherapy**: For personality disorders\n\n**Efficacy**: Evidence for depression, anxiety, personality disorders, somatic symptoms. Effects may continue to grow after treatment ends."
+        },
+        {
+          "title": "Exposure Therapies",
+          "content": "**Mechanisms**:\n- Habituation: Anxiety decreases with prolonged exposure\n- Extinction: New learning that feared outcomes don't occur\n- Inhibitory learning: New memory competes with fear memory\n\n**Types of Exposure**:\n- **In Vivo**: Real-life exposure to feared stimuli\n- **Imaginal**: Visualization of feared scenarios\n- **Interoceptive**: Exposure to feared bodily sensations\n- **Virtual Reality**: Computer-simulated environments\n\n**Prolonged Exposure (PE)** for PTSD:\n- Imaginal exposure to trauma memory\n- In vivo exposure to avoided situations\n- Processing of trauma memories\n\n**Exposure and Response Prevention (ERP)** for OCD:\n- Exposure to obsessional triggers\n- Prevention of compulsive rituals\n\n**Efficacy**: Strong evidence for anxiety disorders, OCD, PTSD."
+        },
+        {
+          "title": "Interpersonal Therapy (IPT)",
+          "content": "**Developed by** Klerman and Weissman for depression\n\n**Theoretical Basis**: Depression occurs in interpersonal context; improving relationships improves depression\n\n**Four Problem Areas**:\n- **Grief**: Complicated bereavement\n- **Role Disputes**: Conflicts with significant others\n- **Role Transitions**: Major life changes\n- **Interpersonal Deficits**: Chronic relationship difficulties\n\n**Structure**:\n- Time-limited (12-16 sessions)\n- Focus on current relationships\n- Improve communication and problem-solving\n\n**Efficacy**: Strong evidence for depression (comparable to CBT). Adapted for eating disorders, bipolar disorder, anxiety."
+        },
+        {
+          "title": "Integrative and Common Factors",
+          "content": "**Common Factors** (account for significant outcome variance):\n- **Therapeutic Alliance**: Strongest predictor of outcome\n- **Empathy**: Therapist understanding\n- **Positive Regard**: Warmth and acceptance\n- **Expectations**: Hope and expectancy of improvement\n- **Cultural Adaptation**: Matching to client context\n\n**Integrative Approaches**:\n- **Technical Eclecticism**: Using techniques from various approaches\n- **Theoretical Integration**: Synthesizing theories\n- **Assimilative Integration**: Home base with openness to other techniques\n- **Common Factors Approach**: Emphasizing shared elements\n\n**Principles of Therapeutic Change**:\n- Match treatment to client characteristics\n- Build strong alliance\n- Enhance motivation for change\n- Foster insight and new perspectives\n- Encourage new experiences and behaviors"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Cognitive Restructuring", "definition": "CBT technique involving identification and modification of maladaptive thoughts and beliefs."},
+        {"term": "Exposure", "definition": "Therapeutic technique involving systematic confrontation with feared stimuli to reduce anxiety through extinction and habituation."},
+        {"term": "Therapeutic Alliance", "definition": "The collaborative relationship between therapist and client, including agreement on goals, tasks, and emotional bond."},
+        {"term": "Psychological Flexibility", "definition": "ACT concept referring to the ability to be present, open to experience, and act in accordance with values."},
+        {"term": "Transference", "definition": "In psychodynamic therapy, the patient's unconscious redirection of feelings about significant others onto the therapist."},
+        {"term": "Evidence-Based Practice", "definition": "Integration of best available research with clinical expertise and patient characteristics in treatment decisions."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Beck, J. S.", "year": 2020, "title": "Cognitive Behavior Therapy: Basics and Beyond", "source": "Guilford Press (3rd ed.)"},
+        {"id": "2", "authors": "Linehan, M. M.", "year": 2015, "title": "DBT Skills Training Manual", "source": "Guilford Press (2nd ed.)"},
+        {"id": "3", "authors": "Hayes, S. C., Strosahl, K. D., & Wilson, K. G.", "year": 2012, "title": "Acceptance and Commitment Therapy: The Process and Practice of Mindful Change", "source": "Guilford Press (2nd ed.)"},
+        {"id": "4", "authors": "Wampold, B. E., & Imel, Z. E.", "year": 2015, "title": "The Great Psychotherapy Debate", "source": "Routledge (2nd ed.)"}
+      ]
+    },
+    "rehabilitation": {
+      "title": "Rehabilitation Psychology",
+      "description": "Understand the psychological aspects of rehabilitation and recovery from injury or illness.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 20,
+      "sections": [
+        {
+          "title": "Introduction to Rehabilitation Psychology",
+          "content": "Rehabilitation psychology examines psychological processes involved in recovery from injury, illness, or disability. This field addresses adjustment, coping, and quality of life during rehabilitation, with applications to physical rehabilitation, brain injury recovery, and chronic illness management."
+        },
+        {
+          "title": "Adjustment to Disability",
+          "content": "**Grief and Loss**:\n- Processing stages: Shock, denial, anger, bargaining, depression, acceptance\n- Chronic grief vs. acute loss\n\n**Coping Strategies**:\n- Problem-focused coping: Active problem-solving\n- Emotion-focused coping: Managing emotional responses\n- Meaning-focused coping: Finding significance in adversity\n\n**Disability Models**:\n- Moral model: Disability as moral failing\n- Medical model: Disability as problem to be cured\n- Social model: Disability created by social barriers\n- Independent living model: Maximizing autonomy"
+        },
+        {
+          "title": "Neuropsychological Rehabilitation",
+          "content": "**Brain Injury Recovery**:\n- Spontaneous recovery occurs in first 6 months\n- Recovery plateau typically at 12-18 months\n- Late recovery possible up to 2 years\n\n**Rehabilitation Principles**:\n- Rehabilitation is learning\n- Use it or lose it principle\n- Mass practice over distributed practice\n- Salience: Making practice personally meaningful\n\n**Cognitive Rehabilitation Approaches**:\n- Attention process training\n- Memory rehabilitation techniques\n- Executive function remediation\n- Metacognitive strategy training\n- Compensatory strategies for deficits"
+        },
+        {
+          "title": "Physical Rehabilitation Psychology",
+          "content": "**Adherence to Rehabilitation**:\n- Motivation and adherence to treatment programs\n- Self-efficacy beliefs influence engagement\n- Social support enhances adherence\n\n\n**Pain Management**:\n- Cognitive-behavioral approaches for chronic pain\n- Biofeedback and relaxation techniques\n- Acceptance and commitment approaches\n\n\n**Psychological Factors in Recovery**:\n- Depression and anxiety as barriers to recovery\n- Personality factors affecting rehabilitation engagement\n- Social support networks and outcomes\n- Occupational identity and role transitions"
+        },
+        {
+          "title": "Rehabilitation Interventions",
+          "content": "**Goal Setting and Motivation**:\n- SMART goals for rehabilitation progress\n- Motivational interviewing techniques\n- Reward systems for progress acknowledgment\n\n**Group Therapy Programs**:\n- Peer support models\n- Shared experiences reduce isolation\n- Skill-building through group activities\n\n**Family Involvement**:\n- Psychoeducation for families\n- Family adjustment counseling\n- Support for caregivers"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Adjustment to Disability", "definition": "Psychological process of adapting to life changes caused by disability or illness."},
+        {"term": "Cognitive Rehabilitation", "definition": "Therapeutic approaches to restore or compensate for cognitive functions impaired by brain injury or neurological conditions."},
+        {"term": "Use it or Lose it Principle", "definition": "Principle stating that neural connections strengthened through active use will weaken without stimulation."},
+        {"term": "Rehabilitation Adherence", "definition": "The degree to which an individual follows prescribed rehabilitation protocols and engages in recovery behaviors."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Wilson, B. A., Tate, R. L., & Grimley, G. J.", "year": 2019, "title": "Neuropsychological Rehabilitation", "source": "Oxford University Press (2nd ed.)"},
+        {"id": "2", "authors": "Schultz, K. K., & DeLisa, L. J.", "year": 2018, "title": "Physical Medicine and Rehabilitation", "source": "Elsevier"}
+      ]
+    },
+    "health-psychology": {
+      "title": "Health Psychology",
+      "description": "Explore psychological factors influencing health, illness, and healthcare behaviors.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 24,
+      "sections": [
+        {
+          "title": "Introduction to Health Psychology",
+          "content": "Health psychology applies psychological principles to understanding health, illness, and healthcare. This field examines how biological, psychological, behavioral, and social factors influence health and illness, with applications to health promotion, disease prevention, and healthcare delivery."
+        },
+        {
+          "title": "Health Behaviors",
+          "content": "**Health-Promoting Behaviors**:\n- Exercise and physical activity\n- Nutrition and healthy eating\n- Sleep and rest\n- Stress management and relaxation\n- Preventive healthcare utilization\n\n**Health-Risk Behaviors**:\n- Substance use and abuse\n- Risky sexual behaviors\n- Sedentary lifestyle\n- Poor diet and overeating\n\n**Healthcare Utilization**:\n- Help-seeking behaviors and delay\n- Adherence to medical regimens\n- Communication with healthcare providers"
+        },
+        {
+          "title": "Stress and Health",
+          "content": "**Stress Response**:\n- Alarm: Initial physiological activation\n- Resistance: Mobilization of resources\n- Exhaustion: Resource depletion\n- Recovery: Return to baseline\n\n**Chronic Stress**:\n- Allostatic load: Cumulative stress burden\n- HPA axis dysregulation\n- Health consequences: Cardiovascular disease, immune suppression\n\n**Coping with Stress**:\n- Problem-focused: Active strategies to address stressors\n- Emotion-focused: Managing emotional responses\n- Social support: Buffering effects of stress"
+        },
+        {
+          "title": "Chronic Illness and Adaptation",
+          "content": "Living with chronic conditions involves ongoing psychological adaptation.\n\n**Common Chronic Conditions**:\n- Diabetes, heart disease, arthritis, cancer, multiple sclerosis\n- Neurological conditions: stroke, Parkinson's, multiple sclerosis\n- Psychological adjustment required\n\n**Models of Adaptation**:\n- Self-regulation model: Managing symptoms and behaviors\n- Disability model: Adjusting to limitations\n- Rehabilitation model: Maximizing function\n\n**Psychological Factors**:\n- Coping strategies and resilience\n- Social support networks\n- Healthcare system navigation\n- Illness beliefs and representations"
+        },
+        {
+          "title": "Pain Psychology",
+          "content": "Pain is complex sensory and emotional experience with significant psychological components.\n\n**Gate Control Theory**:\n- Spinal mechanisms modulate pain transmission\n- Opening gate: Touch and anxiety can increase pain\n- Closing gate: Inhibitory signals can reduce pain\n\n\n**Psychological Factors in Pain**:\n- Attention to pain amplifies experience\n- Expectations and beliefs influence perception\n- Emotional state (anxiety, depression) affects pain experience\n- Past experiences shape current pain responses\n\n**Pain Management Approaches**:\n- Cognitive-behavioral therapy\n- Biofeedback and relaxation techniques\n- Acceptance and mindfulness-based approaches\n- Multidisciplinary pain clinics"
+        },
+        {
+          "title": "Health Behavior Change",
+          "content": "Health behavior change involves modifying behaviors that affect health outcomes.\n\n**The Transtheoretical Model**:\n- Precontemplation: Not considering change\n- Contemplation: Considering change\n- Preparation: Planning for change\n- Action: Implementing changes\n- Maintenance: Sustaining new behavior\n- Termination: Ending change process\n- Relapse prevention is critical\n\n**Motivational Interviewing**:\n- Resolves ambivalence about change\n- Enhances readiness for action\n- Client-centered approach\n\n**Social Cognitive Theory**:\n- Health behaviors shaped by social environment\n- Social norms and social support influence decisions\n- Group-based interventions effective for behavior change"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Allostatic Load", "definition": "The cumulative biological burden of chronic stress on the body, increasing risk for health problems."},
+        {"term": "Gate Control Theory", "definition": "Theory proposing that neural mechanisms in spinal cord can open or close the 'gate' for pain transmission."},
+        {"term": "Health Belief Model", "definition": "Cognitive representations and beliefs that influence health behaviors and responses to illness."},
+        {"term": "Transtheoretical Model", "definition": "Stage model of behavior change describing progression from precontemplation through action to maintenance."},
+        {"term": "Motivational Interviewing", "definition": "Client-centered counseling approach designed to resolve ambivalence and enhance intrinsic motivation for behavior change."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Taylor, S. E.", "year": 2018, "title": "Health Psychology", "source": "McGraw-Hill (11th ed.)"},
+        {"id": "2", "authors": "Brannon, L., & Feist, H. J.", "year": 2019, "title": "Health Psychology: An Introduction to Behavior and Health", "source": "Wiley (8th ed.)"}
+      ]
+    }
+  }
+}

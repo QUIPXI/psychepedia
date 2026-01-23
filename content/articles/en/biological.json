@@ -1,0 +1,218 @@
+{
+  "biological": {
+    "neuropsychology": {
+      "title": "Neuropsychology",
+      "description": "Study brain structure, function, and plasticity in relation to behavior and cognition.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 28,
+      "sections": [
+        {
+          "title": "Introduction to Neuropsychology",
+          "content": "Neuropsychology is the study of brain-behavior relationships, examining how brain structure and function influence cognition, emotion, and behavior. This field bridges neuroscience and psychology to understand both normal functioning and the effects of brain damage or dysfunction. Clinical neuropsychologists assess and treat individuals with brain injuries, neurological diseases, and developmental disorders."
+        },
+        {
+          "title": "Organization of the Nervous System",
+          "content": "**Central Nervous System (CNS)**: Brain and spinal cord\n**Peripheral Nervous System (PNS)**: Nerves outside the CNS\n\n**Major Brain Structures**:\n\n**Cerebral Cortex**: The outer layer responsible for higher cognitive functions\n- **Frontal Lobe**: Executive functions, planning, decision-making, motor control, personality\n- **Parietal Lobe**: Sensory integration, spatial awareness, attention\n- **Temporal Lobe**: Auditory processing, language comprehension, memory\n- **Occipital Lobe**: Visual processing\n\n**Subcortical Structures**:\n- **Limbic System**: Emotion and memory (hippocampus, amygdala, cingulate gyrus)\n- **Basal Ganglia**: Movement initiation and control\n- **Thalamus**: Sensory relay station\n- **Hypothalamus**: Homeostasis, hormone regulation\n\n**Brainstem**: Vital functions (breathing, heart rate, sleep-wake cycles)\n**Cerebellum**: Motor coordination, balance, motor learning"
+        },
+        {
+          "title": "Neural Communication",
+          "content": "**The Neuron**: Fundamental unit of the nervous system\n- **Cell Body (Soma)**: Contains nucleus and metabolic machinery\n- **Dendrites**: Receive signals from other neurons\n- **Axon**: Transmits signals to other neurons\n- **Axon Terminals**: Release neurotransmitters\n- **Myelin Sheath**: Insulation that speeds signal transmission\n\n**Action Potential**: Electrochemical signal traveling along the axon\n- Resting potential: -70mV\n- Depolarization: Sodium influx\n- Repolarization: Potassium efflux\n- Refractory period: Brief unresponsive period\n\n**Synaptic Transmission**:\n1. Action potential reaches axon terminal\n2. Calcium influx triggers vesicle release\n3. Neurotransmitters released into synaptic cleft\n4. Binding to postsynaptic receptors\n5. Excitatory (EPSP) or inhibitory (IPSP) effects\n6. Neurotransmitter removal (reuptake, enzymatic degradation, diffusion)\n\n**Major Neurotransmitter Systems**:\n- **Glutamate**: Primary excitatory neurotransmitter\n- **GABA**: Primary inhibitory neurotransmitter\n- **Dopamine**: Reward, motivation, motor control\n- **Serotonin**: Mood, sleep, appetite\n- **Norepinephrine**: Arousal, attention\n- **Acetylcholine**: Memory, muscle activation"
+        },
+        {
+          "title": "Neuroplasticity",
+          "content": "**Neuroplasticity** refers to the brain's ability to change and reorganize throughout life.\n\n**Types of Plasticity**:\n- **Synaptic Plasticity**: Changes in synaptic strength (long-term potentiation, long-term depression)\n- **Structural Plasticity**: Changes in dendritic spines, axonal sprouting\n- **Neurogenesis**: Formation of new neurons (hippocampus, olfactory bulb)\n- **Cortical Reorganization**: Remapping of cortical areas after injury\n\n**Hebbian Learning**: 'Neurons that fire together, wire together' - coincident activity strengthens connections.\n\n**Critical Periods**: Windows of heightened plasticity during development (e.g., language acquisition, visual development).\n\n**Experience-Dependent Plasticity**: Brain changes in response to learning and environmental enrichment.\n\n**Recovery After Brain Injury**:\n- Diaschisis resolution: Recovery of temporarily dysfunctional connected areas\n- Compensation: Intact brain regions assume functions of damaged areas\n- Rehabilitation: Training-induced plasticity to restore function"
+        },
+        {
+          "title": "Hemispheric Specialization",
+          "content": "**Lateralization** refers to the tendency for certain functions to be predominantly processed by one hemisphere.\n\n**Left Hemisphere** (typically):\n- Language production and comprehension\n- Analytical and sequential processing\n- Mathematical calculation\n- Right-hand motor control\n\n**Right Hemisphere** (typically):\n- Visuospatial processing\n- Face recognition\n- Emotional prosody\n- Holistic/gestalt processing\n- Left-hand motor control\n\n**Split-Brain Research**: Studies of patients with severed corpus callosum (Sperry, Gazzaniga) demonstrated hemispheric specialization and the role of the corpus callosum in interhemispheric communication.\n\n**Important Caveats**:\n- Lateralization is relative, not absolute\n- Both hemispheres work together in most tasks\n- Individual variation exists (especially in left-handers)\n- Pop psychology oversimplifies (e.g., 'left-brained' vs. 'right-brained' people)"
+        },
+        {
+          "title": "Neuropsychological Assessment",
+          "content": "Clinical neuropsychological assessment evaluates cognitive functions through standardized testing.\n\n**Domains Assessed**:\n- **Attention**: Sustained, selective, divided attention\n- **Memory**: Working memory, verbal/visual learning, delayed recall\n- **Language**: Naming, fluency, comprehension, repetition\n- **Visuospatial**: Construction, perception, spatial reasoning\n- **Executive Functions**: Planning, inhibition, cognitive flexibility, problem-solving\n- **Processing Speed**: Speed of cognitive operations\n- **Motor Functions**: Fine motor speed and dexterity\n\n**Common Assessment Instruments**:\n- Wechsler scales (WAIS, WMS)\n- Trail Making Test\n- Wisconsin Card Sorting Test\n- Rey Complex Figure\n- Boston Naming Test\n- Stroop Test\n\n**Interpretation**: Compare performance to normative data, identify patterns of strengths and weaknesses, relate to known brain-behavior relationships."
+        },
+        {
+          "title": "Major Neurological Conditions",
+          "content": "**Traumatic Brain Injury (TBI)**:\n- Caused by external force to the head\n- Severity ranges from mild (concussion) to severe\n- Common deficits: attention, memory, executive function, emotional regulation\n\n**Stroke (Cerebrovascular Accident)**:\n- Ischemic (blocked blood vessel) or hemorrhagic (bleeding)\n- Symptoms depend on location and extent\n- Common syndromes: aphasia, neglect, hemianopia\n\n**Neurodegenerative Diseases**:\n- **Alzheimer's Disease**: Progressive memory loss, language difficulties, visuospatial impairment\n- **Parkinson's Disease**: Motor symptoms (tremor, rigidity, bradykinesia) plus cognitive changes\n- **Huntington's Disease**: Movement disorder with psychiatric and cognitive symptoms\n- **Multiple Sclerosis**: Demyelinating disease with variable cognitive effects\n\n**Epilepsy**: Recurrent seizures; cognitive effects depend on seizure type and focus location."
+        },
+        {
+          "title": "Neuroimaging Techniques",
+          "content": "**Structural Imaging**:\n- **CT (Computed Tomography)**: X-ray based; detects acute hemorrhage, structural abnormalities\n- **MRI (Magnetic Resonance Imaging)**: Superior soft tissue contrast; detailed structural views\n- **DTI (Diffusion Tensor Imaging)**: Visualizes white matter tracts\n\n**Functional Imaging**:\n- **fMRI (functional MRI)**: Measures blood oxygenation (BOLD signal) as proxy for neural activity\n- **PET (Positron Emission Tomography)**: Measures metabolic activity using radioactive tracers\n- **SPECT (Single Photon Emission CT)**: Blood flow imaging\n\n**Electrophysiological Methods**:\n- **EEG (Electroencephalography)**: Records electrical activity from scalp; excellent temporal resolution\n- **MEG (Magnetoencephalography)**: Records magnetic fields; excellent temporal and spatial resolution\n- **ERP (Event-Related Potentials)**: Brain responses time-locked to stimuli\n\n**Emerging Techniques**: Near-infrared spectroscopy (NIRS), transcranial magnetic stimulation (TMS), optogenetics"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Neuroplasticity", "definition": "The brain's ability to change and reorganize its structure and function in response to experience, learning, or injury."},
+        {"term": "Hemispheric Specialization", "definition": "The tendency for certain cognitive functions to be predominantly processed by one cerebral hemisphere."},
+        {"term": "Neurotransmitter", "definition": "Chemical messengers that transmit signals between neurons across the synaptic cleft."},
+        {"term": "Action Potential", "definition": "The electrochemical signal that travels along an axon when a neuron fires."},
+        {"term": "Cerebral Cortex", "definition": "The outer layer of the brain responsible for higher cognitive functions including perception, thought, and decision-making."},
+        {"term": "Synapse", "definition": "The junction between neurons where neurotransmitters are released to communicate signals."},
+        {"term": "Long-Term Potentiation (LTP)", "definition": "A lasting increase in synaptic strength following high-frequency stimulation, considered a cellular basis for learning and memory."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Kolb, B., & Whishaw, I. Q.", "year": 2021, "title": "Fundamentals of Human Neuropsychology", "source": "Worth Publishers (8th ed.)"},
+        {"id": "2", "authors": "Lezak, M. D., Howieson, D. B., Bigler, E. D., & Tranel, D.", "year": 2012, "title": "Neuropsychological Assessment", "source": "Oxford University Press (5th ed.)"},
+        {"id": "3", "authors": "Kandel, E. R., Schwartz, J. H., & Jessell, T. M.", "year": 2021, "title": "Principles of Neural Science", "source": "McGraw-Hill (6th ed.)"},
+        {"id": "4", "authors": "Purves, D., et al.", "year": 2018, "title": "Neuroscience", "source": "Oxford University Press (6th ed.)"}
+      ]
+    },
+    "sensation-perception": {
+      "title": "Sensation & Perception",
+      "description": "Explore how we detect, process, and interpret sensory information from the environment.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 26,
+      "sections": [
+        {
+          "title": "Introduction",
+          "content": "Sensation and perception are fundamental processes by which we experience and understand the world. **Sensation** refers to the detection of physical energy by sensory receptors, while **perception** is the organization, interpretation, and conscious experience of sensory information. Together, these processes transform physical stimuli into meaningful psychological experiences."
+        },
+        {
+          "title": "Basic Principles of Sensation",
+          "content": "**Transduction**: The conversion of physical energy into neural signals by specialized receptor cells.\n\n**Sensory Thresholds**:\n- **Absolute Threshold**: Minimum stimulus intensity detected 50% of the time\n- **Difference Threshold (JND)**: Minimum difference between stimuli that can be detected 50% of the time\n- **Weber's Law**: The JND is proportional to stimulus magnitude (ΔI/I = k)\n\n**Signal Detection Theory**: Detection depends not only on stimulus intensity but also on:\n- Sensitivity (ability to detect signals)\n- Response bias (criterion for reporting detection)\n- Hits, misses, false alarms, correct rejections\n\n**Sensory Adaptation**: Decreased sensitivity to constant stimulation (e.g., adapting to room temperature)."
+        },
+        {
+          "title": "The Visual System",
+          "content": "**Eye Structure**:\n- **Cornea**: Transparent outer covering; refracts light\n- **Pupil/Iris**: Controls light entry\n- **Lens**: Focuses light (accommodation)\n- **Retina**: Contains photoreceptors\n\n**Photoreceptors**:\n- **Rods**: Sensitive to dim light; peripheral vision; no color\n- **Cones**: Color vision; fine detail; concentrated in fovea\n\n**Visual Pathway**:\n1. Retina → Optic nerve\n2. Optic chiasm (partial crossing)\n3. Lateral Geniculate Nucleus (LGN) of thalamus\n4. Primary Visual Cortex (V1) in occipital lobe\n5. Higher visual areas (V2, V4, IT, etc.)\n\n**Color Vision**:\n- **Trichromatic Theory**: Three cone types (S, M, L wavelengths)\n- **Opponent-Process Theory**: Color processed in opposing pairs (red-green, blue-yellow, black-white)\n- Both theories are correct at different processing levels\n\n**Depth Perception**: Binocular cues (retinal disparity, convergence) and monocular cues (relative size, interposition, linear perspective, texture gradient, motion parallax)."
+        },
+        {
+          "title": "The Auditory System",
+          "content": "**Sound Properties**:\n- **Frequency (Hz)**: Perceived as pitch\n- **Amplitude**: Perceived as loudness\n- **Timbre**: Quality/complexity of sound\n\n**Ear Structure**:\n- **Outer Ear**: Pinna, ear canal (collects and funnels sound)\n- **Middle Ear**: Eardrum, ossicles (amplify vibrations)\n- **Inner Ear**: Cochlea (fluid-filled, contains hair cells)\n\n**Theories of Pitch Perception**:\n- **Place Theory**: Different frequencies stimulate different locations on basilar membrane (best for high frequencies)\n- **Frequency Theory**: Rate of neural firing matches sound frequency (best for low frequencies)\n- **Volley Principle**: Groups of neurons fire in volleys for intermediate frequencies\n\n**Auditory Pathway**: Cochlea → Auditory nerve → Brainstem nuclei → Medial geniculate nucleus → Primary auditory cortex (temporal lobe)\n\n**Sound Localization**: Interaural time differences and intensity differences."
+        },
+        {
+          "title": "Other Sensory Systems",
+          "content": "**Somatosensory System** (touch, temperature, pain, proprioception):\n- Multiple receptor types for different stimuli\n- Pathway through spinal cord to somatosensory cortex\n- Somatotopic organization (homunculus)\n\n**Pain**:\n- Fast pain (Aδ fibers): Sharp, localized\n- Slow pain (C fibers): Dull, diffuse\n- Gate Control Theory: Spinal cord 'gate' modulates pain signals\n- Descending modulation from brain\n\n**Chemical Senses**:\n\n**Gustation (Taste)**:\n- Five basic tastes: sweet, sour, salty, bitter, umami\n- Taste receptors on tongue and oral cavity\n- Pathway to gustatory cortex (insula)\n\n**Olfaction (Smell)**:\n- Olfactory receptors in nasal cavity\n- Direct connection to olfactory bulb and limbic system\n- Approximately 400 receptor types; combinatorial coding"
+        },
+        {
+          "title": "Perceptual Organization",
+          "content": "**Gestalt Principles**: The whole is different from the sum of its parts\n\n- **Figure-Ground**: Separating object from background\n- **Proximity**: Elements close together grouped together\n- **Similarity**: Similar elements grouped together\n- **Continuity**: Preference for continuous, smooth patterns\n- **Closure**: Tendency to complete incomplete figures\n- **Common Fate**: Elements moving together grouped together\n\n**Perceptual Constancies**:\n- **Size Constancy**: Objects perceived as same size despite retinal image changes\n- **Shape Constancy**: Objects perceived as same shape despite viewing angle changes\n- **Color Constancy**: Colors perceived as stable despite lighting changes\n\n**Visual Illusions**: Reveal assumptions built into perceptual processing (e.g., Müller-Lyer, Ponzo, Ames room)."
+        },
+        {
+          "title": "Top-Down and Bottom-Up Processing",
+          "content": "**Bottom-Up Processing** (data-driven):\n- Analysis begins with sensory input\n- Building from simple features to complex percepts\n- Feature detection, edge detection\n\n**Top-Down Processing** (concept-driven):\n- Prior knowledge, expectations, context influence perception\n- Schemas guide interpretation\n- Perceptual set: Readiness to perceive in certain ways\n\n**Integration**: Perception involves continuous interaction between bottom-up and top-down processes.\n\n**Examples**:\n- Reading ambiguous handwriting (context helps)\n- Recognizing faces in random patterns (pareidolia)\n- The 'cocktail party effect' (selective attention to meaningful stimuli)"
+        },
+        {
+          "title": "Attention and Perception",
+          "content": "**Selective Attention**: Focusing on specific stimuli while filtering others\n- **Broadbent's Filter Theory**: Early selection based on physical features\n- **Deutsch-Norman Late Selection**: Meaning processed before selection\n- **Treisman's Attenuation Theory**: Unattended information weakened, not completely blocked\n\n**Inattentional Blindness**: Failure to notice unexpected stimuli when attention is focused elsewhere (e.g., gorilla experiment).\n\n**Change Blindness**: Failure to detect changes when brief disruption occurs.\n\n**Binding Problem**: How the brain integrates features processed in different areas into unified percepts.\n\n**Feature Integration Theory** (Treisman): Attention required to bind features into coherent objects."
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Transduction", "definition": "The conversion of physical energy from the environment into neural signals by sensory receptors."},
+        {"term": "Absolute Threshold", "definition": "The minimum stimulus intensity that can be detected 50% of the time."},
+        {"term": "Gestalt Principles", "definition": "Perceptual organization principles describing how elements are grouped into meaningful patterns."},
+        {"term": "Perceptual Constancy", "definition": "The tendency to perceive objects as stable despite changes in sensory input."},
+        {"term": "Bottom-Up Processing", "definition": "Data-driven perceptual analysis starting from sensory input and building to complex representations."},
+        {"term": "Top-Down Processing", "definition": "Concept-driven processing where prior knowledge and expectations influence perception."},
+        {"term": "Selective Attention", "definition": "The ability to focus on specific stimuli while filtering out irrelevant information."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Goldstein, E. B., & Brockmole, J. R.", "year": 2017, "title": "Sensation and Perception", "source": "Cengage Learning (10th ed.)"},
+        {"id": "2", "authors": "Wolfe, J. M., et al.", "year": 2021, "title": "Sensation & Perception", "source": "Oxford University Press (6th ed.)"},
+        {"id": "3", "authors": "Palmer, S. E.", "year": 1999, "title": "Vision Science: Photons to Phenomenology", "source": "MIT Press"}
+      ]
+    },
+    "genetics-evolution": {
+      "title": "Genetics & Evolution",
+      "description": "Explore genetic influences on behavior and evolutionary perspectives in psychology.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 22,
+      "sections": [
+        {
+          "title": "Introduction to Behavioral Genetics",
+          "content": "Behavioral genetics examines how genetic factors influence psychological traits, behaviors, and mental disorders. This field investigates the heritability of characteristics, gene-environment interactions, and the biological basis of individual differences."
+        },
+        {
+          "title": "Basic Genetic Concepts",
+          "content": "**DNA and Genes**:\n- DNA: Double helix structure containing genetic information\n- Genes: Specific segments of DNA that code for proteins\n- Alleles: Alternative forms of genes\n- Genotype vs. Phenotype\n\n**Heredity Mechanisms**:\n- Mendelian inheritance: Dominant/recessive patterns\n- Polygenic traits: Multiple genes influence single traits\n- Gene-environment interaction: Heritability varies across environments\n\n**Heritability Estimates**:\n- Twin studies compare monozygotic vs. dizygotic twins\n- Adoption studies separate genetic from environmental effects\n- Heritability coefficients range from 0-1.0"
+        },
+        {
+          "title": "Genetic Research Methods",
+          "content": "**Molecular Genetics**:\n- Genome-wide association studies (GWAS)\n- Gene sequencing and identification\n- Epigenetics: Environmental influences on gene expression\n\n**Behavioral Genetics**:\n- Twin and adoption designs\n- Family studies\n- Breeding studies in animals\n\n**Applications**:\n- Personalized medicine in psychiatry\n- Genetic counseling\n- Ethical considerations"
+        },
+        {
+          "title": "Evolutionary Psychology",
+          "content": "Evolutionary psychology applies principles of natural selection to understand mental processes and behavior.\n\n**Core Premise**: Psychological adaptations evolved to solve ancestral problems.\n\n**Key Concepts**:\n- **Adaptation**: Traits that enhance survival and reproduction\n- **Natural Selection**: Differential survival/reproduction of traits\n- **Fitness**: Reproductive success\n- **Environment of Evolutionary Adaptedness (EEA)**: Ancestral environment shaping adaptations\n\n**Common Adaptive Problems**:\n- Survival: Avoiding predators, finding food\n- Mating: Mate selection, competition\n- Parenting: Investment in offspring\n- Social: Cooperation, competition, kin selection\n\n**Critiques and Limitations**:\n- Just-so stories (speculative explanations)\n- Difficulty testing hypotheses\n- Modern environments differ from ancestral"
+        },
+        {
+          "title": "Specific Evolutionary Topics",
+          "content": "**Mating Strategies**:\n- Short-term vs. long-term mating\n- Sex differences in mating preferences\n- Parental investment theory\n\n**Altruism and Cooperation**:\n- Kin selection: Helping genetic relatives\n- Reciprocal altruism: Helping with expectation of return\n- Group selection: Selection at group level\n\n**Aggression**:\n- Evolutionary functions of aggressive behavior\n- Gender differences in aggression\n- Status competition\n\n**Emotion and Motivation**:\n- Evolutionary functions of emotions (fear as alarm, disgust as disease avoidance)\n- Universal emotions across cultures\n- Motivation systems (approach vs. avoidance)"
+        },
+        {
+          "title": "Gene-Environment Interactions",
+          "content": "**Diathesis-Stress Model**:\n- Genetic vulnerability interacts with environmental stressors\n- Explains why disorders develop in some but not all\n\n**Epigenetics**:\n- Environmental factors influence gene expression without changing DNA sequence\n- Methylation, histone modification\n- Transgenerational effects possible\n\n**Differential Susceptibility**:\n- Individuals vary in genetic sensitivity to environment\n- Orchid vs. dandelion children concept\n\n**Plasticity**: Genetic expression can change over lifespan"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Heritability", "definition": "Proportion of variance in a trait attributable to genetic differences in a population."},
+        {"term": "Gene-Environment Interaction", "definition": "Interplay between genetic predispositions and environmental influences on behavior and development."},
+        {"term": "Natural Selection", "definition": "Process by which traits that enhance survival and reproduction become more common in populations."},
+        {"term": "Epigenetics", "definition": "Study of environmental influences on gene expression without changes to DNA sequence."},
+        {"term": "Environment of Evolutionary Adaptedness", "definition": "Ancestral environment in which human psychological adaptations evolved."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Plomin, R., DeFries, J. C., McClearn, G. E., & Rutter, M.", "year": 2017, "title": "Behavioral Genetics", "source": "Worth Publishers (4th ed.)"},
+        {"id": "2", "authors": "Buss, D. M.", "year": 2019, "title": "Evolutionary Psychology: The New Science of the Mind", "source": "Routledge (6th ed.)"},
+        {"id": "3", "authors": "Nesse, R. M., & Williams, G. C.", "year": 2019, "title": "Why We Get Sick: The New Science of Darwinian Medicine", "source": "Times Books"}
+      ]
+    },
+    "psychopharmacology": {
+      "title": "Psychopharmacology",
+      "description": "Understand how drugs affect the brain, behavior, and mental processes.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 24,
+      "sections": [
+        {
+          "title": "Introduction to Psychopharmacology",
+          "content": "Psychopharmacology is the study of how drugs affect mood, sensation, thinking, and behavior. This field examines the mechanisms by which psychoactive substances influence neural function, their therapeutic applications in treating mental disorders, and their potential for abuse. Understanding psychopharmacology is essential for clinical practice, research, and public health."
+        },
+        {
+          "title": "Pharmacokinetics: How Drugs Move Through the Body",
+          "content": "**Routes of Administration**:\n- Oral: Convenient but slow absorption, first-pass metabolism\n- Intravenous: Rapid onset, precise dosing\n- Intramuscular/Subcutaneous: Intermediate absorption\n- Inhalation: Very rapid onset (lungs to brain)\n- Transdermal: Slow, sustained release\n\n**ADME Processes**:\n- **Absorption**: Drug enters bloodstream\n- **Distribution**: Drug distributed to tissues; blood-brain barrier limits CNS access\n- **Metabolism**: Liver enzymes (especially CYP450) break down drugs\n- **Excretion**: Removal via kidneys, liver, lungs\n\n**Key Concepts**:\n- **Half-life**: Time for plasma concentration to decrease by half\n- **Bioavailability**: Proportion reaching systemic circulation\n- **Tolerance**: Decreased response with repeated use\n- **Dependence**: Physical/psychological need for drug"
+        },
+        {
+          "title": "Pharmacodynamics: How Drugs Affect the Brain",
+          "content": "**Drug-Receptor Interactions**:\n- **Agonists**: Bind to and activate receptors (mimic neurotransmitter)\n- **Antagonists**: Bind to but do not activate receptors (block neurotransmitter)\n- **Partial Agonists**: Activate receptors with submaximal response\n- **Inverse Agonists**: Produce opposite effect of agonists\n\n**Mechanisms of Action**:\n- Affect neurotransmitter synthesis\n- Affect neurotransmitter storage/release\n- Block or activate receptors\n- Inhibit reuptake transporters\n- Inhibit degradation enzymes\n\n**Dose-Response Relationships**:\n- Potency: Amount needed for effect\n- Efficacy: Maximum effect achievable\n- Therapeutic index: Ratio of toxic to therapeutic dose"
+        },
+        {
+          "title": "Antidepressants",
+          "content": "**Selective Serotonin Reuptake Inhibitors (SSRIs)**:\n- Examples: Fluoxetine, sertraline, escitalopram\n- Mechanism: Block serotonin reuptake\n- First-line for depression and anxiety\n- Delayed therapeutic effect (2-4 weeks)\n\n**Serotonin-Norepinephrine Reuptake Inhibitors (SNRIs)**:\n- Examples: Venlafaxine, duloxetine\n- Block both serotonin and norepinephrine reuptake\n\n**Tricyclic Antidepressants (TCAs)**:\n- Examples: Amitriptyline, imipramine\n- Block multiple neurotransmitter systems\n- More side effects than SSRIs\n\n**Monoamine Oxidase Inhibitors (MAOIs)**:\n- Examples: Phenelzine, tranylcypromine\n- Inhibit enzyme that breaks down monoamines\n- Dietary restrictions required\n\n**Atypical Antidepressants**:\n- Bupropion: Dopamine/norepinephrine; also for smoking cessation\n- Mirtazapine: Alpha-2 antagonist, enhances release"
+        },
+        {
+          "title": "Anxiolytics and Sedative-Hypnotics",
+          "content": "**Benzodiazepines**:\n- Examples: Diazepam, lorazepam, alprazolam\n- Mechanism: Enhance GABA-A receptor function\n- Effects: Anxiolytic, sedative, muscle relaxant, anticonvulsant\n- Risks: Tolerance, dependence, withdrawal, cognitive impairment\n\n**Z-Drugs** (Non-benzodiazepine hypnotics):\n- Examples: Zolpidem, zaleplon\n- Similar mechanism but more selective for sleep\n\n**Buspirone**:\n- 5-HT1A partial agonist\n- Anxiolytic without sedation or dependence\n- Delayed onset (2-4 weeks)\n\n**Other Anxiolytics**:\n- Beta-blockers: Reduce physical symptoms of anxiety\n- Antihistamines: Hydroxyzine\n- Gabapentinoids: Pregabalin, gabapentin"
+        },
+        {
+          "title": "Antipsychotics",
+          "content": "**First-Generation (Typical) Antipsychotics**:\n- Examples: Haloperidol, chlorpromazine\n- Mechanism: D2 receptor antagonism\n- Effective for positive symptoms\n- High risk of extrapyramidal symptoms (EPS)\n\n**Second-Generation (Atypical) Antipsychotics**:\n- Examples: Risperidone, olanzapine, quetiapine, clozapine, aripiprazole\n- Block D2 and 5-HT2A receptors\n- Lower EPS risk\n- Metabolic side effects (weight gain, diabetes)\n\n**Movement Disorders**:\n- Acute dystonia: Muscle spasms\n- Akathisia: Restlessness\n- Parkinsonism: Tremor, rigidity\n- Tardive dyskinesia: Involuntary movements (late-onset, potentially irreversible)"
+        },
+        {
+          "title": "Mood Stabilizers",
+          "content": "**Lithium**:\n- First-line for bipolar disorder\n- Mechanism not fully understood (multiple effects)\n- Narrow therapeutic index; requires monitoring\n- Effective for acute mania and prophylaxis\n\n**Anticonvulsants as Mood Stabilizers**:\n- **Valproate**: Acute mania, rapid cycling\n- **Carbamazepine**: Alternative for mania\n- **Lamotrigine**: Bipolar depression, maintenance\n\n**Atypical Antipsychotics**: Increasingly used as mood stabilizers (quetiapine, olanzapine, aripiprazole)."
+        },
+        {
+          "title": "Stimulants and Cognitive Enhancers",
+          "content": "**ADHD Medications**:\n- **Methylphenidate**: Blocks dopamine/norepinephrine reuptake\n- **Amphetamines**: Release and block reuptake of dopamine/norepinephrine\n- Both enhance prefrontal cortex function\n- Schedule II controlled substances\n\n**Non-Stimulant ADHD Medications**:\n- Atomoxetine: Norepinephrine reuptake inhibitor\n- Guanfacine, clonidine: Alpha-2 agonists\n\n**Cognitive Enhancement in Dementia**:\n- **Cholinesterase Inhibitors**: Donepezil, rivastigmine, galantamine\n- **NMDA Receptor Antagonist**: Memantine\n- Modest symptom improvement; do not halt progression"
+        },
+        {
+          "title": "Substances of Abuse",
+          "content": "**Reward Pathway**: Mesolimbic dopamine system (VTA → nucleus accumbens)\n\n**Major Drug Classes**:\n\n**Depressants**:\n- Alcohol: GABA enhancement, glutamate reduction\n- Opioids: Mu receptor agonism (heroin, morphine, fentanyl)\n\n**Stimulants**:\n- Cocaine: Blocks dopamine reuptake\n- Methamphetamine: Releases and blocks reuptake of monoamines\n\n**Hallucinogens**:\n- LSD, psilocybin: 5-HT2A agonism\n- MDMA: Serotonin release\n\n**Cannabis**:\n- THC: CB1 receptor agonism\n- Endocannabinoid system modulation\n\n**Addiction Mechanisms**:\n- Neuroadaptation and tolerance\n- Sensitization of incentive salience\n- Prefrontal cortex impairment\n- Stress system dysregulation"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Agonist", "definition": "A drug that binds to and activates a receptor, mimicking the effect of a neurotransmitter."},
+        {"term": "Antagonist", "definition": "A drug that binds to a receptor without activating it, blocking the neurotransmitter's effect."},
+        {"term": "Half-Life", "definition": "The time required for the plasma concentration of a drug to decrease by 50%."},
+        {"term": "Therapeutic Index", "definition": "The ratio of the toxic dose to the therapeutic dose; wider index indicates greater safety."},
+        {"term": "Tolerance", "definition": "Decreased response to a drug with repeated administration, requiring higher doses for the same effect."},
+        {"term": "Blood-Brain Barrier", "definition": "A selective barrier that protects the brain by limiting which substances can enter from the bloodstream."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Stahl, S. M.", "year": 2021, "title": "Stahl's Essential Psychopharmacology: Neuroscientific Basis and Practical Applications", "source": "Cambridge University Press (5th ed.)"},
+        {"id": "2", "authors": "Meyer, J. S., & Quenzer, L. F.", "year": 2018, "title": "Psychopharmacology: Drugs, the Brain, and Behavior", "source": "Oxford University Press (3rd ed.)"},
+        {"id": "3", "authors": "Schatzberg, A. F., & DeBattista, C.", "year": 2019, "title": "Manual of Clinical Psychopharmacology", "source": "American Psychiatric Publishing (9th ed.)"}
+      ]
+    }
+  }
+}

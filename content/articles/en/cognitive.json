@@ -1,0 +1,153 @@
+{
+  "cognitive": {
+    "cognitive-psychology": {
+      "title": "Cognitive Psychology",
+      "description": "Study memory, attention, learning, problem-solving, and decision-making processes.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 30,
+      "sections": [
+        {
+          "title": "Introduction to Cognitive Psychology",
+          "content": "Cognitive psychology is the scientific study of mental processes including attention, memory, perception, language, problem-solving, and decision-making. Emerging from the cognitive revolution of the 1950s-1960s, this field views the mind as an information-processing system and uses experimental methods to understand how we acquire, store, transform, and use knowledge."
+        },
+        {
+          "title": "Attention",
+          "content": "**Attention** is the cognitive process of selectively concentrating on relevant information while ignoring irrelevant stimuli.\n\n**Types of Attention**:\n- **Selective Attention**: Focusing on one stimulus while filtering others (cocktail party effect)\n- **Divided Attention**: Simultaneously attending to multiple tasks\n- **Sustained Attention**: Maintaining focus over extended periods\n- **Alternating Attention**: Switching focus between tasks\n\n**Theories of Attention**:\n- **Broadbent's Filter Model**: Early selection based on physical features\n- **Treisman's Attenuation Model**: Unattended information weakened but not eliminated\n- **Late Selection Models**: Semantic processing before selection\n- **Feature Integration Theory**: Attention binds features into objects\n\n**Attentional Phenomena**:\n- **Inattentional Blindness**: Failure to notice unexpected stimuli\n- **Change Blindness**: Failure to detect changes\n- **Attentional Blink**: Brief period of reduced attention after detecting a target"
+        },
+        {
+          "title": "Memory Systems",
+          "content": "**Memory** is the process of encoding, storing, and retrieving information.\n\n**Multi-Store Model (Atkinson & Shiffrin)**:\n- **Sensory Memory**: Brief storage of sensory information (iconic, echoic)\n- **Short-Term Memory**: Limited capacity (7±2 items), brief duration (15-30 seconds)\n- **Long-Term Memory**: Unlimited capacity, potentially permanent storage\n\n**Working Memory (Baddeley)**:\n- **Central Executive**: Attentional control system\n- **Phonological Loop**: Verbal and acoustic information\n- **Visuospatial Sketchpad**: Visual and spatial information\n- **Episodic Buffer**: Integrates information from different sources\n\n**Long-Term Memory Types**:\n- **Explicit (Declarative)**: Conscious recollection\n  - Episodic: Personal experiences and events\n  - Semantic: General knowledge and facts\n- **Implicit (Non-declarative)**: Unconscious influences\n  - Procedural: Skills and habits\n  - Priming: Facilitation from prior exposure\n  - Classical conditioning"
+        },
+        {
+          "title": "Encoding and Retrieval",
+          "content": "**Encoding Processes**:\n- **Levels of Processing (Craik & Lockhart)**: Deeper semantic processing leads to better memory\n- **Elaborative Rehearsal**: Connecting new information to existing knowledge\n- **Organization**: Structuring information improves encoding\n- **Imagery**: Visual mental representations enhance memory\n- **Self-Reference Effect**: Relating information to oneself improves memory\n\n**Retrieval Processes**:\n- **Recall**: Retrieving information without cues\n- **Recognition**: Identifying previously encountered information\n- **Cued Recall**: Retrieval with hints or prompts\n\n**Retrieval Principles**:\n- **Encoding Specificity**: Retrieval cues effective when matching encoding context\n- **Context-Dependent Memory**: Physical environment effects\n- **State-Dependent Memory**: Internal state effects\n- **Transfer-Appropriate Processing**: Match between encoding and retrieval processes\n\n**Forgetting**:\n- **Decay Theory**: Memories fade over time\n- **Interference**: Proactive (old interferes with new) and retroactive (new interferes with old)\n- **Retrieval Failure**: Information available but not accessible"
+        },
+        {
+          "title": "Language and Thought",
+          "content": "**Language Processing**:\n- **Speech Perception**: Categorical perception, phoneme identification\n- **Word Recognition**: Mental lexicon access, context effects\n- **Sentence Processing**: Syntactic parsing, semantic interpretation\n- **Discourse Comprehension**: Building mental models of text/speech\n\n**Language Production**:\n- **Conceptualization**: Message generation\n- **Formulation**: Grammatical and phonological encoding\n- **Articulation**: Motor execution\n- Speech errors reveal production processes\n\n**Linguistic Relativity (Sapir-Whorf Hypothesis)**:\n- Strong version: Language determines thought (largely rejected)\n- Weak version: Language influences thought (supported by research on color, space, time)\n\n**Bilingualism and Cognition**:\n- Executive function advantages (controversial)\n- Cognitive flexibility\n- Metalinguistic awareness"
+        },
+        {
+          "title": "Problem-Solving and Reasoning",
+          "content": "**Problem-Solving Strategies**:\n- **Algorithms**: Systematic procedures guaranteeing solution\n- **Heuristics**: Mental shortcuts (faster but may lead to errors)\n  - Means-ends analysis\n  - Working backward\n  - Analogical reasoning\n\n**Barriers to Problem-Solving**:\n- **Mental Set**: Tendency to use familiar approaches\n- **Functional Fixedness**: Inability to use objects in novel ways\n- **Confirmation Bias**: Seeking confirming evidence\n\n**Deductive Reasoning**: Drawing conclusions from premises\n- Syllogistic reasoning\n- Conditional reasoning (if-then)\n- Common errors: belief bias, affirming the consequent\n\n**Inductive Reasoning**: Generalizing from specific instances\n- Category-based induction\n- Hypothesis testing\n- Scientific reasoning"
+        },
+        {
+          "title": "Decision-Making",
+          "content": "**Normative Models**:\n- **Expected Utility Theory**: Maximize expected value × probability\n- **Bayes' Theorem**: Updating probabilities with new evidence\n\n**Descriptive Models**:\n- **Prospect Theory (Kahneman & Tversky)**:\n  - Reference point dependence\n  - Loss aversion: Losses loom larger than gains\n  - Diminishing sensitivity\n  - Probability weighting\n\n**Heuristics and Biases**:\n- **Availability**: Judging frequency by ease of recall\n- **Representativeness**: Judging probability by similarity to prototype\n- **Anchoring**: Insufficient adjustment from initial value\n- **Affect Heuristic**: Decisions influenced by emotions\n\n**Dual-Process Theory**:\n- **System 1**: Fast, automatic, intuitive\n- **System 2**: Slow, effortful, deliberate\n\n**Bounded Rationality (Simon)**: Humans satisfice rather than optimize due to cognitive limitations."
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Working Memory", "definition": "A cognitive system for temporarily holding and manipulating information, consisting of the central executive, phonological loop, visuospatial sketchpad, and episodic buffer."},
+        {"term": "Encoding Specificity", "definition": "The principle that retrieval cues are effective to the extent they match the conditions present during encoding."},
+        {"term": "Heuristic", "definition": "A mental shortcut or rule of thumb that simplifies decision-making but may lead to systematic errors or biases."},
+        {"term": "Levels of Processing", "definition": "Theory proposing that deeper, more meaningful processing of information leads to better memory than shallow processing."},
+        {"term": "Prospect Theory", "definition": "Descriptive model of decision-making showing that people evaluate outcomes relative to reference points and are loss-averse."},
+        {"term": "Dual-Process Theory", "definition": "Framework distinguishing between fast, automatic (System 1) and slow, deliberate (System 2) cognitive processes."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Sternberg, R. J., & Sternberg, K.", "year": 2017, "title": "Cognitive Psychology", "source": "Cengage Learning (7th ed.)"},
+        {"id": "2", "authors": "Eysenck, M. W., & Keane, M. T.", "year": 2020, "title": "Cognitive Psychology: A Student's Handbook", "source": "Psychology Press (8th ed.)"},
+        {"id": "3", "authors": "Kahneman, D.", "year": 2011, "title": "Thinking, Fast and Slow", "source": "Farrar, Straus and Giroux"}
+      ]
+    },
+    "emotion-motivation": {
+      "title": "Emotion & Motivation",
+      "description": "Understand the nature of emotions and what drives human behavior.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 25,
+      "sections": [
+        {
+          "title": "Introduction",
+          "content": "Emotion and motivation are fundamental psychological processes that energize and direct behavior. **Emotions** are complex psychological states involving subjective experience, physiological arousal, and behavioral expression. **Motivation** refers to the processes that initiate, direct, and sustain goal-directed behavior."
+        },
+        {
+          "title": "Theories of Emotion",
+          "content": "**James-Lange Theory**: Emotions result from perception of bodily changes (we feel afraid because we run).\n\n**Cannon-Bard Theory**: Physiological arousal and emotional experience occur simultaneously and independently.\n\n**Schachter-Singer Two-Factor Theory**: Emotion requires both physiological arousal AND cognitive interpretation of that arousal.\n\n**Cognitive Appraisal Theories**:\n- **Lazarus**: Cognitive appraisal precedes emotion\n- **Primary Appraisal**: Is this relevant to my well-being?\n- **Secondary Appraisal**: Can I cope with this?\n\n**Constructionist Approaches**:\n- Emotions constructed from basic psychological components\n- Core affect (valence + arousal) + conceptualization\n- Lisa Feldman Barrett's theory of constructed emotion"
+        },
+        {
+          "title": "Components and Functions of Emotion",
+          "content": "**Components**:\n- **Subjective Experience**: The conscious feeling\n- **Physiological Arousal**: Autonomic nervous system activation\n- **Behavioral Expression**: Facial expressions, body language, actions\n- **Cognitive Processes**: Appraisals, attention, memory effects\n\n**Basic Emotions (Ekman)**:\n- Happiness, sadness, fear, anger, disgust, surprise\n- Universal facial expressions across cultures\n- Evolved for adaptive functions\n\n**Functions of Emotion**:\n- **Adaptive**: Prepare for action (fight-or-flight)\n- **Social**: Communicate internal states to others\n- **Motivational**: Direct attention and behavior\n- **Decision-Making**: Somatic marker hypothesis (Damasio)"
+        },
+        {
+          "title": "Motivation: Basic Concepts",
+          "content": "**Motivation** involves the processes that initiate, direct, and sustain behavior.\n\n**Drive Theories**:\n- Biological needs create drives (hunger, thirst)\n- Behavior aimed at reducing drives (homeostasis)\n- **Drive Reduction Theory** (Hull)\n\n**Arousal Theory**:\n- Optimal arousal level for performance\n- **Yerkes-Dodson Law**: Moderate arousal optimal; varies by task difficulty\n\n**Incentive Theory**:\n- External stimuli (incentives) pull behavior\n- Expectancy-value models\n\n**Intrinsic vs. Extrinsic Motivation**:\n- Intrinsic: Engaging for inherent satisfaction\n- Extrinsic: Engaging for external rewards\n- Overjustification effect: Extrinsic rewards can undermine intrinsic motivation"
+        },
+        {
+          "title": "Self-Determination Theory",
+          "content": "**Self-Determination Theory (Deci & Ryan)** proposes three basic psychological needs:\n\n**Autonomy**: Need for choice and self-direction\n- Feeling in control of one's behavior\n- Actions aligned with personal values\n\n**Competence**: Need to feel effective and capable\n- Mastering tasks and learning skills\n- Optimal challenge\n\n**Relatedness**: Need for connection with others\n- Belonging and social bonds\n- Feeling cared for and caring for others\n\n**Motivation Continuum**:\n- Amotivation → External regulation → Introjected → Identified → Integrated → Intrinsic motivation\n\n**Applications**: Education, work, healthcare, sports"
+        },
+        {
+          "title": "Achievement Motivation",
+          "content": "**Need for Achievement (nAch)**: Desire to accomplish challenging goals and attain high standards.\n\n**Achievement Goal Theory**:\n- **Mastery Goals**: Focus on learning and improving\n- **Performance Goals**: Focus on demonstrating ability relative to others\n- Performance-approach vs. performance-avoidance\n\n**Attributions for Success and Failure**:\n- **Locus**: Internal vs. external\n- **Stability**: Stable vs. unstable\n- **Controllability**: Controllable vs. uncontrollable\n\n**Mindset Theory (Dweck)**:\n- **Fixed Mindset**: Abilities are innate and unchangeable\n- **Growth Mindset**: Abilities can be developed through effort\n- Implications for persistence and achievement"
+        },
+        {
+          "title": "Emotion Regulation",
+          "content": "**Emotion Regulation** refers to processes by which individuals influence their emotional experiences and expressions.\n\n**Process Model (Gross)**:\n- **Situation Selection**: Choosing situations likely to produce desired emotions\n- **Situation Modification**: Changing the situation\n- **Attentional Deployment**: Directing attention (distraction, concentration)\n- **Cognitive Change**: Reappraisal, changing how one thinks about situation\n- **Response Modulation**: Altering emotional responses (suppression, expression)\n\n**Reappraisal vs. Suppression**:\n- Reappraisal: Generally effective, fewer negative consequences\n- Suppression: Less effective, associated with negative outcomes\n\n**Individual Differences**: Affect intensity, emotional intelligence, coping styles\n\n**Clinical Implications**: Emotion dysregulation in psychopathology (BPD, depression, anxiety)"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Two-Factor Theory", "definition": "Schachter and Singer's theory that emotion results from physiological arousal combined with cognitive interpretation of that arousal."},
+        {"term": "Cognitive Appraisal", "definition": "The process of evaluating a situation in terms of its personal significance and coping options, which shapes emotional response."},
+        {"term": "Self-Determination Theory", "definition": "Theory proposing that optimal motivation and well-being require satisfaction of needs for autonomy, competence, and relatedness."},
+        {"term": "Yerkes-Dodson Law", "definition": "Principle that performance is optimal at moderate arousal levels, with the optimal level varying by task difficulty."},
+        {"term": "Growth Mindset", "definition": "Belief that abilities and intelligence can be developed through effort, learning, and persistence."},
+        {"term": "Emotion Regulation", "definition": "Processes by which individuals influence which emotions they have, when they have them, and how they experience and express them."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Gross, J. J. (Ed.)", "year": 2015, "title": "Handbook of Emotion Regulation", "source": "Guilford Press (2nd ed.)"},
+        {"id": "2", "authors": "Ryan, R. M., & Deci, E. L.", "year": 2017, "title": "Self-Determination Theory: Basic Psychological Needs in Motivation, Development, and Wellness", "source": "Guilford Press"},
+        {"id": "3", "authors": "Barrett, L. F.", "year": 2017, "title": "How Emotions Are Made: The Secret Life of the Brain", "source": "Houghton Mifflin Harcourt"}
+        ]
+    },
+    "psycholinguistics": {
+      "title": "Psycholinguistics",
+      "description": "Study the psychological aspects of language, from acquisition to processing.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 24,
+      "sections": [
+        {
+          "title": "Introduction to Psycholinguistics",
+          "content": "Psycholinguistics is the scientific study of the mental processes underlying language acquisition, comprehension, production, and use. This interdisciplinary field combines psychology and linguistics to understand how humans represent, process, and produce language."
+        },
+        {
+          "title": "Language Acquisition",
+          "content": "**Critical Period Hypothesis**:\n- Language acquisition easier during early childhood\n- Biological preparedness for language learning\n- Declines after puberty\n\n**Stages of Language Development**:\n- Babbling stage (6-12 months)\n- One-word stage (12-18 months)\n- Two-word stage (18-24 months)\n- Telegraphic speech (24+ months)\n- Grammatical development continues through childhood\n\n**Theories of Language Acquisition**:\n- **Behaviorist (Skinner)**: Learning through reinforcement and imitation\n- **Nativist (Chomsky)**: Innate language acquisition device (LAD)\n- **Interactionist**: Combined biological predisposition and social interaction\n\n**Social Interaction Theories**:\n- Importance of child-directed speech\n- Social-pragmatic theories\n- Cultural transmission"
+        },
+        {
+          "title": "Language Comprehension",
+          "content": "**Word Recognition**:\n- Mental lexicon access\n- Frequency effects (faster for common words)\n- Context effects\n- Semantic priming\n\n**Sentence Processing**:\n- Syntactic parsing\n- Garden path model: Incremental processing\n- Ambiguity resolution\n- Prosodic cues to meaning\n\n**Discourse Processing**:\n- Building situation models\n- Inference generation\n- Pronoun resolution\n- Integrating information across sentences\n\n**Reading Processes**:\n- Word identification\n- Lexical access\n- Syntactic parsing\n- Semantic integration\n- Working memory involvement"
+        },
+        {
+          "title": "Language Production",
+          "content": "**Speech Production Model (Levelt)**:\n- **Conceptualization**: Message generation\n- **Formulation**: Grammatical and phonological encoding\n- **Articulation**: Motor execution\n- Self-monitoring and correction\n\n**Speech Errors**:\n- Anticipations (phonological)\n- Exchanges (word selection)\n- Shifts (sound categories)\n- Blends\n- Slip of the tongue\n\n**Aphasia**:\n- **Broca's Aphasia**: Non-fluent speech, good comprehension\n- **Wernicke's Aphasia**: Fluent speech, poor comprehension\n- **Conduction Aphasia**: Poor repetition\n- **Global Aphasia**: Severe impairment of both"
+        },
+        {
+          "title": "Bilingualism and Cognition",
+          "content": "**Types of Bilingualism**:\n- **Simultaneous**: Two languages from birth\n- **Sequential**: Second language learned later\n- **Receptive**: Understanding vs. production\n\n**Effects on Cognition**:\n- **Executive Function**: Enhanced cognitive control (controversial)\n- **Metalinguistic Awareness**: Better understanding of language structure\n- **Cognitive Reserve**: Potential protective effect against aging\n\n**The Bilingual Advantage**:\n- Earlier evidence suggested cognitive benefits\n- Current research shows mixed results\n- Factors: proficiency, age of acquisition, language similarity\n\n**Language Switching Costs**:\n- Slower switching between languages\n- Interference effects\n- Adaptation to bilingual context"
+        },
+        {
+          "title": "Neurolinguistics",
+          "content": "**Brain Areas for Language**:\n- **Broca's Area**: Speech production (left frontal lobe)\n- **Wernicke's Area**: Language comprehension (left temporal lobe)\n- **Arcuate Fasciculus**: Connection between areas\n- **Angular Gyrus**: Reading and writing\n\n\n**Neuroimaging Findings**:\n- fMRI studies of language processing\n- ERP components (N400: semantic processing)\n- Lateralization: Left hemisphere dominance for language\n\n\n**Language Disorders**:\n- Developmental: Dyslexia, specific language impairment\n- Acquired: Aphasia, apraxia of speech\n- Neurodegenerative: Primary progressive aphasia"
+        },
+        {
+          "title": "Language and Thought",
+          "content": "**Linguistic Relativity (Sapir-Whorf)**:\n- Strong version: Language determines thought (largely rejected)\n- Weak version: Language influences thought (supported by color, space, time research)\n\n**Inner Speech**:\n- Self-directed speech for thinking\n- Vygotsky: Private speech guides behavior\n- Internalized in adulthood\n\n**Language in Problem-Solving**:\n- Verbal strategies enhance reasoning\n- Language influences categorization\n- Bilingual effects on problem-solving approaches"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Critical Period", "definition": "Biologically determined window of heightened sensitivity for language acquisition, typically closing around puberty."},
+        {"term": "Mental Lexicon", "definition": "The organized store of words and linguistic knowledge stored in long-term memory."},
+        {"term": "Aphasia", "definition": "Language disorder resulting from brain damage, affecting production or comprehension of speech."},
+        {"term": "Broca's Area", "definition": "Brain region in left frontal lobe associated with speech production and language processing."},
+        {"term": "Phonology", "definition": "The study of sound systems and patterns in language, including rules for combining speech sounds."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Feldman, R. F.", "year": 2019, "title": "Psycholinguistics", "source": "Wiley (7th ed.)"},
+        {"id": "2", "authors": "Harley, T. A.", "year": 2020, "title": "The Psychology of Language: From Data to Theory", "source": "Psychology Press (4th ed.)"},
+        {"id": "3", "authors": "Slobin, D. I.", "year": 2016, "title": "An Introduction to Psycholinguistics", "source": "MIT Press"}
+      ]
+    }
+  }
+}

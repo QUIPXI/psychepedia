@@ -1,0 +1,147 @@
+{
+  "social-personality": {
+    "social-psychology": {
+      "title": "Social Psychology",
+      "description": "Study how individuals think about, influence, and relate to others.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 30,
+      "sections": [
+        {
+          "title": "Introduction to Social Psychology",
+          "content": "Social psychology is the scientific study of how individuals' thoughts, feelings, and behaviors are influenced by the actual, imagined, or implied presence of others. This field examines social cognition, attitudes, social influence, group processes, and interpersonal relationships."
+        },
+        {
+          "title": "Social Cognition",
+          "content": "**Social Cognition** examines how people think about themselves and others.\n\n**Attribution Theory**:\n- **Dispositional Attribution**: Explaining behavior by internal factors (personality, attitudes)\n- **Situational Attribution**: Explaining behavior by external factors (context, pressure)\n\n**Attribution Biases**:\n- **Fundamental Attribution Error**: Overemphasizing dispositional factors for others' behavior\n- **Actor-Observer Bias**: Dispositional for others, situational for self\n- **Self-Serving Bias**: Internal attributions for success, external for failure\n\n**Schemas and Heuristics**:\n- Schemas guide interpretation of social information\n- Stereotypes as cognitive schemas\n- Availability heuristic in social judgment\n- Representativeness heuristic"
+        },
+        {
+          "title": "Attitudes and Persuasion",
+          "content": "**Attitude Components** (ABC Model):\n- **Affective**: Emotional reactions\n- **Behavioral**: Actions toward object\n- **Cognitive**: Beliefs about object\n\n**Attitude Formation**:\n- Classical conditioning\n- Operant conditioning\n- Observational learning\n- Mere exposure effect\n\n**Persuasion** (Elaboration Likelihood Model):\n- **Central Route**: Careful processing of arguments (high involvement)\n- **Peripheral Route**: Reliance on heuristics and cues (low involvement)\n\n**Cognitive Dissonance (Festinger)**:\n- Discomfort from inconsistent cognitions\n- Attitude change to reduce dissonance\n- Insufficient justification effect"
+        },
+        {
+          "title": "Social Influence",
+          "content": "**Conformity**: Changing behavior to match group norms\n- **Asch Studies**: Conformity to clearly wrong answers\n- **Informational Influence**: Conforming to be correct\n- **Normative Influence**: Conforming to be liked/accepted\n\n**Obedience**: Following orders from authority\n- **Milgram Studies**: Obedience to harmful commands\n- Factors affecting obedience: Proximity, legitimacy, gradual commitment\n\n**Compliance Techniques**:\n- Foot-in-the-door: Small request then larger\n- Door-in-the-face: Large request then smaller\n- Low-ball technique: Initial commitment then added costs\n- Reciprocity: Obligation to return favors"
+        },
+        {
+          "title": "Group Processes",
+          "content": "**Social Facilitation**: Improved performance on simple tasks, impaired on complex tasks in presence of others.\n\n**Social Loafing**: Reduced effort in groups. Reduced by: Individual accountability, meaningful tasks, small groups.\n\n**Groupthink (Janis)**: Defective decision-making in cohesive groups prioritizing consensus over critical thinking.\n- Symptoms: Illusion of invulnerability, stereotyping outgroups, self-censorship\n- Prevention: Encourage dissent, outside perspectives, devil's advocate\n\n**Group Polarization**: Group discussion leads to more extreme positions.\n\n**Deindividuation**: Loss of self-awareness in groups leads to uninhibited behavior."
+        },
+        {
+          "title": "Prejudice and Discrimination",
+          "content": "**Prejudice**: Negative attitude toward a group\n**Stereotype**: Generalized belief about a group\n**Discrimination**: Negative behavior toward a group\n\n**Sources of Prejudice**:\n- Social learning\n- Social identity theory: In-group favoritism\n- Realistic conflict theory: Competition for resources\n- Cognitive factors: Categorization, illusory correlation\n\n**Reducing Prejudice**:\n- **Contact Hypothesis**: Intergroup contact under optimal conditions\n  - Equal status\n  - Common goals\n  - Cooperation\n  - Institutional support\n- Perspective-taking\n- Individuating information\n\n**Implicit Bias**: Unconscious associations measured by Implicit Association Test (IAT)."
+        },
+        {
+          "title": "Prosocial Behavior and Aggression",
+          "content": "**Prosocial Behavior**: Actions intended to benefit others.\n\n**Bystander Effect**: Less likely to help when others present.\n- Diffusion of responsibility\n- Pluralistic ignorance\n\n**Factors Increasing Helping**:\n- Clear emergency\n- Competence\n- Personal connection\n- Empathy\n- Mood\n\n**Aggression**: Behavior intended to harm.\n\n**Types**:\n- Hostile: Goal is harm\n- Instrumental: Harm as means to other goal\n\n**Influences on Aggression**:\n- Biological: Hormones, brain regions\n- Frustration-aggression hypothesis\n- Social learning\n- Situational factors: Heat, crowding, provocation"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Fundamental Attribution Error", "definition": "The tendency to overemphasize dispositional factors and underemphasize situational factors when explaining others' behavior."},
+        {"term": "Cognitive Dissonance", "definition": "Psychological discomfort from holding inconsistent cognitions, motivating attitude or behavior change."},
+        {"term": "Conformity", "definition": "Changing one's behavior or beliefs to match those of others or to fit group norms."},
+        {"term": "Groupthink", "definition": "Defective group decision-making where desire for consensus overrides realistic appraisal of alternatives."},
+        {"term": "Bystander Effect", "definition": "The phenomenon where individuals are less likely to help in an emergency when others are present."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Aronson, E., Wilson, T. D., & Sommers, S. R.", "year": 2021, "title": "Social Psychology", "source": "Pearson (10th ed.)"},
+        {"id": "2", "authors": "Myers, D. G., & Twenge, J. M.", "year": 2022, "title": "Social Psychology", "source": "McGraw-Hill (14th ed.)"}
+      ]
+    },
+    "personality-theories": {
+      "title": "Personality Theories",
+      "description": "Explore major theoretical approaches to understanding personality.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 28,
+      "sections": [
+        {
+          "title": "Introduction to Personality",
+          "content": "Personality refers to the characteristic patterns of thoughts, feelings, and behaviors that distinguish individuals and persist over time and situations. Personality psychology examines individual differences, their origins, development, and consequences."
+        },
+        {
+          "title": "Psychoanalytic Perspectives",
+          "content": "**Freud's Structural Model**:\n- **Id**: Pleasure principle; unconscious drives\n- **Ego**: Reality principle; mediates id and superego\n- **Superego**: Moral standards; conscience\n\n**Psychosexual Stages**: Oral, Anal, Phallic, Latency, Genital\n\n**Defense Mechanisms**: Unconscious strategies to manage anxiety\n- Repression, denial, projection, displacement, sublimation, rationalization\n\n**Neo-Freudians**:\n- **Jung**: Collective unconscious, archetypes\n- **Adler**: Inferiority and striving for superiority\n- **Horney**: Basic anxiety, neurotic needs\n- **Erikson**: Psychosocial stages across lifespan"
+        },
+        {
+          "title": "Trait Perspectives",
+          "content": "**Trait Theory**: Personality consists of stable, enduring characteristics.\n\n**Big Five Model (OCEAN)**:\n- **Openness**: Imagination, curiosity, creativity\n- **Conscientiousness**: Organization, dependability, self-discipline\n- **Extraversion**: Sociability, assertiveness, positive emotions\n- **Agreeableness**: Cooperation, trust, compassion\n- **Neuroticism**: Emotional instability, anxiety, moodiness\n\n**Evidence for Big Five**:\n- Cross-cultural replication\n- Heritability (40-60%)\n- Stability in adulthood\n- Predicts important life outcomes\n\n**HEXACO Model**: Adds Honesty-Humility dimension."
+        },
+        {
+          "title": "Humanistic Perspectives",
+          "content": "**Carl Rogers** Person-Centered Theory:\n- **Self-Concept**: How one perceives oneself\n- **Ideal Self**: Who one wants to be\n- **Congruence**: Alignment between self-concept and experience\n- **Conditions of Worth**: Conditional acceptance leads to incongruence\n- **Unconditional Positive Regard**: Acceptance without conditions promotes growth\n\n**Abraham Maslow** Hierarchy of Needs:\n- Physiological → Safety → Love/Belonging → Esteem → Self-Actualization\n- **Self-Actualization**: Realizing one's full potential\n- **Peak Experiences**: Moments of transcendence\n\n**Critique**: Difficult to test empirically; culturally limited."
+        },
+        {
+          "title": "Social-Cognitive Perspectives",
+          "content": "**Bandura's Social Cognitive Theory**:\n- **Reciprocal Determinism**: Behavior, person, environment mutually influence each other\n- **Self-Efficacy**: Beliefs about ability to succeed in specific situations\n- **Observational Learning**: Learning through modeling\n\n**Mischel's Cognitive-Affective System**:\n- Behavior varies across situations\n- Person-situation interaction\n- Cognitive-affective units: Encodings, expectancies, affects, goals, self-regulatory plans\n\n**Strengths**: Emphasizes learning, cognition, and situation\n**Limitations**: May underemphasize biological factors and stable traits"
+        },
+        {
+          "title": "Biological Perspectives",
+          "content": "**Eysenck's Biological Theory**:\n- Extraversion: Cortical arousal levels\n- Neuroticism: Limbic system reactivity\n- Psychoticism: Testosterone levels\n\n**Behavioral Genetics**:\n- Twin studies show heritability of traits\n- Shared environment has minimal effect in adulthood\n- Non-shared environment matters more\n\n**Temperament**: Early-appearing, biologically based individual differences in reactivity and self-regulation.\n\n**Evolutionary Personality Psychology**: Traits as adaptations to ancestral environments."
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Big Five", "definition": "The five-factor model of personality consisting of Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism."},
+        {"term": "Self-Efficacy", "definition": "Bandura's concept referring to beliefs about one's ability to succeed in specific situations or tasks."},
+        {"term": "Defense Mechanisms", "definition": "Unconscious psychological strategies used to protect oneself from anxiety and unacceptable impulses."},
+        {"term": "Self-Actualization", "definition": "Maslow's concept of realizing one's full potential and becoming the best version of oneself."},
+        {"term": "Reciprocal Determinism", "definition": "Bandura's concept that behavior, personal factors, and environment mutually influence each other."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Larsen, R. J., & Buss, D. M.", "year": 2021, "title": "Personality Psychology: Domains of Knowledge About Human Nature", "source": "McGraw-Hill (7th ed.)"},
+        {"id": "2", "authors": "Cervone, D., & Pervin, L. A.", "year": 2019, "title": "Personality: Theory and Research", "source": "Wiley (14th ed.)"}
+      ]
+    },
+    "cross-cultural": {
+      "title": "Cross-Cultural Psychology",
+      "description": "Explore how culture influences psychological processes and behavior.",
+      "lastModified": "2025-01-22",
+      "author": "PsychePedia Editorial Team",
+      "readingTime": 26,
+      "sections": [
+        {
+          "title": "Introduction to Cross-Cultural Psychology",
+          "content": "Cross-cultural psychology examines how cultural factors influence psychological processes, behavior, and development. This field compares psychological phenomena across cultures and challenges Western-centric assumptions in psychological theory and research."
+        },
+        {
+          "title": "Culture and Psychological Processes",
+          "content": "**Defining Culture**:\n- Shared systems of meaning, values, beliefs, and behaviors\n- Learned and transmitted across generations\n- Influences cognition, emotion, and behavior\n\n**Cultural Dimensions**:\n- Individualism vs. Collectivism\n- Power distance\n- Uncertainty avoidance\n- Masculinity vs. Femininity\n- Long-term vs. Short-term orientation\n\n**Cultural Syndromes**:\n- Amok (sudden violent outburst)\n- Koro (fear of genital retraction)\n- Taijin-kyofusho (fear of offending others)\n- Susto (shock reaction to Western culture)\n\n**Acculturation**: Process of adapting to a new culture; associated with stress."
+        },
+        {
+          "title": "Perception Across Cultures",
+          "content": "**Visual Perception**:\n- Müller-Lyer illusion stronger in some cultures\n- Depth perception differences\n- Color categorization differences\n\n**Emotion Perception**:\n- Recognition accuracy varies across cultures\n- Display rules differ (expressive vs. restrictive)\n\n**Perception of Time**:\n- Linear vs. cyclical time concepts\n- Pacing differences in communication\n- Future orientation differences"
+        },
+        {
+          "title": "Cognition and Intelligence",
+          "content": "**Cognitive Styles**:\n- Analytic vs. Holistic thinking\n- Field dependence vs. Independence\n- Nisbett's research on East Asian vs. Western cognition\n\n**Intelligence Testing**:\n- Cultural bias in IQ tests\n- Language and educational background effects\n- Need for culture-fair assessments\n\n**Mathematical Cognition**:\n- Counting systems differ\n- Spatial reasoning strategies\n- Number concepts vary across languages\n\n**Memory and Learning**:\n- Memory content organized differently\n- Learning styles influenced by culture\n- Contextual learning differences"
+        },
+        {
+          "title": "Social Behavior Across Cultures",
+          "content": "**Self-Concept**:\n- Independent vs. Interdependent self-construal\n- Self-enhancement vs. self-improvement motives\n\n**Conformity vs. Individualism**:\n- Level of conformity varies across cultures\n- Collectivist cultures show more conformity\n- Individualist cultures emphasize uniqueness\n\n**Communication Styles**:\n- High-context vs. Low-context communication\n- Direct vs. Indirect communication styles\n- Nonverbal differences\n\n**Emotion Expression**:\n- Display rules for emotions vary\n- Some emotions suppressed more than others\n- Cultural differences in shame, anger expression"
+        },
+        {
+          "title": "Mental Health and Culture",
+          "content": "**Culture-Bound Syndromes**:\n- Disorders specific to certain cultures (ataque de nervios, susto)\n- Cultural interpretations of symptoms\n\n**Expression of Distress**:\n- Somatic vs. psychological expression\n- Culture influences whether distress expressed mentally or physically\n- Cultural idioms of distress\n\n**Help-Seeking Behavior**:\n- Formal vs. informal help-seeking varies\n- Stigma differences\n- Family involvement in treatment\n\n**Culturally Competent Care**:\n- Understanding cultural background\n- Language considerations\n- Family involvement in treatment\n- Respect for cultural values and beliefs"
+        },
+        {
+          "title": "Research Methods",
+          "content": "**Emic vs. Etic Approaches**:\n- Emic: Culture-specific understanding from within culture\n- Etic: Universal constructs applied across cultures\n- Need for both perspectives\n\n**Cross-Cultural Comparisons**:\n- Nomothetic approach: Testing hypotheses across cultures\n- Idiographic approach: In-depth study of single culture\n- Cultural equivalence in research\n\n**Methodological Challenges**:\n- Translation and back-translation issues\n- Conceptual equivalence\n- Response styles influenced by culture\n- Sampling bias in cross-cultural research"
+        }
+      ],
+      "keyConcepts": [
+        {"term": "Individualism vs. Collectivism", "definition": "Cultural dimension emphasizing personal independence and self-reliance (individualism) versus group harmony and interdependence (collectivism)."},
+        {"term": "Power Distance", "definition": "Degree to which less powerful members accept unequal power distribution in a society."},
+        {"term": "High-Context vs. Low-Context Communication", "definition": "Communication styles where meaning is embedded in context (high) versus explicitly stated in words (low)."},
+        {"term": "Cultural Syndromes", "definition": "Culture-specific patterns of illness or behavior found only in particular cultures."},
+        {"term": "Emic vs. Etic", "definition": "Emic: Culture-specific understanding from within; Etic: Universal constructs applied across cultures."},
+        {"term": "Acculturation", "definition": "Process of psychological and cultural change that results when groups from different cultures come into continuous contact."},
+        {"term": "Cultural Competence", "definition": "Ability to understand, appreciate, and interact effectively with people from diverse cultural backgrounds."}
+      ],
+      "references": [
+        {"id": "1", "authors": "Matsumoto, D.", "year": 2000, "title": "Culture and Psychology: People Around the World", "source": "Wadsworth Cengage Learning (3rd ed.)"},
+        {"id": "2", "authors": "Triandis, H. C.", "year": 1994, "title": "Individualism and Collectivism", "source": "Westview Press"},
+        {"id": "3", "authors": "Nisbett, R. E., & Masuda, T.", "year": 1969, "title": "Culture and Point of View", "source": "Cognitive Psychology"}
+      ]
+    }
+  }
+}
