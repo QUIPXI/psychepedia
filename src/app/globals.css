@@ -373,12 +373,9 @@ body {
   text-align: right;
 }
 
-.rtl .font-serif {
-  font-family: var(--font-noto-arabic), var(--font-serif);
-}
-
-.rtl body,
-.rtl .prose {
+.rtl .font-serif,
+.rtl .prose,
+.rtl body {
   font-family: var(--font-noto-arabic), var(--font-sans);
 }
 
@@ -389,6 +386,24 @@ body {
 .rtl .prose h5,
 .rtl .prose h6 {
   font-family: var(--font-noto-arabic), var(--font-sans);
+  font-weight: 700;
+}
+
+.rtl .prose p,
+.rtl .prose li {
+  font-family: var(--font-noto-arabic), var(--font-sans);
+  line-height: 2;
+}
+
+/* RTL flex and layout adjustments */
+.rtl .flex-row {
+  flex-direction: row-reverse;
+}
+
+.rtl .flex.items-center.gap-1,
+.rtl .flex.items-center.gap-2,
+.rtl .flex.items-center.gap-4 {
+  flex-direction: row-reverse;
 }
 
 /* RTL callout */
@@ -400,6 +415,21 @@ body {
 
 /* RTL sidebar link */
 .rtl .sidebar-link {
+  flex-direction: row-reverse;
+}
+
+/* RTL button icon order */
+.rtl button .flex.items-center.gap-2 {
+  flex-direction: row-reverse;
+}
+
+/* RTL breadcrumb */
+.rtl nav[aria-label="Breadcrumb"] {
+  direction: rtl;
+}
+
+/* RTL article header metadata */
+.rtl .flex.flex-wrap.items-center {
   flex-direction: row-reverse;
 }
 

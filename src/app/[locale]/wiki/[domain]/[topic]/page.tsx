@@ -104,6 +104,9 @@ export default async function TopicPage({ params }: TopicPageProps) {
         article={article} 
         shortLabel={t("shortVersion")}
         fullLabel={t("fullVersion")}
+        readingFullText={t("readingFull")}
+        readingShortText={t("readingShort")}
+        minText={t("min")}
       />
 
       {/* References */}

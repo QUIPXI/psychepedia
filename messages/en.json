@@ -95,7 +95,10 @@
     "relatedTopics": "Related Topics",
     "tableOfContents": "Table of Contents",
     "shortVersion": "Short Version",
-    "fullVersion": "Full Version"
+    "fullVersion": "Full Version",
+    "readingFull": "Reading full version",
+    "readingShort": "Reading short version",
+    "min": "min"
   },
   "wiki": {
     "title": "Psychology Wiki",

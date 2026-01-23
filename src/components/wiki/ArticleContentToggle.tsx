@@ -9,6 +9,9 @@ interface ArticleContentToggleProps {
   article: Article;
   shortLabel: string;
   fullLabel: string;
+  readingFullText: string;
+  readingShortText: string;
+  minText: string;
 }
 
 function ArticleContent({ sections }: { sections: Article["sections"] }) {
@@ -53,6 +56,9 @@ export function ArticleContentToggle({
   article,
   shortLabel,
   fullLabel,
+  readingFullText,
+  readingShortText,
+  minText,
 }: ArticleContentToggleProps) {
   const [showFull, setShowFull] = React.useState(false);
   const hasFullVersion = article.fullSections && article.fullSections.length > 0;
@@ -72,9 +78,9 @@ export function ArticleContentToggle({
           <div className="flex-1">
             <p className="text-sm text-muted-foreground">
               {showFull ? (
-                <>Reading full version ({article.readingTime} min)</>
+                <>{readingFullText} ({article.readingTime} {minText})</>
               ) : (
-                <>Reading short version ({article.shortReadingTime} min)</>
+                <>{readingShortText} ({article.shortReadingTime} {minText})</>
               )}
             </p>
           </div>

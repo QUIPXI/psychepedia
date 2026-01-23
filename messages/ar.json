@@ -95,7 +95,10 @@
     "relatedTopics": "مواضيع ذات صلة",
     "tableOfContents": "فهرس المحتويات",
     "shortVersion": "النسخة المختصرة",
-    "fullVersion": "النسخة الكاملة"
+    "fullVersion": "النسخة الكاملة",
+    "readingFull": "تقرأ النسخة الكاملة",
+    "readingShort": "تقرأ النسخة المختصرة",
+    "min": "دقيقة"
   },
   "wiki": {
     "title": "موسوعة علم النفس",
