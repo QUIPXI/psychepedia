@@ -27,7 +27,9 @@ export interface Article {
   lastModified: string;
   author: string;
   readingTime: number;
+  shortReadingTime?: number;
   sections: ArticleSection[];
+  fullSections?: ArticleSection[];
   keyConcepts: ArticleKeyConcept[];
   references: ArticleReference[];
 }
@@ -77,8 +79,15 @@ export async function loadArticles(locale: string): Promise<AllArticles> {
     Object.keys(domainArticlesData).forEach(key => {
       const article = domainArticlesData[key];
       if (article.sections) {
-        const fullContent = article.sections.map((s: any) => s.content).join(" ");
-        article.readingTime = getReadingTime(fullContent);
+        const shortContent = article.sections.map((s: any) => s.content).join(" ");
+        article.shortReadingTime = getReadingTime(shortContent);
+        
+        if (article.fullSections) {
+          const fullContent = article.fullSections.map((s: any) => s.content).join(" ");
+          article.readingTime = getReadingTime(fullContent);
+        } else {
+          article.readingTime = article.shortReadingTime;
+        }
       }
     });
 

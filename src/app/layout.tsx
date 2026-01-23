@@ -75,9 +75,16 @@ export default function RootLayout({
             __html: `
               try {
                 const theme = localStorage.getItem('psychepedia-theme');
-                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                if (theme === 'dark' || theme === 'dark-midnight' || theme === 'dark-contrast') {
                   document.documentElement.classList.add('dark');
+                  if (theme === 'dark-midnight') document.documentElement.classList.add('dark-midnight');
+                  if (theme === 'dark-contrast') document.documentElement.classList.add('dark-contrast');
+                } else if (theme === 'light-warm') {
+                  document.documentElement.classList.add('light-warm');
+                } else if (theme === 'light-cool') {
+                  document.documentElement.classList.add('light-cool');
                 }
+                // Default is light theme (no class needed)
               } catch (e) {}
             `,
           }}

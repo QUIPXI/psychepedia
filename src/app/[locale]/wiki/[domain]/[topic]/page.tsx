@@ -5,50 +5,12 @@ import { Clock, Calendar, User } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { KeyConcepts } from "@/components/wiki/KeyConcepts";
 import { References } from "@/components/wiki/References";
-import { getArticle, loadArticles, Article } from "@/lib/articles";
+import { ArticleContentToggle } from "@/components/wiki/ArticleContentToggle";
+import { getArticle, loadArticles } from "@/lib/articles";
 import { locales } from "@/i18n/config";
 
 interface TopicPageProps {
   params: Promise<{ locale: string; domain: string; topic: string }>;
-}
-
-// Content renderer component
-function ArticleContent({ sections }: { sections: Article["sections"] }) {
-  return (
-    <div className="prose prose-slate dark:prose-invert max-w-none">
-      {sections.map((section, index) => (
-        <section key={index} className="mb-8">
-          <h2 className="text-2xl font-bold mb-4 pb-2 border-b border-border">
-            {section.title}
-          </h2>
-          <div className="space-y-4">
-            {section.content.split("\n\n").map((paragraph, pIndex) => {
-              const trimmed = paragraph.trim();
-              if (!trimmed) return null;
-
-              return (
-                <p
-                  key={pIndex}
-                  className="leading-relaxed text-foreground/90 font-serif"
-                >
-                  {trimmed.split(/(\*\*[^*]+\*\*)/).map((part, i) => {
-                    if (part.startsWith("**") && part.endsWith("**")) {
-                      return (
-                        <strong key={i} className="font-bold text-foreground">
-                          {part.slice(2, -2)}
-                        </strong>
-                      );
-                    }
-                    return part;
-                  })}
-                </p>
-              );
-            })}
-          </div>
-        </section>
-      ))}
-    </div>
-  );
 }
 
 export async function generateMetadata({
@@ -137,8 +99,12 @@ export default async function TopicPage({ params }: TopicPageProps) {
       {/* Key Concepts */}
       <KeyConcepts concepts={article.keyConcepts} title={t("keyConcepts")} />
 
-      {/* Article Content */}
-      <ArticleContent sections={article.sections} />
+      {/* Article Content with Toggle */}
+      <ArticleContentToggle 
+        article={article} 
+        shortLabel={t("shortVersion")}
+        fullLabel={t("fullVersion")}
+      />
 
       {/* References */}
       <References references={article.references} title={t("references")} />

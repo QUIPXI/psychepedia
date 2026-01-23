@@ -93,7 +93,9 @@
     "cite": "Cite",
     "copied": "Citation copied!",
     "relatedTopics": "Related Topics",
-    "tableOfContents": "Table of Contents"
+    "tableOfContents": "Table of Contents",
+    "shortVersion": "Short Version",
+    "fullVersion": "Full Version"
   },
   "wiki": {
     "title": "Psychology Wiki",

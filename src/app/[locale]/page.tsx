@@ -31,14 +31,14 @@ const domainIcons = {
 };
 
 const domainColors = {
-  foundations: "bg-blue-700",
-  biological: "bg-emerald-700",
-  cognitive: "bg-violet-600",
-  developmental: "bg-orange-600",
-  "social-personality": "bg-pink-700",
-  clinical: "bg-cyan-600",
-  applied: "bg-indigo-600",
-  "new-and-now": "bg-amber-600",
+  foundations: "bg-slate-700",
+  biological: "bg-emerald-800",
+  cognitive: "bg-indigo-800",
+  developmental: "bg-stone-600",
+  "social-personality": "bg-rose-800",
+  clinical: "bg-teal-800",
+  applied: "bg-zinc-700",
+  "new-and-now": "bg-neutral-600",
 };
 
 const domainKeys = [

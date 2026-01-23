@@ -93,7 +93,9 @@
     "cite": "استشهاد",
     "copied": "تم نسخ الاستشهاد!",
     "relatedTopics": "مواضيع ذات صلة",
-    "tableOfContents": "فهرس المحتويات"
+    "tableOfContents": "فهرس المحتويات",
+    "shortVersion": "النسخة المختصرة",
+    "fullVersion": "النسخة الكاملة"
   },
   "wiki": {
     "title": "موسوعة علم النفس",
