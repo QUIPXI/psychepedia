@@ -21,6 +21,40 @@ export interface ArticleKeyConcept {
   definition: string;
 }
 
+export type DifficultyLevel = "beginner" | "intermediate" | "advanced";
+
+export interface ArticleQuizQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation?: string;
+}
+
+export interface ArticleCaseStudy {
+  title: string;
+  description: string;
+  scenario: string;
+  analysis: string;
+  keyTakeaways: string[];
+}
+
+export interface ArticleComparison {
+  title: string;
+  description?: string;
+  headers: string[];
+  rows: { label: string; values: string[] }[];
+}
+
+export interface ArticleDiagram {
+  id: string;
+  title: string;
+  description: string;
+  type: "flowchart" | "hierarchy" | "cycle" | "comparison" | "timeline";
+  nodes: { id: string; label: string; description?: string }[];
+  connections?: { from: string; to: string; label?: string }[];
+}
+
 export interface Article {
   title: string;
   description: string;
@@ -28,10 +62,16 @@ export interface Article {
   author: string;
   readingTime: number;
   shortReadingTime?: number;
+  difficulty?: DifficultyLevel;
+  prerequisites?: string[]; // Array of topic IDs like "foundations/research-methods"
   sections: ArticleSection[];
   fullSections?: ArticleSection[];
   keyConcepts: ArticleKeyConcept[];
   references: ArticleReference[];
+  quiz?: ArticleQuizQuestion[];
+  caseStudies?: ArticleCaseStudy[];
+  comparisons?: ArticleComparison[];
+  diagrams?: ArticleDiagram[];
 }
 
 export interface DomainArticles {

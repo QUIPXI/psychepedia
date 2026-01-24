@@ -4,6 +4,68 @@
     "description": "Explore the historical development of psychological thought from ancient philosophy to modern neuroscience.",
     "lastModified": "2025-01-23",
     "author": "PsychePedia Editorial Team",
+    "difficulty": "beginner",
+    "quiz": [
+      {
+        "id": "q1",
+        "question": "When was psychology formally established as a scientific discipline?",
+        "options": ["1850", "1879", "1900", "1920"],
+        "correctIndex": 1,
+        "explanation": "Wilhelm Wundt opened the first psychology laboratory at the University of Leipzig in 1879, marking the formal beginning of psychology as a science."
+      },
+      {
+        "id": "q2",
+        "question": "Which school of psychology emphasized the purpose and adaptive functions of mental processes?",
+        "options": ["Structuralism", "Functionalism", "Behaviorism", "Gestalt Psychology"],
+        "correctIndex": 1,
+        "explanation": "Functionalism, developed by William James, focused on what consciousness is 'for' rather than analyzing its structure."
+      },
+      {
+        "id": "q3",
+        "question": "Who launched behaviorism with his 1913 manifesto?",
+        "options": ["Sigmund Freud", "William James", "John B. Watson", "Wilhelm Wundt"],
+        "correctIndex": 2,
+        "explanation": "John B. Watson's 1913 paper 'Psychology as the Behaviorist Views It' launched the behaviorist movement."
+      },
+      {
+        "id": "q4",
+        "question": "Which concept refers to John Locke's idea that the mind at birth is a 'blank slate'?",
+        "options": ["Dualism", "Tabula Rasa", "Introspection", "Self-Actualization"],
+        "correctIndex": 1,
+        "explanation": "Tabula Rasa (Latin for 'blank slate') is Locke's concept that the mind at birth is empty and all knowledge comes from experience."
+      }
+    ],
+    "comparisons": [
+      {
+        "title": "Major Schools of Psychology Compared",
+        "description": "Key differences between the foundational schools of psychological thought",
+        "headers": ["Structuralism", "Functionalism", "Behaviorism", "Gestalt"],
+        "rows": [
+          {"label": "Founder", "values": ["Wilhelm Wundt", "William James", "John B. Watson", "Max Wertheimer"]},
+          {"label": "Focus", "values": ["Structure of consciousness", "Function of mental processes", "Observable behavior", "Whole patterns of perception"]},
+          {"label": "Method", "values": ["Introspection", "Observation & pragmatism", "Experiments on behavior", "Perceptual experiments"]},
+          {"label": "Key Idea", "values": ["Break down consciousness into elements", "Mind evolved to help us adapt", "Only study what can be observed", "The whole is greater than parts"]},
+          {"label": "Time Period", "values": ["1879-1920s", "1890s-1930s", "1913-1960s", "1912-1940s"]}
+        ]
+      }
+    ],
+    "diagrams": [
+      {
+        "id": "timeline-schools",
+        "title": "Evolution of Psychological Schools",
+        "description": "Timeline showing how major schools of psychology emerged and influenced each other",
+        "type": "timeline",
+        "nodes": [
+          {"id": "philosophy", "label": "Philosophical Roots", "description": "Ancient Greek philosophy through British Empiricism laid the groundwork for scientific psychology"},
+          {"id": "structuralism", "label": "Structuralism (1879)", "description": "Wundt establishes first lab; Titchener names the approach 'structuralism'"},
+          {"id": "functionalism", "label": "Functionalism (1890s)", "description": "James and Dewey shift focus to mental functions and adaptation"},
+          {"id": "psychoanalysis", "label": "Psychoanalysis (1895)", "description": "Freud develops theory of unconscious processes and treatment methods"},
+          {"id": "behaviorism", "label": "Behaviorism (1913)", "description": "Watson rejects study of consciousness; Skinner develops operant conditioning"},
+          {"id": "humanistic", "label": "Humanistic (1950s)", "description": "Maslow and Rogers emphasize human potential and self-actualization"},
+          {"id": "cognitive", "label": "Cognitive Revolution (1960s)", "description": "Mental processes return as legitimate objects of scientific study"}
+        ]
+      }
+    ],
     "sections": [
       {
         "title": "Introduction",
@@ -106,6 +168,22 @@
     "description": "Master the scientific methods used to study behavior and mental processes, from experimental design to statistical analysis.",
     "lastModified": "2025-01-23",
     "author": "PsychePedia Editorial Team",
+    "difficulty": "intermediate",
+    "prerequisites": ["foundations/history-and-systems"],
+    "caseStudies": [
+      {
+        "title": "The Stanford Prison Experiment",
+        "description": "A controversial study that raised fundamental questions about research ethics",
+        "scenario": "In 1971, Philip Zimbardo conducted a simulated prison experiment at Stanford University. College students were randomly assigned to be either guards or prisoners in a mock prison in the basement of the psychology building. The study was planned for two weeks but was terminated after only six days due to the psychological distress experienced by participants.",
+        "analysis": "The study demonstrated how situational forces can influence behavior, but it also became a cautionary tale about research ethics. The lack of adequate safeguards, the dual role of Zimbardo as researcher and prison superintendent, and the lasting psychological effects on some participants led to significant reforms in how psychological research is conducted. Modern IRBs would not approve this study design.",
+        "keyTakeaways": [
+          "Research ethics must prioritize participant welfare above scientific goals",
+          "Researchers must maintain objectivity and avoid dual roles",
+          "Debriefing and follow-up care are essential for participant wellbeing",
+          "Institutional Review Boards (IRBs) now review all research involving human participants"
+        ]
+      }
+    ],
     "sections": [
       {
         "title": "Introduction to Psychological Research",

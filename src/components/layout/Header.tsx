@@ -6,6 +6,7 @@ import { Search, Moon, Sun, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { ThemeSelector } from "@/components/layout/ThemeSelector";
+import { FontSizeSelector } from "@/components/layout/FontSizeSelector";
 import { SearchDialog } from "@/components/search/SearchDialog";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
@@ -107,6 +108,9 @@ export function Header() {
                 {t("searchPlaceholder")}
               </span>
             </Button>
+
+            {/* Font size selector */}
+            <FontSizeSelector locale={locale} className="hidden md:flex" />
 
             {/* Language switcher */}
             <LanguageSwitcher />

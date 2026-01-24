@@ -86,7 +86,46 @@ export function generateCitation(
     day: "numeric",
   });
   
-  return `PsychePedia. (${new Date().getFullYear()}). ${title}. In PsychePedia: The Psychology Encyclopedia. Retrieved ${formattedDate}, from https://psychepedia.edu/wiki/${domain}/${topic}`;
+  return `PsychePedia. (${new Date().getFullYear()}). ${title}. In PsychePedia: The Psychology Encyclopedia. Retrieved ${formattedDate}, from https://psychepedia.vercel.app/wiki/${domain}/${topic}`;
+}
+
+export type CitationFormat = "apa" | "mla" | "chicago";
+
+/**
+ * Generate citations in multiple formats
+ */
+export function generateCitations(
+  title: string,
+  domain: string,
+  topic: string,
+  accessDate: Date = new Date()
+): Record<CitationFormat, string> {
+  const year = new Date().getFullYear();
+  const url = `https://psychepedia.vercel.app/wiki/${domain}/${topic}`;
+  
+  const apaDate = accessDate.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  
+  const mlaDate = accessDate.toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+  
+  const chicagoDate = accessDate.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+
+  return {
+    apa: `PsychePedia. (${year}). ${title}. In PsychePedia: The Psychology Encyclopedia. Retrieved ${apaDate}, from ${url}`,
+    mla: `"${title}." PsychePedia: The Psychology Encyclopedia, ${year}, ${url}. Accessed ${mlaDate}.`,
+    chicago: `PsychePedia. "${title}." PsychePedia: The Psychology Encyclopedia. Accessed ${chicagoDate}. ${url}.`,
+  };
 }
 
 /**

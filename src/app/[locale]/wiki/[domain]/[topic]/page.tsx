@@ -6,6 +6,13 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { KeyConcepts } from "@/components/wiki/KeyConcepts";
 import { References } from "@/components/wiki/References";
 import { ArticleContentToggle } from "@/components/wiki/ArticleContentToggle";
+import { DifficultyBadge } from "@/components/wiki/DifficultyBadge";
+import { Prerequisites } from "@/components/wiki/Prerequisites";
+import { ArticleQuiz } from "@/components/wiki/ArticleQuiz";
+import { CaseStudies } from "@/components/wiki/CaseStudies";
+import { ComparisonTables } from "@/components/wiki/ComparisonTables";
+import { InteractiveDiagrams } from "@/components/wiki/InteractiveDiagrams";
+import { CiteButton } from "@/components/wiki/CiteButton";
 import { getArticle, loadArticles } from "@/lib/articles";
 import { locales } from "@/i18n/config";
 
@@ -74,7 +81,12 @@ export default async function TopicPage({ params }: TopicPageProps) {
 
           {/* Article Header */}
           <header className="mb-8">
-            <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <h1 className="text-4xl font-bold">{article.title}</h1>
+              {article.difficulty && (
+                <DifficultyBadge level={article.difficulty} locale={locale} />
+              )}
+            </div>
             <p className="text-xl text-muted-foreground mb-4 font-serif">
               {article.description}
             </p>
@@ -96,11 +108,33 @@ export default async function TopicPage({ params }: TopicPageProps) {
                 <User className="h-4 w-4" />
                 {article.author}
               </span>
+              <CiteButton title={article.title} domain={domain} topic={topic} locale={locale} />
             </div>
           </header>
 
-          {/* Key Concepts */}
-          <KeyConcepts concepts={article.keyConcepts} title={t("keyConcepts")} />
+          {/* Prerequisites */}
+          {article.prerequisites && article.prerequisites.length > 0 && (
+            <Prerequisites 
+              prerequisites={article.prerequisites} 
+              locale={locale}
+              className="mb-8"
+            />
+          )}
+
+          {/* Key Concepts with Study Mode */}
+          <KeyConcepts 
+            concepts={article.keyConcepts} 
+            title={t("keyConcepts")} 
+            locale={locale}
+          />
+
+          {/* Interactive Diagrams */}
+          {article.diagrams && article.diagrams.length > 0 && (
+            <InteractiveDiagrams 
+              diagrams={article.diagrams} 
+              locale={locale}
+            />
+          )}
 
           {/* Article Content with Toggle and TOC */}
           <ArticleContentToggle 
@@ -113,6 +147,32 @@ export default async function TopicPage({ params }: TopicPageProps) {
             tocTitle={t("tableOfContents")}
             locale={locale}
           />
+
+          {/* Comparison Tables */}
+          {article.comparisons && article.comparisons.length > 0 && (
+            <ComparisonTables 
+              comparisons={article.comparisons} 
+              locale={locale}
+            />
+          )}
+
+          {/* Case Studies */}
+          {article.caseStudies && article.caseStudies.length > 0 && (
+            <CaseStudies 
+              caseStudies={article.caseStudies} 
+              locale={locale}
+            />
+          )}
+
+          {/* Quiz */}
+          {article.quiz && article.quiz.length > 0 && (
+            <div className="my-8">
+              <ArticleQuiz 
+                questions={article.quiz} 
+                locale={locale}
+              />
+            </div>
+          )}
 
           {/* References */}
           <References references={article.references} title={t("references")} />

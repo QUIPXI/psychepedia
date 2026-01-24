@@ -4,7 +4,7 @@ import * as React from "react";
 import { BookOpen, FileText, List } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { useScrollSpy, useScrollToHeading } from "@/lib/hooks";
+import { useScrollSpy, useScrollToHeading, useFontSize } from "@/lib/hooks";
 import type { Article } from "@/lib/articles";
 
 interface ArticleContentToggleProps {
@@ -132,8 +132,18 @@ function MobileTOC({
 }
 
 function ArticleContent({ sections }: { sections: Article["sections"] }) {
+  const { fontSizeClass, mounted } = useFontSize();
+  
+  // Font size mapping for prose content
+  const proseSize = mounted ? {
+    "text-sm": "prose-sm",
+    "text-base": "prose-base",
+    "text-lg": "prose-lg",
+    "text-xl": "prose-xl",
+  }[fontSizeClass] || "prose-base" : "prose-base";
+
   return (
-    <div className="prose prose-slate dark:prose-invert max-w-none">
+    <div className={cn("prose prose-slate dark:prose-invert max-w-none", proseSize)}>
       {sections.map((section, index) => {
         const id = slugify(section.title);
         return (
