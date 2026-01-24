@@ -66,51 +66,58 @@ export default async function TopicPage({ params }: TopicPageProps) {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <Breadcrumb items={breadcrumbs} className="mb-6" />
+    <div className="container mx-auto px-4 py-8">
+      <div className="flex gap-8">
+        {/* Main Content */}
+        <div className="flex-1 max-w-4xl">
+          <Breadcrumb items={breadcrumbs} className="mb-6" />
 
-      {/* Article Header */}
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
-        <p className="text-xl text-muted-foreground mb-4 font-serif">
-          {article.description}
-        </p>
+          {/* Article Header */}
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
+            <p className="text-xl text-muted-foreground mb-4 font-serif">
+              {article.description}
+            </p>
 
-        <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-          <span className="flex items-center gap-1">
-            <Clock className="h-4 w-4" />
-            {t("readingTime", { minutes: article.readingTime })}
-          </span>
-          <span className="flex items-center gap-1">
-            <Calendar className="h-4 w-4" />
-            {t("lastUpdated", {
-              date: new Date(article.lastModified).toLocaleDateString(
-                locale === "ar" ? "ar-SA" : "en-US"
-              ),
-            })}
-          </span>
-          <span className="flex items-center gap-1">
-            <User className="h-4 w-4" />
-            {article.author}
-          </span>
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+              <span className="flex items-center gap-1">
+                <Clock className="h-4 w-4" />
+                {t("readingTime", { minutes: article.readingTime })}
+              </span>
+              <span className="flex items-center gap-1">
+                <Calendar className="h-4 w-4" />
+                {t("lastUpdated", {
+                  date: new Date(article.lastModified).toLocaleDateString(
+                    locale === "ar" ? "ar-SA" : "en-US"
+                  ),
+                })}
+              </span>
+              <span className="flex items-center gap-1">
+                <User className="h-4 w-4" />
+                {article.author}
+              </span>
+            </div>
+          </header>
+
+          {/* Key Concepts */}
+          <KeyConcepts concepts={article.keyConcepts} title={t("keyConcepts")} />
+
+          {/* Article Content with Toggle and TOC */}
+          <ArticleContentToggle 
+            article={article} 
+            shortLabel={t("shortVersion")}
+            fullLabel={t("fullVersion")}
+            readingFullText={t("readingFull")}
+            readingShortText={t("readingShort")}
+            minText={t("min")}
+            tocTitle={t("tableOfContents")}
+            locale={locale}
+          />
+
+          {/* References */}
+          <References references={article.references} title={t("references")} />
         </div>
-      </header>
-
-      {/* Key Concepts */}
-      <KeyConcepts concepts={article.keyConcepts} title={t("keyConcepts")} />
-
-      {/* Article Content with Toggle */}
-      <ArticleContentToggle 
-        article={article} 
-        shortLabel={t("shortVersion")}
-        fullLabel={t("fullVersion")}
-        readingFullText={t("readingFull")}
-        readingShortText={t("readingShort")}
-        minText={t("min")}
-      />
-
-      {/* References */}
-      <References references={article.references} title={t("references")} />
+      </div>
     </div>
   );
 }
