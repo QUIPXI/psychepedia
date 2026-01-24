@@ -6,6 +6,7 @@
       "lastModified": "2025-01-22",
       "author": "فريق تحرير سايكوبيديا",
       "readingTime": 28,
+      "difficulty": "beginner",
       "sections": [
         {
           "title": "مقدمة في تطور الطفل",
@@ -56,6 +57,7 @@
       "lastModified": "2025-01-22",
       "author": "فريق تحرير سايكوبيديا",
       "readingTime": 24,
+      "difficulty": "beginner",
       "sections": [
         {
           "title": "مقدمة في المراهقة",
@@ -100,6 +102,7 @@
       "lastModified": "2025-01-22",
       "author": "فريق تحرير سايكوبيديا",
       "readingTime": 26,
+      "difficulty": "intermediate",
       "sections": [
         {
           "title": "النمو ما قبل الولادة",
@@ -144,6 +147,7 @@
       "lastModified": "2025-01-22",
       "author": "فريق تحرير سايكوبيديا",
       "readingTime": 24,
+      "difficulty": "intermediate",
       "sections": [
         {
           "title": "مقدمة في نمو البالغين",
@@ -188,6 +192,7 @@
       "lastModified": "2025-01-22",
       "author": "فريق تحرير سايكوبيديا",
       "readingTime": 22,
+      "difficulty": "intermediate",
       "sections": [
         {
           "title": "مقدمة في علم نفس الشيخوخة",
