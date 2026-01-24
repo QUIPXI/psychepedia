@@ -31,14 +31,14 @@ const domainIcons = {
 };
 
 const domainColors = {
-  foundations: "bg-slate-700",
-  biological: "bg-emerald-800",
-  cognitive: "bg-indigo-800",
-  developmental: "bg-stone-600",
-  "social-personality": "bg-rose-800",
-  clinical: "bg-teal-800",
-  applied: "bg-zinc-700",
-  "new-and-now": "bg-neutral-600",
+  foundations: "text-slate-600 dark:text-slate-400",
+  biological: "text-emerald-600 dark:text-emerald-400",
+  cognitive: "text-indigo-600 dark:text-indigo-400",
+  developmental: "text-amber-600 dark:text-amber-400",
+  "social-personality": "text-rose-600 dark:text-rose-400",
+  clinical: "text-teal-600 dark:text-teal-400",
+  applied: "text-violet-600 dark:text-violet-400",
+  "new-and-now": "text-orange-600 dark:text-orange-400",
 };
 
 const domainKeys = [
@@ -109,11 +109,7 @@ export default function HomePage() {
                 <Link key={domainKey} href={`/wiki/${domainKey}`} className="group">
                   <Card className="h-full transition-all duration-200 hover:shadow-lg hover:border-primary/20 group-hover:-translate-y-1">
                     <CardHeader>
-                      <div
-                        className={`w-12 h-12 rounded-lg ${color} flex items-center justify-center mb-4`}
-                      >
-                        <Icon className="h-6 w-6 text-white" />
-                      </div>
+                      <Icon className={`h-8 w-8 mb-4 ${color}`} />
                       <CardTitle className="group-hover:text-primary transition-colors">
                         {tDomains(`${domainKey}.title`)}
                       </CardTitle>
