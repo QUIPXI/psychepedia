@@ -169,8 +169,8 @@ function SidebarNav({ currentPath, isCollapsed = false, onToggleCollapse }: { cu
             <button
               onClick={() => toggleExpanded(item.id)}
               className={cn(
-                "flex items-center rounded-md transition-colors",
-                isCollapsed ? "justify-center w-10 h-10 mx-auto" : "w-full justify-between px-3 py-2",
+                "flex items-center rounded-md transition-colors font-semibold",
+                isCollapsed ? "justify-center w-9 h-9 mx-auto" : "w-full justify-between px-2.5 py-1.5 text-sm",
                 isActive || hasActiveChild
                   ? "bg-primary/10 text-primary"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -197,7 +197,7 @@ function SidebarNav({ currentPath, isCollapsed = false, onToggleCollapse }: { cu
                 <Link
                   href={item.href}
                   className={cn(
-                    "block rounded-md px-3 py-1.5 text-sm transition-colors",
+                    "block rounded-md px-2.5 py-1 text-sm font-medium transition-colors",
                     isActive
                       ? "bg-primary text-primary-foreground"
                       : "text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -208,16 +208,16 @@ function SidebarNav({ currentPath, isCollapsed = false, onToggleCollapse }: { cu
                 {item.topics.map((topic) => {
                   const isTopicActive = cleanPath === topic.href;
                   return (
-                    <Link
-                      key={topic.id}
-                      href={topic.href}
-                      className={cn(
-                        "block rounded-md px-3 py-1.5 text-sm transition-colors",
-                        isTopicActive
-                          ? "bg-primary text-primary-foreground"
-                          : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                      )}
-                    >
+                      <Link
+                        key={topic.id}
+                        href={topic.href}
+                        className={cn(
+                          "block rounded-md px-2.5 py-1 text-sm font-medium transition-colors",
+                          isTopicActive
+                            ? "bg-primary text-primary-foreground"
+                            : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                        )}
+                      >
                       {locale === "ar" ? topic.titleAr : topic.titleEn}
                     </Link>
                   );

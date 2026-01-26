@@ -583,6 +583,9 @@
     "description": "Understand the ethical guidelines that govern psychological research and clinical practice.",
     "lastModified": "2025-01-23",
     "author": "PsychePedia Editorial Team",
+    "prerequisites": [
+      "foundations/research-methods"
+    ],
     "sections": [
       {
         "title": "Introduction",
