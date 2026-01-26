@@ -32,17 +32,12 @@ export default async function StroopPage({ params }: StroopPageProps) {
     ];
 
     return (
-        <div className="container mx-auto px-4 py-8">
-            <Breadcrumb items={breadcrumbs} className="mb-6" />
+        <div className="container mx-auto px-4 py-8 max-w-5xl">
+            <Breadcrumb items={breadcrumbs} className="mb-8" />
 
-            <header className="mb-8 text-center">
-                <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
-                <p className="text-xl text-muted-foreground font-serif max-w-2xl mx-auto">
-                    {t("description")}
-                </p>
-            </header>
-
-            <StroopTest />
+            <div className="bg-background rounded-xl shadow-sm border p-8">
+                <StroopTest />
+            </div>
         </div>
     );
 }

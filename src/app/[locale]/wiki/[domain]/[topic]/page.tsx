@@ -15,7 +15,8 @@ import { InteractiveDiagrams } from "@/components/wiki/InteractiveDiagrams";
 import { CiteButton } from "@/components/wiki/CiteButton";
 import { getArticle, loadArticles } from "@/lib/articles";
 import { locales } from "@/i18n/config";
-import { ArticleNotes } from "@/components/wiki/ArticleNotes";
+import { ArticleHighlighter } from "@/components/wiki/ArticleHighlighter";
+import StroopTest from "@/components/experiments/StroopTest";
 
 interface TopicPageProps {
   params: Promise<{ locale: string; domain: string; topic: string }>;
@@ -53,8 +54,6 @@ export async function generateStaticParams() {
   return params;
 }
 
-import StroopTestModal from "@/components/experiments/StroopTest";
-
 export default async function TopicPage({ params }: TopicPageProps) {
   const { locale, domain, topic } = await params;
   setRequestLocale(locale);
@@ -68,6 +67,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
   }
 
   const domainTitle = tDomains(`${domain}.title` as never) || domain;
+  const articleId = `${domain}/${topic}`;
 
   const breadcrumbs = [
     { label: locale === "ar" ? "الموسوعة" : "Wiki", href: "/wiki" },
@@ -76,125 +76,126 @@ export default async function TopicPage({ params }: TopicPageProps) {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="flex gap-8">
-        {/* Main Content */}
-        <div className="flex-1 max-w-4xl">
-          <Breadcrumb items={breadcrumbs} className="mb-6" />
+    <ArticleHighlighter articleId={articleId}>
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex gap-8">
+          {/* Main Content */}
+          <div className="flex-1 max-w-4xl">
+            <Breadcrumb items={breadcrumbs} className="mb-6" />
 
-          {/* Article Header */}
-          <header className="mb-8">
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <h1 className="text-4xl font-bold">{article.title}</h1>
-              {article.difficulty && (
-                <DifficultyBadge level={article.difficulty} locale={locale} />
-              )}
-            </div>
-            <p className="text-xl text-muted-foreground mb-4 font-serif">
-              {article.description}
-            </p>
-
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-              <span className="flex items-center gap-1">
-                <Clock className="h-4 w-4" />
-                {t("readingTime", { minutes: article.readingTime })}
-              </span>
-              <span className="flex items-center gap-1">
-                <Calendar className="h-4 w-4" />
-                {t("lastUpdated", {
-                  date: new Date(article.lastModified).toLocaleDateString(
-                    locale === "ar" ? "ar-SA" : "en-US"
-                  ),
-                })}
-              </span>
-              <span className="flex items-center gap-1">
-                <User className="h-4 w-4" />
-                {article.author}
-              </span>
-              <CiteButton title={article.title} domain={domain} topic={topic} locale={locale} />
-            </div>
-          </header>
-
-          {/* Experiment Trigger */}
-          {article.experiment === "stroop" && (
-            <div className="mb-8 p-6 bg-secondary/20 rounded-xl border-primary/20 border flex flex-col md:flex-row items-center justify-between gap-4">
-              <div>
-                <h3 className="text-xl font-bold mb-2">{locale === "ar" ? "تجربة تفاعلية" : "Interactive Experiment"}</h3>
-                <p className="text-muted-foreground">{locale === "ar" ? "اختبر تركيزك وسرعة رد فعلك مع اختبار ستروب." : "Test your focus and reaction speed with the Stroop Test."}</p>
+            {/* Article Header */}
+            <header className="mb-8">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <h1 className="text-4xl font-bold">{article.title}</h1>
+                {article.difficulty && (
+                  <DifficultyBadge level={article.difficulty} locale={locale} />
+                )}
               </div>
-              <StroopTestModal />
-            </div>
-          )}
+              <p className="text-xl text-muted-foreground mb-4 font-serif">
+                {article.description}
+              </p>
 
-          {/* Prerequisites */}
-          {article.prerequisites && article.prerequisites.length > 0 && (
-            <Prerequisites
-              prerequisites={article.prerequisites}
-              locale={locale}
-              className="mb-8"
-            />
-          )}
+              <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                <span className="flex items-center gap-1">
+                  <Clock className="h-4 w-4" />
+                  {t("readingTime", { minutes: article.readingTime })}
+                </span>
+                <span className="flex items-center gap-1">
+                  <Calendar className="h-4 w-4" />
+                  {t("lastUpdated", {
+                    date: new Date(article.lastModified).toLocaleDateString(
+                      locale === "ar" ? "ar-SA" : "en-US"
+                    ),
+                  })}
+                </span>
+                <span className="flex items-center gap-1">
+                  <User className="h-4 w-4" />
+                  {article.author}
+                </span>
+                <CiteButton title={article.title} domain={domain} topic={topic} locale={locale} />
+              </div>
+            </header>
 
-          {/* Key Concepts with Study Mode */}
-          <KeyConcepts
-            concepts={article.keyConcepts}
-            title={t("keyConcepts")}
-            locale={locale}
-          />
+            {/* Experiment Trigger */}
+            {(article as any).experiment === "stroop" && (
+              <div className="mb-8 p-6 bg-secondary/20 rounded-xl border-primary/20 border flex flex-col md:flex-row items-center justify-between gap-4">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{locale === "ar" ? "تجربة تفاعلية" : "Interactive Experiment"}</h3>
+                  <p className="text-muted-foreground">{locale === "ar" ? "اختبر تركيزك وسرعة رد فعلك مع اختبار ستروب." : "Test your focus and reaction speed with the Stroop Test."}</p>
+                </div>
+                <StroopTest />
+              </div>
+            )}
 
-          {/* Interactive Diagrams */}
-          {article.diagrams && article.diagrams.length > 0 && (
-            <InteractiveDiagrams
-              diagrams={article.diagrams}
-              locale={locale}
-            />
-          )}
+            {/* Prerequisites */}
+            {article.prerequisites && article.prerequisites.length > 0 && (
+              <Prerequisites
+                prerequisites={article.prerequisites}
+                locale={locale}
+                className="mb-8"
+              />
+            )}
 
-          {/* Article Content with Toggle and TOC */}
-          <ArticleContentToggle
-            article={article}
-            shortLabel={t("shortVersion")}
-            fullLabel={t("fullVersion")}
-            readingFullText={t("readingFull")}
-            readingShortText={t("readingShort")}
-            minText={t("min")}
-            tocTitle={t("tableOfContents")}
-            locale={locale}
-          />
-
-          {/* Comparison Tables */}
-          {article.comparisons && article.comparisons.length > 0 && (
-            <ComparisonTables
-              comparisons={article.comparisons}
-              locale={locale}
-            />
-          )}
-
-          {/* Case Studies */}
-          {article.caseStudies && article.caseStudies.length > 0 && (
-            <CaseStudies
-              caseStudies={article.caseStudies}
+            {/* Key Concepts with Study Mode */}
+            <KeyConcepts
+              concepts={article.keyConcepts}
+              title={t("keyConcepts")}
               locale={locale}
             />
-          )}
 
-          {/* Quiz */}
-          {article.quiz && article.quiz.length > 0 && (
-            <div className="my-8">
-              <ArticleQuiz
-                questions={article.quiz}
+            {/* Interactive Diagrams */}
+            {article.diagrams && article.diagrams.length > 0 && (
+              <InteractiveDiagrams
+                diagrams={article.diagrams}
                 locale={locale}
               />
-            </div>
-          )}
+            )}
 
-          {/* References */}
-          <References references={article.references} title={t("references")} />
+            {/* Article Content with Toggle and TOC */}
+            <ArticleContentToggle
+              article={article}
+              shortLabel={t("shortVersion")}
+              fullLabel={t("fullVersion")}
+              readingFullText={t("readingFull")}
+              readingShortText={t("readingShort")}
+              minText={t("min")}
+              tocTitle={t("tableOfContents")}
+              locale={locale}
+              domain={domain}
+              topic={topic}
+            />
+
+            {/* Comparison Tables */}
+            {article.comparisons && article.comparisons.length > 0 && (
+              <ComparisonTables
+                comparisons={article.comparisons}
+                locale={locale}
+              />
+            )}
+
+            {/* Case Studies */}
+            {article.caseStudies && article.caseStudies.length > 0 && (
+              <CaseStudies
+                caseStudies={article.caseStudies}
+                locale={locale}
+              />
+            )}
+
+            {/* Quiz */}
+            {article.quiz && article.quiz.length > 0 && (
+              <div className="my-8">
+                <ArticleQuiz
+                  questions={article.quiz}
+                  locale={locale}
+                />
+              </div>
+            )}
+
+            {/* References */}
+            <References references={article.references} title={t("references")} />
+          </div>
         </div>
       </div>
-
-      {/* Article Notes Sidebar */}
-      <ArticleNotes articleId={`${domain}/${topic}`} />
-    </div>
+    </ArticleHighlighter>
   );
 }

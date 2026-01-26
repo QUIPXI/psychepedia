@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useScrollSpy, useScrollToHeading, useFontSize } from "@/lib/hooks";
 import type { Article } from "@/lib/articles";
+import { useHighlights } from "@/context/HighlightContext";
+import { HIGHLIGHT_COLORS } from "@/context/HighlightContext";
 
 interface ArticleContentToggleProps {
   article: Article;
@@ -16,6 +18,8 @@ interface ArticleContentToggleProps {
   minText: string;
   tocTitle?: string;
   locale?: string;
+  domain?: string;
+  topic?: string;
 }
 
 // Helper to convert section title to URL-friendly ID
@@ -133,9 +137,11 @@ function MobileTOC({
   );
 }
 
-function ArticleContent({ sections }: { sections: Article["sections"] }) {
+function ArticleContent({ sections, articleId }: { sections: Article["sections"]; articleId: string }) {
   const { fontSizeClass, mounted } = useFontSize();
-  
+  const { getHighlights } = useHighlights();
+  const highlights = getHighlights(articleId);
+
   // Font size mapping for prose content
   const proseSize = mounted ? {
     "text-sm": "prose-sm",
@@ -143,6 +149,41 @@ function ArticleContent({ sections }: { sections: Article["sections"] }) {
     "text-lg": "prose-lg",
     "text-xl": "prose-xl",
   }[fontSizeClass] || "prose-base" : "prose-base";
+
+  // Helper to apply highlighting to text
+  const applyHighlighting = (text: string): React.ReactNode => {
+    const parts = text.split(/(\*\*[^*]+\*\*)/);
+
+    return parts.map((part, i) => {
+      if (part.startsWith("**") && part.endsWith("**")) {
+        return (
+          <strong key={i} className="font-bold text-foreground">
+            {part.slice(2, -2)}
+          </strong>
+        );
+      }
+
+      // Check for highlights within this part
+      let content = part;
+      highlights.forEach((highlight) => {
+        if (content.toLowerCase().includes(highlight.text.toLowerCase())) {
+          const colorInfo = HIGHLIGHT_COLORS.find((c) => c.hex === highlight.color) || HIGHLIGHT_COLORS[0];
+          // Simple case-insensitive replace
+          const regex = new RegExp(`(${highlight.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+          content = content.replace(regex, `<span style="background-color: ${highlight.color}; padding: 0 2px; border-radius: 2px;">$1</span>`);
+        }
+      });
+
+      // Render the content with highlights
+      return (
+        <span
+          key={i}
+          dangerouslySetInnerHTML={{ __html: content }}
+          className="highlighted-text"
+        />
+      );
+    });
+  };
 
   return (
     <div className={cn("prose prose-slate dark:prose-invert max-w-none", proseSize)}>
@@ -165,16 +206,7 @@ function ArticleContent({ sections }: { sections: Article["sections"] }) {
                     <ul key={pIndex} className="list-disc pl-6 space-y-2">
                       {items.map((item, i) => (
                         <li key={i} className="leading-relaxed text-foreground/90 font-serif">
-                          {item.split(/(\*\*[^*]+\*\*)/).map((part, j) => {
-                            if (part.startsWith("**") && part.endsWith("**")) {
-                              return (
-                                <strong key={j} className="font-bold text-foreground">
-                                  {part.slice(2, -2)}
-                                </strong>
-                              );
-                            }
-                            return part;
-                          })}
+                          {applyHighlighting(item)}
                         </li>
                       ))}
                     </ul>
@@ -186,16 +218,7 @@ function ArticleContent({ sections }: { sections: Article["sections"] }) {
                     key={pIndex}
                     className="leading-relaxed text-foreground/90 font-serif"
                   >
-                    {trimmed.split(/(\*\*[^*]+\*\*)/).map((part, i) => {
-                      if (part.startsWith("**") && part.endsWith("**")) {
-                        return (
-                          <strong key={i} className="font-bold text-foreground">
-                            {part.slice(2, -2)}
-                          </strong>
-                        );
-                      }
-                      return part;
-                    })}
+                    {applyHighlighting(trimmed)}
                   </p>
                 );
               })}
@@ -216,11 +239,13 @@ export function ArticleContentToggle({
   minText,
   tocTitle = "On This Page",
   locale = "en",
+  domain,
+  topic,
 }: ArticleContentToggleProps) {
   const [showFull, setShowFull] = React.useState(false);
   const hasFullVersion = article.fullSections && article.fullSections.length > 0;
   const isRtl = locale === "ar";
-  
+
   const currentSections = showFull && hasFullVersion 
     ? article.fullSections! 
     : article.sections;
@@ -228,6 +253,11 @@ export function ArticleContentToggle({
   const currentReadingTime = showFull && hasFullVersion
     ? article.readingTime
     : article.shortReadingTime || article.readingTime;
+
+  // Create articleId from domain and topic props
+  const articleId = React.useMemo(() => {
+    return `${domain || "unknown"}/${topic || "unknown"}`;
+  }, [domain, topic]);
 
   return (
     <div>
@@ -272,7 +302,7 @@ export function ArticleContentToggle({
       {/* Content with Desktop TOC */}
       <div className={cn("flex", isRtl ? "flex-row-reverse" : "flex-row")}>
         <div className="flex-1 min-w-0">
-          <ArticleContent sections={currentSections} />
+          <ArticleContent sections={currentSections} articleId={articleId} />
         </div>
         
         {/* Desktop TOC Sidebar */}
