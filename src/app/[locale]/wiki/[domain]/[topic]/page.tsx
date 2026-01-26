@@ -15,6 +15,7 @@ import { InteractiveDiagrams } from "@/components/wiki/InteractiveDiagrams";
 import { CiteButton } from "@/components/wiki/CiteButton";
 import { getArticle, loadArticles } from "@/lib/articles";
 import { locales } from "@/i18n/config";
+import { ArticleNotes } from "@/components/wiki/ArticleNotes";
 
 interface TopicPageProps {
   params: Promise<{ locale: string; domain: string; topic: string }>;
@@ -51,6 +52,8 @@ export async function generateStaticParams() {
 
   return params;
 }
+
+import StroopTestModal from "@/components/experiments/StroopTest";
 
 export default async function TopicPage({ params }: TopicPageProps) {
   const { locale, domain, topic } = await params;
@@ -112,33 +115,44 @@ export default async function TopicPage({ params }: TopicPageProps) {
             </div>
           </header>
 
+          {/* Experiment Trigger */}
+          {article.experiment === "stroop" && (
+            <div className="mb-8 p-6 bg-secondary/20 rounded-xl border-primary/20 border flex flex-col md:flex-row items-center justify-between gap-4">
+              <div>
+                <h3 className="text-xl font-bold mb-2">{locale === "ar" ? "تجربة تفاعلية" : "Interactive Experiment"}</h3>
+                <p className="text-muted-foreground">{locale === "ar" ? "اختبر تركيزك وسرعة رد فعلك مع اختبار ستروب." : "Test your focus and reaction speed with the Stroop Test."}</p>
+              </div>
+              <StroopTestModal />
+            </div>
+          )}
+
           {/* Prerequisites */}
           {article.prerequisites && article.prerequisites.length > 0 && (
-            <Prerequisites 
-              prerequisites={article.prerequisites} 
+            <Prerequisites
+              prerequisites={article.prerequisites}
               locale={locale}
               className="mb-8"
             />
           )}
 
           {/* Key Concepts with Study Mode */}
-          <KeyConcepts 
-            concepts={article.keyConcepts} 
-            title={t("keyConcepts")} 
+          <KeyConcepts
+            concepts={article.keyConcepts}
+            title={t("keyConcepts")}
             locale={locale}
           />
 
           {/* Interactive Diagrams */}
           {article.diagrams && article.diagrams.length > 0 && (
-            <InteractiveDiagrams 
-              diagrams={article.diagrams} 
+            <InteractiveDiagrams
+              diagrams={article.diagrams}
               locale={locale}
             />
           )}
 
           {/* Article Content with Toggle and TOC */}
-          <ArticleContentToggle 
-            article={article} 
+          <ArticleContentToggle
+            article={article}
             shortLabel={t("shortVersion")}
             fullLabel={t("fullVersion")}
             readingFullText={t("readingFull")}
@@ -150,16 +164,16 @@ export default async function TopicPage({ params }: TopicPageProps) {
 
           {/* Comparison Tables */}
           {article.comparisons && article.comparisons.length > 0 && (
-            <ComparisonTables 
-              comparisons={article.comparisons} 
+            <ComparisonTables
+              comparisons={article.comparisons}
               locale={locale}
             />
           )}
 
           {/* Case Studies */}
           {article.caseStudies && article.caseStudies.length > 0 && (
-            <CaseStudies 
-              caseStudies={article.caseStudies} 
+            <CaseStudies
+              caseStudies={article.caseStudies}
               locale={locale}
             />
           )}
@@ -167,8 +181,8 @@ export default async function TopicPage({ params }: TopicPageProps) {
           {/* Quiz */}
           {article.quiz && article.quiz.length > 0 && (
             <div className="my-8">
-              <ArticleQuiz 
-                questions={article.quiz} 
+              <ArticleQuiz
+                questions={article.quiz}
                 locale={locale}
               />
             </div>
@@ -178,6 +192,9 @@ export default async function TopicPage({ params }: TopicPageProps) {
           <References references={article.references} title={t("references")} />
         </div>
       </div>
+
+      {/* Article Notes Sidebar */}
+      <ArticleNotes articleId={`${domain}/${topic}`} />
     </div>
   );
 }

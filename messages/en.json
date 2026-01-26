@@ -125,5 +125,14 @@
     "backToHome": "Back to Home",
     "notFound": "Page Not Found",
     "notFoundDesc": "The page you're looking for doesn't exist."
+  },
+  "experiments": {
+    "title": "Interactive Experiments",
+    "description": "Engage with psychological concepts through interactive simulations and models.",
+    "startExperiment": "Start Experiment",
+    "stroopTest": {
+      "title": "Stroop Effect",
+      "description": "Test your reaction time and attention with this classic cognitive experiment."
+    }
   }
 }
