@@ -5,7 +5,7 @@
       "description": "An analysis of recent developments in AI-driven mental healthcare, from therapeutic chatbots to predictive diagnostics, and the ethical challenges they present.",
       "lastModified": "2026-01-23",
       "author": "PsychePedia Research Team",
-      "readingTime": 6,
+      "readingTime": 14,
       "sections": [
         {
           "title": "The Rise of Therapeutic Conversational Agents",
@@ -67,36 +67,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Generative AI (GenAI)", "definition": "AI systems capable of generating new content (text, images, etc.) based on learned patterns, enabling more natural and personalized conversations than rule-based systems."},
-        {"term": "Therapeutic Alliance", "definition": "The cooperative relationship between patient and therapist, widely considered the most significant predictor of treatment success. Recent research suggests AI can partially replicate this bond."},
-        {"term": "Digital Phenotyping", "definition": "The use of data from smartphones and wearables (like typing speed or sleep patterns) to passively infer mental health states."},
-        {"term": "Algorithmic Bias", "definition": "Systematic errors in AI systems that create unfair outcomes, often stemming from unrepresentative training data."},
-        {"term": "Black Box Problem", "definition": "The opacity of modern machine learning systems that makes it impossible to fully explain how they arrive at specific outputs or recommendations."},
-        {"term": "Explainable AI (XAI)", "definition": "Approaches and techniques designed to make AI decision-making processes transparent and interpretable to humans."},
-        {"term": "Large Language Model (LLM)", "definition": "A type of AI trained on vast amounts of text data, capable of generating human-like text and engaging in dynamic conversations."},
-        {"term": "Digital Biomarkers", "definition": "Objective, quantifiable physiological and behavioral data collected through digital devices that can indicate health status."},
-        {"term": "Federated Learning", "definition": "A machine learning approach that trains models on decentralized data without requiring data to be centralized, enhancing privacy."},
-        {"term": "Precision Mental Health", "definition": "An approach that uses individual characteristics to match patients with the most effective treatments, analogous to precision medicine."}
+        {
+          "term": "Generative AI (GenAI)",
+          "definition": "AI systems capable of generating new content (text, images, etc.) based on learned patterns, enabling more natural and personalized conversations than rule-based systems."
+        },
+        {
+          "term": "Therapeutic Alliance",
+          "definition": "The cooperative relationship between patient and therapist, widely considered the most significant predictor of treatment success. Recent research suggests AI can partially replicate this bond."
+        },
+        {
+          "term": "Digital Phenotyping",
+          "definition": "The use of data from smartphones and wearables (like typing speed or sleep patterns) to passively infer mental health states."
+        },
+        {
+          "term": "Algorithmic Bias",
+          "definition": "Systematic errors in AI systems that create unfair outcomes, often stemming from unrepresentative training data."
+        },
+        {
+          "term": "Black Box Problem",
+          "definition": "The opacity of modern machine learning systems that makes it impossible to fully explain how they arrive at specific outputs or recommendations."
+        },
+        {
+          "term": "Explainable AI (XAI)",
+          "definition": "Approaches and techniques designed to make AI decision-making processes transparent and interpretable to humans."
+        },
+        {
+          "term": "Large Language Model (LLM)",
+          "definition": "A type of AI trained on vast amounts of text data, capable of generating human-like text and engaging in dynamic conversations."
+        },
+        {
+          "term": "Digital Biomarkers",
+          "definition": "Objective, quantifiable physiological and behavioral data collected through digital devices that can indicate health status."
+        },
+        {
+          "term": "Federated Learning",
+          "definition": "A machine learning approach that trains models on decentralized data without requiring data to be centralized, enhancing privacy."
+        },
+        {
+          "term": "Precision Mental Health",
+          "definition": "An approach that uses individual characteristics to match patients with the most effective treatments, analogous to precision medicine."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Lau, Y., et al.", "year": 2025, "title": "The Effectiveness of AI Chatbots in Alleviating Mental Distress and Promoting Health Behaviors Among Adolescents and Young Adults: Systematic Review and Meta-Analysis", "source": "Journal of Medical Internet Research (JMIR)"},
-        {"id": "2", "authors": "Heinz, M. V., et al.", "year": 2025, "title": "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment", "source": "NEJM AI"},
-        {"id": "3", "authors": "Heinz, M. V., et al.", "year": 2025, "title": "Therabot for the treatment of mental disorders", "source": "Nature Mental Health"},
-        {"id": "4", "authors": "Chen, Y., et al.", "year": 2025, "title": "The Efficacy of Rule-Based Versus Large Language Model-Based Chatbots in Alleviating Symptoms of Depression and Anxiety: Systematic Review and Meta-Analysis", "source": "Journal of Medical Internet Research (JMIR)"},
-        {"id": "5", "authors": "Upheal Research", "year": 2025, "title": "Integrating AI into therapy - an academic review", "source": "Upheal Blog"},
-        {"id": "6", "authors": "World Health Organization", "year": 2024, "title": "Mental Health in the Digital Age: Guidance on AI-Based Mental Health Tools", "source": "WHO Publications"},
-        {"id": "7", "authors": "Torous, J., et al.", "year": 2024, "title": "Digital Phenotyping in Psychiatry: A Scientific Review", "source": "American Journal of Psychiatry"},
-        {"id": "8", "authors": "Mozilla Foundation", "year": 2024, "title": "Mental Health Apps Privacy Analysis", "source": "Mozilla Foundation Privacy Not Included"},
-        {"id": "9", "authors": "American Psychological Association", "year": 2025, "title": "Guidelines for the Use of AI in Psychological Practice", "source": "APA Guidelines"},
-        {"id": "10", "authors": "Chandler, C., et al.", "year": 2025, "title": "Algorithmic Bias in Mental Health AI: A Systematic Review", "source": "The Lancet Digital Health"}
-      ]
+        {
+          "id": "1",
+          "authors": "Lau, Y., et al.",
+          "year": 2025,
+          "title": "The Effectiveness of AI Chatbots in Alleviating Mental Distress and Promoting Health Behaviors Among Adolescents and Young Adults: Systematic Review and Meta-Analysis",
+          "source": "Journal of Medical Internet Research (JMIR)"
+        },
+        {
+          "id": "2",
+          "authors": "Heinz, M. V., et al.",
+          "year": 2025,
+          "title": "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment",
+          "source": "NEJM AI"
+        },
+        {
+          "id": "3",
+          "authors": "Heinz, M. V., et al.",
+          "year": 2025,
+          "title": "Therabot for the treatment of mental disorders",
+          "source": "Nature Mental Health"
+        },
+        {
+          "id": "4",
+          "authors": "Chen, Y., et al.",
+          "year": 2025,
+          "title": "The Efficacy of Rule-Based Versus Large Language Model-Based Chatbots in Alleviating Symptoms of Depression and Anxiety: Systematic Review and Meta-Analysis",
+          "source": "Journal of Medical Internet Research (JMIR)"
+        },
+        {
+          "id": "5",
+          "authors": "Upheal Research",
+          "year": 2025,
+          "title": "Integrating AI into therapy - an academic review",
+          "source": "Upheal Blog"
+        },
+        {
+          "id": "6",
+          "authors": "World Health Organization",
+          "year": 2024,
+          "title": "Mental Health in the Digital Age: Guidance on AI-Based Mental Health Tools",
+          "source": "WHO Publications"
+        },
+        {
+          "id": "7",
+          "authors": "Torous, J., et al.",
+          "year": 2024,
+          "title": "Digital Phenotyping in Psychiatry: A Scientific Review",
+          "source": "American Journal of Psychiatry"
+        },
+        {
+          "id": "8",
+          "authors": "Mozilla Foundation",
+          "year": 2024,
+          "title": "Mental Health Apps Privacy Analysis",
+          "source": "Mozilla Foundation Privacy Not Included"
+        },
+        {
+          "id": "9",
+          "authors": "American Psychological Association",
+          "year": 2025,
+          "title": "Guidelines for the Use of AI in Psychological Practice",
+          "source": "APA Guidelines"
+        },
+        {
+          "id": "10",
+          "authors": "Chandler, C., et al.",
+          "year": 2025,
+          "title": "Algorithmic Bias in Mental Health AI: A Systematic Review",
+          "source": "The Lancet Digital Health"
+        }
+      ],
+      "difficulty": "intermediate"
     },
     "psychedelic-therapy": {
       "title": "Psychedelic-Assisted Therapy: Progress and Setbacks",
       "description": "An overview of MDMA and Psilocybin therapies, highlighting recent clinical trial success, the 2024 FDA rejection, and the path forward.",
       "lastModified": "2026-01-23",
       "author": "PsychePedia Research Team",
-      "readingTime": 7,
+      "readingTime": 15,
       "sections": [
         {
           "title": "The Mechanism of Action",
@@ -158,36 +249,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Functional Unblinding", "definition": "A common issue in psychedelic trials where participants correctly guess their treatment assignment (drug vs. placebo) due to the obvious psychoactive effects, potentially biasing self-reported outcomes."},
-        {"term": "Default Mode Network (DMN)", "definition": "A brain network associated with self-referential thought, mind-wandering, and rumination; often hyperactive in depression and down-regulated by psychedelics."},
-        {"term": "Neuroplasticity", "definition": "The brain's ability to form new neural connections throughout life. Psychedelics appear to enhance this process, potentially allowing for rapid therapeutic change."},
-        {"term": "Breakthrough Therapy Designation", "definition": "An FDA status granted to drugs that demonstrate substantial improvement over available therapy, expediting their development and review. Both psilocybin and MDMA have received this designation."},
-        {"term": "Set and Setting", "definition": "The combination of a person's mindset (set) and the physical and social environment (setting) in which a psychedelic experience occurs. Considered crucial to outcomes."},
-        {"term": "Integration Therapy", "definition": "The psychotherapeutic sessions following a drug experience, focused on processing insights, making meaning, and applying experiences to daily life."},
-        {"term": "Ego Dissolution", "definition": "A temporary loss of the sense of separate self often experienced during psychedelic experiences, frequently described as feeling of unity or interconnection."},
-        {"term": "5-HT2A Receptor", "definition": "A serotonin receptor subtype that is the primary target of classical psychedelics like psilocybin and LSD. Activation produces altered perception and cognition."},
-        {"term": "Empathogen", "definition": "A class of psychoactive substances that produce feelings of emotional openness, empathy, and connection. MDMA is the prototypical empathogen."},
-        {"term": "Treatment-Resistant Depression", "definition": "Depression that has not responded to at least two adequate trials of antidepressant medications. A key target population for psilocybin therapy."}
+        {
+          "term": "Functional Unblinding",
+          "definition": "A common issue in psychedelic trials where participants correctly guess their treatment assignment (drug vs. placebo) due to the obvious psychoactive effects, potentially biasing self-reported outcomes."
+        },
+        {
+          "term": "Default Mode Network (DMN)",
+          "definition": "A brain network associated with self-referential thought, mind-wandering, and rumination; often hyperactive in depression and down-regulated by psychedelics."
+        },
+        {
+          "term": "Neuroplasticity",
+          "definition": "The brain's ability to form new neural connections throughout life. Psychedelics appear to enhance this process, potentially allowing for rapid therapeutic change."
+        },
+        {
+          "term": "Breakthrough Therapy Designation",
+          "definition": "An FDA status granted to drugs that demonstrate substantial improvement over available therapy, expediting their development and review. Both psilocybin and MDMA have received this designation."
+        },
+        {
+          "term": "Set and Setting",
+          "definition": "The combination of a person's mindset (set) and the physical and social environment (setting) in which a psychedelic experience occurs. Considered crucial to outcomes."
+        },
+        {
+          "term": "Integration Therapy",
+          "definition": "The psychotherapeutic sessions following a drug experience, focused on processing insights, making meaning, and applying experiences to daily life."
+        },
+        {
+          "term": "Ego Dissolution",
+          "definition": "A temporary loss of the sense of separate self often experienced during psychedelic experiences, frequently described as feeling of unity or interconnection."
+        },
+        {
+          "term": "5-HT2A Receptor",
+          "definition": "A serotonin receptor subtype that is the primary target of classical psychedelics like psilocybin and LSD. Activation produces altered perception and cognition."
+        },
+        {
+          "term": "Empathogen",
+          "definition": "A class of psychoactive substances that produce feelings of emotional openness, empathy, and connection. MDMA is the prototypical empathogen."
+        },
+        {
+          "term": "Treatment-Resistant Depression",
+          "definition": "Depression that has not responded to at least two adequate trials of antidepressant medications. A key target population for psilocybin therapy."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "NPR", "year": 2024, "title": "FDA gives thumbs down to MDMA for now, demanding further research", "source": "NPR Shots"},
-        {"id": "2", "authors": "Pharmacy Times", "year": 2025, "title": "Psychedelic Science 2025: Lessons From MDMA Trials Could Strengthen Future Psychedelic Approvals", "source": "Pharmacy Times"},
-        {"id": "3", "authors": "Goodwin, G. M., et al.", "year": 2024, "title": "Single-Dose Psilocybin for Depression With Severe Treatment Resistance: An Open-Label Trial", "source": "American Journal of Psychiatry"},
-        {"id": "4", "authors": "Cleveland Clinic", "year": 2025, "title": "Psychedelic-Assisted Therapy: An Overview for Nonpsychiatrists", "source": "Cleveland Clinic ConsultQD"},
-        {"id": "5", "authors": "Cloesmeijer, M. E., et al.", "year": 2024, "title": "Knowledge, attitudes, and concerns about psilocybin and MDMA as novel therapies among U.S. healthcare professionals", "source": "Nature Scientific Reports"},
-        {"id": "6", "authors": "Mitchell, J. M., et al.", "year": 2023, "title": "MDMA-assisted therapy for moderate to severe PTSD: a randomized, placebo-controlled phase 3 trial", "source": "Nature Medicine"},
-        {"id": "7", "authors": "Carhart-Harris, R., et al.", "year": 2021, "title": "Trial of Psilocybin versus Escitalopram for Depression", "source": "New England Journal of Medicine"},
-        {"id": "8", "authors": "Johnson, M. W., et al.", "year": 2022, "title": "Psilocybin produces substantial and sustained decreases in depression and anxiety in patients with life-threatening cancer", "source": "Journal of Psychopharmacology"},
-        {"id": "9", "authors": "Bogenschutz, M. P., et al.", "year": 2022, "title": "Percentage of Heavy Drinking Days Following Psilocybin-Assisted Psychotherapy vs Placebo in the Treatment of Adult Patients With Alcohol Use Disorder", "source": "JAMA Psychiatry"},
-        {"id": "10", "authors": "Therapeutic Goods Administration", "year": 2023, "title": "Change to classification of psilocybin and MDMA to enable prescribing by authorised psychiatrists", "source": "Australian Government TGA"}
-      ]
+        {
+          "id": "1",
+          "authors": "NPR",
+          "year": 2024,
+          "title": "FDA gives thumbs down to MDMA for now, demanding further research",
+          "source": "NPR Shots"
+        },
+        {
+          "id": "2",
+          "authors": "Pharmacy Times",
+          "year": 2025,
+          "title": "Psychedelic Science 2025: Lessons From MDMA Trials Could Strengthen Future Psychedelic Approvals",
+          "source": "Pharmacy Times"
+        },
+        {
+          "id": "3",
+          "authors": "Goodwin, G. M., et al.",
+          "year": 2024,
+          "title": "Single-Dose Psilocybin for Depression With Severe Treatment Resistance: An Open-Label Trial",
+          "source": "American Journal of Psychiatry"
+        },
+        {
+          "id": "4",
+          "authors": "Cleveland Clinic",
+          "year": 2025,
+          "title": "Psychedelic-Assisted Therapy: An Overview for Nonpsychiatrists",
+          "source": "Cleveland Clinic ConsultQD"
+        },
+        {
+          "id": "5",
+          "authors": "Cloesmeijer, M. E., et al.",
+          "year": 2024,
+          "title": "Knowledge, attitudes, and concerns about psilocybin and MDMA as novel therapies among U.S. healthcare professionals",
+          "source": "Nature Scientific Reports"
+        },
+        {
+          "id": "6",
+          "authors": "Mitchell, J. M., et al.",
+          "year": 2023,
+          "title": "MDMA-assisted therapy for moderate to severe PTSD: a randomized, placebo-controlled phase 3 trial",
+          "source": "Nature Medicine"
+        },
+        {
+          "id": "7",
+          "authors": "Carhart-Harris, R., et al.",
+          "year": 2021,
+          "title": "Trial of Psilocybin versus Escitalopram for Depression",
+          "source": "New England Journal of Medicine"
+        },
+        {
+          "id": "8",
+          "authors": "Johnson, M. W., et al.",
+          "year": 2022,
+          "title": "Psilocybin produces substantial and sustained decreases in depression and anxiety in patients with life-threatening cancer",
+          "source": "Journal of Psychopharmacology"
+        },
+        {
+          "id": "9",
+          "authors": "Bogenschutz, M. P., et al.",
+          "year": 2022,
+          "title": "Percentage of Heavy Drinking Days Following Psilocybin-Assisted Psychotherapy vs Placebo in the Treatment of Adult Patients With Alcohol Use Disorder",
+          "source": "JAMA Psychiatry"
+        },
+        {
+          "id": "10",
+          "authors": "Therapeutic Goods Administration",
+          "year": 2023,
+          "title": "Change to classification of psilocybin and MDMA to enable prescribing by authorised psychiatrists",
+          "source": "Australian Government TGA"
+        }
+      ],
+      "difficulty": "advanced"
     },
     "eco-anxiety": {
       "title": "Eco-Anxiety: Mental Health in the Climate Crisis",
       "description": "Scientific perspectives on solastalgia, climate grief, and the psychological impact of environmental change, with a focus on youth.",
       "lastModified": "2026-01-23",
       "author": "PsychePedia Research Team",
-      "readingTime": 6,
+      "readingTime": 13,
       "sections": [
         {
           "title": "Defining the Distress: More Than Just Worry",
@@ -245,36 +427,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Solastalgia", "definition": "The distress caused by environmental change impacting people while they are directly connected to their home environment; 'homesickness while you are still at home'."},
-        {"term": "Moral Injury", "definition": "Psychological distress resulting from witnessing actions (or the lack of them, e.g., government inaction on climate) that violate one's moral or ethical code."},
-        {"term": "Active Hope", "definition": "A psychological practice involving clear intention setting and active participation in solutions, used as a coping mechanism for eco-anxiety. It transforms distress into agency."},
-        {"term": "Eco-Emotions", "definition": "A broader category of emotional responses to environmental crises, including eco-anxiety, solastalgia, and climate grief."},
-        {"term": "Climate Grief", "definition": "Grief experienced in response to ecological losses, both past and anticipated. Includes mourning for species, ecosystems, and ways of life."},
-        {"term": "Anticipatory Grief", "definition": "Mourning for losses that have not yet occurred but are perceived as inevitable, a key component of eco-anxiety."},
-        {"term": "Ecological Identity", "definition": "The aspect of personal identity that includes one's relationship with and connection to the natural environment."},
-        {"term": "Pre-traumatic Stress", "definition": "Psychological distress arising from anticipation of future traumatic events, applied to anticipated climate catastrophes."},
-        {"term": "Environmental Melancholia", "definition": "A persistent state of mourning for environmental losses, characterized by inability to complete the grieving process due to ongoing losses."},
-        {"term": "Planetary Health", "definition": "A framework recognizing the interdependence of human health and the health of natural systems, emphasizing that human well-being depends on flourishing ecosystems."}
+        {
+          "term": "Solastalgia",
+          "definition": "The distress caused by environmental change impacting people while they are directly connected to their home environment; 'homesickness while you are still at home'."
+        },
+        {
+          "term": "Moral Injury",
+          "definition": "Psychological distress resulting from witnessing actions (or the lack of them, e.g., government inaction on climate) that violate one's moral or ethical code."
+        },
+        {
+          "term": "Active Hope",
+          "definition": "A psychological practice involving clear intention setting and active participation in solutions, used as a coping mechanism for eco-anxiety. It transforms distress into agency."
+        },
+        {
+          "term": "Eco-Emotions",
+          "definition": "A broader category of emotional responses to environmental crises, including eco-anxiety, solastalgia, and climate grief."
+        },
+        {
+          "term": "Climate Grief",
+          "definition": "Grief experienced in response to ecological losses, both past and anticipated. Includes mourning for species, ecosystems, and ways of life."
+        },
+        {
+          "term": "Anticipatory Grief",
+          "definition": "Mourning for losses that have not yet occurred but are perceived as inevitable, a key component of eco-anxiety."
+        },
+        {
+          "term": "Ecological Identity",
+          "definition": "The aspect of personal identity that includes one's relationship with and connection to the natural environment."
+        },
+        {
+          "term": "Pre-traumatic Stress",
+          "definition": "Psychological distress arising from anticipation of future traumatic events, applied to anticipated climate catastrophes."
+        },
+        {
+          "term": "Environmental Melancholia",
+          "definition": "A persistent state of mourning for environmental losses, characterized by inability to complete the grieving process due to ongoing losses."
+        },
+        {
+          "term": "Planetary Health",
+          "definition": "A framework recognizing the interdependence of human health and the health of natural systems, emphasizing that human well-being depends on flourishing ecosystems."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Lykins, A. D., et al.", "year": 2024, "title": "The relationship between climate change and mental health: a systematic review of the association between eco-anxiety, psychological distress, and symptoms of major affective disorders", "source": "BMC Psychiatry"},
-        {"id": "2", "authors": "Vela Sandquist, C., et al.", "year": 2025, "title": "Is solastalgia associated with mental health problems? A scoping review", "source": "BMJ Mental Health"},
-        {"id": "3", "authors": "Nature Mental Health Editorial", "year": 2025, "title": "Solastalgia as a warning sign for mental health in a changing environment", "source": "Nature Mental Health"},
-        {"id": "4", "authors": "Hickman, C., et al.", "year": 2025, "title": "A systematic review of social, political and geographic factors associated with eco-anxiety in children and young people", "source": "Nature Mental Health"},
-        {"id": "5", "authors": "Hickman, C., et al.", "year": 2021, "title": "Climate anxiety in children and young people and their beliefs about government responses to climate change: a global survey", "source": "The Lancet Planetary Health"},
-        {"id": "6", "authors": "Clayton, S., et al.", "year": 2021, "title": "Climate Anxiety, Climate Grief, and Climate Action: A Primer", "source": "American Psychological Association"},
-        {"id": "7", "authors": "Albrecht, G.", "year": 2019, "title": "Earth Emotions: New Words for a New World", "source": "Cornell University Press"},
-        {"id": "8", "authors": "Macy, J. & Johnstone, C.", "year": 2022, "title": "Active Hope: How to Face the Mess We're in with Unexpected Resilience", "source": "New World Library"},
-        {"id": "9", "authors": "Galway, L. P., et al.", "year": 2024, "title": "Climate activism and mental health: A systematic review", "source": "Global Environmental Change"},
-        {"id": "10", "authors": "Pihkala, P.", "year": 2024, "title": "Toward a Taxonomy of Climate Emotions", "source": "Frontiers in Climate"}
-      ]
+        {
+          "id": "1",
+          "authors": "Lykins, A. D., et al.",
+          "year": 2024,
+          "title": "The relationship between climate change and mental health: a systematic review of the association between eco-anxiety, psychological distress, and symptoms of major affective disorders",
+          "source": "BMC Psychiatry"
+        },
+        {
+          "id": "2",
+          "authors": "Vela Sandquist, C., et al.",
+          "year": 2025,
+          "title": "Is solastalgia associated with mental health problems? A scoping review",
+          "source": "BMJ Mental Health"
+        },
+        {
+          "id": "3",
+          "authors": "Nature Mental Health Editorial",
+          "year": 2025,
+          "title": "Solastalgia as a warning sign for mental health in a changing environment",
+          "source": "Nature Mental Health"
+        },
+        {
+          "id": "4",
+          "authors": "Hickman, C., et al.",
+          "year": 2025,
+          "title": "A systematic review of social, political and geographic factors associated with eco-anxiety in children and young people",
+          "source": "Nature Mental Health"
+        },
+        {
+          "id": "5",
+          "authors": "Hickman, C., et al.",
+          "year": 2021,
+          "title": "Climate anxiety in children and young people and their beliefs about government responses to climate change: a global survey",
+          "source": "The Lancet Planetary Health"
+        },
+        {
+          "id": "6",
+          "authors": "Clayton, S., et al.",
+          "year": 2021,
+          "title": "Climate Anxiety, Climate Grief, and Climate Action: A Primer",
+          "source": "American Psychological Association"
+        },
+        {
+          "id": "7",
+          "authors": "Albrecht, G.",
+          "year": 2019,
+          "title": "Earth Emotions: New Words for a New World",
+          "source": "Cornell University Press"
+        },
+        {
+          "id": "8",
+          "authors": "Macy, J. & Johnstone, C.",
+          "year": 2022,
+          "title": "Active Hope: How to Face the Mess We're in with Unexpected Resilience",
+          "source": "New World Library"
+        },
+        {
+          "id": "9",
+          "authors": "Galway, L. P., et al.",
+          "year": 2024,
+          "title": "Climate activism and mental health: A systematic review",
+          "source": "Global Environmental Change"
+        },
+        {
+          "id": "10",
+          "authors": "Pihkala, P.",
+          "year": 2024,
+          "title": "Toward a Taxonomy of Climate Emotions",
+          "source": "Frontiers in Climate"
+        }
+      ],
+      "difficulty": "beginner"
     },
     "algorithmic-impact": {
       "title": "The Impact of Algorithmic Feeds: Attention & Identity",
       "description": "How short-form, personalized video feeds are reshaping adolescent attention, cognition, and body image.",
       "lastModified": "2026-01-23",
       "author": "PsychePedia Research Team",
-      "readingTime": 6,
+      "readingTime": 15,
       "sections": [
         {
           "title": "The Attention Economy and 'Brain Rot'",
@@ -336,36 +609,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Variable Ratio Reinforcement", "definition": "A schedule of reinforcement where a response is reinforced after an unpredictable number of responses, creating a high, steady rate of responding that is highly resistant to extinction. The core mechanism behind slot machines and social media feeds."},
-        {"term": "Brain Rot", "definition": "Oxford Word of the Year 2024. Refers to perceived cognitive decline from overconsuming trivial online material, particularly short-form video content."},
-        {"term": "Flow Experience", "definition": "A psychological state of complete immersion in an activity, characterized by enjoyment, concentration, and time distortion. TikTok's algorithm is designed to induce this state."},
-        {"term": "Problematic TikTok Use (PTU)", "definition": "A pattern of addictive or uncontrolled TikTok use characterized by compulsive engagement, loss of control, and negative consequences."},
-        {"term": "Interest Graph", "definition": "A model for organizing content based on predicted user interests and engagement, rather than social connections (social graph). The basis of TikTok's For You Page."},
-        {"term": "Rabbit Hole Effect", "definition": "The tendency of algorithmic recommendation systems to serve increasingly extreme content based on engagement signals, potentially leading users toward harmful material."},
-        {"term": "Persuasive Design", "definition": "Interface and product design principles explicitly intended to influence user behavior, often prioritizing engagement metrics over user well-being."},
-        {"term": "Social Comparison", "definition": "The process of evaluating oneself against others. Algorithmic platforms intensify upward comparison by exposing users to highly curated representations of others."},
-        {"term": "Attention Fragmentation", "definition": "The breaking up of sustained attention into brief episodes, potentially resulting from habitual consumption of short-form content."},
-        {"term": "Sludge Content", "definition": "Low-effort, ultra-palatable short-form videos engineered for immediate micro-rewards, contributing to compulsive consumption patterns."}
+        {
+          "term": "Variable Ratio Reinforcement",
+          "definition": "A schedule of reinforcement where a response is reinforced after an unpredictable number of responses, creating a high, steady rate of responding that is highly resistant to extinction. The core mechanism behind slot machines and social media feeds."
+        },
+        {
+          "term": "Brain Rot",
+          "definition": "Oxford Word of the Year 2024. Refers to perceived cognitive decline from overconsuming trivial online material, particularly short-form video content."
+        },
+        {
+          "term": "Flow Experience",
+          "definition": "A psychological state of complete immersion in an activity, characterized by enjoyment, concentration, and time distortion. TikTok's algorithm is designed to induce this state."
+        },
+        {
+          "term": "Problematic TikTok Use (PTU)",
+          "definition": "A pattern of addictive or uncontrolled TikTok use characterized by compulsive engagement, loss of control, and negative consequences."
+        },
+        {
+          "term": "Interest Graph",
+          "definition": "A model for organizing content based on predicted user interests and engagement, rather than social connections (social graph). The basis of TikTok's For You Page."
+        },
+        {
+          "term": "Rabbit Hole Effect",
+          "definition": "The tendency of algorithmic recommendation systems to serve increasingly extreme content based on engagement signals, potentially leading users toward harmful material."
+        },
+        {
+          "term": "Persuasive Design",
+          "definition": "Interface and product design principles explicitly intended to influence user behavior, often prioritizing engagement metrics over user well-being."
+        },
+        {
+          "term": "Social Comparison",
+          "definition": "The process of evaluating oneself against others. Algorithmic platforms intensify upward comparison by exposing users to highly curated representations of others."
+        },
+        {
+          "term": "Attention Fragmentation",
+          "definition": "The breaking up of sustained attention into brief episodes, potentially resulting from habitual consumption of short-form content."
+        },
+        {
+          "term": "Sludge Content",
+          "definition": "Low-effort, ultra-palatable short-form videos engineered for immediate micro-rewards, contributing to compulsive consumption patterns."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "European Child & Adolescent Psychiatry", "year": 2024, "title": "Scrolling through adolescence: a systematic review of the impact of TikTok on adolescent mental health", "source": "Springer Link"},
-        {"id": "2", "authors": "PMC Authors", "year": 2025, "title": "Demystifying the New Dilemma of Brain Rot in the Digital Era: A Review", "source": "PMC"},
-        {"id": "3", "authors": "PMC Authors", "year": 2025, "title": "Exploring Problematic TikTok Use and Mental Health Issues: A Systematic Review of Empirical Studies", "source": "PMC"},
-        {"id": "4", "authors": "MedRxiv Preprint", "year": 2025, "title": "The Impact of Short-Form Video Use on Cognitive and Mental Health Outcomes: A Systematic Review", "source": "MedRxiv"},
-        {"id": "5", "authors": "Dartmouth Health", "year": 2024, "title": "The Psychology of TikTok: Understanding Algorithmic Influence on Adolescent Behavior", "source": "Dartmouth Health"},
-        {"id": "6", "authors": "Oxford Languages", "year": 2024, "title": "Word of the Year 2024: Brain Rot", "source": "Oxford Languages"},
-        {"id": "7", "authors": "Montag, C., et al.", "year": 2024, "title": "Social Media's Impact on Psychological Well-being: A Meta-Analysis", "source": "Computers in Human Behavior"},
-        {"id": "8", "authors": "Orben, A., et al.", "year": 2024, "title": "The association between adolescent well-being and digital technology use", "source": "Nature Human Behaviour"},
-        {"id": "9", "authors": "Twenge, J. M.", "year": 2024, "title": "Generations: The Real Differences Between Gen Z, Millennials, Gen X, Boomers, and Silents", "source": "Atria Books"},
-        {"id": "10", "authors": "Haidt, J.", "year": 2024, "title": "The Anxious Generation: How the Great Rewiring of Childhood Is Causing an Epidemic of Mental Illness", "source": "Penguin Press"}
-      ]
+        {
+          "id": "1",
+          "authors": "European Child & Adolescent Psychiatry",
+          "year": 2024,
+          "title": "Scrolling through adolescence: a systematic review of the impact of TikTok on adolescent mental health",
+          "source": "Springer Link"
+        },
+        {
+          "id": "2",
+          "authors": "PMC Authors",
+          "year": 2025,
+          "title": "Demystifying the New Dilemma of Brain Rot in the Digital Era: A Review",
+          "source": "PMC"
+        },
+        {
+          "id": "3",
+          "authors": "PMC Authors",
+          "year": 2025,
+          "title": "Exploring Problematic TikTok Use and Mental Health Issues: A Systematic Review of Empirical Studies",
+          "source": "PMC"
+        },
+        {
+          "id": "4",
+          "authors": "MedRxiv Preprint",
+          "year": 2025,
+          "title": "The Impact of Short-Form Video Use on Cognitive and Mental Health Outcomes: A Systematic Review",
+          "source": "MedRxiv"
+        },
+        {
+          "id": "5",
+          "authors": "Dartmouth Health",
+          "year": 2024,
+          "title": "The Psychology of TikTok: Understanding Algorithmic Influence on Adolescent Behavior",
+          "source": "Dartmouth Health"
+        },
+        {
+          "id": "6",
+          "authors": "Oxford Languages",
+          "year": 2024,
+          "title": "Word of the Year 2024: Brain Rot",
+          "source": "Oxford Languages"
+        },
+        {
+          "id": "7",
+          "authors": "Montag, C., et al.",
+          "year": 2024,
+          "title": "Social Media's Impact on Psychological Well-being: A Meta-Analysis",
+          "source": "Computers in Human Behavior"
+        },
+        {
+          "id": "8",
+          "authors": "Orben, A., et al.",
+          "year": 2024,
+          "title": "The association between adolescent well-being and digital technology use",
+          "source": "Nature Human Behaviour"
+        },
+        {
+          "id": "9",
+          "authors": "Twenge, J. M.",
+          "year": 2024,
+          "title": "Generations: The Real Differences Between Gen Z, Millennials, Gen X, Boomers, and Silents",
+          "source": "Atria Books"
+        },
+        {
+          "id": "10",
+          "authors": "Haidt, J.",
+          "year": 2024,
+          "title": "The Anxious Generation: How the Great Rewiring of Childhood Is Causing an Epidemic of Mental Illness",
+          "source": "Penguin Press"
+        }
+      ],
+      "difficulty": "beginner"
     },
     "exercise-vs-medication": {
       "title": "Exercise as Therapy: The 2024-2025 Consensus",
       "description": "Major systematic reviews now suggest physical activity should be considered alongside antidepressants as a core treatment for depression.",
       "lastModified": "2026-01-23",
       "author": "PsychePedia Research Team",
-      "readingTime": 6,
+      "readingTime": 14,
       "sections": [
         {
           "title": "The Landmark 2024 BMJ Meta-Analysis",
@@ -427,36 +791,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Brain-Derived Neurotrophic Factor (BDNF)", "definition": "A protein that promotes the survival of nerve cells (neurons) by playing a role in their growth, maturation, and maintenance. Often depleted in depression and increased by exercise."},
-        {"term": "Systemic Inflammation", "definition": "Chronic, low-grade inflammation throughout the body that has been linked to the development and maintenance of depression. Exercise has anti-inflammatory effects."},
-        {"term": "Network Meta-Analysis", "definition": "A statistical technique that allows for comparison of multiple treatments simultaneously, even if they haven't been directly compared in head-to-head trials."},
-        {"term": "Mind-Body Exercise", "definition": "Exercise modalities that combine physical movement with mental focus and controlled breathing, such as yoga, tai chi, and qigong."},
-        {"term": "HPA Axis", "definition": "The hypothalamic-pituitary-adrenal axis—the body's central stress response system. Dysregulation is common in depression and normalized by exercise."},
-        {"term": "Behavioral Activation", "definition": "A therapeutic approach that combats depression by increasing engagement in positive activities, breaking cycles of withdrawal and avoidance."},
-        {"term": "Effect Size (Hedges' g)", "definition": "A standardized measure of the magnitude of a treatment effect. Values of 0.2 are considered small, 0.5 moderate, and 0.8 large."},
-        {"term": "Treatment-Resistant Depression", "definition": "Depression that has not responded adequately to at least two different antidepressant medications taken for adequate duration and dose."},
-        {"term": "Neurogenesis", "definition": "The process by which new neurons are formed in the brain. Exercise promotes neurogenesis, particularly in the hippocampus."},
-        {"term": "SUCRA Score", "definition": "Surface Under the Cumulative Ranking curve—a measure used in network meta-analysis to rank treatments by their probability of being the best option."}
+        {
+          "term": "Brain-Derived Neurotrophic Factor (BDNF)",
+          "definition": "A protein that promotes the survival of nerve cells (neurons) by playing a role in their growth, maturation, and maintenance. Often depleted in depression and increased by exercise."
+        },
+        {
+          "term": "Systemic Inflammation",
+          "definition": "Chronic, low-grade inflammation throughout the body that has been linked to the development and maintenance of depression. Exercise has anti-inflammatory effects."
+        },
+        {
+          "term": "Network Meta-Analysis",
+          "definition": "A statistical technique that allows for comparison of multiple treatments simultaneously, even if they haven't been directly compared in head-to-head trials."
+        },
+        {
+          "term": "Mind-Body Exercise",
+          "definition": "Exercise modalities that combine physical movement with mental focus and controlled breathing, such as yoga, tai chi, and qigong."
+        },
+        {
+          "term": "HPA Axis",
+          "definition": "The hypothalamic-pituitary-adrenal axis—the body's central stress response system. Dysregulation is common in depression and normalized by exercise."
+        },
+        {
+          "term": "Behavioral Activation",
+          "definition": "A therapeutic approach that combats depression by increasing engagement in positive activities, breaking cycles of withdrawal and avoidance."
+        },
+        {
+          "term": "Effect Size (Hedges' g)",
+          "definition": "A standardized measure of the magnitude of a treatment effect. Values of 0.2 are considered small, 0.5 moderate, and 0.8 large."
+        },
+        {
+          "term": "Treatment-Resistant Depression",
+          "definition": "Depression that has not responded adequately to at least two different antidepressant medications taken for adequate duration and dose."
+        },
+        {
+          "term": "Neurogenesis",
+          "definition": "The process by which new neurons are formed in the brain. Exercise promotes neurogenesis, particularly in the hippocampus."
+        },
+        {
+          "term": "SUCRA Score",
+          "definition": "Surface Under the Cumulative Ranking curve—a measure used in network meta-analysis to rank treatments by their probability of being the best option."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Noetel, M., et al.", "year": 2024, "title": "Effect of exercise for depression: systematic review and network meta-analysis of randomised controlled trials", "source": "British Medical Journal (BMJ)"},
-        {"id": "2", "authors": "Recchia, F., et al.", "year": 2022, "title": "Comparative effectiveness of exercise, antidepressants and their combination in treating non-severe depression: a systematic review and network meta-analysis of randomised controlled trials", "source": "British Journal of Sports Medicine"},
-        {"id": "3", "authors": "Chen, Y., et al.", "year": 2025, "title": "Effect and acceptability of different exercise modes on adult patients with clinically diagnosed depression: a network meta-analysis", "source": "Nature Scientific Reports"},
-        {"id": "4", "authors": "Schuch, F. B., et al.", "year": 2016, "title": "Exercise as a treatment for depression: A meta-analysis adjusting for publication bias", "source": "Journal of Psychiatric Research"},
-        {"id": "5", "authors": "Morres, I. D., et al.", "year": 2019, "title": "Aerobic exercise for adult patients with major depressive disorder in mental health services: A systematic review and meta-analysis", "source": "Depression and Anxiety"},
-        {"id": "6", "authors": "Gordon, B. R., et al.", "year": 2018, "title": "Association of Efficacy of Resistance Exercise Training With Depressive Symptoms: Meta-analysis and Meta-regression Analysis", "source": "JAMA Psychiatry"},
-        {"id": "7", "authors": "Cramer, H., et al.", "year": 2017, "title": "Yoga for depression: A systematic review and meta-analysis", "source": "Depression and Anxiety"},
-        {"id": "8", "authors": "Kvam, S., et al.", "year": 2016, "title": "Exercise as a treatment for depression: A meta-analysis", "source": "Journal of Affective Disorders"},
-        {"id": "9", "authors": "Blumenthal, J. A., et al.", "year": 2007, "title": "Exercise and pharmacotherapy in the treatment of major depressive disorder", "source": "Psychosomatic Medicine"},
-        {"id": "10", "authors": "National Institute for Health and Care Excellence", "year": 2022, "title": "Depression in adults: treatment and management", "source": "NICE Guidelines"}
-      ]
+        {
+          "id": "1",
+          "authors": "Noetel, M., et al.",
+          "year": 2024,
+          "title": "Effect of exercise for depression: systematic review and network meta-analysis of randomised controlled trials",
+          "source": "British Medical Journal (BMJ)"
+        },
+        {
+          "id": "2",
+          "authors": "Recchia, F., et al.",
+          "year": 2022,
+          "title": "Comparative effectiveness of exercise, antidepressants and their combination in treating non-severe depression: a systematic review and network meta-analysis of randomised controlled trials",
+          "source": "British Journal of Sports Medicine"
+        },
+        {
+          "id": "3",
+          "authors": "Chen, Y., et al.",
+          "year": 2025,
+          "title": "Effect and acceptability of different exercise modes on adult patients with clinically diagnosed depression: a network meta-analysis",
+          "source": "Nature Scientific Reports"
+        },
+        {
+          "id": "4",
+          "authors": "Schuch, F. B., et al.",
+          "year": 2016,
+          "title": "Exercise as a treatment for depression: A meta-analysis adjusting for publication bias",
+          "source": "Journal of Psychiatric Research"
+        },
+        {
+          "id": "5",
+          "authors": "Morres, I. D., et al.",
+          "year": 2019,
+          "title": "Aerobic exercise for adult patients with major depressive disorder in mental health services: A systematic review and meta-analysis",
+          "source": "Depression and Anxiety"
+        },
+        {
+          "id": "6",
+          "authors": "Gordon, B. R., et al.",
+          "year": 2018,
+          "title": "Association of Efficacy of Resistance Exercise Training With Depressive Symptoms: Meta-analysis and Meta-regression Analysis",
+          "source": "JAMA Psychiatry"
+        },
+        {
+          "id": "7",
+          "authors": "Cramer, H., et al.",
+          "year": 2017,
+          "title": "Yoga for depression: A systematic review and meta-analysis",
+          "source": "Depression and Anxiety"
+        },
+        {
+          "id": "8",
+          "authors": "Kvam, S., et al.",
+          "year": 2016,
+          "title": "Exercise as a treatment for depression: A meta-analysis",
+          "source": "Journal of Affective Disorders"
+        },
+        {
+          "id": "9",
+          "authors": "Blumenthal, J. A., et al.",
+          "year": 2007,
+          "title": "Exercise and pharmacotherapy in the treatment of major depressive disorder",
+          "source": "Psychosomatic Medicine"
+        },
+        {
+          "id": "10",
+          "authors": "National Institute for Health and Care Excellence",
+          "year": 2022,
+          "title": "Depression in adults: treatment and management",
+          "source": "NICE Guidelines"
+        }
+      ],
+      "difficulty": "beginner"
     },
     "teen-sleep-patterns": {
       "title": "Teen Sleep: The Weekend Catch-Up Effect",
       "description": "New 2025-2026 research challenges conventional advice, finding that moderate weekend catch-up sleep significantly lowers depression risk in adolescents.",
       "lastModified": "2026-01-23",
       "author": "PsychePedia Research Team",
-      "readingTime": 5,
+      "readingTime": 15,
       "sections": [
         {
           "title": "The 2026 Findings: 41% Lower Depression Risk",
@@ -514,29 +969,120 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Social Jetlag", "definition": "The discrepancy in a person's sleep pattern (particularly timing) between days they have to work or go to school and days they have off. Moderate levels may be protective in teens."},
-        {"term": "Sleep Debt", "definition": "The cumulative effect of not getting enough sleep over time. It can lead to mental and physical fatigue and is common in adolescents due to early school start times."},
-        {"term": "Circadian Phase Delay", "definition": "The natural biological shift during adolescence that causes teens to prefer later sleep and wake times, making them 'night owls'."},
-        {"term": "Weekend Catch-Up Sleep (CUS)", "definition": "The practice of sleeping longer on weekends to compensate for insufficient sleep during the week. Moderate CUS appears protective for teen mental health."},
-        {"term": "Chronotype", "definition": "An individual's natural preference for sleeping and waking at certain times. Ranges from morning types ('larks') to evening types ('owls')."},
-        {"term": "Melatonin", "definition": "A hormone produced by the pineal gland that regulates sleep-wake cycles. Its release shifts later during puberty, contributing to the adolescent phase delay."},
-        {"term": "Sleep Restriction", "definition": "Getting less sleep than the body needs. Chronic sleep restriction during the school week is common in adolescents."},
-        {"term": "REM Sleep", "definition": "Rapid Eye Movement sleep—a sleep stage crucial for emotional processing, memory consolidation, and mental health. Often cut short by early school wake times."},
-        {"term": "Sleep Hygiene", "definition": "Practices and habits that promote good sleep quality. Traditional sleep hygiene emphasizes consistent schedules, but this may need modification for adolescents."},
-        {"term": "School Start Times", "definition": "The time at which school instruction begins. The American Academy of Pediatrics recommends middle and high schools start no earlier than 8:30 AM."}
+        {
+          "term": "Social Jetlag",
+          "definition": "The discrepancy in a person's sleep pattern (particularly timing) between days they have to work or go to school and days they have off. Moderate levels may be protective in teens."
+        },
+        {
+          "term": "Sleep Debt",
+          "definition": "The cumulative effect of not getting enough sleep over time. It can lead to mental and physical fatigue and is common in adolescents due to early school start times."
+        },
+        {
+          "term": "Circadian Phase Delay",
+          "definition": "The natural biological shift during adolescence that causes teens to prefer later sleep and wake times, making them 'night owls'."
+        },
+        {
+          "term": "Weekend Catch-Up Sleep (CUS)",
+          "definition": "The practice of sleeping longer on weekends to compensate for insufficient sleep during the week. Moderate CUS appears protective for teen mental health."
+        },
+        {
+          "term": "Chronotype",
+          "definition": "An individual's natural preference for sleeping and waking at certain times. Ranges from morning types ('larks') to evening types ('owls')."
+        },
+        {
+          "term": "Melatonin",
+          "definition": "A hormone produced by the pineal gland that regulates sleep-wake cycles. Its release shifts later during puberty, contributing to the adolescent phase delay."
+        },
+        {
+          "term": "Sleep Restriction",
+          "definition": "Getting less sleep than the body needs. Chronic sleep restriction during the school week is common in adolescents."
+        },
+        {
+          "term": "REM Sleep",
+          "definition": "Rapid Eye Movement sleep—a sleep stage crucial for emotional processing, memory consolidation, and mental health. Often cut short by early school wake times."
+        },
+        {
+          "term": "Sleep Hygiene",
+          "definition": "Practices and habits that promote good sleep quality. Traditional sleep hygiene emphasizes consistent schedules, but this may need modification for adolescents."
+        },
+        {
+          "term": "School Start Times",
+          "definition": "The time at which school instruction begins. The American Academy of Pediatrics recommends middle and high schools start no earlier than 8:30 AM."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Winsler, A., et al.", "year": 2026, "title": "Sleeping in on the weekends can boost teen mental health: study", "source": "University of Oregon News"},
-        {"id": "2", "authors": "SLEEP 2025 Conference", "year": 2025, "title": "Study identifies the 'sweet spot' for catch-up sleep by teens on weekends", "source": "American Academy of Sleep Medicine"},
-        {"id": "3", "authors": "Kim, S., et al.", "year": 2022, "title": "Association of weekend catch-up sleep ratio and subjective sleep quality with depressive symptoms and suicidal ideation among Korean adolescents", "source": "Nature Scientific Reports"},
-        {"id": "4", "authors": "Powers Health", "year": 2026, "title": "Your Teen Sleeping In During The Weekend? It Could Protect Them From Depression, Experts Say", "source": "Powers Health Newsroom"},
-        {"id": "5", "authors": "American Academy of Pediatrics", "year": 2014, "title": "School Start Times for Adolescents", "source": "Pediatrics"},
-        {"id": "6", "authors": "Crowley, S. J., et al.", "year": 2018, "title": "An update on adolescent sleep: New evidence informing the perfect storm model", "source": "Journal of Adolescence"},
-        {"id": "7", "authors": "Centers for Disease Control and Prevention", "year": 2024, "title": "Sleep in Middle and High School Students", "source": "CDC Healthy Schools"},
-        {"id": "8", "authors": "Roenneberg, T., et al.", "year": 2019, "title": "Chronotype and Social Jetlag: A (Self-) Critical Review", "source": "Biology"},
-        {"id": "9", "authors": "Wahlstrom, K., et al.", "year": 2014, "title": "Examining the Impact of Later School Start Times on the Health and Academic Performance of High School Students", "source": "University of Minnesota"},
-        {"id": "10", "authors": "Owens, J., et al.", "year": 2014, "title": "Insufficient Sleep in Adolescents and Young Adults: An Update on Causes and Consequences", "source": "Pediatrics"}
-      ]
+        {
+          "id": "1",
+          "authors": "Winsler, A., et al.",
+          "year": 2026,
+          "title": "Sleeping in on the weekends can boost teen mental health: study",
+          "source": "University of Oregon News"
+        },
+        {
+          "id": "2",
+          "authors": "SLEEP 2025 Conference",
+          "year": 2025,
+          "title": "Study identifies the 'sweet spot' for catch-up sleep by teens on weekends",
+          "source": "American Academy of Sleep Medicine"
+        },
+        {
+          "id": "3",
+          "authors": "Kim, S., et al.",
+          "year": 2022,
+          "title": "Association of weekend catch-up sleep ratio and subjective sleep quality with depressive symptoms and suicidal ideation among Korean adolescents",
+          "source": "Nature Scientific Reports"
+        },
+        {
+          "id": "4",
+          "authors": "Powers Health",
+          "year": 2026,
+          "title": "Your Teen Sleeping In During The Weekend? It Could Protect Them From Depression, Experts Say",
+          "source": "Powers Health Newsroom"
+        },
+        {
+          "id": "5",
+          "authors": "American Academy of Pediatrics",
+          "year": 2014,
+          "title": "School Start Times for Adolescents",
+          "source": "Pediatrics"
+        },
+        {
+          "id": "6",
+          "authors": "Crowley, S. J., et al.",
+          "year": 2018,
+          "title": "An update on adolescent sleep: New evidence informing the perfect storm model",
+          "source": "Journal of Adolescence"
+        },
+        {
+          "id": "7",
+          "authors": "Centers for Disease Control and Prevention",
+          "year": 2024,
+          "title": "Sleep in Middle and High School Students",
+          "source": "CDC Healthy Schools"
+        },
+        {
+          "id": "8",
+          "authors": "Roenneberg, T., et al.",
+          "year": 2019,
+          "title": "Chronotype and Social Jetlag: A (Self-) Critical Review",
+          "source": "Biology"
+        },
+        {
+          "id": "9",
+          "authors": "Wahlstrom, K., et al.",
+          "year": 2014,
+          "title": "Examining the Impact of Later School Start Times on the Health and Academic Performance of High School Students",
+          "source": "University of Minnesota"
+        },
+        {
+          "id": "10",
+          "authors": "Owens, J., et al.",
+          "year": 2014,
+          "title": "Insufficient Sleep in Adolescents and Young Adults: An Update on Causes and Consequences",
+          "source": "Pediatrics"
+        }
+      ],
+      "difficulty": "beginner"
     }
   }
 }

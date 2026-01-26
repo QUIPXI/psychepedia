@@ -5,7 +5,7 @@
       "description": "Understand mental disorders, their classification, etiology, and clinical presentations.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 35,
+      "readingTime": 32,
       "sections": [
         {
           "title": "Introduction to Psychopathology",
@@ -79,36 +79,250 @@
         }
       ],
       "keyConcepts": [
-        {"term": "DSM-5-TR", "definition": "The Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision, published by the American Psychiatric Association for classifying mental disorders."},
-        {"term": "Positive Symptoms", "definition": "Excesses or distortions of normal functions in schizophrenia, including delusions and hallucinations."},
-        {"term": "Negative Symptoms", "definition": "Deficits or absences of normal functions in schizophrenia, such as flat affect, alogia, and avolition."},
-        {"term": "Comorbidity", "definition": "The co-occurrence of two or more disorders in the same individual."},
-        {"term": "Diathesis-Stress Model", "definition": "Theory that disorders result from the interaction of a predisposition (diathesis) and environmental stressors."},
-        {"term": "Differential Diagnosis", "definition": "The process of distinguishing between disorders with similar symptoms to arrive at the correct diagnosis."},
-        {"term": "Biopsychosocial Model", "definition": "Integrative framework recognizing that mental disorders result from interactions among biological, psychological, and social factors."},
-        {"term": "Dimensional Approach", "definition": "Conceptualizing psychopathology as extreme positions on continua rather than discrete categorical conditions."},
-        {"term": "Prodrome", "definition": "Early signs and symptoms that precede the full development of a disorder, particularly relevant in schizophrenia."},
-        {"term": "Ego-Syntonic", "definition": "Experiences or behaviors that are consistent with one's self-image and values, often seen in personality disorders."}
+        {
+          "term": "DSM-5-TR",
+          "definition": "The Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision, published by the American Psychiatric Association for classifying mental disorders."
+        },
+        {
+          "term": "Positive Symptoms",
+          "definition": "Excesses or distortions of normal functions in schizophrenia, including delusions and hallucinations."
+        },
+        {
+          "term": "Negative Symptoms",
+          "definition": "Deficits or absences of normal functions in schizophrenia, such as flat affect, alogia, and avolition."
+        },
+        {
+          "term": "Comorbidity",
+          "definition": "The co-occurrence of two or more disorders in the same individual."
+        },
+        {
+          "term": "Diathesis-Stress Model",
+          "definition": "Theory that disorders result from the interaction of a predisposition (diathesis) and environmental stressors."
+        },
+        {
+          "term": "Differential Diagnosis",
+          "definition": "The process of distinguishing between disorders with similar symptoms to arrive at the correct diagnosis."
+        },
+        {
+          "term": "Biopsychosocial Model",
+          "definition": "Integrative framework recognizing that mental disorders result from interactions among biological, psychological, and social factors."
+        },
+        {
+          "term": "Dimensional Approach",
+          "definition": "Conceptualizing psychopathology as extreme positions on continua rather than discrete categorical conditions."
+        },
+        {
+          "term": "Prodrome",
+          "definition": "Early signs and symptoms that precede the full development of a disorder, particularly relevant in schizophrenia."
+        },
+        {
+          "term": "Ego-Syntonic",
+          "definition": "Experiences or behaviors that are consistent with one's self-image and values, often seen in personality disorders."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "American Psychiatric Association", "year": 2022, "title": "Diagnostic and Statistical Manual of Mental Disorders (5th ed., text rev.)", "source": "American Psychiatric Publishing"},
-        {"id": "2", "authors": "Barlow, D. H., & Durand, V. M.", "year": 2021, "title": "Abnormal Psychology: An Integrative Approach", "source": "Cengage Learning (9th ed.)"},
-        {"id": "3", "authors": "Kring, A. M., & Johnson, S. L.", "year": 2021, "title": "Abnormal Psychology: The Science and Treatment of Psychological Disorders", "source": "Wiley (14th ed.)"},
-        {"id": "4", "authors": "Nolen-Hoeksema, S.", "year": 2020, "title": "Abnormal Psychology", "source": "McGraw-Hill (8th ed.)"},
-        {"id": "5", "authors": "Comer, R. J., & Comer, J. S.", "year": 2021, "title": "Fundamentals of Abnormal Psychology", "source": "Worth Publishers (10th ed.)"},
-        {"id": "6", "authors": "Insel, T. R., et al.", "year": 2010, "title": "Research Domain Criteria (RDoC): Toward a New Classification Framework for Research on Mental Disorders", "source": "American Journal of Psychiatry, 167(7), 748-751"},
-        {"id": "7", "authors": "Beck, A. T., & Bredemeier, K.", "year": 2016, "title": "A Unified Model of Depression: Integrating Clinical, Cognitive, Biological, and Evolutionary Perspectives", "source": "Clinical Psychological Science, 4(4), 596-619"},
-        {"id": "8", "authors": "Craske, M. G., et al.", "year": 2017, "title": "Anxiety Disorders", "source": "Nature Reviews Disease Primers, 3, 17024"},
-        {"id": "9", "authors": "Howes, O. D., & Murray, R. M.", "year": 2014, "title": "Schizophrenia: An Integrated Sociodevelopmental-Cognitive Model", "source": "The Lancet, 383(9929), 1677-1687"},
-        {"id": "10", "authors": "Skodol, A. E., et al.", "year": 2011, "title": "Personality Disorder Types Proposed for DSM-5", "source": "Journal of Personality Disorders, 25(2), 136-169"}
-      ]
+        {
+          "id": "1",
+          "authors": "American Psychiatric Association",
+          "year": 2022,
+          "title": "Diagnostic and Statistical Manual of Mental Disorders (5th ed., text rev.)",
+          "source": "American Psychiatric Publishing"
+        },
+        {
+          "id": "2",
+          "authors": "Barlow, D. H., & Durand, V. M.",
+          "year": 2021,
+          "title": "Abnormal Psychology: An Integrative Approach",
+          "source": "Cengage Learning (9th ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Kring, A. M., & Johnson, S. L.",
+          "year": 2021,
+          "title": "Abnormal Psychology: The Science and Treatment of Psychological Disorders",
+          "source": "Wiley (14th ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Nolen-Hoeksema, S.",
+          "year": 2020,
+          "title": "Abnormal Psychology",
+          "source": "McGraw-Hill (8th ed.)"
+        },
+        {
+          "id": "5",
+          "authors": "Comer, R. J., & Comer, J. S.",
+          "year": 2021,
+          "title": "Fundamentals of Abnormal Psychology",
+          "source": "Worth Publishers (10th ed.)"
+        },
+        {
+          "id": "6",
+          "authors": "Insel, T. R., et al.",
+          "year": 2010,
+          "title": "Research Domain Criteria (RDoC): Toward a New Classification Framework for Research on Mental Disorders",
+          "source": "American Journal of Psychiatry, 167(7), 748-751"
+        },
+        {
+          "id": "7",
+          "authors": "Beck, A. T., & Bredemeier, K.",
+          "year": 2016,
+          "title": "A Unified Model of Depression: Integrating Clinical, Cognitive, Biological, and Evolutionary Perspectives",
+          "source": "Clinical Psychological Science, 4(4), 596-619"
+        },
+        {
+          "id": "8",
+          "authors": "Craske, M. G., et al.",
+          "year": 2017,
+          "title": "Anxiety Disorders",
+          "source": "Nature Reviews Disease Primers, 3, 17024"
+        },
+        {
+          "id": "9",
+          "authors": "Howes, O. D., & Murray, R. M.",
+          "year": 2014,
+          "title": "Schizophrenia: An Integrated Sociodevelopmental-Cognitive Model",
+          "source": "The Lancet, 383(9929), 1677-1687"
+        },
+        {
+          "id": "10",
+          "authors": "Skodol, A. E., et al.",
+          "year": 2011,
+          "title": "Personality Disorder Types Proposed for DSM-5",
+          "source": "Journal of Personality Disorders, 25(2), 136-169"
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "question": "Which of the 'Four Ds' of abnormality refers to behavior that interferes with an individual's daily functioning?",
+          "options": [
+            "Deviance",
+            "Distress",
+            "Dysfunction",
+            "Danger"
+          ],
+          "correctIndex": 2,
+          "explanation": "Dysfunction refers to the extent to which a behavior or psychological process interferes with an individual's ability to perform daily activities and maintain relationships."
+        },
+        {
+          "id": "q2",
+          "question": "What is the primary difference between Bipolar I and Bipolar II disorder?",
+          "options": [
+            "Bipolar I requires a major depressive episode, while Bipolar II does not.",
+            "Bipolar I requires at least one manic episode, while Bipolar II requires hypomania and depression.",
+            "Bipolar II involves more severe manic symptoms than Bipolar I.",
+            "Bipolar I is chronic, while Bipolar II is episodic."
+          ],
+          "correctIndex": 1,
+          "explanation": "Bipolar I is characterized by at least one full manic episode. Bipolar II requires at least one hypomanic episode and at least one major depressive episode."
+        },
+        {
+          "id": "q3",
+          "question": "In the context of Schizophrenia, which of the following is considered a 'negative symptom'?",
+          "options": [
+            "Hallucinations",
+            "Delusions",
+            "Disorganized speech",
+            "Avolition"
+          ],
+          "correctIndex": 3,
+          "explanation": "Negative symptoms represent deficits in normal functioning. Avolition (lack of motivation) is a negative symptom, whereas hallucinations and delusions are positive symptoms (excesses)."
+        },
+        {
+          "id": "q4",
+          "question": "Which personality disorder cluster is characterized by dramatic, emotional, or erratic behavior?",
+          "options": [
+            "Cluster A",
+            "Cluster B",
+            "Cluster C",
+            "Cluster D"
+          ],
+          "correctIndex": 1,
+          "explanation": "Cluster B includes Antisocial, Borderline, Histrionic, and Narcissistic personality disorders, all of which involve dramatic or erratic emotional presentations."
+        }
+      ],
+      "caseStudies": [
+        {
+          "title": "The Case of Sarah: Obsessive-Compulsive Disorder",
+          "description": "A 26-year-old woman experiencing intrusive thoughts about contamination.",
+          "scenario": "Sarah spends over 4 hours a day washing her hands and cleaning her apartment. She experiences intense anxiety if she touches a doorknob without a tissue, fearing she will contract a deadly disease and spread it to her family.",
+          "analysis": "Sarah's presentation meets DSM-5 criteria for OCD, featuring both obsessions (contamination fears) and compulsions (excessive washing). Her symptoms are time-consuming and cause significant distress.",
+          "keyTakeaways": [
+            "Obsessions are intrusive thoughts; compulsions are ritualistic behaviors to reduce anxiety.",
+            "Insight can vary but the behavior is recognized as excessive.",
+            "CBT with Exposure and Response Prevention (ERP) is a first-line treatment."
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "DSM-5-TR vs. ICD-11",
+          "description": "Comparison of the two major classification systems for mental disorders.",
+          "headers": [
+            "Feature",
+            "DSM-5-TR",
+            "ICD-11"
+          ],
+          "rows": [
+            {
+              "label": "Publisher",
+              "values": [
+                "American Psychiatric Association (APA)",
+                "World Health Organization (WHO)"
+              ]
+            },
+            {
+              "label": "Primary Use",
+              "values": [
+                "Clinical diagnosis in North America",
+                "Global health statistics and clinical use"
+              ]
+            },
+            {
+              "label": "Scope",
+              "values": [
+                "Mental disorders only",
+                "All medical and mental disorders"
+              ]
+            }
+          ]
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "d1",
+          "title": "The Diathesis-Stress Model",
+          "description": "A flowchart showing how predisposition and environment interact to produce a disorder.",
+          "type": "flowchart",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "Biological/Genetic Predisposition (Diathesis)"
+            },
+            {
+              "id": "n2",
+              "label": "Environmental Stressors (Life Events)"
+            },
+            {
+              "id": "n3",
+              "label": "Interaction/Threshold Exceeded"
+            },
+            {
+              "id": "n4",
+              "label": "Development of Mental Disorder"
+            }
+          ]
+        }
+      ],
+      "difficulty": "intermediate"
     },
     "assessment": {
       "title": "Psychological Assessment",
       "description": "Learn about psychological testing, clinical interviews, and assessment methods.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 28,
+      "readingTime": 23,
       "sections": [
         {
           "title": "Introduction to Psychological Assessment",
@@ -178,36 +392,242 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Reliability", "definition": "The consistency and stability of test scores across time, items, or raters."},
-        {"term": "Validity", "definition": "The degree to which a test measures what it is intended to measure."},
-        {"term": "Mental Status Examination", "definition": "A systematic assessment of a patient's current psychological functioning covering appearance, behavior, cognition, and more."},
-        {"term": "Standardization", "definition": "The process of administering a test under consistent conditions and developing normative data for interpretation."},
-        {"term": "Full Scale IQ", "definition": "An overall measure of cognitive ability derived from performance on various subtests of an intelligence test."},
-        {"term": "Projective Test", "definition": "Assessment technique using ambiguous stimuli to elicit responses thought to reveal unconscious processes."},
-        {"term": "Standard Error of Measurement", "definition": "Statistic quantifying the expected variability in scores due to measurement error, used to create confidence intervals."},
-        {"term": "Functional Behavioral Assessment", "definition": "Method identifying antecedents and consequences maintaining behaviors to guide function-based intervention."},
-        {"term": "Convergent Validity", "definition": "Evidence that a measure correlates appropriately with measures of related constructs."},
-        {"term": "Normative Data", "definition": "Scores from representative samples used as reference points for interpreting individual test performance."}
+        {
+          "term": "Reliability",
+          "definition": "The consistency and stability of test scores across time, items, or raters."
+        },
+        {
+          "term": "Validity",
+          "definition": "The degree to which a test measures what it is intended to measure."
+        },
+        {
+          "term": "Mental Status Examination",
+          "definition": "A systematic assessment of a patient's current psychological functioning covering appearance, behavior, cognition, and more."
+        },
+        {
+          "term": "Standardization",
+          "definition": "The process of administering a test under consistent conditions and developing normative data for interpretation."
+        },
+        {
+          "term": "Full Scale IQ",
+          "definition": "An overall measure of cognitive ability derived from performance on various subtests of an intelligence test."
+        },
+        {
+          "term": "Projective Test",
+          "definition": "Assessment technique using ambiguous stimuli to elicit responses thought to reveal unconscious processes."
+        },
+        {
+          "term": "Standard Error of Measurement",
+          "definition": "Statistic quantifying the expected variability in scores due to measurement error, used to create confidence intervals."
+        },
+        {
+          "term": "Functional Behavioral Assessment",
+          "definition": "Method identifying antecedents and consequences maintaining behaviors to guide function-based intervention."
+        },
+        {
+          "term": "Convergent Validity",
+          "definition": "Evidence that a measure correlates appropriately with measures of related constructs."
+        },
+        {
+          "term": "Normative Data",
+          "definition": "Scores from representative samples used as reference points for interpreting individual test performance."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Groth-Marnat, G., & Wright, A. J.", "year": 2016, "title": "Handbook of Psychological Assessment", "source": "Wiley (6th ed.)"},
-        {"id": "2", "authors": "Meyer, G. J., et al.", "year": 2001, "title": "Psychological Testing and Psychological Assessment", "source": "American Psychologist, 56(2), 128-165"},
-        {"id": "3", "authors": "Strauss, E., Sherman, E. M. S., & Spreen, O.", "year": 2006, "title": "A Compendium of Neuropsychological Tests", "source": "Oxford University Press (3rd ed.)"},
-        {"id": "4", "authors": "Weiner, I. B., & Greene, R. L.", "year": 2017, "title": "Handbook of Personality Assessment", "source": "Wiley (2nd ed.)"},
-        {"id": "5", "authors": "Ben-Porath, Y. S., & Tellegen, A.", "year": 2020, "title": "Minnesota Multiphasic Personality Inventory-3 (MMPI-3): Manual for Administration, Scoring, and Interpretation", "source": "University of Minnesota Press"},
-        {"id": "6", "authors": "Wechsler, D.", "year": 2008, "title": "Wechsler Adult Intelligence Scale—Fourth Edition: Technical and Interpretive Manual", "source": "Pearson"},
-        {"id": "7", "authors": "Lezak, M. D., et al.", "year": 2012, "title": "Neuropsychological Assessment", "source": "Oxford University Press (5th ed.)"},
-        {"id": "8", "authors": "Reynolds, C. R., & Kamphaus, R. W.", "year": 2015, "title": "Behavior Assessment System for Children, Third Edition (BASC-3): Manual", "source": "Pearson"},
-        {"id": "9", "authors": "Hunsley, J., & Mash, E. J.", "year": 2018, "title": "A Guide to Assessments That Work", "source": "Oxford University Press (2nd ed.)"},
-        {"id": "10", "authors": "First, M. B., et al.", "year": 2016, "title": "Structured Clinical Interview for DSM-5 Disorders: Clinician Version (SCID-5-CV)", "source": "American Psychiatric Association Publishing"}
-      ]
+        {
+          "id": "1",
+          "authors": "Groth-Marnat, G., & Wright, A. J.",
+          "year": 2016,
+          "title": "Handbook of Psychological Assessment",
+          "source": "Wiley (6th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Meyer, G. J., et al.",
+          "year": 2001,
+          "title": "Psychological Testing and Psychological Assessment",
+          "source": "American Psychologist, 56(2), 128-165"
+        },
+        {
+          "id": "3",
+          "authors": "Strauss, E., Sherman, E. M. S., & Spreen, O.",
+          "year": 2006,
+          "title": "A Compendium of Neuropsychological Tests",
+          "source": "Oxford University Press (3rd ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Weiner, I. B., & Greene, R. L.",
+          "year": 2017,
+          "title": "Handbook of Personality Assessment",
+          "source": "Wiley (2nd ed.)"
+        },
+        {
+          "id": "5",
+          "authors": "Ben-Porath, Y. S., & Tellegen, A.",
+          "year": 2020,
+          "title": "Minnesota Multiphasic Personality Inventory-3 (MMPI-3): Manual for Administration, Scoring, and Interpretation",
+          "source": "University of Minnesota Press"
+        },
+        {
+          "id": "6",
+          "authors": "Wechsler, D.",
+          "year": 2008,
+          "title": "Wechsler Adult Intelligence Scale—Fourth Edition: Technical and Interpretive Manual",
+          "source": "Pearson"
+        },
+        {
+          "id": "7",
+          "authors": "Lezak, M. D., et al.",
+          "year": 2012,
+          "title": "Neuropsychological Assessment",
+          "source": "Oxford University Press (5th ed.)"
+        },
+        {
+          "id": "8",
+          "authors": "Reynolds, C. R., & Kamphaus, R. W.",
+          "year": 2015,
+          "title": "Behavior Assessment System for Children, Third Edition (BASC-3): Manual",
+          "source": "Pearson"
+        },
+        {
+          "id": "9",
+          "authors": "Hunsley, J., & Mash, E. J.",
+          "year": 2018,
+          "title": "A Guide to Assessments That Work",
+          "source": "Oxford University Press (2nd ed.)"
+        },
+        {
+          "id": "10",
+          "authors": "First, M. B., et al.",
+          "year": 2016,
+          "title": "Structured Clinical Interview for DSM-5 Disorders: Clinician Version (SCID-5-CV)",
+          "source": "American Psychiatric Association Publishing"
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "question": "Which psychometric property refers to the consistency of a measure over time?",
+          "options": [
+            "Content Validity",
+            "Test-Retest Reliability",
+            "Internal Consistency",
+            "Criterion Validity"
+          ],
+          "correctIndex": 1,
+          "explanation": "Test-retest reliability measures the stability of test scores when the same test is administered to the same people at two different points in time."
+        },
+        {
+          "id": "q2",
+          "question": "In the WAIS-IV, which index measures the ability to hold and manipulate information in conscious awareness?",
+          "options": [
+            "Verbal Comprehension",
+            "Perceptual Reasoning",
+            "Working Memory",
+            "Processing Speed"
+          ],
+          "correctIndex": 2,
+          "explanation": "The Working Memory Index (WMI) assesses the capacity for temporary storage and active manipulation of information."
+        },
+        {
+          "id": "q3",
+          "question": "What is the primary purpose of validity scales in the MMPI-3?",
+          "options": [
+            "To measure specific clinical symptoms like depression.",
+            "To detect unusual or dishonest response styles.",
+            "To assess intelligence and cognitive functioning.",
+            "To determine the patient's vocational interests."
+          ],
+          "correctIndex": 1,
+          "explanation": "Validity scales are designed to identify response biases, such as overreporting, underreporting, or random responding, which could invalidate the clinical results."
+        }
+      ],
+      "caseStudies": [
+        {
+          "title": "Diagnostic Assessment of Mr. J",
+          "description": "A 45-year-old male referred for evaluation of cognitive decline.",
+          "scenario": "Mr. J reports increasing forgetfulness and difficulty managing finances. A comprehensive battery including the WAIS-IV and memory tests (CVLT-3) was administered.",
+          "analysis": "Results showed a significant discrepancy between preserved verbal crystalized intelligence and impaired delayed recall and executive functioning, suggesting a neurocognitive disorder rather than normal aging or depression.",
+          "keyTakeaways": [
+            "Discrepancy analysis is crucial in neuropsychological assessment.",
+            "Multiple sources of data (testing, history, observation) must be integrated.",
+            "Assessment informs differential diagnosis between depression and dementia."
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Reliability vs. Validity",
+          "description": "Distinguishing the two fundamental pillars of psychometrics.",
+          "headers": [
+            "Feature",
+            "Reliability",
+            "Validity"
+          ],
+          "rows": [
+            {
+              "label": "Definition",
+              "values": [
+                "Consistency of measurement",
+                "Accuracy of measurement"
+              ]
+            },
+            {
+              "label": "Key Question",
+              "values": [
+                "Is the result stable?",
+                "Does it measure what it should?"
+              ]
+            },
+            {
+              "label": "Relationship",
+              "values": [
+                "Necessary for validity",
+                "Possible without reliability (but rare/useless)"
+              ]
+            }
+          ]
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "d1",
+          "title": "The Assessment Process",
+          "description": "A cycle showing the iterative nature of psychological assessment.",
+          "type": "cycle",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "Referral Question"
+            },
+            {
+              "id": "n2",
+              "label": "Data Collection (Interview/Testing)"
+            },
+            {
+              "id": "n3",
+              "label": "Integration & Interpretation"
+            },
+            {
+              "id": "n4",
+              "label": "Report & Recommendations"
+            },
+            {
+              "id": "n5",
+              "label": "Feedback & Follow-up"
+            }
+          ]
+        }
+      ],
+      "difficulty": "intermediate"
     },
     "evidence-based-therapies": {
       "title": "Evidence-Based Psychotherapies",
       "description": "Explore CBT, DBT, psychodynamic, and other empirically supported treatments.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 32,
+      "readingTime": 25,
       "sections": [
         {
           "title": "Introduction to Evidence-Based Practice",
@@ -277,36 +697,234 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Cognitive Restructuring", "definition": "CBT technique involving identification and modification of maladaptive thoughts and beliefs."},
-        {"term": "Exposure", "definition": "Therapeutic technique involving systematic confrontation with feared stimuli to reduce anxiety through extinction and habituation."},
-        {"term": "Therapeutic Alliance", "definition": "The collaborative relationship between therapist and client, including agreement on goals, tasks, and emotional bond."},
-        {"term": "Psychological Flexibility", "definition": "ACT concept referring to the ability to be present, open to experience, and act in accordance with values."},
-        {"term": "Transference", "definition": "In psychodynamic therapy, the patient's unconscious redirection of feelings about significant others onto the therapist."},
-        {"term": "Evidence-Based Practice", "definition": "Integration of best available research with clinical expertise and patient characteristics in treatment decisions."},
-        {"term": "Mindfulness", "definition": "Paying attention, on purpose, in the present moment, non-judgmentally—a core component of many third-wave therapies."},
-        {"term": "Dialectics", "definition": "In DBT, the integration of opposites (acceptance and change) rather than viewing them as contradictory."},
-        {"term": "Response Prevention", "definition": "In ERP for OCD, blocking compulsive rituals to allow anxiety to decrease naturally without compulsive relief."},
-        {"term": "Common Factors", "definition": "Elements shared across psychotherapies that contribute to outcome, including alliance, empathy, and expectations."}
+        {
+          "term": "Cognitive Restructuring",
+          "definition": "CBT technique involving identification and modification of maladaptive thoughts and beliefs."
+        },
+        {
+          "term": "Exposure",
+          "definition": "Therapeutic technique involving systematic confrontation with feared stimuli to reduce anxiety through extinction and habituation."
+        },
+        {
+          "term": "Therapeutic Alliance",
+          "definition": "The collaborative relationship between therapist and client, including agreement on goals, tasks, and emotional bond."
+        },
+        {
+          "term": "Psychological Flexibility",
+          "definition": "ACT concept referring to the ability to be present, open to experience, and act in accordance with values."
+        },
+        {
+          "term": "Transference",
+          "definition": "In psychodynamic therapy, the patient's unconscious redirection of feelings about significant others onto the therapist."
+        },
+        {
+          "term": "Evidence-Based Practice",
+          "definition": "Integration of best available research with clinical expertise and patient characteristics in treatment decisions."
+        },
+        {
+          "term": "Mindfulness",
+          "definition": "Paying attention, on purpose, in the present moment, non-judgmentally—a core component of many third-wave therapies."
+        },
+        {
+          "term": "Dialectics",
+          "definition": "In DBT, the integration of opposites (acceptance and change) rather than viewing them as contradictory."
+        },
+        {
+          "term": "Response Prevention",
+          "definition": "In ERP for OCD, blocking compulsive rituals to allow anxiety to decrease naturally without compulsive relief."
+        },
+        {
+          "term": "Common Factors",
+          "definition": "Elements shared across psychotherapies that contribute to outcome, including alliance, empathy, and expectations."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Beck, J. S.", "year": 2020, "title": "Cognitive Behavior Therapy: Basics and Beyond", "source": "Guilford Press (3rd ed.)"},
-        {"id": "2", "authors": "Linehan, M. M.", "year": 2015, "title": "DBT Skills Training Manual", "source": "Guilford Press (2nd ed.)"},
-        {"id": "3", "authors": "Hayes, S. C., Strosahl, K. D., & Wilson, K. G.", "year": 2012, "title": "Acceptance and Commitment Therapy: The Process and Practice of Mindful Change", "source": "Guilford Press (2nd ed.)"},
-        {"id": "4", "authors": "Wampold, B. E., & Imel, Z. E.", "year": 2015, "title": "The Great Psychotherapy Debate", "source": "Routledge (2nd ed.)"},
-        {"id": "5", "authors": "Foa, E. B., Hembree, E. A., & Rothbaum, B. O.", "year": 2007, "title": "Prolonged Exposure Therapy for PTSD: Emotional Processing of Traumatic Experiences", "source": "Oxford University Press"},
-        {"id": "6", "authors": "Weissman, M. M., Markowitz, J. C., & Klerman, G. L.", "year": 2018, "title": "The Guide to Interpersonal Psychotherapy", "source": "Oxford University Press"},
-        {"id": "7", "authors": "Segal, Z. V., Williams, J. M. G., & Teasdale, J. D.", "year": 2018, "title": "Mindfulness-Based Cognitive Therapy for Depression", "source": "Guilford Press (2nd ed.)"},
-        {"id": "8", "authors": "Gilbert, P.", "year": 2010, "title": "Compassion Focused Therapy: Distinctive Features", "source": "Routledge"},
-        {"id": "9", "authors": "Craske, M. G., et al.", "year": 2014, "title": "Maximizing Exposure Therapy: An Inhibitory Learning Approach", "source": "Behaviour Research and Therapy, 58, 10-23"},
-        {"id": "10", "authors": "Norcross, J. C., & Lambert, M. J.", "year": 2018, "title": "Psychotherapy Relationships That Work III", "source": "Psychotherapy, 55(4), 303-315"}
-      ]
+        {
+          "id": "1",
+          "authors": "Beck, J. S.",
+          "year": 2020,
+          "title": "Cognitive Behavior Therapy: Basics and Beyond",
+          "source": "Guilford Press (3rd ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Linehan, M. M.",
+          "year": 2015,
+          "title": "DBT Skills Training Manual",
+          "source": "Guilford Press (2nd ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Hayes, S. C., Strosahl, K. D., & Wilson, K. G.",
+          "year": 2012,
+          "title": "Acceptance and Commitment Therapy: The Process and Practice of Mindful Change",
+          "source": "Guilford Press (2nd ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Wampold, B. E., & Imel, Z. E.",
+          "year": 2015,
+          "title": "The Great Psychotherapy Debate",
+          "source": "Routledge (2nd ed.)"
+        },
+        {
+          "id": "5",
+          "authors": "Foa, E. B., Hembree, E. A., & Rothbaum, B. O.",
+          "year": 2007,
+          "title": "Prolonged Exposure Therapy for PTSD: Emotional Processing of Traumatic Experiences",
+          "source": "Oxford University Press"
+        },
+        {
+          "id": "6",
+          "authors": "Weissman, M. M., Markowitz, J. C., & Klerman, G. L.",
+          "year": 2018,
+          "title": "The Guide to Interpersonal Psychotherapy",
+          "source": "Oxford University Press"
+        },
+        {
+          "id": "7",
+          "authors": "Segal, Z. V., Williams, J. M. G., & Teasdale, J. D.",
+          "year": 2018,
+          "title": "Mindfulness-Based Cognitive Therapy for Depression",
+          "source": "Guilford Press (2nd ed.)"
+        },
+        {
+          "id": "8",
+          "authors": "Gilbert, P.",
+          "year": 2010,
+          "title": "Compassion Focused Therapy: Distinctive Features",
+          "source": "Routledge"
+        },
+        {
+          "id": "9",
+          "authors": "Craske, M. G., et al.",
+          "year": 2014,
+          "title": "Maximizing Exposure Therapy: An Inhibitory Learning Approach",
+          "source": "Behaviour Research and Therapy, 58, 10-23"
+        },
+        {
+          "id": "10",
+          "authors": "Norcross, J. C., & Lambert, M. J.",
+          "year": 2018,
+          "title": "Psychotherapy Relationships That Work III",
+          "source": "Psychotherapy, 55(4), 303-315"
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "question": "Which therapeutic approach is based on the core dialectic of balancing acceptance and change?",
+          "options": [
+            "CBT",
+            "DBT",
+            "ACT",
+            "IPT"
+          ],
+          "correctIndex": 1,
+          "explanation": "Dialectical Behavior Therapy (DBT) emphasizes the synthesis of acceptance (validating the client) and change (behavioral improvement)."
+        },
+        {
+          "id": "q2",
+          "question": "In ACT, what does 'cognitive defusion' refer to?",
+          "options": [
+            "Changing the content of negative thoughts to positive ones.",
+            "Reducing the literal, controlling influence of thoughts by changing our relationship to them.",
+            "Eliminating all thoughts during meditation.",
+            "Analyzing the childhood origins of current thoughts."
+          ],
+          "correctIndex": 1,
+          "explanation": "Cognitive defusion involves seeing thoughts as just thoughts (mental events) rather than as objective facts that must control behavior."
+        },
+        {
+          "id": "q3",
+          "question": "Which 'common factor' is consistently found to be the strongest predictor of therapeutic outcome?",
+          "options": [
+            "The specific technique used",
+            "The therapist's years of experience",
+            "The therapeutic alliance",
+            "The duration of treatment"
+          ],
+          "correctIndex": 2,
+          "explanation": "The therapeutic alliance—the collaborative relationship between therapist and client—is the most robust predictor of success across different types of therapy."
+        }
+      ],
+      "caseStudies": [
+        {
+          "title": "Treating Panic Disorder with CBT",
+          "description": "Application of cognitive restructuring and interoceptive exposure.",
+          "scenario": "A 30-year-old man avoids public places due to fear of panic attacks. He misinterprets heart palpitations as signs of an impending heart attack.",
+          "analysis": "Treatment involved identifying catastrophic misinterpretations (cognitive restructuring) and systematically inducing feared sensations like breathlessness (interoceptive exposure) to demonstrate they are not dangerous.",
+          "keyTakeaways": [
+            "Interoceptive exposure targets fear of bodily sensations.",
+            "Cognitive restructuring addresses 'catastrophizing' thoughts.",
+            "CBT for panic disorder is highly effective and time-limited."
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "CBT vs. ACT",
+          "description": "Comparing traditional cognitive-behavioral therapy with acceptance-based approaches.",
+          "headers": [
+            "Feature",
+            "CBT (Traditional)",
+            "ACT (Third-Wave)"
+          ],
+          "rows": [
+            {
+              "label": "Goal regarding thoughts",
+              "values": [
+                "Change thought content/accuracy",
+                "Change relationship to thoughts"
+              ]
+            },
+            {
+              "label": "Primary Mechanism",
+              "values": [
+                "Cognitive restructuring",
+                "Psychological flexibility"
+              ]
+            },
+            {
+              "label": "View of Symptoms",
+              "values": [
+                "Targets for reduction",
+                "Experiences to be accepted while acting on values"
+              ]
+            }
+          ]
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "d1",
+          "title": "The CBT Triangle",
+          "description": "A comparison diagram showing the reciprocal relationship between thoughts, feelings, and behaviors.",
+          "type": "comparison",
+          "nodes": [
+            {
+              "id": "n1",
+              "label": "Thoughts (What we think)"
+            },
+            {
+              "id": "n2",
+              "label": "Feelings (What we feel)"
+            },
+            {
+              "id": "n3",
+              "label": "Behaviors (What we do)"
+            }
+          ]
+        }
+      ],
+      "difficulty": "advanced"
     },
     "rehabilitation": {
       "title": "Rehabilitation Psychology",
       "description": "Understand the psychological aspects of rehabilitation and recovery from injury or illness.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 20,
+      "readingTime": 18,
       "sections": [
         {
           "title": "Introduction to Rehabilitation Psychology",
@@ -360,36 +978,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Adjustment to Disability", "definition": "Psychological process of adapting to life changes caused by disability or illness."},
-        {"term": "Cognitive Rehabilitation", "definition": "Therapeutic approaches to restore or compensate for cognitive functions impaired by brain injury or neurological conditions."},
-        {"term": "Use it or Lose it Principle", "definition": "Principle stating that neural connections strengthened through active use will weaken without stimulation."},
-        {"term": "Rehabilitation Adherence", "definition": "The degree to which an individual follows prescribed rehabilitation protocols and engages in recovery behaviors."},
-        {"term": "Anosognosia", "definition": "Impaired awareness of one's own deficits, common after brain injury, creating challenges for rehabilitation engagement."},
-        {"term": "Posttraumatic Growth", "definition": "Positive psychological change experienced as a result of adversity or challenging circumstances."},
-        {"term": "Self-Efficacy", "definition": "Beliefs about one's ability to perform specific behaviors, strongly predicting rehabilitation engagement and self-management."},
-        {"term": "Holistic Rehabilitation", "definition": "Comprehensive approach integrating cognitive, emotional, social, and vocational rehabilitation in unified programs."},
-        {"term": "Phantom Limb", "definition": "Sensations, sometimes painful, perceived to come from an amputated limb that is no longer present."},
-        {"term": "Secondary Conditions", "definition": "Health problems occurring as consequences of a primary disability, often preventable with proper management."}
+        {
+          "term": "Adjustment to Disability",
+          "definition": "Psychological process of adapting to life changes caused by disability or illness."
+        },
+        {
+          "term": "Cognitive Rehabilitation",
+          "definition": "Therapeutic approaches to restore or compensate for cognitive functions impaired by brain injury or neurological conditions."
+        },
+        {
+          "term": "Use it or Lose it Principle",
+          "definition": "Principle stating that neural connections strengthened through active use will weaken without stimulation."
+        },
+        {
+          "term": "Rehabilitation Adherence",
+          "definition": "The degree to which an individual follows prescribed rehabilitation protocols and engages in recovery behaviors."
+        },
+        {
+          "term": "Anosognosia",
+          "definition": "Impaired awareness of one's own deficits, common after brain injury, creating challenges for rehabilitation engagement."
+        },
+        {
+          "term": "Posttraumatic Growth",
+          "definition": "Positive psychological change experienced as a result of adversity or challenging circumstances."
+        },
+        {
+          "term": "Self-Efficacy",
+          "definition": "Beliefs about one's ability to perform specific behaviors, strongly predicting rehabilitation engagement and self-management."
+        },
+        {
+          "term": "Holistic Rehabilitation",
+          "definition": "Comprehensive approach integrating cognitive, emotional, social, and vocational rehabilitation in unified programs."
+        },
+        {
+          "term": "Phantom Limb",
+          "definition": "Sensations, sometimes painful, perceived to come from an amputated limb that is no longer present."
+        },
+        {
+          "term": "Secondary Conditions",
+          "definition": "Health problems occurring as consequences of a primary disability, often preventable with proper management."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Wilson, B. A., Tate, R. L., & Grimley, G. J.", "year": 2019, "title": "Neuropsychological Rehabilitation", "source": "Oxford University Press (2nd ed.)"},
-        {"id": "2", "authors": "Schultz, K. K., & DeLisa, L. J.", "year": 2018, "title": "Physical Medicine and Rehabilitation", "source": "Elsevier"},
-        {"id": "3", "authors": "Frank, R. G., & Elliott, T. R.", "year": 2000, "title": "Handbook of Rehabilitation Psychology", "source": "American Psychological Association"},
-        {"id": "4", "authors": "Prigatano, G. P.", "year": 1999, "title": "Principles of Neuropsychological Rehabilitation", "source": "Oxford University Press"},
-        {"id": "5", "authors": "Kennedy, P.", "year": 2012, "title": "The Oxford Handbook of Rehabilitation Psychology", "source": "Oxford University Press"},
-        {"id": "6", "authors": "Cicerone, K. D., et al.", "year": 2019, "title": "Evidence-Based Cognitive Rehabilitation: Systematic Review of the Literature From 2009 Through 2014", "source": "Archives of Physical Medicine and Rehabilitation, 100(8), 1515-1533"},
-        {"id": "7", "authors": "Bombardier, C. H., et al.", "year": 2012, "title": "Depression Trajectories During the First Year After Spinal Cord Injury", "source": "Archives of Physical Medicine and Rehabilitation, 93(2), 268-274"},
-        {"id": "8", "authors": "Dijkers, M. P.", "year": 2005, "title": "Quality of Life of Individuals With Spinal Cord Injury: A Review of Conceptualization, Measurement, and Research Findings", "source": "Journal of Rehabilitation Research and Development, 42(3), 87-110"},
-        {"id": "9", "authors": "Kreutzer, J. S., et al.", "year": 2009, "title": "Family Needs After Brain Injury: A Quantitative Analysis of Family and Professional Perspectives", "source": "Journal of Head Trauma Rehabilitation, 24(2), 111-119"},
-        {"id": "10", "authors": "Turk, D. C., & Gatchel, R. J.", "year": 2018, "title": "Psychological Approaches to Pain Management: A Practitioner's Handbook", "source": "Guilford Press (3rd ed.)"}
-      ]
+        {
+          "id": "1",
+          "authors": "Wilson, B. A., Tate, R. L., & Grimley, G. J.",
+          "year": 2019,
+          "title": "Neuropsychological Rehabilitation",
+          "source": "Oxford University Press (2nd ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Schultz, K. K., & DeLisa, L. J.",
+          "year": 2018,
+          "title": "Physical Medicine and Rehabilitation",
+          "source": "Elsevier"
+        },
+        {
+          "id": "3",
+          "authors": "Frank, R. G., & Elliott, T. R.",
+          "year": 2000,
+          "title": "Handbook of Rehabilitation Psychology",
+          "source": "American Psychological Association"
+        },
+        {
+          "id": "4",
+          "authors": "Prigatano, G. P.",
+          "year": 1999,
+          "title": "Principles of Neuropsychological Rehabilitation",
+          "source": "Oxford University Press"
+        },
+        {
+          "id": "5",
+          "authors": "Kennedy, P.",
+          "year": 2012,
+          "title": "The Oxford Handbook of Rehabilitation Psychology",
+          "source": "Oxford University Press"
+        },
+        {
+          "id": "6",
+          "authors": "Cicerone, K. D., et al.",
+          "year": 2019,
+          "title": "Evidence-Based Cognitive Rehabilitation: Systematic Review of the Literature From 2009 Through 2014",
+          "source": "Archives of Physical Medicine and Rehabilitation, 100(8), 1515-1533"
+        },
+        {
+          "id": "7",
+          "authors": "Bombardier, C. H., et al.",
+          "year": 2012,
+          "title": "Depression Trajectories During the First Year After Spinal Cord Injury",
+          "source": "Archives of Physical Medicine and Rehabilitation, 93(2), 268-274"
+        },
+        {
+          "id": "8",
+          "authors": "Dijkers, M. P.",
+          "year": 2005,
+          "title": "Quality of Life of Individuals With Spinal Cord Injury: A Review of Conceptualization, Measurement, and Research Findings",
+          "source": "Journal of Rehabilitation Research and Development, 42(3), 87-110"
+        },
+        {
+          "id": "9",
+          "authors": "Kreutzer, J. S., et al.",
+          "year": 2009,
+          "title": "Family Needs After Brain Injury: A Quantitative Analysis of Family and Professional Perspectives",
+          "source": "Journal of Head Trauma Rehabilitation, 24(2), 111-119"
+        },
+        {
+          "id": "10",
+          "authors": "Turk, D. C., & Gatchel, R. J.",
+          "year": 2018,
+          "title": "Psychological Approaches to Pain Management: A Practitioner's Handbook",
+          "source": "Guilford Press (3rd ed.)"
+        }
+      ],
+      "difficulty": "intermediate"
     },
     "health-psychology": {
       "title": "Health Psychology",
       "description": "Explore psychological factors influencing health, illness, and healthcare behaviors.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 24,
+      "readingTime": 21,
       "sections": [
         {
           "title": "Introduction to Health Psychology",
@@ -451,29 +1160,120 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Allostatic Load", "definition": "The cumulative biological burden of chronic stress on the body, increasing risk for health problems."},
-        {"term": "Gate Control Theory", "definition": "Theory proposing that neural mechanisms in spinal cord can open or close the 'gate' for pain transmission."},
-        {"term": "Health Belief Model", "definition": "Theory that health behaviors depend on perceived susceptibility, severity, benefits, barriers, cues to action, and self-efficacy."},
-        {"term": "Transtheoretical Model", "definition": "Stage model of behavior change describing progression from precontemplation through action to maintenance."},
-        {"term": "Motivational Interviewing", "definition": "Client-centered counseling approach designed to resolve ambivalence and enhance intrinsic motivation for behavior change."},
-        {"term": "Self-Efficacy", "definition": "Belief in one's ability to successfully perform a specific behavior, strongly predicting health behavior performance."},
-        {"term": "Biopsychosocial Model", "definition": "Framework recognizing that health and illness result from interactions among biological, psychological, and social factors."},
-        {"term": "Catastrophizing", "definition": "Pattern of magnifying, ruminating about, and feeling helpless about pain, strongly predicting pain outcomes."},
-        {"term": "Illness Representations", "definition": "Mental models of illness (identity, cause, timeline, consequences, control) that guide coping and health behavior."},
-        {"term": "Psychoneuroimmunology", "definition": "Field examining interactions among psychological processes, nervous system, and immune function."}
+        {
+          "term": "Allostatic Load",
+          "definition": "The cumulative biological burden of chronic stress on the body, increasing risk for health problems."
+        },
+        {
+          "term": "Gate Control Theory",
+          "definition": "Theory proposing that neural mechanisms in spinal cord can open or close the 'gate' for pain transmission."
+        },
+        {
+          "term": "Health Belief Model",
+          "definition": "Theory that health behaviors depend on perceived susceptibility, severity, benefits, barriers, cues to action, and self-efficacy."
+        },
+        {
+          "term": "Transtheoretical Model",
+          "definition": "Stage model of behavior change describing progression from precontemplation through action to maintenance."
+        },
+        {
+          "term": "Motivational Interviewing",
+          "definition": "Client-centered counseling approach designed to resolve ambivalence and enhance intrinsic motivation for behavior change."
+        },
+        {
+          "term": "Self-Efficacy",
+          "definition": "Belief in one's ability to successfully perform a specific behavior, strongly predicting health behavior performance."
+        },
+        {
+          "term": "Biopsychosocial Model",
+          "definition": "Framework recognizing that health and illness result from interactions among biological, psychological, and social factors."
+        },
+        {
+          "term": "Catastrophizing",
+          "definition": "Pattern of magnifying, ruminating about, and feeling helpless about pain, strongly predicting pain outcomes."
+        },
+        {
+          "term": "Illness Representations",
+          "definition": "Mental models of illness (identity, cause, timeline, consequences, control) that guide coping and health behavior."
+        },
+        {
+          "term": "Psychoneuroimmunology",
+          "definition": "Field examining interactions among psychological processes, nervous system, and immune function."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Taylor, S. E.", "year": 2018, "title": "Health Psychology", "source": "McGraw-Hill (11th ed.)"},
-        {"id": "2", "authors": "Brannon, L., & Feist, H. J.", "year": 2019, "title": "Health Psychology: An Introduction to Behavior and Health", "source": "Cengage (9th ed.)"},
-        {"id": "3", "authors": "Sarafino, E. P., & Smith, T. W.", "year": 2020, "title": "Health Psychology: Biopsychosocial Interactions", "source": "Wiley (9th ed.)"},
-        {"id": "4", "authors": "Miller, W. R., & Rollnick, S.", "year": 2013, "title": "Motivational Interviewing: Helping People Change", "source": "Guilford Press (3rd ed.)"},
-        {"id": "5", "authors": "Turk, D. C., & Gatchel, R. J.", "year": 2018, "title": "Psychological Approaches to Pain Management: A Practitioner's Handbook", "source": "Guilford Press (3rd ed.)"},
-        {"id": "6", "authors": "Ader, R., Felten, D. L., & Cohen, N.", "year": 2001, "title": "Psychoneuroimmunology", "source": "Academic Press (3rd ed.)"},
-        {"id": "7", "authors": "Prochaska, J. O., & DiClemente, C. C.", "year": 1983, "title": "Stages and Processes of Self-Change of Smoking: Toward an Integrative Model of Change", "source": "Journal of Consulting and Clinical Psychology, 51(3), 390-395"},
-        {"id": "8", "authors": "Leventhal, H., Phillips, L. A., & Burns, E.", "year": 2016, "title": "The Common-Sense Model of Self-Regulation: A Dynamic Framework for Understanding Illness Self-Management", "source": "Journal of Behavioral Medicine, 39(6), 935-946"},
-        {"id": "9", "authors": "McEwen, B. S.", "year": 1998, "title": "Stress, Adaptation, and Disease: Allostasis and Allostatic Load", "source": "Annals of the New York Academy of Sciences, 840(1), 33-44"},
-        {"id": "10", "authors": "Hagger, M. S., & Orbell, S.", "year": 2003, "title": "A Meta-Analytic Review of the Common-Sense Model of Illness Representations", "source": "Psychology and Health, 18(2), 141-184"}
-      ]
+        {
+          "id": "1",
+          "authors": "Taylor, S. E.",
+          "year": 2018,
+          "title": "Health Psychology",
+          "source": "McGraw-Hill (11th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Brannon, L., & Feist, H. J.",
+          "year": 2019,
+          "title": "Health Psychology: An Introduction to Behavior and Health",
+          "source": "Cengage (9th ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Sarafino, E. P., & Smith, T. W.",
+          "year": 2020,
+          "title": "Health Psychology: Biopsychosocial Interactions",
+          "source": "Wiley (9th ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Miller, W. R., & Rollnick, S.",
+          "year": 2013,
+          "title": "Motivational Interviewing: Helping People Change",
+          "source": "Guilford Press (3rd ed.)"
+        },
+        {
+          "id": "5",
+          "authors": "Turk, D. C., & Gatchel, R. J.",
+          "year": 2018,
+          "title": "Psychological Approaches to Pain Management: A Practitioner's Handbook",
+          "source": "Guilford Press (3rd ed.)"
+        },
+        {
+          "id": "6",
+          "authors": "Ader, R., Felten, D. L., & Cohen, N.",
+          "year": 2001,
+          "title": "Psychoneuroimmunology",
+          "source": "Academic Press (3rd ed.)"
+        },
+        {
+          "id": "7",
+          "authors": "Prochaska, J. O., & DiClemente, C. C.",
+          "year": 1983,
+          "title": "Stages and Processes of Self-Change of Smoking: Toward an Integrative Model of Change",
+          "source": "Journal of Consulting and Clinical Psychology, 51(3), 390-395"
+        },
+        {
+          "id": "8",
+          "authors": "Leventhal, H., Phillips, L. A., & Burns, E.",
+          "year": 2016,
+          "title": "The Common-Sense Model of Self-Regulation: A Dynamic Framework for Understanding Illness Self-Management",
+          "source": "Journal of Behavioral Medicine, 39(6), 935-946"
+        },
+        {
+          "id": "9",
+          "authors": "McEwen, B. S.",
+          "year": 1998,
+          "title": "Stress, Adaptation, and Disease: Allostasis and Allostatic Load",
+          "source": "Annals of the New York Academy of Sciences, 840(1), 33-44"
+        },
+        {
+          "id": "10",
+          "authors": "Hagger, M. S., & Orbell, S.",
+          "year": 2003,
+          "title": "A Meta-Analytic Review of the Common-Sense Model of Illness Representations",
+          "source": "Psychology and Health, 18(2), 141-184"
+        }
+      ],
+      "difficulty": "intermediate"
     }
   }
 }

@@ -5,7 +5,7 @@
       "description": "Study memory, attention, learning, problem-solving, and decision-making processes.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 30,
+      "readingTime": 15,
       "sections": [
         {
           "title": "Introduction to Cognitive Psychology",
@@ -71,36 +71,265 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Working Memory", "definition": "A cognitive system for temporarily holding and manipulating information, consisting of the central executive, phonological loop, visuospatial sketchpad, and episodic buffer."},
-        {"term": "Encoding Specificity", "definition": "The principle that retrieval cues are effective to the extent they match the conditions present during encoding."},
-        {"term": "Heuristic", "definition": "A mental shortcut or rule of thumb that simplifies decision-making but may lead to systematic errors or biases."},
-        {"term": "Levels of Processing", "definition": "Theory proposing that deeper, more meaningful processing of information leads to better memory than shallow processing."},
-        {"term": "Prospect Theory", "definition": "Descriptive model of decision-making showing that people evaluate outcomes relative to reference points and are loss-averse."},
-        {"term": "Dual-Process Theory", "definition": "Framework distinguishing between fast, automatic (System 1) and slow, deliberate (System 2) cognitive processes."},
-        {"term": "Inattentional Blindness", "definition": "Failure to notice clearly visible objects or events when attention is focused elsewhere."},
-        {"term": "Feature Integration Theory", "definition": "Treisman's theory that attention is required to bind individual features into coherent object representations."},
-        {"term": "Episodic Buffer", "definition": "Component of working memory that integrates information from different sources and links working memory to long-term memory."},
-        {"term": "Loss Aversion", "definition": "The tendency for losses to be psychologically more impactful than equivalent gains, typically by a ratio of about 2:1."}
+        {
+          "term": "Working Memory",
+          "definition": "A cognitive system for temporarily holding and manipulating information, consisting of the central executive, phonological loop, visuospatial sketchpad, and episodic buffer."
+        },
+        {
+          "term": "Encoding Specificity",
+          "definition": "The principle that retrieval cues are effective to the extent they match the conditions present during encoding."
+        },
+        {
+          "term": "Heuristic",
+          "definition": "A mental shortcut or rule of thumb that simplifies decision-making but may lead to systematic errors or biases."
+        },
+        {
+          "term": "Levels of Processing",
+          "definition": "Theory proposing that deeper, more meaningful processing of information leads to better memory than shallow processing."
+        },
+        {
+          "term": "Prospect Theory",
+          "definition": "Descriptive model of decision-making showing that people evaluate outcomes relative to reference points and are loss-averse."
+        },
+        {
+          "term": "Dual-Process Theory",
+          "definition": "Framework distinguishing between fast, automatic (System 1) and slow, deliberate (System 2) cognitive processes."
+        },
+        {
+          "term": "Inattentional Blindness",
+          "definition": "Failure to notice clearly visible objects or events when attention is focused elsewhere."
+        },
+        {
+          "term": "Feature Integration Theory",
+          "definition": "Treisman's theory that attention is required to bind individual features into coherent object representations."
+        },
+        {
+          "term": "Episodic Buffer",
+          "definition": "Component of working memory that integrates information from different sources and links working memory to long-term memory."
+        },
+        {
+          "term": "Loss Aversion",
+          "definition": "The tendency for losses to be psychologically more impactful than equivalent gains, typically by a ratio of about 2:1."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Sternberg, R. J., & Sternberg, K.", "year": 2017, "title": "Cognitive Psychology", "source": "Cengage Learning (7th ed.)"},
-        {"id": "2", "authors": "Eysenck, M. W., & Keane, M. T.", "year": 2020, "title": "Cognitive Psychology: A Student's Handbook", "source": "Psychology Press (8th ed.)"},
-        {"id": "3", "authors": "Kahneman, D.", "year": 2011, "title": "Thinking, Fast and Slow", "source": "Farrar, Straus and Giroux"},
-        {"id": "4", "authors": "Baddeley, A. D., Eysenck, M. W., & Anderson, M. C.", "year": 2020, "title": "Memory", "source": "Psychology Press (3rd ed.)"},
-        {"id": "5", "authors": "Neisser, U.", "year": 1967, "title": "Cognitive Psychology", "source": "Appleton-Century-Crofts"},
-        {"id": "6", "authors": "Kahneman, D., & Tversky, A.", "year": 1979, "title": "Prospect Theory: An Analysis of Decision under Risk", "source": "Econometrica, 47(2), 263-292"},
-        {"id": "7", "authors": "Simons, D. J., & Chabris, C. F.", "year": 1999, "title": "Gorillas in Our Midst: Sustained Inattentional Blindness for Dynamic Events", "source": "Perception, 28(9), 1059-1074"},
-        {"id": "8", "authors": "Treisman, A. M., & Gelade, G.", "year": 1980, "title": "A Feature-Integration Theory of Attention", "source": "Cognitive Psychology, 12(1), 97-136"},
-        {"id": "9", "authors": "Tulving, E.", "year": 1972, "title": "Episodic and Semantic Memory", "source": "In E. Tulving & W. Donaldson (Eds.), Organization of Memory. Academic Press"},
-        {"id": "10", "authors": "Craik, F. I., & Lockhart, R. S.", "year": 1972, "title": "Levels of Processing: A Framework for Memory Research", "source": "Journal of Verbal Learning and Verbal Behavior, 11(6), 671-684"}
-      ]
+        {
+          "id": "1",
+          "authors": "Sternberg, R. J., & Sternberg, K.",
+          "year": 2017,
+          "title": "Cognitive Psychology",
+          "source": "Cengage Learning (7th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Eysenck, M. W., & Keane, M. T.",
+          "year": 2020,
+          "title": "Cognitive Psychology: A Student's Handbook",
+          "source": "Psychology Press (8th ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Kahneman, D.",
+          "year": 2011,
+          "title": "Thinking, Fast and Slow",
+          "source": "Farrar, Straus and Giroux"
+        },
+        {
+          "id": "4",
+          "authors": "Baddeley, A. D., Eysenck, M. W., & Anderson, M. C.",
+          "year": 2020,
+          "title": "Memory",
+          "source": "Psychology Press (3rd ed.)"
+        },
+        {
+          "id": "5",
+          "authors": "Neisser, U.",
+          "year": 1967,
+          "title": "Cognitive Psychology",
+          "source": "Appleton-Century-Crofts"
+        },
+        {
+          "id": "6",
+          "authors": "Kahneman, D., & Tversky, A.",
+          "year": 1979,
+          "title": "Prospect Theory: An Analysis of Decision under Risk",
+          "source": "Econometrica, 47(2), 263-292"
+        },
+        {
+          "id": "7",
+          "authors": "Simons, D. J., & Chabris, C. F.",
+          "year": 1999,
+          "title": "Gorillas in Our Midst: Sustained Inattentional Blindness for Dynamic Events",
+          "source": "Perception, 28(9), 1059-1074"
+        },
+        {
+          "id": "8",
+          "authors": "Treisman, A. M., & Gelade, G.",
+          "year": 1980,
+          "title": "A Feature-Integration Theory of Attention",
+          "source": "Cognitive Psychology, 12(1), 97-136"
+        },
+        {
+          "id": "9",
+          "authors": "Tulving, E.",
+          "year": 1972,
+          "title": "Episodic and Semantic Memory",
+          "source": "In E. Tulving & W. Donaldson (Eds.), Organization of Memory. Academic Press"
+        },
+        {
+          "id": "10",
+          "authors": "Craik, F. I., & Lockhart, R. S.",
+          "year": 1972,
+          "title": "Levels of Processing: A Framework for Memory Research",
+          "source": "Journal of Verbal Learning and Verbal Behavior, 11(6), 671-684"
+        }
+      ],
+      "quiz": [
+        {
+          "id": "cog_q1",
+          "question": "Which component of working memory is responsible for coordinating the subsystems and allocating attentional resources?",
+          "options": [
+            "Phonological Loop",
+            "Visuospatial Sketchpad",
+            "Central Executive",
+            "Episodic Buffer"
+          ],
+          "correctIndex": 2,
+          "explanation": "The central executive is the 'control center' of Baddeley's working memory model, managing the other components."
+        },
+        {
+          "id": "cog_q2",
+          "question": "What is the term for the failure to notice an unexpected stimulus when attention is focused elsewhere?",
+          "options": [
+            "Change Blindness",
+            "Inattentional Blindness",
+            "Attentional Blink",
+            "Inhibition of Return"
+          ],
+          "correctIndex": 1,
+          "explanation": "Inattentional blindness occurs when a person fails to notice a visible but unexpected object because their attention is occupied by another task."
+        },
+        {
+          "id": "cog_q3",
+          "question": "According to Prospect Theory, how do people generally react to losses compared to equivalent gains?",
+          "options": [
+            "Gains are more impactful",
+            "Losses and gains are equal",
+            "Losses are more impactful (loss aversion)",
+            "People are indifferent to both"
+          ],
+          "correctIndex": 2,
+          "explanation": "Loss aversion is the principle that losses are psychologically twice as powerful as gains."
+        },
+        {
+          "id": "cog_q4",
+          "question": "Which memory system has a capacity of approximately 7±2 items and a duration of 15-30 seconds?",
+          "options": [
+            "Sensory Memory",
+            "Short-Term Memory",
+            "Long-Term Memory",
+            "Implicit Memory"
+          ],
+          "correctIndex": 1,
+          "explanation": "Miller (1956) identified the capacity of short-term memory as approximately 7 items (or chunks)."
+        }
+      ],
+      "caseStudies": [
+        {
+          "title": "The Case of H.M. (Henry Molaison)",
+          "description": "The most famous case study in the history of memory research.",
+          "scenario": "After undergoing bilateral medial temporal lobe resection to treat epilepsy, H.M. developed profound anterograde amnesia. He could no longer form new explicit memories but could still learn new motor skills.",
+          "analysis": "H.M.'s case demonstrated the critical role of the hippocampus in consolidating explicit memories and revealed the distinction between explicit and implicit memory systems.",
+          "keyTakeaways": [
+            "The hippocampus is essential for forming new long-term explicit memories",
+            "Explicit and implicit memory are served by different brain systems",
+            "Short-term memory can remain intact even when long-term consolidation is lost"
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "System 1 vs. System 2 Thinking",
+          "description": "The dual-process theory of cognition popularized by Daniel Kahneman.",
+          "headers": [
+            "Feature",
+            "System 1 (Intuitive)",
+            "System 2 (Deliberate)"
+          ],
+          "rows": [
+            {
+              "label": "Speed",
+              "values": [
+                "Fast",
+                "Slow"
+              ]
+            },
+            {
+              "label": "Effort",
+              "values": [
+                "Automatic/Low effort",
+                "Controlled/High effort"
+              ]
+            },
+            {
+              "label": "Awareness",
+              "values": [
+                "Unconscious",
+                "Conscious"
+              ]
+            },
+            {
+              "label": "Reliability",
+              "values": [
+                "Prone to biases",
+                "More logical/reliable"
+              ]
+            }
+          ]
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "cog_d1",
+          "title": "Information Processing Model",
+          "description": "The flow of information through the memory system.",
+          "type": "flowchart",
+          "nodes": [
+            {
+              "id": "1",
+              "label": "Sensory Input"
+            },
+            {
+              "id": "2",
+              "label": "Sensory Memory"
+            },
+            {
+              "id": "3",
+              "label": "Attention"
+            },
+            {
+              "id": "4",
+              "label": "Short-Term / Working Memory"
+            },
+            {
+              "id": "5",
+              "label": "Encoding / Retrieval"
+            },
+            {
+              "id": "6",
+              "label": "Long-Term Memory"
+            }
+          ]
+        }
+      ],
+      "difficulty": "intermediate"
     },
     "emotion-motivation": {
       "title": "Emotion & Motivation",
       "description": "Understand the nature of emotions and what drives human behavior.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 25,
+      "readingTime": 13,
       "sections": [
         {
           "title": "Introduction",
@@ -162,36 +391,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Two-Factor Theory", "definition": "Schachter and Singer's theory that emotion results from physiological arousal combined with cognitive interpretation of that arousal."},
-        {"term": "Cognitive Appraisal", "definition": "The process of evaluating a situation in terms of its personal significance and coping options, which shapes emotional response."},
-        {"term": "Self-Determination Theory", "definition": "Theory proposing that optimal motivation and well-being require satisfaction of needs for autonomy, competence, and relatedness."},
-        {"term": "Yerkes-Dodson Law", "definition": "Principle that performance is optimal at moderate arousal levels, with the optimal level varying by task difficulty."},
-        {"term": "Growth Mindset", "definition": "Belief that abilities and intelligence can be developed through effort, learning, and persistence."},
-        {"term": "Emotion Regulation", "definition": "Processes by which individuals influence which emotions they have, when they have them, and how they experience and express them."},
-        {"term": "Core Affect", "definition": "Barrett's concept of continuous variation in valence (pleasant-unpleasant) and arousal that forms the basis of constructed emotions."},
-        {"term": "Intrinsic Motivation", "definition": "Engaging in an activity for its inherent satisfaction rather than for external rewards or pressures."},
-        {"term": "Attribution", "definition": "The process of explaining the causes of behavior and events, which affects motivation and emotion."},
-        {"term": "Reappraisal", "definition": "An emotion regulation strategy involving changing how one thinks about a situation to alter its emotional impact."}
+        {
+          "term": "Two-Factor Theory",
+          "definition": "Schachter and Singer's theory that emotion results from physiological arousal combined with cognitive interpretation of that arousal."
+        },
+        {
+          "term": "Cognitive Appraisal",
+          "definition": "The process of evaluating a situation in terms of its personal significance and coping options, which shapes emotional response."
+        },
+        {
+          "term": "Self-Determination Theory",
+          "definition": "Theory proposing that optimal motivation and well-being require satisfaction of needs for autonomy, competence, and relatedness."
+        },
+        {
+          "term": "Yerkes-Dodson Law",
+          "definition": "Principle that performance is optimal at moderate arousal levels, with the optimal level varying by task difficulty."
+        },
+        {
+          "term": "Growth Mindset",
+          "definition": "Belief that abilities and intelligence can be developed through effort, learning, and persistence."
+        },
+        {
+          "term": "Emotion Regulation",
+          "definition": "Processes by which individuals influence which emotions they have, when they have them, and how they experience and express them."
+        },
+        {
+          "term": "Core Affect",
+          "definition": "Barrett's concept of continuous variation in valence (pleasant-unpleasant) and arousal that forms the basis of constructed emotions."
+        },
+        {
+          "term": "Intrinsic Motivation",
+          "definition": "Engaging in an activity for its inherent satisfaction rather than for external rewards or pressures."
+        },
+        {
+          "term": "Attribution",
+          "definition": "The process of explaining the causes of behavior and events, which affects motivation and emotion."
+        },
+        {
+          "term": "Reappraisal",
+          "definition": "An emotion regulation strategy involving changing how one thinks about a situation to alter its emotional impact."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Gross, J. J. (Ed.)", "year": 2015, "title": "Handbook of Emotion Regulation", "source": "Guilford Press (2nd ed.)"},
-        {"id": "2", "authors": "Ryan, R. M., & Deci, E. L.", "year": 2017, "title": "Self-Determination Theory: Basic Psychological Needs in Motivation, Development, and Wellness", "source": "Guilford Press"},
-        {"id": "3", "authors": "Barrett, L. F.", "year": 2017, "title": "How Emotions Are Made: The Secret Life of the Brain", "source": "Houghton Mifflin Harcourt"},
-        {"id": "4", "authors": "Dweck, C. S.", "year": 2006, "title": "Mindset: The New Psychology of Success", "source": "Random House"},
-        {"id": "5", "authors": "Ekman, P.", "year": 2003, "title": "Emotions Revealed: Recognizing Faces and Feelings", "source": "Times Books"},
-        {"id": "6", "authors": "Lazarus, R. S.", "year": 1991, "title": "Emotion and Adaptation", "source": "Oxford University Press"},
-        {"id": "7", "authors": "Scherer, K. R., Schorr, A., & Johnstone, T. (Eds.)", "year": 2001, "title": "Appraisal Processes in Emotion", "source": "Oxford University Press"},
-        {"id": "8", "authors": "Weiner, B.", "year": 1985, "title": "An Attributional Theory of Achievement Motivation and Emotion", "source": "Psychological Review, 92(4), 548-573"},
-        {"id": "9", "authors": "Elliot, A. J., & Dweck, C. S. (Eds.)", "year": 2005, "title": "Handbook of Competence and Motivation", "source": "Guilford Press"},
-        {"id": "10", "authors": "Damasio, A. R.", "year": 1994, "title": "Descartes' Error: Emotion, Reason, and the Human Brain", "source": "Putnam"}
-      ]
+        {
+          "id": "1",
+          "authors": "Gross, J. J. (Ed.)",
+          "year": 2015,
+          "title": "Handbook of Emotion Regulation",
+          "source": "Guilford Press (2nd ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Ryan, R. M., & Deci, E. L.",
+          "year": 2017,
+          "title": "Self-Determination Theory: Basic Psychological Needs in Motivation, Development, and Wellness",
+          "source": "Guilford Press"
+        },
+        {
+          "id": "3",
+          "authors": "Barrett, L. F.",
+          "year": 2017,
+          "title": "How Emotions Are Made: The Secret Life of the Brain",
+          "source": "Houghton Mifflin Harcourt"
+        },
+        {
+          "id": "4",
+          "authors": "Dweck, C. S.",
+          "year": 2006,
+          "title": "Mindset: The New Psychology of Success",
+          "source": "Random House"
+        },
+        {
+          "id": "5",
+          "authors": "Ekman, P.",
+          "year": 2003,
+          "title": "Emotions Revealed: Recognizing Faces and Feelings",
+          "source": "Times Books"
+        },
+        {
+          "id": "6",
+          "authors": "Lazarus, R. S.",
+          "year": 1991,
+          "title": "Emotion and Adaptation",
+          "source": "Oxford University Press"
+        },
+        {
+          "id": "7",
+          "authors": "Scherer, K. R., Schorr, A., & Johnstone, T. (Eds.)",
+          "year": 2001,
+          "title": "Appraisal Processes in Emotion",
+          "source": "Oxford University Press"
+        },
+        {
+          "id": "8",
+          "authors": "Weiner, B.",
+          "year": 1985,
+          "title": "An Attributional Theory of Achievement Motivation and Emotion",
+          "source": "Psychological Review, 92(4), 548-573"
+        },
+        {
+          "id": "9",
+          "authors": "Elliot, A. J., & Dweck, C. S. (Eds.)",
+          "year": 2005,
+          "title": "Handbook of Competence and Motivation",
+          "source": "Guilford Press"
+        },
+        {
+          "id": "10",
+          "authors": "Damasio, A. R.",
+          "year": 1994,
+          "title": "Descartes' Error: Emotion, Reason, and the Human Brain",
+          "source": "Putnam"
+        }
+      ],
+      "difficulty": "beginner"
     },
     "psycholinguistics": {
       "title": "Psycholinguistics",
       "description": "Study the psychological aspects of language, from acquisition to processing.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 24,
+      "readingTime": 14,
       "sections": [
         {
           "title": "Introduction to Psycholinguistics",
@@ -253,29 +573,120 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Critical Period", "definition": "Biologically determined window of heightened sensitivity for language acquisition, typically closing around puberty."},
-        {"term": "Mental Lexicon", "definition": "The organized store of words and linguistic knowledge stored in long-term memory."},
-        {"term": "Aphasia", "definition": "Language disorder resulting from brain damage, affecting production or comprehension of speech."},
-        {"term": "Broca's Area", "definition": "Brain region in left frontal lobe associated with speech production and language processing."},
-        {"term": "Phonology", "definition": "The study of sound systems and patterns in language, including rules for combining speech sounds."},
-        {"term": "Universal Grammar", "definition": "Chomsky's theory of innate knowledge of language principles that guides language acquisition."},
-        {"term": "Semantic Priming", "definition": "Faster processing of words preceded by semantically related words, revealing spreading activation in the mental lexicon."},
-        {"term": "Code-Switching", "definition": "Alternating between two or more languages within a conversation, a common bilingual practice."},
-        {"term": "Linguistic Relativity", "definition": "The hypothesis that language influences thought, with weak versions receiving empirical support."},
-        {"term": "Tip-of-the-Tongue State", "definition": "The feeling of knowing a word without being able to retrieve its phonological form."}
+        {
+          "term": "Critical Period",
+          "definition": "Biologically determined window of heightened sensitivity for language acquisition, typically closing around puberty."
+        },
+        {
+          "term": "Mental Lexicon",
+          "definition": "The organized store of words and linguistic knowledge stored in long-term memory."
+        },
+        {
+          "term": "Aphasia",
+          "definition": "Language disorder resulting from brain damage, affecting production or comprehension of speech."
+        },
+        {
+          "term": "Broca's Area",
+          "definition": "Brain region in left frontal lobe associated with speech production and language processing."
+        },
+        {
+          "term": "Phonology",
+          "definition": "The study of sound systems and patterns in language, including rules for combining speech sounds."
+        },
+        {
+          "term": "Universal Grammar",
+          "definition": "Chomsky's theory of innate knowledge of language principles that guides language acquisition."
+        },
+        {
+          "term": "Semantic Priming",
+          "definition": "Faster processing of words preceded by semantically related words, revealing spreading activation in the mental lexicon."
+        },
+        {
+          "term": "Code-Switching",
+          "definition": "Alternating between two or more languages within a conversation, a common bilingual practice."
+        },
+        {
+          "term": "Linguistic Relativity",
+          "definition": "The hypothesis that language influences thought, with weak versions receiving empirical support."
+        },
+        {
+          "term": "Tip-of-the-Tongue State",
+          "definition": "The feeling of knowing a word without being able to retrieve its phonological form."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Harley, T. A.", "year": 2020, "title": "The Psychology of Language: From Data to Theory", "source": "Psychology Press (4th ed.)"},
-        {"id": "2", "authors": "Traxler, M. J.", "year": 2011, "title": "Introduction to Psycholinguistics: Understanding Language Science", "source": "Wiley-Blackwell"},
-        {"id": "3", "authors": "Pinker, S.", "year": 1994, "title": "The Language Instinct: How the Mind Creates Language", "source": "William Morrow"},
-        {"id": "4", "authors": "Chomsky, N.", "year": 1965, "title": "Aspects of the Theory of Syntax", "source": "MIT Press"},
-        {"id": "5", "authors": "Levelt, W. J. M.", "year": 1989, "title": "Speaking: From Intention to Articulation", "source": "MIT Press"},
-        {"id": "6", "authors": "Kroll, J. F., & de Groot, A. M. B. (Eds.)", "year": 2005, "title": "Handbook of Bilingualism: Psycholinguistic Approaches", "source": "Oxford University Press"},
-        {"id": "7", "authors": "Hickok, G., & Poeppel, D.", "year": 2007, "title": "The Cortical Organization of Speech Processing", "source": "Nature Reviews Neuroscience, 8(5), 393-402"},
-        {"id": "8", "authors": "Boroditsky, L.", "year": 2011, "title": "How Language Shapes Thought", "source": "Scientific American, 304(2), 62-65"},
-        {"id": "9", "authors": "Saffran, J. R., Aslin, R. N., & Newport, E. L.", "year": 1996, "title": "Statistical Learning by 8-Month-Old Infants", "source": "Science, 274(5294), 1926-1928"},
-        {"id": "10", "authors": "Tomasello, M.", "year": 2003, "title": "Constructing a Language: A Usage-Based Theory of Language Acquisition", "source": "Harvard University Press"}
-      ]
+        {
+          "id": "1",
+          "authors": "Harley, T. A.",
+          "year": 2020,
+          "title": "The Psychology of Language: From Data to Theory",
+          "source": "Psychology Press (4th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Traxler, M. J.",
+          "year": 2011,
+          "title": "Introduction to Psycholinguistics: Understanding Language Science",
+          "source": "Wiley-Blackwell"
+        },
+        {
+          "id": "3",
+          "authors": "Pinker, S.",
+          "year": 1994,
+          "title": "The Language Instinct: How the Mind Creates Language",
+          "source": "William Morrow"
+        },
+        {
+          "id": "4",
+          "authors": "Chomsky, N.",
+          "year": 1965,
+          "title": "Aspects of the Theory of Syntax",
+          "source": "MIT Press"
+        },
+        {
+          "id": "5",
+          "authors": "Levelt, W. J. M.",
+          "year": 1989,
+          "title": "Speaking: From Intention to Articulation",
+          "source": "MIT Press"
+        },
+        {
+          "id": "6",
+          "authors": "Kroll, J. F., & de Groot, A. M. B. (Eds.)",
+          "year": 2005,
+          "title": "Handbook of Bilingualism: Psycholinguistic Approaches",
+          "source": "Oxford University Press"
+        },
+        {
+          "id": "7",
+          "authors": "Hickok, G., & Poeppel, D.",
+          "year": 2007,
+          "title": "The Cortical Organization of Speech Processing",
+          "source": "Nature Reviews Neuroscience, 8(5), 393-402"
+        },
+        {
+          "id": "8",
+          "authors": "Boroditsky, L.",
+          "year": 2011,
+          "title": "How Language Shapes Thought",
+          "source": "Scientific American, 304(2), 62-65"
+        },
+        {
+          "id": "9",
+          "authors": "Saffran, J. R., Aslin, R. N., & Newport, E. L.",
+          "year": 1996,
+          "title": "Statistical Learning by 8-Month-Old Infants",
+          "source": "Science, 274(5294), 1926-1928"
+        },
+        {
+          "id": "10",
+          "authors": "Tomasello, M.",
+          "year": 2003,
+          "title": "Constructing a Language: A Usage-Based Theory of Language Acquisition",
+          "source": "Harvard University Press"
+        }
+      ],
+      "difficulty": "intermediate"
     }
   }
 }

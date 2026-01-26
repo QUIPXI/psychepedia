@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { CheckCircle, XCircle, RotateCcw, Trophy, ChevronRight } from "lucide-react";
+import { CheckCircle, XCircle, RotateCcw, Trophy, ChevronRight, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { ArticleQuizQuestion } from "@/lib/articles";
@@ -19,6 +19,7 @@ export function ArticleQuiz({
   locale = "en",
   className 
 }: ArticleQuizProps) {
+  const [isOpen, setIsOpen] = React.useState(false);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [selectedAnswer, setSelectedAnswer] = React.useState<number | null>(null);
   const [showResult, setShowResult] = React.useState(false);
@@ -67,6 +68,30 @@ export function ArticleQuiz({
 
   const percentage = Math.round((score / questions.length) * 100);
 
+  // Show the start button when quiz is not open
+  if (!isOpen) {
+    return (
+      <div className={cn("p-6 rounded-lg border border-border bg-card", className)}>
+        <div className="text-center">
+          <Brain className="h-12 w-12 mx-auto mb-4 text-primary" />
+          <h3 className="text-xl font-bold mb-2">
+            {isRtl ? "اختبر معلوماتك" : "Test Your Knowledge"}
+          </h3>
+          <p className="text-muted-foreground mb-4">
+            {isRtl 
+              ? `${questions.length} أسئلة لاختبار فهمك لهذا الموضوع`
+              : `${questions.length} questions to test your understanding of this topic`
+            }
+          </p>
+          <Button onClick={() => setIsOpen(true)} className="gap-2">
+            {isRtl ? "ابدأ الاختبار" : "Start Quiz"}
+            <ChevronRight className={cn("h-4 w-4", isRtl && "rotate-180")} />
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
   if (quizComplete) {
     return (
       <div className={cn("p-6 rounded-lg border border-border bg-card", className)}>
@@ -92,10 +117,15 @@ export function ArticleQuiz({
                 : (isRtl ? "استمر في الدراسة وحاول مرة أخرى." : "Keep studying and try again.")
             }
           </p>
-          <Button onClick={resetQuiz} className="gap-2">
-            <RotateCcw className="h-4 w-4" />
-            {isRtl ? "إعادة الاختبار" : "Retake Quiz"}
-          </Button>
+          <div className="flex gap-2 justify-center">
+            <Button onClick={resetQuiz} className="gap-2">
+              <RotateCcw className="h-4 w-4" />
+              {isRtl ? "إعادة الاختبار" : "Retake Quiz"}
+            </Button>
+            <Button variant="outline" onClick={() => { resetQuiz(); setIsOpen(false); }}>
+              {isRtl ? "إغلاق" : "Close"}
+            </Button>
+          </div>
         </div>
       </div>
     );
@@ -130,7 +160,7 @@ export function ArticleQuiz({
           const isSelected = selectedAnswer === index;
           const isCorrectAnswer = index === question.correctIndex;
           
-          let buttonClass = "w-full text-left p-4 rounded-lg border transition-all ";
+          let buttonClass = "w-full p-4 rounded-lg border transition-all text-start ";
           
           if (showResult) {
             if (isCorrectAnswer) {

@@ -50,7 +50,7 @@ export interface ArticleDiagram {
   id: string;
   title: string;
   description: string;
-  type: "flowchart" | "hierarchy" | "cycle" | "comparison" | "timeline";
+  type: "flowchart" | "hierarchy" | "cycle" | "comparison";
   nodes: { id: string; label: string; description?: string }[];
   connections?: { from: string; to: string; label?: string }[];
 }

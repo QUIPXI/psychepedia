@@ -5,7 +5,7 @@
       "description": "Apply psychological principles to legal and criminal justice contexts.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 26,
+      "readingTime": 19,
       "sections": [
         {
           "title": "Introduction to Forensic Psychology",
@@ -67,36 +67,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Competency to Stand Trial", "definition": "A defendant's current ability to understand court proceedings and assist in their own defense."},
-        {"term": "Insanity Defense", "definition": "Legal defense arguing that mental disorder prevented understanding of wrongfulness of actions at the time of the offense."},
-        {"term": "Psychopathy", "definition": "Personality construct characterized by interpersonal manipulation, callousness, and antisocial behavior."},
-        {"term": "Risk Assessment", "definition": "Evaluation of the likelihood that an individual will engage in future violent or criminal behavior."},
-        {"term": "Misinformation Effect", "definition": "Incorporation of misleading post-event information into memory of an event."},
-        {"term": "M'Naghten Rule", "definition": "Legal standard for insanity requiring that defendant did not know the nature of the act or that it was wrong."},
-        {"term": "Structured Professional Judgment", "definition": "Risk assessment approach combining empirically-supported factors with clinical judgment."},
-        {"term": "Weapon Focus Effect", "definition": "Tendency for witnesses to focus attention on a weapon, reducing encoding of perpetrator features."},
-        {"term": "Risk-Need-Responsivity Model", "definition": "Framework for offender rehabilitation matching intensity to risk, targeting criminogenic needs, and adapting to responsivity."},
-        {"term": "Best Interests of the Child", "definition": "Legal standard guiding custody decisions, prioritizing the child's welfare over parental preferences."}
+        {
+          "term": "Competency to Stand Trial",
+          "definition": "A defendant's current ability to understand court proceedings and assist in their own defense."
+        },
+        {
+          "term": "Insanity Defense",
+          "definition": "Legal defense arguing that mental disorder prevented understanding of wrongfulness of actions at the time of the offense."
+        },
+        {
+          "term": "Psychopathy",
+          "definition": "Personality construct characterized by interpersonal manipulation, callousness, and antisocial behavior."
+        },
+        {
+          "term": "Risk Assessment",
+          "definition": "Evaluation of the likelihood that an individual will engage in future violent or criminal behavior."
+        },
+        {
+          "term": "Misinformation Effect",
+          "definition": "Incorporation of misleading post-event information into memory of an event."
+        },
+        {
+          "term": "M'Naghten Rule",
+          "definition": "Legal standard for insanity requiring that defendant did not know the nature of the act or that it was wrong."
+        },
+        {
+          "term": "Structured Professional Judgment",
+          "definition": "Risk assessment approach combining empirically-supported factors with clinical judgment."
+        },
+        {
+          "term": "Weapon Focus Effect",
+          "definition": "Tendency for witnesses to focus attention on a weapon, reducing encoding of perpetrator features."
+        },
+        {
+          "term": "Risk-Need-Responsivity Model",
+          "definition": "Framework for offender rehabilitation matching intensity to risk, targeting criminogenic needs, and adapting to responsivity."
+        },
+        {
+          "term": "Best Interests of the Child",
+          "definition": "Legal standard guiding custody decisions, prioritizing the child's welfare over parental preferences."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Bartol, C. R., & Bartol, A. M.", "year": 2019, "title": "Introduction to Forensic Psychology", "source": "SAGE Publications (5th ed.)"},
-        {"id": "2", "authors": "Heilbrun, K., Grisso, T., & Goldstein, A. M.", "year": 2014, "title": "Foundations of Forensic Mental Health Assessment", "source": "Oxford University Press (2nd ed.)"},
-        {"id": "3", "authors": "Hare, R. D.", "year": 2003, "title": "Manual for the Revised Psychopathy Checklist", "source": "Multi-Health Systems (2nd ed.)"},
-        {"id": "4", "authors": "Loftus, E. F.", "year": 2005, "title": "Planting Misinformation in the Human Mind: A 30-Year Investigation of the Malleability of Memory", "source": "Learning & Memory, 12(4), 361-366"},
-        {"id": "5", "authors": "Andrews, D. A., & Bonta, J.", "year": 2010, "title": "The Psychology of Criminal Conduct", "source": "Anderson Publishing (5th ed.)"},
-        {"id": "6", "authors": "Douglas, K. S., et al.", "year": 2013, "title": "HCR-20V3: Assessing Risk for Violence", "source": "Mental Health, Law, and Policy Institute"},
-        {"id": "7", "authors": "Wells, G. L., & Olson, E. A.", "year": 2003, "title": "Eyewitness Testimony", "source": "Annual Review of Psychology, 54, 277-295"},
-        {"id": "8", "authors": "Otto, R. K., & Heilbrun, K.", "year": 2002, "title": "The Practice of Forensic Psychology: A Look Toward the Future", "source": "American Psychologist, 57(1), 5-18"},
-        {"id": "9", "authors": "Grisso, T.", "year": 2003, "title": "Evaluating Competencies: Forensic Assessments and Instruments", "source": "Kluwer Academic/Plenum Publishers (2nd ed.)"},
-        {"id": "10", "authors": "Skeem, J. L., Polaschek, D. L. L., & Manchak, S.", "year": 2009, "title": "Appropriate Treatment Works, but How? Rehabilitating General, Psychopathic, and High-Risk Offenders", "source": "Psychological Science in the Public Interest, 10(3), 89-123"}
-      ]
+        {
+          "id": "1",
+          "authors": "Bartol, C. R., & Bartol, A. M.",
+          "year": 2019,
+          "title": "Introduction to Forensic Psychology",
+          "source": "SAGE Publications (5th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Heilbrun, K., Grisso, T., & Goldstein, A. M.",
+          "year": 2014,
+          "title": "Foundations of Forensic Mental Health Assessment",
+          "source": "Oxford University Press (2nd ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Hare, R. D.",
+          "year": 2003,
+          "title": "Manual for the Revised Psychopathy Checklist",
+          "source": "Multi-Health Systems (2nd ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Loftus, E. F.",
+          "year": 2005,
+          "title": "Planting Misinformation in the Human Mind: A 30-Year Investigation of the Malleability of Memory",
+          "source": "Learning & Memory, 12(4), 361-366"
+        },
+        {
+          "id": "5",
+          "authors": "Andrews, D. A., & Bonta, J.",
+          "year": 2010,
+          "title": "The Psychology of Criminal Conduct",
+          "source": "Anderson Publishing (5th ed.)"
+        },
+        {
+          "id": "6",
+          "authors": "Douglas, K. S., et al.",
+          "year": 2013,
+          "title": "HCR-20V3: Assessing Risk for Violence",
+          "source": "Mental Health, Law, and Policy Institute"
+        },
+        {
+          "id": "7",
+          "authors": "Wells, G. L., & Olson, E. A.",
+          "year": 2003,
+          "title": "Eyewitness Testimony",
+          "source": "Annual Review of Psychology, 54, 277-295"
+        },
+        {
+          "id": "8",
+          "authors": "Otto, R. K., & Heilbrun, K.",
+          "year": 2002,
+          "title": "The Practice of Forensic Psychology: A Look Toward the Future",
+          "source": "American Psychologist, 57(1), 5-18"
+        },
+        {
+          "id": "9",
+          "authors": "Grisso, T.",
+          "year": 2003,
+          "title": "Evaluating Competencies: Forensic Assessments and Instruments",
+          "source": "Kluwer Academic/Plenum Publishers (2nd ed.)"
+        },
+        {
+          "id": "10",
+          "authors": "Skeem, J. L., Polaschek, D. L. L., & Manchak, S.",
+          "year": 2009,
+          "title": "Appropriate Treatment Works, but How? Rehabilitating General, Psychopathic, and High-Risk Offenders",
+          "source": "Psychological Science in the Public Interest, 10(3), 89-123"
+        }
+      ],
+      "difficulty": "advanced"
     },
     "industrial-organizational": {
       "title": "Industrial-Organizational Psychology",
       "description": "Apply psychology to workplace behavior, leadership, and organizations.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 26,
+      "readingTime": 16,
       "sections": [
         {
           "title": "Introduction to I/O Psychology",
@@ -154,36 +245,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Job Analysis", "definition": "Systematic process of gathering information about job tasks, responsibilities, and requirements."},
-        {"term": "Validity", "definition": "In selection, the extent to which a predictor correlates with job performance."},
-        {"term": "Transformational Leadership", "definition": "Leadership style that inspires followers through vision, intellectual stimulation, and individualized consideration."},
-        {"term": "Expectancy Theory", "definition": "Vroom's theory that motivation depends on expectancy, instrumentality, and valence."},
-        {"term": "Job Satisfaction", "definition": "A positive emotional state resulting from the appraisal of one's job or job experiences."},
-        {"term": "Organizational Commitment", "definition": "Psychological attachment to an organization, encompassing affective, continuance, and normative components."},
-        {"term": "Adverse Impact", "definition": "Selection rate differences between groups that may indicate discrimination, requiring job-relatedness justification."},
-        {"term": "Training Transfer", "definition": "Application of knowledge and skills learned in training to the job environment."},
-        {"term": "Job Characteristics Model", "definition": "Framework identifying core job dimensions that affect motivation through psychological states."},
-        {"term": "Burnout", "definition": "Syndrome of emotional exhaustion, depersonalization, and reduced accomplishment from chronic work stress."}
+        {
+          "term": "Job Analysis",
+          "definition": "Systematic process of gathering information about job tasks, responsibilities, and requirements."
+        },
+        {
+          "term": "Validity",
+          "definition": "In selection, the extent to which a predictor correlates with job performance."
+        },
+        {
+          "term": "Transformational Leadership",
+          "definition": "Leadership style that inspires followers through vision, intellectual stimulation, and individualized consideration."
+        },
+        {
+          "term": "Expectancy Theory",
+          "definition": "Vroom's theory that motivation depends on expectancy, instrumentality, and valence."
+        },
+        {
+          "term": "Job Satisfaction",
+          "definition": "A positive emotional state resulting from the appraisal of one's job or job experiences."
+        },
+        {
+          "term": "Organizational Commitment",
+          "definition": "Psychological attachment to an organization, encompassing affective, continuance, and normative components."
+        },
+        {
+          "term": "Adverse Impact",
+          "definition": "Selection rate differences between groups that may indicate discrimination, requiring job-relatedness justification."
+        },
+        {
+          "term": "Training Transfer",
+          "definition": "Application of knowledge and skills learned in training to the job environment."
+        },
+        {
+          "term": "Job Characteristics Model",
+          "definition": "Framework identifying core job dimensions that affect motivation through psychological states."
+        },
+        {
+          "term": "Burnout",
+          "definition": "Syndrome of emotional exhaustion, depersonalization, and reduced accomplishment from chronic work stress."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Spector, P. E.", "year": 2021, "title": "Industrial and Organizational Psychology", "source": "Wiley (8th ed.)"},
-        {"id": "2", "authors": "Landy, F. J., & Conte, J. M.", "year": 2019, "title": "Work in the 21st Century", "source": "Wiley (6th ed.)"},
-        {"id": "3", "authors": "Cascio, W. F., & Aguinis, H.", "year": 2019, "title": "Applied Psychology in Talent Management", "source": "SAGE Publications (8th ed.)"},
-        {"id": "4", "authors": "Locke, E. A., & Latham, G. P.", "year": 2002, "title": "Building a Practically Useful Theory of Goal Setting and Task Motivation", "source": "American Psychologist, 57(9), 705-717"},
-        {"id": "5", "authors": "Bass, B. M., & Riggio, R. E.", "year": 2006, "title": "Transformational Leadership", "source": "Lawrence Erlbaum Associates (2nd ed.)"},
-        {"id": "6", "authors": "Meyer, J. P., & Allen, N. J.", "year": 1997, "title": "Commitment in the Workplace: Theory, Research, and Application", "source": "SAGE Publications"},
-        {"id": "7", "authors": "Schein, E. H.", "year": 2010, "title": "Organizational Culture and Leadership", "source": "Jossey-Bass (4th ed.)"},
-        {"id": "8", "authors": "Hackman, J. R., & Oldham, G. R.", "year": 1980, "title": "Work Redesign", "source": "Addison-Wesley"},
-        {"id": "9", "authors": "Schmidt, F. L., & Hunter, J. E.", "year": 1998, "title": "The Validity and Utility of Selection Methods in Personnel Psychology", "source": "Psychological Bulletin, 124(2), 262-274"},
-        {"id": "10", "authors": "Maslach, C., Schaufeli, W. B., & Leiter, M. P.", "year": 2001, "title": "Job Burnout", "source": "Annual Review of Psychology, 52, 397-422"}
-      ]
+        {
+          "id": "1",
+          "authors": "Spector, P. E.",
+          "year": 2021,
+          "title": "Industrial and Organizational Psychology",
+          "source": "Wiley (8th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Landy, F. J., & Conte, J. M.",
+          "year": 2019,
+          "title": "Work in the 21st Century",
+          "source": "Wiley (6th ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Cascio, W. F., & Aguinis, H.",
+          "year": 2019,
+          "title": "Applied Psychology in Talent Management",
+          "source": "SAGE Publications (8th ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Locke, E. A., & Latham, G. P.",
+          "year": 2002,
+          "title": "Building a Practically Useful Theory of Goal Setting and Task Motivation",
+          "source": "American Psychologist, 57(9), 705-717"
+        },
+        {
+          "id": "5",
+          "authors": "Bass, B. M., & Riggio, R. E.",
+          "year": 2006,
+          "title": "Transformational Leadership",
+          "source": "Lawrence Erlbaum Associates (2nd ed.)"
+        },
+        {
+          "id": "6",
+          "authors": "Meyer, J. P., & Allen, N. J.",
+          "year": 1997,
+          "title": "Commitment in the Workplace: Theory, Research, and Application",
+          "source": "SAGE Publications"
+        },
+        {
+          "id": "7",
+          "authors": "Schein, E. H.",
+          "year": 2010,
+          "title": "Organizational Culture and Leadership",
+          "source": "Jossey-Bass (4th ed.)"
+        },
+        {
+          "id": "8",
+          "authors": "Hackman, J. R., & Oldham, G. R.",
+          "year": 1980,
+          "title": "Work Redesign",
+          "source": "Addison-Wesley"
+        },
+        {
+          "id": "9",
+          "authors": "Schmidt, F. L., & Hunter, J. E.",
+          "year": 1998,
+          "title": "The Validity and Utility of Selection Methods in Personnel Psychology",
+          "source": "Psychological Bulletin, 124(2), 262-274"
+        },
+        {
+          "id": "10",
+          "authors": "Maslach, C., Schaufeli, W. B., & Leiter, M. P.",
+          "year": 2001,
+          "title": "Job Burnout",
+          "source": "Annual Review of Psychology, 52, 397-422"
+        }
+      ],
+      "difficulty": "intermediate"
     },
     "educational-school": {
       "title": "Educational Psychology",
       "description": "Apply psychology to teaching, learning, and educational systems.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 24,
+      "readingTime": 15,
       "sections": [
         {
           "title": "Introduction to Educational Psychology",
@@ -245,36 +427,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Zone of Proximal Development", "definition": "The gap between what a learner can do independently and what they can achieve with guidance from a more knowledgeable other."},
-        {"term": "Metacognition", "definition": "Awareness and understanding of one's own cognitive processes, including planning, monitoring, and evaluation."},
-        {"term": "Scaffolding", "definition": "Temporary support provided by a more knowledgeable person to help a learner accomplish tasks they cannot do alone."},
-        {"term": "Self-Efficacy", "definition": "Belief in one's capability to successfully execute tasks or achieve goals in specific situations."},
-        {"term": "Universal Design for Learning", "definition": "Framework for curriculum and instruction that provides multiple means of engagement, representation, and expression to accommodate diverse learner needs."},
-        {"term": "Intrinsic Motivation", "definition": "Engaging in an activity for its inherent satisfaction rather than for external rewards."},
-        {"term": "Cognitive Load", "definition": "The total amount of mental effort being used in working memory, which has limited capacity."},
-        {"term": "Formative Assessment", "definition": "Assessment conducted during learning to provide feedback and inform instructional adjustments."},
-        {"term": "Transfer of Learning", "definition": "Application of knowledge or skills learned in one context to new, different contexts."},
-        {"term": "Constructivism", "definition": "Theory that learners actively construct knowledge through experience rather than passively receiving it."}
+        {
+          "term": "Zone of Proximal Development",
+          "definition": "The gap between what a learner can do independently and what they can achieve with guidance from a more knowledgeable other."
+        },
+        {
+          "term": "Metacognition",
+          "definition": "Awareness and understanding of one's own cognitive processes, including planning, monitoring, and evaluation."
+        },
+        {
+          "term": "Scaffolding",
+          "definition": "Temporary support provided by a more knowledgeable person to help a learner accomplish tasks they cannot do alone."
+        },
+        {
+          "term": "Self-Efficacy",
+          "definition": "Belief in one's capability to successfully execute tasks or achieve goals in specific situations."
+        },
+        {
+          "term": "Universal Design for Learning",
+          "definition": "Framework for curriculum and instruction that provides multiple means of engagement, representation, and expression to accommodate diverse learner needs."
+        },
+        {
+          "term": "Intrinsic Motivation",
+          "definition": "Engaging in an activity for its inherent satisfaction rather than for external rewards."
+        },
+        {
+          "term": "Cognitive Load",
+          "definition": "The total amount of mental effort being used in working memory, which has limited capacity."
+        },
+        {
+          "term": "Formative Assessment",
+          "definition": "Assessment conducted during learning to provide feedback and inform instructional adjustments."
+        },
+        {
+          "term": "Transfer of Learning",
+          "definition": "Application of knowledge or skills learned in one context to new, different contexts."
+        },
+        {
+          "term": "Constructivism",
+          "definition": "Theory that learners actively construct knowledge through experience rather than passively receiving it."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Woolfolk, A. E.", "year": 2018, "title": "Educational Psychology", "source": "Pearson (14th ed.)"},
-        {"id": "2", "authors": "Ormrod, R. E.", "year": 2020, "title": "Human Learning", "source": "Pearson (8th ed.)"},
-        {"id": "3", "authors": "Slavin, R. E.", "year": 2018, "title": "Educational Psychology: Theory and Practice", "source": "Pearson (12th ed.)"},
-        {"id": "4", "authors": "Hattie, J.", "year": 2009, "title": "Visible Learning: A Synthesis of Over 800 Meta-Analyses Relating to Achievement", "source": "Routledge"},
-        {"id": "5", "authors": "Bransford, J. D., Brown, A. L., & Cocking, R. R.", "year": 2000, "title": "How People Learn: Brain, Mind, Experience, and School", "source": "National Academy Press"},
-        {"id": "6", "authors": "Dweck, C. S.", "year": 2006, "title": "Mindset: The New Psychology of Success", "source": "Random House"},
-        {"id": "7", "authors": "Roediger, H. L., & Karpicke, J. D.", "year": 2006, "title": "Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention", "source": "Psychological Science, 17(3), 249-255"},
-        {"id": "8", "authors": "Ryan, R. M., & Deci, E. L.", "year": 2000, "title": "Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being", "source": "American Psychologist, 55(1), 68-78"},
-        {"id": "9", "authors": "Sweller, J., Ayres, P., & Kalyuga, S.", "year": 2011, "title": "Cognitive Load Theory", "source": "Springer"},
-        {"id": "10", "authors": "Tomlinson, C. A.", "year": 2014, "title": "The Differentiated Classroom: Responding to the Needs of All Learners", "source": "ASCD (2nd ed.)"}
-      ]
+        {
+          "id": "1",
+          "authors": "Woolfolk, A. E.",
+          "year": 2018,
+          "title": "Educational Psychology",
+          "source": "Pearson (14th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Ormrod, R. E.",
+          "year": 2020,
+          "title": "Human Learning",
+          "source": "Pearson (8th ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Slavin, R. E.",
+          "year": 2018,
+          "title": "Educational Psychology: Theory and Practice",
+          "source": "Pearson (12th ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Hattie, J.",
+          "year": 2009,
+          "title": "Visible Learning: A Synthesis of Over 800 Meta-Analyses Relating to Achievement",
+          "source": "Routledge"
+        },
+        {
+          "id": "5",
+          "authors": "Bransford, J. D., Brown, A. L., & Cocking, R. R.",
+          "year": 2000,
+          "title": "How People Learn: Brain, Mind, Experience, and School",
+          "source": "National Academy Press"
+        },
+        {
+          "id": "6",
+          "authors": "Dweck, C. S.",
+          "year": 2006,
+          "title": "Mindset: The New Psychology of Success",
+          "source": "Random House"
+        },
+        {
+          "id": "7",
+          "authors": "Roediger, H. L., & Karpicke, J. D.",
+          "year": 2006,
+          "title": "Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention",
+          "source": "Psychological Science, 17(3), 249-255"
+        },
+        {
+          "id": "8",
+          "authors": "Ryan, R. M., & Deci, E. L.",
+          "year": 2000,
+          "title": "Self-Determination Theory and the Facilitation of Intrinsic Motivation, Social Development, and Well-Being",
+          "source": "American Psychologist, 55(1), 68-78"
+        },
+        {
+          "id": "9",
+          "authors": "Sweller, J., Ayres, P., & Kalyuga, S.",
+          "year": 2011,
+          "title": "Cognitive Load Theory",
+          "source": "Springer"
+        },
+        {
+          "id": "10",
+          "authors": "Tomlinson, C. A.",
+          "year": 2014,
+          "title": "The Differentiated Classroom: Responding to the Needs of All Learners",
+          "source": "ASCD (2nd ed.)"
+        }
+      ],
+      "difficulty": "beginner"
     },
     "sports-performance": {
       "title": "Sports Psychology",
       "description": "Understand psychological factors in athletic performance and physical activity.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 22,
+      "readingTime": 17,
       "sections": [
         {
           "title": "Introduction to Sports Psychology",
@@ -344,29 +617,120 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Yerkes-Dodson Law", "definition": "Principle stating that performance is optimal at moderate arousal levels, varying by task difficulty and individual differences."},
-        {"term": "Choking Under Pressure", "definition": "Performance failure in high-stakes situations despite having the necessary skills, caused by attentional disruption and overthinking."},
-        {"term": "Self-Efficacy", "definition": "Belief in one's capability to execute behaviors required to produce specific outcomes, central to sport confidence."},
-        {"term": "Imagery", "definition": "Mental creation or recreation of experiences using multiple senses to rehearse skills, prepare for competition, and enhance motivation."},
-        {"term": "Team Cohesion", "definition": "The tendency for a group to stick together in pursuit of instrumental objectives and satisfaction of member needs."},
-        {"term": "Collective Efficacy", "definition": "A team's shared belief in its conjoint capabilities to organize and execute actions required to achieve goals."},
-        {"term": "IZOF Model", "definition": "Individualized Zones of Optimal Functioning—theory that each athlete has a personal optimal anxiety zone for performance."},
-        {"term": "Mastery Orientation", "definition": "Goal orientation focused on learning, improvement, and skill development rather than comparison with others."},
-        {"term": "Pre-Performance Routine", "definition": "Consistent sequence of thoughts and actions before performance that optimizes mental state and attention."},
-        {"term": "Fear of Re-Injury", "definition": "Anxiety about sustaining another injury that can persist after physical healing and affect return to play."}
+        {
+          "term": "Yerkes-Dodson Law",
+          "definition": "Principle stating that performance is optimal at moderate arousal levels, varying by task difficulty and individual differences."
+        },
+        {
+          "term": "Choking Under Pressure",
+          "definition": "Performance failure in high-stakes situations despite having the necessary skills, caused by attentional disruption and overthinking."
+        },
+        {
+          "term": "Self-Efficacy",
+          "definition": "Belief in one's capability to execute behaviors required to produce specific outcomes, central to sport confidence."
+        },
+        {
+          "term": "Imagery",
+          "definition": "Mental creation or recreation of experiences using multiple senses to rehearse skills, prepare for competition, and enhance motivation."
+        },
+        {
+          "term": "Team Cohesion",
+          "definition": "The tendency for a group to stick together in pursuit of instrumental objectives and satisfaction of member needs."
+        },
+        {
+          "term": "Collective Efficacy",
+          "definition": "A team's shared belief in its conjoint capabilities to organize and execute actions required to achieve goals."
+        },
+        {
+          "term": "IZOF Model",
+          "definition": "Individualized Zones of Optimal Functioning—theory that each athlete has a personal optimal anxiety zone for performance."
+        },
+        {
+          "term": "Mastery Orientation",
+          "definition": "Goal orientation focused on learning, improvement, and skill development rather than comparison with others."
+        },
+        {
+          "term": "Pre-Performance Routine",
+          "definition": "Consistent sequence of thoughts and actions before performance that optimizes mental state and attention."
+        },
+        {
+          "term": "Fear of Re-Injury",
+          "definition": "Anxiety about sustaining another injury that can persist after physical healing and affect return to play."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Weinberg, R. S., & Gould, D.", "year": 2019, "title": "Foundations of Sport and Exercise Psychology", "source": "Human Kinetics (7th ed.)"},
-        {"id": "2", "authors": "Murphy, S. M.", "year": 2015, "title": "Sport Psychology: A Student's Handbook", "source": "Psychology Press"},
-        {"id": "3", "authors": "Williams, J. M., & Krane, V.", "year": 2020, "title": "Applied Sport Psychology: Personal Growth to Peak Performance", "source": "McGraw-Hill (8th ed.)"},
-        {"id": "4", "authors": "Hanton, S., & Mellalieu, S. D.", "year": 2014, "title": "Professional Practice in Sport Psychology", "source": "Routledge"},
-        {"id": "5", "authors": "Horn, T. S.", "year": 2019, "title": "Advances in Sport and Exercise Psychology", "source": "Human Kinetics (4th ed.)"},
-        {"id": "6", "authors": "Hanin, Y. L.", "year": 2000, "title": "Emotions in Sport", "source": "Human Kinetics"},
-        {"id": "7", "authors": "Vealey, R. S.", "year": 1986, "title": "Conceptualization of Sport-Confidence and Competitive Orientation", "source": "Journal of Sport Psychology, 8(3), 221-246"},
-        {"id": "8", "authors": "Carron, A. V., Hausenblas, H. A., & Eys, M. A.", "year": 2005, "title": "Group Dynamics in Sport", "source": "Fitness Information Technology (3rd ed.)"},
-        {"id": "9", "authors": "Williams, J. M., & Andersen, M. B.", "year": 1998, "title": "Psychosocial Antecedents of Sport Injury", "source": "Journal of Applied Sport Psychology, 10(1), 5-25"},
-        {"id": "10", "authors": "Holmes, P. S., & Collins, D. J.", "year": 2001, "title": "The PETTLEP Approach to Motor Imagery", "source": "Journal of Applied Sport Psychology, 13(1), 60-83"}
-      ]
+        {
+          "id": "1",
+          "authors": "Weinberg, R. S., & Gould, D.",
+          "year": 2019,
+          "title": "Foundations of Sport and Exercise Psychology",
+          "source": "Human Kinetics (7th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Murphy, S. M.",
+          "year": 2015,
+          "title": "Sport Psychology: A Student's Handbook",
+          "source": "Psychology Press"
+        },
+        {
+          "id": "3",
+          "authors": "Williams, J. M., & Krane, V.",
+          "year": 2020,
+          "title": "Applied Sport Psychology: Personal Growth to Peak Performance",
+          "source": "McGraw-Hill (8th ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Hanton, S., & Mellalieu, S. D.",
+          "year": 2014,
+          "title": "Professional Practice in Sport Psychology",
+          "source": "Routledge"
+        },
+        {
+          "id": "5",
+          "authors": "Horn, T. S.",
+          "year": 2019,
+          "title": "Advances in Sport and Exercise Psychology",
+          "source": "Human Kinetics (4th ed.)"
+        },
+        {
+          "id": "6",
+          "authors": "Hanin, Y. L.",
+          "year": 2000,
+          "title": "Emotions in Sport",
+          "source": "Human Kinetics"
+        },
+        {
+          "id": "7",
+          "authors": "Vealey, R. S.",
+          "year": 1986,
+          "title": "Conceptualization of Sport-Confidence and Competitive Orientation",
+          "source": "Journal of Sport Psychology, 8(3), 221-246"
+        },
+        {
+          "id": "8",
+          "authors": "Carron, A. V., Hausenblas, H. A., & Eys, M. A.",
+          "year": 2005,
+          "title": "Group Dynamics in Sport",
+          "source": "Fitness Information Technology (3rd ed.)"
+        },
+        {
+          "id": "9",
+          "authors": "Williams, J. M., & Andersen, M. B.",
+          "year": 1998,
+          "title": "Psychosocial Antecedents of Sport Injury",
+          "source": "Journal of Applied Sport Psychology, 10(1), 5-25"
+        },
+        {
+          "id": "10",
+          "authors": "Holmes, P. S., & Collins, D. J.",
+          "year": 2001,
+          "title": "The PETTLEP Approach to Motor Imagery",
+          "source": "Journal of Applied Sport Psychology, 13(1), 60-83"
+        }
+      ],
+      "difficulty": "beginner"
     }
   }
 }

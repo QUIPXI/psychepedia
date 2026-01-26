@@ -14,6 +14,8 @@ import {
   Briefcase,
   GraduationCap,
   Sparkles,
+  CornerDownRight,
+  CornerUpLeft,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/routing";
@@ -113,11 +115,13 @@ const navigationItems = [
 ];
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean; // Mobile
+  onClose: () => void; // Mobile
+  isCollapsed?: boolean; // Desktop
+  onToggleCollapse?: () => void; // Desktop
 }
 
-function SidebarNav({ currentPath }: { currentPath: string }) {
+function SidebarNav({ currentPath, isCollapsed = false, onToggleCollapse }: { currentPath: string; isCollapsed?: boolean; onToggleCollapse?: () => void }) {
   const t = useTranslations("domains");
   const tWiki = useTranslations("wiki");
   const locale = useLocale();
@@ -139,6 +143,15 @@ function SidebarNav({ currentPath }: { currentPath: string }) {
   }, [cleanPath]);
 
   const toggleExpanded = (id: string) => {
+    if (isCollapsed && onToggleCollapse) {
+      onToggleCollapse();
+      // Also expand this item
+      if (!expandedItems.includes(id)) {
+        setExpandedItems((prev) => [...prev, id]);
+      }
+      return;
+    }
+
     setExpandedItems((prev) =>
       prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
     );
@@ -156,24 +169,30 @@ function SidebarNav({ currentPath }: { currentPath: string }) {
             <button
               onClick={() => toggleExpanded(item.id)}
               className={cn(
-                "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                "flex items-center rounded-md transition-colors",
+                isCollapsed ? "justify-center w-10 h-10 mx-auto" : "w-full justify-between px-3 py-2",
                 isActive || hasActiveChild
                   ? "bg-primary/10 text-primary"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"
               )}
+              title={isCollapsed ? t(`${item.id}.title`) : undefined}
             >
-              <span className="flex items-center gap-2">
+              <span className={cn("flex items-center", isCollapsed ? "justify-center" : "gap-2")}>
                 {domainIcons[item.id]}
-                <span className="truncate">{t(`${item.id}.title`)}</span>
+                <span className={`block transition-all duration-200 ${isCollapsed ? "w-0 overflow-hidden opacity-0" : "flex-1 truncate"}`}>
+                  {t(`${item.id}.title`)}
+                </span>
               </span>
-              {isExpanded ? (
-                <ChevronDown className="h-4 w-4 shrink-0" />
-              ) : (
-                locale === "ar" ? <ChevronRight className="h-4 w-4 shrink-0 rotate-180" /> : <ChevronRight className="h-4 w-4 shrink-0" />
+              {!isCollapsed && (
+                isExpanded ? (
+                  <ChevronDown className="h-4 w-4 shrink-0" />
+                ) : (
+                  locale === "ar" ? <ChevronRight className="h-4 w-4 shrink-0 rotate-180" /> : <ChevronRight className="h-4 w-4 shrink-0" />
+                )
               )}
             </button>
 
-            {isExpanded && (
+            {isExpanded && !isCollapsed && (
               <div className={`mt-1 ${locale === "ar" ? "me-4 border-e pe-4" : "ms-4 border-s ps-4"} space-y-1 border-border`}>
                 <Link
                   href={item.href}
@@ -212,16 +231,34 @@ function SidebarNav({ currentPath }: { currentPath: string }) {
   );
 }
 
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
+export function Sidebar({ isOpen, onClose, isCollapsed = false, onToggleCollapse }: SidebarProps) {
   const pathname = usePathname();
   const locale = useLocale();
 
   return (
     <>
       {/* Desktop Sidebar */}
-      <aside className={`hidden md:flex md:w-72 md:flex-col md:fixed md:inset-y-0 md:pt-16 md:border-border md:bg-background ${locale === "ar" ? "md:end-0 md:border-s" : "md:start-0 md:border-e"}`}>
-        <div className="flex-1 overflow-y-auto p-4">
-          <SidebarNav currentPath={pathname} />
+      <aside
+        className={cn(
+          "hidden md:flex md:flex-col md:fixed md:inset-y-0 md:pt-16 md:border-border md:bg-background transition-all duration-300 ease-in-out",
+          locale === "ar" ? "md:end-0 md:border-s" : "md:start-0 md:border-e",
+          isCollapsed ? "md:w-16" : "md:w-72"
+        )}
+      >
+        <div className="flex items-center justify-end p-2 border-b border-border">
+          <button onClick={onToggleCollapse} className="p-2 hover:bg-muted rounded-md text-muted-foreground hover:text-foreground transition-all duration-300">
+            <div className="relative w-4 h-4">
+              <div className={`absolute inset-0 transition-all duration-300 transform ${isCollapsed ? "opacity-0 scale-50" : "opacity-100 scale-100"}`}>
+                <CornerUpLeft className="h-4 w-4" />
+              </div>
+              <div className={`absolute inset-0 transition-all duration-300 transform ${isCollapsed ? "opacity-100 scale-100" : "opacity-0 scale-50"}`}>
+                <CornerDownRight className="h-4 w-4" />
+              </div>
+            </div>
+          </button>
+        </div>
+        <div className="flex-1 overflow-y-auto p-4 overflow-x-hidden">
+          <SidebarNav currentPath={pathname} isCollapsed={isCollapsed} onToggleCollapse={onToggleCollapse} />
         </div>
       </aside>
 

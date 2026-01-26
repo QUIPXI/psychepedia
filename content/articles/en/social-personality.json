@@ -5,7 +5,7 @@
       "description": "Study how individuals think about, influence, and relate to others.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 30,
+      "readingTime": 31,
       "sections": [
         {
           "title": "Introduction to Social Psychology",
@@ -75,36 +75,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Fundamental Attribution Error", "definition": "The tendency to overemphasize dispositional factors and underemphasize situational factors when explaining others' behavior."},
-        {"term": "Cognitive Dissonance", "definition": "Psychological discomfort from holding inconsistent cognitions, motivating attitude or behavior change."},
-        {"term": "Conformity", "definition": "Changing one's behavior or beliefs to match those of others or to fit group norms."},
-        {"term": "Groupthink", "definition": "Defective group decision-making where desire for consensus overrides realistic appraisal of alternatives."},
-        {"term": "Bystander Effect", "definition": "The phenomenon where individuals are less likely to help in an emergency when others are present."},
-        {"term": "Elaboration Likelihood Model", "definition": "Theory proposing two routes to persuasion: central (careful argument processing) and peripheral (reliance on heuristic cues)."},
-        {"term": "Social Identity Theory", "definition": "Theory that people derive self-concept from group memberships and are motivated to view their groups positively."},
-        {"term": "Implicit Bias", "definition": "Unconscious attitudes or stereotypes that automatically influence perception, judgment, and behavior."},
-        {"term": "Social Facilitation", "definition": "Improved performance on simple tasks and impaired performance on complex tasks in the presence of others."},
-        {"term": "Reciprocal Altruism", "definition": "Evolutionary theory that helping non-relatives can be adaptive if recipients reciprocate, increasing the helper's survival chances."}
+        {
+          "term": "Fundamental Attribution Error",
+          "definition": "The tendency to overemphasize dispositional factors and underemphasize situational factors when explaining others' behavior."
+        },
+        {
+          "term": "Cognitive Dissonance",
+          "definition": "Psychological discomfort from holding inconsistent cognitions, motivating attitude or behavior change."
+        },
+        {
+          "term": "Conformity",
+          "definition": "Changing one's behavior or beliefs to match those of others or to fit group norms."
+        },
+        {
+          "term": "Groupthink",
+          "definition": "Defective group decision-making where desire for consensus overrides realistic appraisal of alternatives."
+        },
+        {
+          "term": "Bystander Effect",
+          "definition": "The phenomenon where individuals are less likely to help in an emergency when others are present."
+        },
+        {
+          "term": "Elaboration Likelihood Model",
+          "definition": "Theory proposing two routes to persuasion: central (careful argument processing) and peripheral (reliance on heuristic cues)."
+        },
+        {
+          "term": "Social Identity Theory",
+          "definition": "Theory that people derive self-concept from group memberships and are motivated to view their groups positively."
+        },
+        {
+          "term": "Implicit Bias",
+          "definition": "Unconscious attitudes or stereotypes that automatically influence perception, judgment, and behavior."
+        },
+        {
+          "term": "Social Facilitation",
+          "definition": "Improved performance on simple tasks and impaired performance on complex tasks in the presence of others."
+        },
+        {
+          "term": "Reciprocal Altruism",
+          "definition": "Evolutionary theory that helping non-relatives can be adaptive if recipients reciprocate, increasing the helper's survival chances."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Aronson, E., Wilson, T. D., & Sommers, S. R.", "year": 2021, "title": "Social Psychology", "source": "Pearson (10th ed.)"},
-        {"id": "2", "authors": "Myers, D. G., & Twenge, J. M.", "year": 2022, "title": "Social Psychology", "source": "McGraw-Hill (14th ed.)"},
-        {"id": "3", "authors": "Fiske, S. T., & Taylor, S. E.", "year": 2017, "title": "Social Cognition: From Brains to Culture", "source": "SAGE Publications (3rd ed.)"},
-        {"id": "4", "authors": "Petty, R. E., & Cacioppo, J. T.", "year": 1986, "title": "Communication and Persuasion: Central and Peripheral Routes to Attitude Change", "source": "Springer-Verlag"},
-        {"id": "5", "authors": "Cialdini, R. B.", "year": 2021, "title": "Influence: The Psychology of Persuasion", "source": "Harper Business (New and Expanded ed.)"},
-        {"id": "6", "authors": "Milgram, S.", "year": 1974, "title": "Obedience to Authority: An Experimental View", "source": "Harper & Row"},
-        {"id": "7", "authors": "Allport, G. W.", "year": 1954, "title": "The Nature of Prejudice", "source": "Addison-Wesley"},
-        {"id": "8", "authors": "Tajfel, H., & Turner, J. C.", "year": 1979, "title": "An Integrative Theory of Intergroup Conflict", "source": "The Social Psychology of Intergroup Relations, Brooks/Cole"},
-        {"id": "9", "authors": "Latané, B., & Darley, J. M.", "year": 1970, "title": "The Unresponsive Bystander: Why Doesn't He Help?", "source": "Appleton-Century-Crofts"},
-        {"id": "10", "authors": "Bandura, A.", "year": 1973, "title": "Aggression: A Social Learning Analysis", "source": "Prentice-Hall"}
-      ]
+        {
+          "id": "1",
+          "authors": "Aronson, E., Wilson, T. D., & Sommers, S. R.",
+          "year": 2021,
+          "title": "Social Psychology",
+          "source": "Pearson (10th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Myers, D. G., & Twenge, J. M.",
+          "year": 2022,
+          "title": "Social Psychology",
+          "source": "McGraw-Hill (14th ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Fiske, S. T., & Taylor, S. E.",
+          "year": 2017,
+          "title": "Social Cognition: From Brains to Culture",
+          "source": "SAGE Publications (3rd ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Petty, R. E., & Cacioppo, J. T.",
+          "year": 1986,
+          "title": "Communication and Persuasion: Central and Peripheral Routes to Attitude Change",
+          "source": "Springer-Verlag"
+        },
+        {
+          "id": "5",
+          "authors": "Cialdini, R. B.",
+          "year": 2021,
+          "title": "Influence: The Psychology of Persuasion",
+          "source": "Harper Business (New and Expanded ed.)"
+        },
+        {
+          "id": "6",
+          "authors": "Milgram, S.",
+          "year": 1974,
+          "title": "Obedience to Authority: An Experimental View",
+          "source": "Harper & Row"
+        },
+        {
+          "id": "7",
+          "authors": "Allport, G. W.",
+          "year": 1954,
+          "title": "The Nature of Prejudice",
+          "source": "Addison-Wesley"
+        },
+        {
+          "id": "8",
+          "authors": "Tajfel, H., & Turner, J. C.",
+          "year": 1979,
+          "title": "An Integrative Theory of Intergroup Conflict",
+          "source": "The Social Psychology of Intergroup Relations, Brooks/Cole"
+        },
+        {
+          "id": "9",
+          "authors": "Latané, B., & Darley, J. M.",
+          "year": 1970,
+          "title": "The Unresponsive Bystander: Why Doesn't He Help?",
+          "source": "Appleton-Century-Crofts"
+        },
+        {
+          "id": "10",
+          "authors": "Bandura, A.",
+          "year": 1973,
+          "title": "Aggression: A Social Learning Analysis",
+          "source": "Prentice-Hall"
+        }
+      ],
+      "difficulty": "beginner"
     },
     "personality-theories": {
       "title": "Personality Theories",
       "description": "Explore major theoretical approaches to understanding personality.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 28,
+      "readingTime": 35,
       "sections": [
         {
           "title": "Introduction to Personality",
@@ -170,36 +261,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Big Five", "definition": "The five-factor model of personality consisting of Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism."},
-        {"term": "Self-Efficacy", "definition": "Bandura's concept referring to beliefs about one's ability to succeed in specific situations or tasks."},
-        {"term": "Defense Mechanisms", "definition": "Unconscious psychological strategies used to protect oneself from anxiety and unacceptable impulses."},
-        {"term": "Self-Actualization", "definition": "Maslow's concept of realizing one's full potential and becoming the best version of oneself."},
-        {"term": "Reciprocal Determinism", "definition": "Bandura's concept that behavior, personal factors, and environment mutually influence each other."},
-        {"term": "Heritability", "definition": "The proportion of observed variation in a trait that can be attributed to genetic differences within a population."},
-        {"term": "Temperament", "definition": "Early-appearing, biologically based individual differences in emotional reactivity and self-regulation."},
-        {"term": "Unconditional Positive Regard", "definition": "Rogers' concept of accepting and valuing a person without conditions, promoting psychological growth."},
-        {"term": "Locus of Control", "definition": "Rotter's concept of generalized expectancy about whether outcomes are controlled by internal or external factors."},
-        {"term": "Identity Achievement", "definition": "Marcia's status characterized by commitment to an identity following active exploration of alternatives."}
+        {
+          "term": "Big Five",
+          "definition": "The five-factor model of personality consisting of Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism."
+        },
+        {
+          "term": "Self-Efficacy",
+          "definition": "Bandura's concept referring to beliefs about one's ability to succeed in specific situations or tasks."
+        },
+        {
+          "term": "Defense Mechanisms",
+          "definition": "Unconscious psychological strategies used to protect oneself from anxiety and unacceptable impulses."
+        },
+        {
+          "term": "Self-Actualization",
+          "definition": "Maslow's concept of realizing one's full potential and becoming the best version of oneself."
+        },
+        {
+          "term": "Reciprocal Determinism",
+          "definition": "Bandura's concept that behavior, personal factors, and environment mutually influence each other."
+        },
+        {
+          "term": "Heritability",
+          "definition": "The proportion of observed variation in a trait that can be attributed to genetic differences within a population."
+        },
+        {
+          "term": "Temperament",
+          "definition": "Early-appearing, biologically based individual differences in emotional reactivity and self-regulation."
+        },
+        {
+          "term": "Unconditional Positive Regard",
+          "definition": "Rogers' concept of accepting and valuing a person without conditions, promoting psychological growth."
+        },
+        {
+          "term": "Locus of Control",
+          "definition": "Rotter's concept of generalized expectancy about whether outcomes are controlled by internal or external factors."
+        },
+        {
+          "term": "Identity Achievement",
+          "definition": "Marcia's status characterized by commitment to an identity following active exploration of alternatives."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Larsen, R. J., & Buss, D. M.", "year": 2021, "title": "Personality Psychology: Domains of Knowledge About Human Nature", "source": "McGraw-Hill (7th ed.)"},
-        {"id": "2", "authors": "Cervone, D., & Pervin, L. A.", "year": 2019, "title": "Personality: Theory and Research", "source": "Wiley (14th ed.)"},
-        {"id": "3", "authors": "McAdams, D. P., & Pals, J. L.", "year": 2006, "title": "A New Big Five: Fundamental Principles for an Integrative Science of Personality", "source": "American Psychologist, 61(3), 204-217"},
-        {"id": "4", "authors": "Roberts, B. W., Walton, K. E., & Viechtbauer, W.", "year": 2006, "title": "Patterns of Mean-Level Change in Personality Traits Across the Life Course", "source": "Psychological Bulletin, 132(1), 1-25"},
-        {"id": "5", "authors": "Bandura, A.", "year": 1997, "title": "Self-Efficacy: The Exercise of Control", "source": "W.H. Freeman"},
-        {"id": "6", "authors": "Mischel, W., & Shoda, Y.", "year": 1995, "title": "A Cognitive-Affective System Theory of Personality", "source": "Psychological Review, 102(2), 246-268"},
-        {"id": "7", "authors": "Costa, P. T., & McCrae, R. R.", "year": 1992, "title": "Revised NEO Personality Inventory (NEO-PI-R) and NEO Five-Factor Inventory (NEO-FFI) Professional Manual", "source": "Psychological Assessment Resources"},
-        {"id": "8", "authors": "Caspi, A., Roberts, B. W., & Shiner, R. L.", "year": 2005, "title": "Personality Development: Stability and Change", "source": "Annual Review of Psychology, 56, 453-484"},
-        {"id": "9", "authors": "John, O. P., Robins, R. W., & Pervin, L. A.", "year": 2008, "title": "Handbook of Personality: Theory and Research", "source": "Guilford Press (3rd ed.)"},
-        {"id": "10", "authors": "Friedman, H. S., & Kern, M. L.", "year": 2014, "title": "Personality, Well-Being, and Health", "source": "Annual Review of Psychology, 65, 719-742"}
-      ]
+        {
+          "id": "1",
+          "authors": "Larsen, R. J., & Buss, D. M.",
+          "year": 2021,
+          "title": "Personality Psychology: Domains of Knowledge About Human Nature",
+          "source": "McGraw-Hill (7th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Cervone, D., & Pervin, L. A.",
+          "year": 2019,
+          "title": "Personality: Theory and Research",
+          "source": "Wiley (14th ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "McAdams, D. P., & Pals, J. L.",
+          "year": 2006,
+          "title": "A New Big Five: Fundamental Principles for an Integrative Science of Personality",
+          "source": "American Psychologist, 61(3), 204-217"
+        },
+        {
+          "id": "4",
+          "authors": "Roberts, B. W., Walton, K. E., & Viechtbauer, W.",
+          "year": 2006,
+          "title": "Patterns of Mean-Level Change in Personality Traits Across the Life Course",
+          "source": "Psychological Bulletin, 132(1), 1-25"
+        },
+        {
+          "id": "5",
+          "authors": "Bandura, A.",
+          "year": 1997,
+          "title": "Self-Efficacy: The Exercise of Control",
+          "source": "W.H. Freeman"
+        },
+        {
+          "id": "6",
+          "authors": "Mischel, W., & Shoda, Y.",
+          "year": 1995,
+          "title": "A Cognitive-Affective System Theory of Personality",
+          "source": "Psychological Review, 102(2), 246-268"
+        },
+        {
+          "id": "7",
+          "authors": "Costa, P. T., & McCrae, R. R.",
+          "year": 1992,
+          "title": "Revised NEO Personality Inventory (NEO-PI-R) and NEO Five-Factor Inventory (NEO-FFI) Professional Manual",
+          "source": "Psychological Assessment Resources"
+        },
+        {
+          "id": "8",
+          "authors": "Caspi, A., Roberts, B. W., & Shiner, R. L.",
+          "year": 2005,
+          "title": "Personality Development: Stability and Change",
+          "source": "Annual Review of Psychology, 56, 453-484"
+        },
+        {
+          "id": "9",
+          "authors": "John, O. P., Robins, R. W., & Pervin, L. A.",
+          "year": 2008,
+          "title": "Handbook of Personality: Theory and Research",
+          "source": "Guilford Press (3rd ed.)"
+        },
+        {
+          "id": "10",
+          "authors": "Friedman, H. S., & Kern, M. L.",
+          "year": 2014,
+          "title": "Personality, Well-Being, and Health",
+          "source": "Annual Review of Psychology, 65, 719-742"
+        }
+      ],
+      "difficulty": "intermediate"
     },
     "cross-cultural": {
       "title": "Cross-Cultural Psychology",
       "description": "Explore how culture influences psychological processes and behavior.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 26,
+      "readingTime": 29,
       "sections": [
         {
           "title": "Introduction to Cross-Cultural Psychology",
@@ -265,29 +447,120 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Individualism vs. Collectivism", "definition": "Cultural dimension emphasizing personal independence and self-reliance (individualism) versus group harmony and interdependence (collectivism)."},
-        {"term": "Power Distance", "definition": "Degree to which less powerful members accept unequal power distribution in a society."},
-        {"term": "High-Context vs. Low-Context Communication", "definition": "Communication styles where meaning is embedded in context (high) versus explicitly stated in words (low)."},
-        {"term": "Cultural Syndromes", "definition": "Culture-specific patterns of illness or behavior found only in particular cultures."},
-        {"term": "Emic vs. Etic", "definition": "Emic: Culture-specific understanding from within; Etic: Universal constructs applied across cultures."},
-        {"term": "Acculturation", "definition": "Process of psychological and cultural change that results when groups from different cultures come into continuous contact."},
-        {"term": "Cultural Competence", "definition": "Ability to understand, appreciate, and interact effectively with people from diverse cultural backgrounds."},
-        {"term": "Independent vs. Interdependent Self-Construal", "definition": "Viewing self as autonomous and separate (independent) versus connected and embedded in relationships (interdependent)."},
-        {"term": "Analytic vs. Holistic Cognition", "definition": "Cognitive styles emphasizing focal objects and rules (analytic) versus context and relationships (holistic)."},
-        {"term": "Bicultural Identity", "definition": "Integration of aspects of multiple cultural backgrounds into a coherent sense of self."}
+        {
+          "term": "Individualism vs. Collectivism",
+          "definition": "Cultural dimension emphasizing personal independence and self-reliance (individualism) versus group harmony and interdependence (collectivism)."
+        },
+        {
+          "term": "Power Distance",
+          "definition": "Degree to which less powerful members accept unequal power distribution in a society."
+        },
+        {
+          "term": "High-Context vs. Low-Context Communication",
+          "definition": "Communication styles where meaning is embedded in context (high) versus explicitly stated in words (low)."
+        },
+        {
+          "term": "Cultural Syndromes",
+          "definition": "Culture-specific patterns of illness or behavior found only in particular cultures."
+        },
+        {
+          "term": "Emic vs. Etic",
+          "definition": "Emic: Culture-specific understanding from within; Etic: Universal constructs applied across cultures."
+        },
+        {
+          "term": "Acculturation",
+          "definition": "Process of psychological and cultural change that results when groups from different cultures come into continuous contact."
+        },
+        {
+          "term": "Cultural Competence",
+          "definition": "Ability to understand, appreciate, and interact effectively with people from diverse cultural backgrounds."
+        },
+        {
+          "term": "Independent vs. Interdependent Self-Construal",
+          "definition": "Viewing self as autonomous and separate (independent) versus connected and embedded in relationships (interdependent)."
+        },
+        {
+          "term": "Analytic vs. Holistic Cognition",
+          "definition": "Cognitive styles emphasizing focal objects and rules (analytic) versus context and relationships (holistic)."
+        },
+        {
+          "term": "Bicultural Identity",
+          "definition": "Integration of aspects of multiple cultural backgrounds into a coherent sense of self."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Matsumoto, D., & Juang, L.", "year": 2017, "title": "Culture and Psychology", "source": "Cengage Learning (6th ed.)"},
-        {"id": "2", "authors": "Triandis, H. C.", "year": 1994, "title": "Individualism and Collectivism", "source": "Westview Press"},
-        {"id": "3", "authors": "Nisbett, R. E.", "year": 2003, "title": "The Geography of Thought: How Asians and Westerners Think Differently...and Why", "source": "Free Press"},
-        {"id": "4", "authors": "Markus, H. R., & Kitayama, S.", "year": 1991, "title": "Culture and the Self: Implications for Cognition, Emotion, and Motivation", "source": "Psychological Review, 98(2), 224-253"},
-        {"id": "5", "authors": "Berry, J. W.", "year": 2005, "title": "Acculturation: Living Successfully in Two Cultures", "source": "International Journal of Intercultural Relations, 29(6), 697-712"},
-        {"id": "6", "authors": "Hofstede, G.", "year": 2001, "title": "Culture's Consequences: Comparing Values, Behaviors, Institutions, and Organizations Across Nations", "source": "SAGE Publications (2nd ed.)"},
-        {"id": "7", "authors": "Henrich, J., Heine, S. J., & Norenzayan, A.", "year": 2010, "title": "The Weirdest People in the World?", "source": "Behavioral and Brain Sciences, 33(2-3), 61-83"},
-        {"id": "8", "authors": "Schwartz, S. H.", "year": 2012, "title": "An Overview of the Schwartz Theory of Basic Values", "source": "Online Readings in Psychology and Culture, 2(1)"},
-        {"id": "9", "authors": "Sue, D. W., & Sue, D.", "year": 2016, "title": "Counseling the Culturally Diverse: Theory and Practice", "source": "Wiley (7th ed.)"},
-        {"id": "10", "authors": "Phinney, J. S., & Ong, A. D.", "year": 2007, "title": "Conceptualization and Measurement of Ethnic Identity", "source": "International Journal of Behavioral Development, 31(5), 478-490"}
-      ]
+        {
+          "id": "1",
+          "authors": "Matsumoto, D., & Juang, L.",
+          "year": 2017,
+          "title": "Culture and Psychology",
+          "source": "Cengage Learning (6th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Triandis, H. C.",
+          "year": 1994,
+          "title": "Individualism and Collectivism",
+          "source": "Westview Press"
+        },
+        {
+          "id": "3",
+          "authors": "Nisbett, R. E.",
+          "year": 2003,
+          "title": "The Geography of Thought: How Asians and Westerners Think Differently...and Why",
+          "source": "Free Press"
+        },
+        {
+          "id": "4",
+          "authors": "Markus, H. R., & Kitayama, S.",
+          "year": 1991,
+          "title": "Culture and the Self: Implications for Cognition, Emotion, and Motivation",
+          "source": "Psychological Review, 98(2), 224-253"
+        },
+        {
+          "id": "5",
+          "authors": "Berry, J. W.",
+          "year": 2005,
+          "title": "Acculturation: Living Successfully in Two Cultures",
+          "source": "International Journal of Intercultural Relations, 29(6), 697-712"
+        },
+        {
+          "id": "6",
+          "authors": "Hofstede, G.",
+          "year": 2001,
+          "title": "Culture's Consequences: Comparing Values, Behaviors, Institutions, and Organizations Across Nations",
+          "source": "SAGE Publications (2nd ed.)"
+        },
+        {
+          "id": "7",
+          "authors": "Henrich, J., Heine, S. J., & Norenzayan, A.",
+          "year": 2010,
+          "title": "The Weirdest People in the World?",
+          "source": "Behavioral and Brain Sciences, 33(2-3), 61-83"
+        },
+        {
+          "id": "8",
+          "authors": "Schwartz, S. H.",
+          "year": 2012,
+          "title": "An Overview of the Schwartz Theory of Basic Values",
+          "source": "Online Readings in Psychology and Culture, 2(1)"
+        },
+        {
+          "id": "9",
+          "authors": "Sue, D. W., & Sue, D.",
+          "year": 2016,
+          "title": "Counseling the Culturally Diverse: Theory and Practice",
+          "source": "Wiley (7th ed.)"
+        },
+        {
+          "id": "10",
+          "authors": "Phinney, J. S., & Ong, A. D.",
+          "year": 2007,
+          "title": "Conceptualization and Measurement of Ethnic Identity",
+          "source": "International Journal of Behavioral Development, 31(5), 478-490"
+        }
+      ],
+      "difficulty": "intermediate"
     }
   }
 }

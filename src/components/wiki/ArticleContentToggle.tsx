@@ -48,7 +48,7 @@ function TableOfContents({
     <nav
       className={cn(
         "hidden lg:block sticky top-24 w-64 shrink-0 self-start",
-        isRtl ? "mr-8" : "ml-8"
+        isRtl ? "ml-8" : "ml-8"
       )}
       aria-label="Table of contents"
     >
@@ -62,14 +62,16 @@ function TableOfContents({
             const id = slugify(section.title);
             return (
               <li key={id}>
-                <button
-                  onClick={() => scrollToHeading(id)}
-                  className={cn(
-                    "block w-full text-left py-1.5 px-2 rounded-md transition-colors hover:text-foreground hover:bg-muted/50",
-                    activeId === id
-                      ? "text-primary font-medium bg-primary/5 border-l-2 border-primary"
-                      : "text-muted-foreground"
-                  )}
+                  <button
+                    onClick={() => scrollToHeading(id)}
+                    className={cn(
+                      "block w-full text-left py-1.5 px-2 rounded-md transition-colors hover:text-foreground hover:bg-muted/50",
+                      activeId === id
+                        ? isRtl 
+                          ? "text-primary font-medium bg-primary/5 border-r-2 border-primary" 
+                          : "text-primary font-medium bg-primary/5 border-l-2 border-primary"
+                        : "text-muted-foreground"
+                    )}
                 >
                   {section.title}
                 </button>
@@ -268,7 +270,7 @@ export function ArticleContentToggle({
       <MobileTOC sections={currentSections} title={tocTitle} />
       
       {/* Content with Desktop TOC */}
-      <div className={cn("flex", isRtl && "flex-row-reverse")}>
+      <div className={cn("flex", isRtl ? "flex-row-reverse" : "flex-row")}>
         <div className="flex-1 min-w-0">
           <ArticleContent sections={currentSections} />
         </div>

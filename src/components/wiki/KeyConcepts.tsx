@@ -95,23 +95,23 @@ export function KeyConcepts({
       {/* Study Mode Controls */}
       {studyMode && (
         <div className="flex flex-wrap gap-2 mb-4 pb-4 border-b border-primary/20">
-          <Button variant="outline" size="sm" onClick={revealAll} className="text-xs">
-            <Eye className="h-3 w-3 mr-1" />
+          <Button variant="outline" size="sm" onClick={revealAll} className="text-xs gap-1">
+            <Eye className="h-3 w-3" />
             {isRtl ? "إظهار الكل" : "Reveal All"}
           </Button>
-          <Button variant="outline" size="sm" onClick={hideAll} className="text-xs">
-            <EyeOff className="h-3 w-3 mr-1" />
+          <Button variant="outline" size="sm" onClick={hideAll} className="text-xs gap-1">
+            <EyeOff className="h-3 w-3" />
             {isRtl ? "إخفاء الكل" : "Hide All"}
           </Button>
-          <Button variant="outline" size="sm" onClick={shuffleTerms} className="text-xs">
-            <Shuffle className="h-3 w-3 mr-1" />
+          <Button variant="outline" size="sm" onClick={shuffleTerms} className="text-xs gap-1">
+            <Shuffle className="h-3 w-3" />
             {isRtl ? "خلط" : "Shuffle"}
           </Button>
-          <Button variant="outline" size="sm" onClick={resetOrder} className="text-xs">
-            <RotateCcw className="h-3 w-3 mr-1" />
+          <Button variant="outline" size="sm" onClick={resetOrder} className="text-xs gap-1">
+            <RotateCcw className="h-3 w-3" />
             {isRtl ? "إعادة ضبط" : "Reset"}
           </Button>
-          <span className="text-xs text-muted-foreground ml-auto self-center">
+          <span className={cn("text-xs text-muted-foreground self-center", isRtl ? "mr-auto" : "ml-auto")}>
             {revealedTerms.size}/{shuffledConcepts.length} {isRtl ? "مكشوف" : "revealed"}
           </span>
         </div>
@@ -130,7 +130,8 @@ export function KeyConcepts({
             <dt className="font-medium text-foreground">{concept.term}</dt>
             <dd 
               className={cn(
-                "text-sm pl-4 border-l-2 border-primary/30 transition-all",
+                "text-sm transition-all",
+                isRtl ? "pr-4 border-r-2 border-primary/30" : "pl-4 border-l-2 border-primary/30",
                 studyMode && !revealedTerms.has(index)
                   ? "text-transparent bg-muted/50 rounded select-none blur-sm"
                   : "text-muted-foreground"

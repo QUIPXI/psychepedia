@@ -5,7 +5,7 @@
       "description": "Understand cognitive, social, and emotional development in childhood.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 28,
+      "readingTime": 14,
       "sections": [
         {
           "title": "Introduction to Child Development",
@@ -67,36 +67,261 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Zone of Proximal Development", "definition": "The gap between what a child can do independently and what they can achieve with guidance from a more skilled person."},
-        {"term": "Object Permanence", "definition": "Understanding that objects continue to exist even when not directly perceived, typically developing in the first year."},
-        {"term": "Attachment", "definition": "The emotional bond between infant and caregiver that serves as a secure base for exploration."},
-        {"term": "Theory of Mind", "definition": "The ability to understand that others have mental states (beliefs, desires) different from one's own."},
-        {"term": "Scaffolding", "definition": "Temporary support provided by a more skilled person to help a child accomplish a task, gradually withdrawn as competence increases."},
-        {"term": "Conservation", "definition": "Understanding that quantity remains the same despite changes in appearance, achieved in the concrete operational stage."},
-        {"term": "Internal Working Model", "definition": "Mental representation of self, attachment figures, and relationships that guides expectations in future relationships."},
-        {"term": "Private Speech", "definition": "Self-directed speech used to guide behavior and thought, which becomes internalized as inner speech."},
-        {"term": "Secure Base", "definition": "The attachment figure provides a secure base from which the child can explore the environment."},
-        {"term": "Equilibration", "definition": "Piaget's concept of the drive to maintain cognitive balance, motivating adaptation when new experiences don't fit existing schemas."}
+        {
+          "term": "Zone of Proximal Development",
+          "definition": "The gap between what a child can do independently and what they can achieve with guidance from a more skilled person."
+        },
+        {
+          "term": "Object Permanence",
+          "definition": "Understanding that objects continue to exist even when not directly perceived, typically developing in the first year."
+        },
+        {
+          "term": "Attachment",
+          "definition": "The emotional bond between infant and caregiver that serves as a secure base for exploration."
+        },
+        {
+          "term": "Theory of Mind",
+          "definition": "The ability to understand that others have mental states (beliefs, desires) different from one's own."
+        },
+        {
+          "term": "Scaffolding",
+          "definition": "Temporary support provided by a more skilled person to help a child accomplish a task, gradually withdrawn as competence increases."
+        },
+        {
+          "term": "Conservation",
+          "definition": "Understanding that quantity remains the same despite changes in appearance, achieved in the concrete operational stage."
+        },
+        {
+          "term": "Internal Working Model",
+          "definition": "Mental representation of self, attachment figures, and relationships that guides expectations in future relationships."
+        },
+        {
+          "term": "Private Speech",
+          "definition": "Self-directed speech used to guide behavior and thought, which becomes internalized as inner speech."
+        },
+        {
+          "term": "Secure Base",
+          "definition": "The attachment figure provides a secure base from which the child can explore the environment."
+        },
+        {
+          "term": "Equilibration",
+          "definition": "Piaget's concept of the drive to maintain cognitive balance, motivating adaptation when new experiences don't fit existing schemas."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Siegler, R., et al.", "year": 2020, "title": "How Children Develop", "source": "Worth Publishers (6th ed.)"},
-        {"id": "2", "authors": "Berk, L. E.", "year": 2018, "title": "Development Through the Lifespan", "source": "Pearson (7th ed.)"},
-        {"id": "3", "authors": "Santrock, J. W.", "year": 2021, "title": "Child Development", "source": "McGraw-Hill (15th ed.)"},
-        {"id": "4", "authors": "Piaget, J.", "year": 1952, "title": "The Origins of Intelligence in Children", "source": "International Universities Press"},
-        {"id": "5", "authors": "Vygotsky, L. S.", "year": 1978, "title": "Mind in Society: Development of Higher Psychological Processes", "source": "Harvard University Press"},
-        {"id": "6", "authors": "Bowlby, J.", "year": 1969, "title": "Attachment and Loss: Vol. 1. Attachment", "source": "Basic Books"},
-        {"id": "7", "authors": "Ainsworth, M. D. S., et al.", "year": 1978, "title": "Patterns of Attachment: A Psychological Study of the Strange Situation", "source": "Erlbaum"},
-        {"id": "8", "authors": "Kohlberg, L.", "year": 1984, "title": "The Psychology of Moral Development", "source": "Harper & Row"},
-        {"id": "9", "authors": "Gopnik, A., Meltzoff, A. N., & Kuhl, P. K.", "year": 1999, "title": "The Scientist in the Crib", "source": "William Morrow"},
-        {"id": "10", "authors": "Rogoff, B.", "year": 2003, "title": "The Cultural Nature of Human Development", "source": "Oxford University Press"}
-      ]
+        {
+          "id": "1",
+          "authors": "Siegler, R., et al.",
+          "year": 2020,
+          "title": "How Children Develop",
+          "source": "Worth Publishers (6th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Berk, L. E.",
+          "year": 2018,
+          "title": "Development Through the Lifespan",
+          "source": "Pearson (7th ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Santrock, J. W.",
+          "year": 2021,
+          "title": "Child Development",
+          "source": "McGraw-Hill (15th ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Piaget, J.",
+          "year": 1952,
+          "title": "The Origins of Intelligence in Children",
+          "source": "International Universities Press"
+        },
+        {
+          "id": "5",
+          "authors": "Vygotsky, L. S.",
+          "year": 1978,
+          "title": "Mind in Society: Development of Higher Psychological Processes",
+          "source": "Harvard University Press"
+        },
+        {
+          "id": "6",
+          "authors": "Bowlby, J.",
+          "year": 1969,
+          "title": "Attachment and Loss: Vol. 1. Attachment",
+          "source": "Basic Books"
+        },
+        {
+          "id": "7",
+          "authors": "Ainsworth, M. D. S., et al.",
+          "year": 1978,
+          "title": "Patterns of Attachment: A Psychological Study of the Strange Situation",
+          "source": "Erlbaum"
+        },
+        {
+          "id": "8",
+          "authors": "Kohlberg, L.",
+          "year": 1984,
+          "title": "The Psychology of Moral Development",
+          "source": "Harper & Row"
+        },
+        {
+          "id": "9",
+          "authors": "Gopnik, A., Meltzoff, A. N., & Kuhl, P. K.",
+          "year": 1999,
+          "title": "The Scientist in the Crib",
+          "source": "William Morrow"
+        },
+        {
+          "id": "10",
+          "authors": "Rogoff, B.",
+          "year": 2003,
+          "title": "The Cultural Nature of Human Development",
+          "source": "Oxford University Press"
+        }
+      ],
+      "quiz": [
+        {
+          "id": "q1",
+          "question": "A child who understands that water poured from a short, wide glass into a tall, thin glass remains the same amount has achieved:",
+          "options": [
+            "Object Permanence",
+            "Conservation",
+            "Egocentrism",
+            "Hypothetical Reasoning"
+          ],
+          "correctIndex": 1,
+          "explanation": "Conservation is the understanding that quantity remains the same despite changes in appearance, a key achievement of the concrete operational stage."
+        },
+        {
+          "id": "q2",
+          "question": "According to Vygotsky, the gap between what a child can do alone and what they can do with help is called:",
+          "options": [
+            "Scaffolding",
+            "Schema",
+            "Zone of Proximal Development",
+            "Assimilation"
+          ],
+          "correctIndex": 2,
+          "explanation": "The Zone of Proximal Development (ZPD) represents the range of tasks that are too difficult for a child to master alone but can be learned with guidance."
+        },
+        {
+          "id": "q3",
+          "question": "In the 'Strange Situation', an infant who is distressed by separation but easily comforted upon the caregiver's return is classified as:",
+          "options": [
+            "Anxious-Avoidant",
+            "Anxious-Resistant",
+            "Disorganized",
+            "Securely Attached"
+          ],
+          "correctIndex": 3,
+          "explanation": "Securely attached infants use the caregiver as a secure base and are readily comforted after a stressful separation."
+        },
+        {
+          "id": "q4",
+          "question": "At which stage of Kohlberg's moral development is an individual primarily concerned with avoiding punishment?",
+          "options": [
+            "Preconventional",
+            "Conventional",
+            "Postconventional",
+            "Universal Ethical Principles"
+          ],
+          "correctIndex": 0,
+          "explanation": "The preconventional level focuses on self-interest and the direct consequences of actions, such as punishment or reward."
+        }
+      ],
+      "caseStudies": [
+        {
+          "title": "The Case of Leo: Cognitive Development",
+          "description": "Observation of a 4-year-old's perspective-taking abilities.",
+          "scenario": "Leo is shown a model of three mountains. When asked what a doll sitting on the opposite side sees, Leo describes the mountains exactly as he sees them from his own position.",
+          "analysis": "Leo's response demonstrates egocentrism, a characteristic of Piaget's preoperational stage, where children have difficulty taking the physical perspective of others.",
+          "keyTakeaways": [
+            "Egocentrism is normative in early childhood",
+            "Perspective-taking develops gradually",
+            "Concrete experiences help bridge cognitive gaps"
+          ]
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Piaget vs. Vygotsky",
+          "description": "Key differences between the two major theories of cognitive development.",
+          "headers": [
+            "Feature",
+            "Piaget (Cognitive Constructivism)",
+            "Vygotsky (Social Constructivism)"
+          ],
+          "rows": [
+            {
+              "label": "Source of Knowledge",
+              "values": [
+                "Individual exploration",
+                "Social interaction"
+              ]
+            },
+            {
+              "label": "Role of Language",
+              "values": [
+                "Reflects thought",
+                "Shapes thought"
+              ]
+            },
+            {
+              "label": "Stages",
+              "values": [
+                "Strong emphasis on stages",
+                "No general stages proposed"
+              ]
+            },
+            {
+              "label": "Key Process",
+              "values": [
+                "Equilibration",
+                "ZPD and Scaffolding"
+              ]
+            }
+          ]
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "piaget-stages",
+          "title": "Piaget's Stages of Cognitive Development",
+          "description": "Hierarchy of cognitive progression from birth to adulthood.",
+          "type": "hierarchy",
+          "nodes": [
+            {
+              "id": "1",
+              "label": "Sensorimotor (0-2y)",
+              "description": "Sensory/motor exploration"
+            },
+            {
+              "id": "2",
+              "label": "Preoperational (2-7y)",
+              "description": "Symbolic thought, egocentrism"
+            },
+            {
+              "id": "3",
+              "label": "Concrete Operational (7-11y)",
+              "description": "Logical thought, conservation"
+            },
+            {
+              "id": "4",
+              "label": "Formal Operational (11y+)",
+              "description": "Abstract reasoning"
+            }
+          ]
+        }
+      ],
+      "difficulty": "beginner"
     },
     "adolescent-psychology": {
       "title": "Adolescent Psychology",
       "description": "Explore the unique developmental challenges and changes of adolescence.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 24,
+      "readingTime": 11,
       "sections": [
         {
           "title": "Introduction to Adolescence",
@@ -150,36 +375,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Identity Achievement", "definition": "Marcia's identity status characterized by having explored alternatives and made commitments to identity choices."},
-        {"term": "Imaginary Audience", "definition": "Adolescent belief that others are constantly watching and evaluating them."},
-        {"term": "Personal Fable", "definition": "Adolescent sense of being unique and invulnerable to harm that affects others."},
-        {"term": "Prefrontal Cortex", "definition": "Brain region responsible for executive functions, decision-making, and impulse control; continues developing into the mid-20s."},
-        {"term": "Puberty", "definition": "The period of biological changes leading to physical and sexual maturation."},
-        {"term": "Developmental Mismatch", "definition": "The gap between early-maturing limbic system and later-maturing prefrontal cortex that helps explain adolescent risk-taking."},
-        {"term": "Psychosocial Moratorium", "definition": "Erikson's concept of a period during adolescence when society allows exploration before adult commitments."},
-        {"term": "Authoritative Parenting", "definition": "Parenting style combining warmth and responsiveness with clear expectations, associated with best adolescent outcomes."},
-        {"term": "Emerging Adulthood", "definition": "Arnett's term for the developmental period from ages 18-25, characterized by identity exploration, instability, and self-focus."},
-        {"term": "Ethnic Identity", "definition": "Sense of belonging to an ethnic group and attitudes and feelings associated with that membership."}
+        {
+          "term": "Identity Achievement",
+          "definition": "Marcia's identity status characterized by having explored alternatives and made commitments to identity choices."
+        },
+        {
+          "term": "Imaginary Audience",
+          "definition": "Adolescent belief that others are constantly watching and evaluating them."
+        },
+        {
+          "term": "Personal Fable",
+          "definition": "Adolescent sense of being unique and invulnerable to harm that affects others."
+        },
+        {
+          "term": "Prefrontal Cortex",
+          "definition": "Brain region responsible for executive functions, decision-making, and impulse control; continues developing into the mid-20s."
+        },
+        {
+          "term": "Puberty",
+          "definition": "The period of biological changes leading to physical and sexual maturation."
+        },
+        {
+          "term": "Developmental Mismatch",
+          "definition": "The gap between early-maturing limbic system and later-maturing prefrontal cortex that helps explain adolescent risk-taking."
+        },
+        {
+          "term": "Psychosocial Moratorium",
+          "definition": "Erikson's concept of a period during adolescence when society allows exploration before adult commitments."
+        },
+        {
+          "term": "Authoritative Parenting",
+          "definition": "Parenting style combining warmth and responsiveness with clear expectations, associated with best adolescent outcomes."
+        },
+        {
+          "term": "Emerging Adulthood",
+          "definition": "Arnett's term for the developmental period from ages 18-25, characterized by identity exploration, instability, and self-focus."
+        },
+        {
+          "term": "Ethnic Identity",
+          "definition": "Sense of belonging to an ethnic group and attitudes and feelings associated with that membership."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Steinberg, L.", "year": 2020, "title": "Adolescence", "source": "McGraw-Hill (12th ed.)"},
-        {"id": "2", "authors": "Arnett, J. J.", "year": 2018, "title": "Adolescence and Emerging Adulthood", "source": "Pearson (6th ed.)"},
-        {"id": "3", "authors": "Erikson, E. H.", "year": 1968, "title": "Identity: Youth and Crisis", "source": "Norton"},
-        {"id": "4", "authors": "Marcia, J. E.", "year": 1966, "title": "Development and Validation of Ego-Identity Status", "source": "Journal of Personality and Social Psychology, 3(5), 551-558"},
-        {"id": "5", "authors": "Casey, B. J., et al.", "year": 2008, "title": "The Adolescent Brain", "source": "Developmental Science, 11(1), 13-22"},
-        {"id": "6", "authors": "Giedd, J. N.", "year": 2015, "title": "The Amazing Teen Brain", "source": "Scientific American, 312(6), 32-37"},
-        {"id": "7", "authors": "Crone, E. A., & Dahl, R. E.", "year": 2012, "title": "Understanding Adolescence as a Period of Social-Affective Engagement and Goal Flexibility", "source": "Nature Reviews Neuroscience, 13(9), 636-650"},
-        {"id": "8", "authors": "Phinney, J. S.", "year": 1990, "title": "Ethnic Identity in Adolescents and Adults", "source": "Psychological Bulletin, 108(3), 499-514"},
-        {"id": "9", "authors": "Nock, M. K.", "year": 2010, "title": "Self-Injury", "source": "Annual Review of Clinical Psychology, 6, 339-363"},
-        {"id": "10", "authors": "Blakemore, S. J.", "year": 2018, "title": "Inventing Ourselves: The Secret Life of the Teenage Brain", "source": "PublicAffairs"}
-      ]
+        {
+          "id": "1",
+          "authors": "Steinberg, L.",
+          "year": 2020,
+          "title": "Adolescence",
+          "source": "McGraw-Hill (12th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Arnett, J. J.",
+          "year": 2018,
+          "title": "Adolescence and Emerging Adulthood",
+          "source": "Pearson (6th ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Erikson, E. H.",
+          "year": 1968,
+          "title": "Identity: Youth and Crisis",
+          "source": "Norton"
+        },
+        {
+          "id": "4",
+          "authors": "Marcia, J. E.",
+          "year": 1966,
+          "title": "Development and Validation of Ego-Identity Status",
+          "source": "Journal of Personality and Social Psychology, 3(5), 551-558"
+        },
+        {
+          "id": "5",
+          "authors": "Casey, B. J., et al.",
+          "year": 2008,
+          "title": "The Adolescent Brain",
+          "source": "Developmental Science, 11(1), 13-22"
+        },
+        {
+          "id": "6",
+          "authors": "Giedd, J. N.",
+          "year": 2015,
+          "title": "The Amazing Teen Brain",
+          "source": "Scientific American, 312(6), 32-37"
+        },
+        {
+          "id": "7",
+          "authors": "Crone, E. A., & Dahl, R. E.",
+          "year": 2012,
+          "title": "Understanding Adolescence as a Period of Social-Affective Engagement and Goal Flexibility",
+          "source": "Nature Reviews Neuroscience, 13(9), 636-650"
+        },
+        {
+          "id": "8",
+          "authors": "Phinney, J. S.",
+          "year": 1990,
+          "title": "Ethnic Identity in Adolescents and Adults",
+          "source": "Psychological Bulletin, 108(3), 499-514"
+        },
+        {
+          "id": "9",
+          "authors": "Nock, M. K.",
+          "year": 2010,
+          "title": "Self-Injury",
+          "source": "Annual Review of Clinical Psychology, 6, 339-363"
+        },
+        {
+          "id": "10",
+          "authors": "Blakemore, S. J.",
+          "year": 2018,
+          "title": "Inventing Ourselves: The Secret Life of the Teenage Brain",
+          "source": "PublicAffairs"
+        }
+      ],
+      "difficulty": "beginner"
     },
     "prenatal-infant": {
       "title": "Prenatal & Infant Psychology",
       "description": "Understand development from conception through infancy.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 26,
+      "readingTime": 11,
       "sections": [
         {
           "title": "Prenatal Development",
@@ -229,36 +545,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Teratogen", "definition": "Any agent that causes developmental abnormalities in the embryo or fetus."},
-        {"term": "Apgar Score", "definition": "Quick assessment of newborn health based on appearance, pulse, grimace, activity, and respiration."},
-        {"term": "Object Permanence", "definition": "Understanding that objects continue to exist even when not perceived, typically developing around 8-12 months."},
-        {"term": "Temperament", "definition": "Biologically based individual differences in emotional reactivity and self-regulation evident from early infancy."},
-        {"term": "Joint Attention", "definition": "Developmental milestone where infant and caregiver share focus on same object or event."},
-        {"term": "Co-regulation", "definition": "Process by which caregiver helps infant regulate emotional states before infant can self-regulate independently."},
-        {"term": "Social Referencing", "definition": "Using caregiver's emotional expressions to guide behavior in ambiguous situations."},
-        {"term": "Telegraphic Speech", "definition": "Early speech consisting of content words without grammatical function words."},
-        {"term": "Sensorimotor Stage", "definition": "Piaget's first stage of cognitive development (0-2 years) in which intelligence develops through sensory and motor interaction."},
-        {"term": "Fetal Alcohol Spectrum Disorders", "definition": "Range of effects from prenatal alcohol exposure, including physical abnormalities and cognitive/behavioral problems."}
+        {
+          "term": "Teratogen",
+          "definition": "Any agent that causes developmental abnormalities in the embryo or fetus."
+        },
+        {
+          "term": "Apgar Score",
+          "definition": "Quick assessment of newborn health based on appearance, pulse, grimace, activity, and respiration."
+        },
+        {
+          "term": "Object Permanence",
+          "definition": "Understanding that objects continue to exist even when not perceived, typically developing around 8-12 months."
+        },
+        {
+          "term": "Temperament",
+          "definition": "Biologically based individual differences in emotional reactivity and self-regulation evident from early infancy."
+        },
+        {
+          "term": "Joint Attention",
+          "definition": "Developmental milestone where infant and caregiver share focus on same object or event."
+        },
+        {
+          "term": "Co-regulation",
+          "definition": "Process by which caregiver helps infant regulate emotional states before infant can self-regulate independently."
+        },
+        {
+          "term": "Social Referencing",
+          "definition": "Using caregiver's emotional expressions to guide behavior in ambiguous situations."
+        },
+        {
+          "term": "Telegraphic Speech",
+          "definition": "Early speech consisting of content words without grammatical function words."
+        },
+        {
+          "term": "Sensorimotor Stage",
+          "definition": "Piaget's first stage of cognitive development (0-2 years) in which intelligence develops through sensory and motor interaction."
+        },
+        {
+          "term": "Fetal Alcohol Spectrum Disorders",
+          "definition": "Range of effects from prenatal alcohol exposure, including physical abnormalities and cognitive/behavioral problems."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Berk, L. E.", "year": 2018, "title": "Development Through Lifespan", "source": "Pearson (7th ed.)"},
-        {"id": "2", "authors": "Moore, K. L., & Persaud, T. V. N.", "year": 2016, "title": "The Developing Human: Clinically Oriented Embryology", "source": "Saunders (10th ed.)"},
-        {"id": "3", "authors": "Santrock, J. W.", "year": 2021, "title": "Child Development", "source": "McGraw-Hill (15th ed.)"},
-        {"id": "4", "authors": "Piaget, J.", "year": 1952, "title": "The Origins of Intelligence in Children", "source": "International Universities Press"},
-        {"id": "5", "authors": "Baillargeon, R.", "year": 2004, "title": "Infants' Reasoning About Hidden Objects: Evidence for Event-General and Event-Specific Expectations", "source": "Developmental Science, 7(4), 391-424"},
-        {"id": "6", "authors": "Spelke, E. S.", "year": 2000, "title": "Core Knowledge", "source": "American Psychologist, 55(11), 1233-1243"},
-        {"id": "7", "authors": "Rothbart, M. K.", "year": 2011, "title": "Becoming Who We Are: Temperament and Personality in Development", "source": "Guilford Press"},
-        {"id": "8", "authors": "Thelen, E., & Smith, L. B.", "year": 1994, "title": "A Dynamic Systems Approach to the Development of Cognition and Action", "source": "MIT Press"},
-        {"id": "9", "authors": "Kuhl, P. K.", "year": 2004, "title": "Early Language Acquisition: Cracking the Speech Code", "source": "Nature Reviews Neuroscience, 5(11), 831-843"},
-        {"id": "10", "authors": "Thompson, R. A.", "year": 2006, "title": "The Development of the Person: Social Understanding, Relationships, Self, Conscience", "source": "In W. Damon & R. M. Lerner (Eds.), Handbook of Child Psychology"}
-      ]
+        {
+          "id": "1",
+          "authors": "Berk, L. E.",
+          "year": 2018,
+          "title": "Development Through Lifespan",
+          "source": "Pearson (7th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Moore, K. L., & Persaud, T. V. N.",
+          "year": 2016,
+          "title": "The Developing Human: Clinically Oriented Embryology",
+          "source": "Saunders (10th ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Santrock, J. W.",
+          "year": 2021,
+          "title": "Child Development",
+          "source": "McGraw-Hill (15th ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Piaget, J.",
+          "year": 1952,
+          "title": "The Origins of Intelligence in Children",
+          "source": "International Universities Press"
+        },
+        {
+          "id": "5",
+          "authors": "Baillargeon, R.",
+          "year": 2004,
+          "title": "Infants' Reasoning About Hidden Objects: Evidence for Event-General and Event-Specific Expectations",
+          "source": "Developmental Science, 7(4), 391-424"
+        },
+        {
+          "id": "6",
+          "authors": "Spelke, E. S.",
+          "year": 2000,
+          "title": "Core Knowledge",
+          "source": "American Psychologist, 55(11), 1233-1243"
+        },
+        {
+          "id": "7",
+          "authors": "Rothbart, M. K.",
+          "year": 2011,
+          "title": "Becoming Who We Are: Temperament and Personality in Development",
+          "source": "Guilford Press"
+        },
+        {
+          "id": "8",
+          "authors": "Thelen, E., & Smith, L. B.",
+          "year": 1994,
+          "title": "A Dynamic Systems Approach to the Development of Cognition and Action",
+          "source": "MIT Press"
+        },
+        {
+          "id": "9",
+          "authors": "Kuhl, P. K.",
+          "year": 2004,
+          "title": "Early Language Acquisition: Cracking the Speech Code",
+          "source": "Nature Reviews Neuroscience, 5(11), 831-843"
+        },
+        {
+          "id": "10",
+          "authors": "Thompson, R. A.",
+          "year": 2006,
+          "title": "The Development of the Person: Social Understanding, Relationships, Self, Conscience",
+          "source": "In W. Damon & R. M. Lerner (Eds.), Handbook of Child Psychology"
+        }
+      ],
+      "difficulty": "intermediate"
     },
     "adult-psychology": {
       "title": "Adult Psychology",
       "description": "Explore psychological development and challenges in adulthood.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 24,
+      "readingTime": 10,
       "sections": [
         {
           "title": "Introduction to Adult Development",
@@ -308,36 +715,127 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Fluid Intelligence", "definition": "Ability to reason abstractly and solve novel problems, typically peaks in young adulthood and declines with age."},
-        {"term": "Crystallized Intelligence", "definition": "Accumulated knowledge and verbal abilities that tend to remain stable or increase throughout adulthood."},
-        {"term": "Generativity", "definition": "Erikson's concept of contributing to future generations through productivity, creativity, and nurturing."},
-        {"term": "Cognitive Reserve", "definition": "The mind's resistance to neuropathological damage or age-related decline, built through education, occupation, and lifestyle."},
-        {"term": "Sandwich Generation", "definition": "Adults simultaneously caring for aging parents and supporting dependent children."},
-        {"term": "SOC Model", "definition": "Selection, Optimization, and Compensation model explaining how adults adapt to aging through strategies."},
-        {"term": "Socioemotional Selectivity Theory", "definition": "Carstensen's theory that as time horizons shrink, people prioritize emotionally meaningful goals and relationships."},
-        {"term": "Ego Integrity", "definition": "Erikson's concept of accepting one's life as lived and approaching death with wisdom and acceptance."},
-        {"term": "Positivity Effect", "definition": "Tendency for older adults to attend to and remember positive over negative information."},
-        {"term": "Midlife Transition", "definition": "Period around age 40-45 involving reassessment of life structure and priorities."}
+        {
+          "term": "Fluid Intelligence",
+          "definition": "Ability to reason abstractly and solve novel problems, typically peaks in young adulthood and declines with age."
+        },
+        {
+          "term": "Crystallized Intelligence",
+          "definition": "Accumulated knowledge and verbal abilities that tend to remain stable or increase throughout adulthood."
+        },
+        {
+          "term": "Generativity",
+          "definition": "Erikson's concept of contributing to future generations through productivity, creativity, and nurturing."
+        },
+        {
+          "term": "Cognitive Reserve",
+          "definition": "The mind's resistance to neuropathological damage or age-related decline, built through education, occupation, and lifestyle."
+        },
+        {
+          "term": "Sandwich Generation",
+          "definition": "Adults simultaneously caring for aging parents and supporting dependent children."
+        },
+        {
+          "term": "SOC Model",
+          "definition": "Selection, Optimization, and Compensation model explaining how adults adapt to aging through strategies."
+        },
+        {
+          "term": "Socioemotional Selectivity Theory",
+          "definition": "Carstensen's theory that as time horizons shrink, people prioritize emotionally meaningful goals and relationships."
+        },
+        {
+          "term": "Ego Integrity",
+          "definition": "Erikson's concept of accepting one's life as lived and approaching death with wisdom and acceptance."
+        },
+        {
+          "term": "Positivity Effect",
+          "definition": "Tendency for older adults to attend to and remember positive over negative information."
+        },
+        {
+          "term": "Midlife Transition",
+          "definition": "Period around age 40-45 involving reassessment of life structure and priorities."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Berk, L. E.", "year": 2018, "title": "Development Through Lifespan", "source": "Pearson (7th ed.)"},
-        {"id": "2", "authors": "Arnett, J. J.", "year": 2018, "title": "Emerging Adulthood", "source": "American Psychological Association"},
-        {"id": "3", "authors": "Whitbourne, S. K., & Whitbourne, S. B.", "year": 2021, "title": "Adult Development and Aging", "source": "Wiley (7th ed.)"},
-        {"id": "4", "authors": "Erikson, E. H.", "year": 1982, "title": "The Life Cycle Completed", "source": "Norton"},
-        {"id": "5", "authors": "Baltes, P. B., & Baltes, M. M.", "year": 1990, "title": "Successful Aging: Perspectives from the Behavioral Sciences", "source": "Cambridge University Press"},
-        {"id": "6", "authors": "Carstensen, L. L.", "year": 2006, "title": "The Influence of a Sense of Time on Human Development", "source": "Science, 312(5782), 1913-1915"},
-        {"id": "7", "authors": "Salthouse, T. A.", "year": 2010, "title": "Major Issues in Cognitive Aging", "source": "Oxford University Press"},
-        {"id": "8", "authors": "Gottman, J. M., & Silver, N.", "year": 2015, "title": "The Seven Principles for Making Marriage Work", "source": "Harmony Books"},
-        {"id": "9", "authors": "Rowe, J. W., & Kahn, R. L.", "year": 1997, "title": "Successful Aging", "source": "The Gerontologist, 37(4), 433-440"},
-        {"id": "10", "authors": "Staudinger, U. M., & Glück, J.", "year": 2011, "title": "Psychological Wisdom Research", "source": "Annual Review of Psychology, 62, 215-241"}
-      ]
+        {
+          "id": "1",
+          "authors": "Berk, L. E.",
+          "year": 2018,
+          "title": "Development Through Lifespan",
+          "source": "Pearson (7th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Arnett, J. J.",
+          "year": 2018,
+          "title": "Emerging Adulthood",
+          "source": "American Psychological Association"
+        },
+        {
+          "id": "3",
+          "authors": "Whitbourne, S. K., & Whitbourne, S. B.",
+          "year": 2021,
+          "title": "Adult Development and Aging",
+          "source": "Wiley (7th ed.)"
+        },
+        {
+          "id": "4",
+          "authors": "Erikson, E. H.",
+          "year": 1982,
+          "title": "The Life Cycle Completed",
+          "source": "Norton"
+        },
+        {
+          "id": "5",
+          "authors": "Baltes, P. B., & Baltes, M. M.",
+          "year": 1990,
+          "title": "Successful Aging: Perspectives from the Behavioral Sciences",
+          "source": "Cambridge University Press"
+        },
+        {
+          "id": "6",
+          "authors": "Carstensen, L. L.",
+          "year": 2006,
+          "title": "The Influence of a Sense of Time on Human Development",
+          "source": "Science, 312(5782), 1913-1915"
+        },
+        {
+          "id": "7",
+          "authors": "Salthouse, T. A.",
+          "year": 2010,
+          "title": "Major Issues in Cognitive Aging",
+          "source": "Oxford University Press"
+        },
+        {
+          "id": "8",
+          "authors": "Gottman, J. M., & Silver, N.",
+          "year": 2015,
+          "title": "The Seven Principles for Making Marriage Work",
+          "source": "Harmony Books"
+        },
+        {
+          "id": "9",
+          "authors": "Rowe, J. W., & Kahn, R. L.",
+          "year": 1997,
+          "title": "Successful Aging",
+          "source": "The Gerontologist, 37(4), 433-440"
+        },
+        {
+          "id": "10",
+          "authors": "Staudinger, U. M., & Glück, J.",
+          "year": 2011,
+          "title": "Psychological Wisdom Research",
+          "source": "Annual Review of Psychology, 62, 215-241"
+        }
+      ],
+      "difficulty": "intermediate"
     },
     "geriatric-psychology": {
       "title": "Geriatric Psychology",
       "description": "Understand psychological aspects of aging in later life.",
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
-      "readingTime": 22,
+      "readingTime": 9,
       "sections": [
         {
           "title": "Introduction to Geriatric Psychology",
@@ -387,29 +885,120 @@
         }
       ],
       "keyConcepts": [
-        {"term": "Mild Cognitive Impairment", "definition": "Noticeable decline in cognitive function beyond normal aging but not severe enough to interfere with daily activities."},
-        {"term": "Cognitive Reserve", "definition": "Built-up neural resilience to age-related damage or decline, enhanced by education, occupation, and mentally stimulating activities."},
-        {"term": "Positivity Effect", "definition": "Tendency for older adults to preferentially attend to and remember positive over negative information."},
-        {"term": "Ageism", "definition": "Stereotyping, prejudice, and discrimination against individuals based on their age."},
-        {"term": "Successful Aging", "definition": "Optimal aging involving physical, cognitive, and social engagement allowing older adults to maintain function and wellbeing."},
-        {"term": "SOC Model", "definition": "Balancing selection, optimization, and compensation to adapt to age-related changes."},
-        {"term": "Life Review", "definition": "Naturally occurring or therapeutic process of reflecting on and integrating life experiences to find meaning."},
-        {"term": "Social Convoy", "definition": "The network of relationships that travels with a person through life, providing support and connection."},
-        {"term": "Prolonged Grief Disorder", "definition": "Persistent, intense grief lasting more than 12 months that interferes with functioning."},
-        {"term": "Alzheimer's Disease", "definition": "Most common form of dementia, characterized by progressive memory loss, amyloid plaques, and neurofibrillary tangles."}
+        {
+          "term": "Mild Cognitive Impairment",
+          "definition": "Noticeable decline in cognitive function beyond normal aging but not severe enough to interfere with daily activities."
+        },
+        {
+          "term": "Cognitive Reserve",
+          "definition": "Built-up neural resilience to age-related damage or decline, enhanced by education, occupation, and mentally stimulating activities."
+        },
+        {
+          "term": "Positivity Effect",
+          "definition": "Tendency for older adults to preferentially attend to and remember positive over negative information."
+        },
+        {
+          "term": "Ageism",
+          "definition": "Stereotyping, prejudice, and discrimination against individuals based on their age."
+        },
+        {
+          "term": "Successful Aging",
+          "definition": "Optimal aging involving physical, cognitive, and social engagement allowing older adults to maintain function and wellbeing."
+        },
+        {
+          "term": "SOC Model",
+          "definition": "Balancing selection, optimization, and compensation to adapt to age-related changes."
+        },
+        {
+          "term": "Life Review",
+          "definition": "Naturally occurring or therapeutic process of reflecting on and integrating life experiences to find meaning."
+        },
+        {
+          "term": "Social Convoy",
+          "definition": "The network of relationships that travels with a person through life, providing support and connection."
+        },
+        {
+          "term": "Prolonged Grief Disorder",
+          "definition": "Persistent, intense grief lasting more than 12 months that interferes with functioning."
+        },
+        {
+          "term": "Alzheimer's Disease",
+          "definition": "Most common form of dementia, characterized by progressive memory loss, amyloid plaques, and neurofibrillary tangles."
+        }
       ],
       "references": [
-        {"id": "1", "authors": "Cavanaugh, J. C., & Blanchard-Fields, F.", "year": 2018, "title": "Adult Development and Aging", "source": "Cengage Learning (7th ed.)"},
-        {"id": "2", "authors": "Schaie, K. W., & Willis, S. L.", "year": 2021, "title": "Handbook of the Psychology of Aging", "source": "Academic Press (9th ed.)"},
-        {"id": "3", "authors": "Lichtenberg, P. A. (Ed.)", "year": 2010, "title": "Handbook of Assessment in Clinical Gerontology", "source": "Academic Press"},
-        {"id": "4", "authors": "Carstensen, L. L., & Mikels, J. A.", "year": 2005, "title": "At the Intersection of Emotion and Cognition: Aging and the Positivity Effect", "source": "Current Directions in Psychological Science, 14(3), 117-121"},
-        {"id": "5", "authors": "Baltes, P. B., & Smith, J.", "year": 2003, "title": "New Frontiers in the Future of Aging", "source": "Gerontology, 49(2), 123-135"},
-        {"id": "6", "authors": "Rowe, J. W., & Kahn, R. L.", "year": 1997, "title": "Successful Aging", "source": "The Gerontologist, 37(4), 433-440"},
-        {"id": "7", "authors": "Butler, R. N.", "year": 1963, "title": "The Life Review: An Interpretation of Reminiscence in the Aged", "source": "Psychiatry, 26(1), 65-76"},
-        {"id": "8", "authors": "Kübler-Ross, E.", "year": 1969, "title": "On Death and Dying", "source": "Macmillan"},
-        {"id": "9", "authors": "Antonucci, T. C., & Akiyama, H.", "year": 1987, "title": "Social Networks in Adult Life and a Preliminary Examination of the Convoy Model", "source": "Journal of Gerontology, 42(5), 519-527"},
-        {"id": "10", "authors": "Salthouse, T. A.", "year": 2010, "title": "Major Issues in Cognitive Aging", "source": "Oxford University Press"}
-      ]
+        {
+          "id": "1",
+          "authors": "Cavanaugh, J. C., & Blanchard-Fields, F.",
+          "year": 2018,
+          "title": "Adult Development and Aging",
+          "source": "Cengage Learning (7th ed.)"
+        },
+        {
+          "id": "2",
+          "authors": "Schaie, K. W., & Willis, S. L.",
+          "year": 2021,
+          "title": "Handbook of the Psychology of Aging",
+          "source": "Academic Press (9th ed.)"
+        },
+        {
+          "id": "3",
+          "authors": "Lichtenberg, P. A. (Ed.)",
+          "year": 2010,
+          "title": "Handbook of Assessment in Clinical Gerontology",
+          "source": "Academic Press"
+        },
+        {
+          "id": "4",
+          "authors": "Carstensen, L. L., & Mikels, J. A.",
+          "year": 2005,
+          "title": "At the Intersection of Emotion and Cognition: Aging and the Positivity Effect",
+          "source": "Current Directions in Psychological Science, 14(3), 117-121"
+        },
+        {
+          "id": "5",
+          "authors": "Baltes, P. B., & Smith, J.",
+          "year": 2003,
+          "title": "New Frontiers in the Future of Aging",
+          "source": "Gerontology, 49(2), 123-135"
+        },
+        {
+          "id": "6",
+          "authors": "Rowe, J. W., & Kahn, R. L.",
+          "year": 1997,
+          "title": "Successful Aging",
+          "source": "The Gerontologist, 37(4), 433-440"
+        },
+        {
+          "id": "7",
+          "authors": "Butler, R. N.",
+          "year": 1963,
+          "title": "The Life Review: An Interpretation of Reminiscence in the Aged",
+          "source": "Psychiatry, 26(1), 65-76"
+        },
+        {
+          "id": "8",
+          "authors": "Kübler-Ross, E.",
+          "year": 1969,
+          "title": "On Death and Dying",
+          "source": "Macmillan"
+        },
+        {
+          "id": "9",
+          "authors": "Antonucci, T. C., & Akiyama, H.",
+          "year": 1987,
+          "title": "Social Networks in Adult Life and a Preliminary Examination of the Convoy Model",
+          "source": "Journal of Gerontology, 42(5), 519-527"
+        },
+        {
+          "id": "10",
+          "authors": "Salthouse, T. A.",
+          "year": 2010,
+          "title": "Major Issues in Cognitive Aging",
+          "source": "Oxford University Press"
+        }
+      ],
+      "difficulty": "intermediate"
     }
   }
 }

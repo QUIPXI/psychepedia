@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { locales, localeDirection, Locale } from "@/i18n/config";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FontSizeProvider } from "@/context/FontSizeContext";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -36,11 +37,13 @@ export default async function LocaleLayout({
   return (
     <div lang={locale} dir={dir} className={dir === "rtl" ? "rtl" : "ltr"}>
       <NextIntlClientProvider messages={messages}>
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <FontSizeProvider>
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </FontSizeProvider>
       </NextIntlClientProvider>
     </div>
   );

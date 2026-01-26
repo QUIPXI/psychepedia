@@ -22,7 +22,7 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "wiki" });
-  
+
   return {
     title: t("title"),
     description: t("subtitle"),
@@ -34,56 +34,56 @@ const domainConfig = [
     id: "foundations",
     icon: GraduationCap,
     href: "/wiki/foundations",
-    color: "bg-blue-700",
+    color: "text-slate-600 dark:text-slate-400",
     topicCount: 3,
   },
   {
     id: "biological",
     icon: Brain,
     href: "/wiki/biological",
-    color: "bg-emerald-700",
+    color: "text-emerald-600 dark:text-emerald-400",
     topicCount: 4,
   },
   {
     id: "cognitive",
     icon: Lightbulb,
     href: "/wiki/cognitive",
-    color: "bg-violet-600",
+    color: "text-indigo-600 dark:text-indigo-400",
     topicCount: 3,
   },
   {
     id: "developmental",
     icon: Users,
     href: "/wiki/developmental",
-    color: "bg-orange-600",
+    color: "text-amber-600 dark:text-amber-400",
     topicCount: 5,
   },
   {
     id: "social-personality",
     icon: Heart,
     href: "/wiki/social-personality",
-    color: "bg-pink-700",
+    color: "text-rose-600 dark:text-rose-400",
     topicCount: 3,
   },
   {
     id: "clinical",
     icon: BookOpen,
     href: "/wiki/clinical",
-    color: "bg-cyan-600",
+    color: "text-teal-600 dark:text-teal-400",
     topicCount: 5,
   },
   {
     id: "applied",
     icon: Briefcase,
     href: "/wiki/applied",
-    color: "bg-indigo-600",
+    color: "text-violet-600 dark:text-violet-400",
     topicCount: 4,
   },
   {
     id: "new-and-now",
     icon: Sparkles,
     href: "/wiki/new-and-now",
-    color: "bg-amber-600",
+    color: "text-orange-600 dark:text-orange-400",
     topicCount: 4,
   },
 ];
@@ -115,12 +115,8 @@ export default async function WikiIndexPage({ params }: Props) {
           return (
             <Link key={domain.id} href={domain.href} className="group">
               <Card className="h-full transition-all duration-200 hover:shadow-lg hover:border-primary/20">
-                <CardHeader className="flex flex-row items-start gap-4">
-                  <div
-                    className={`w-14 h-14 rounded-lg ${domain.color} flex items-center justify-center shrink-0`}
-                  >
-                    <Icon className="h-7 w-7 text-white" />
-                  </div>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <Icon className={`h-8 w-8 shrink-0 ${domain.color}`} />
                   <div className="flex-1 min-w-0">
                     <CardTitle className="text-xl group-hover:text-primary transition-colors">
                       {tDomains(`${domain.id}.title`)}

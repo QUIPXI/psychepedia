@@ -8,61 +8,158 @@
     "quiz": [
       {
         "id": "q1",
-        "question": "When was psychology formally established as a scientific discipline?",
-        "options": ["1850", "1879", "1900", "1920"],
+        "question": "What is the primary advantage of random assignment in experiments?",
+        "options": [
+          "It increases sample size",
+          "It ensures groups are equivalent on average",
+          "It improves measurement reliability",
+          "It enhances ecological validity"
+        ],
         "correctIndex": 1,
-        "explanation": "Wilhelm Wundt opened the first psychology laboratory at the University of Leipzig in 1879, marking the formal beginning of psychology as a science."
+        "explanation": "Random assignment ensures that groups are equivalent on average for all variables (known and unknown) except the independent variable, allowing causal inferences."
       },
       {
         "id": "q2",
-        "question": "Which school of psychology emphasized the purpose and adaptive functions of mental processes?",
-        "options": ["Structuralism", "Functionalism", "Behaviorism", "Gestalt Psychology"],
-        "correctIndex": 1,
-        "explanation": "Functionalism, developed by William James, focused on what consciousness is 'for' rather than analyzing its structure."
+        "question": "Which type of error occurs when researchers conclude an effect exists when it actually doesn't?",
+        "options": [
+          "Type II error",
+          "Sampling error",
+          "Type I error",
+          "Measurement error"
+        ],
+        "correctIndex": 2,
+        "explanation": "Type I error (false positive) occurs when the null hypothesis is incorrectly rejected, concluding an effect exists when there is none."
       },
       {
         "id": "q3",
-        "question": "Who launched behaviorism with his 1913 manifesto?",
-        "options": ["Sigmund Freud", "William James", "John B. Watson", "Wilhelm Wundt"],
-        "correctIndex": 2,
-        "explanation": "John B. Watson's 1913 paper 'Psychology as the Behaviorist Views It' launched the behaviorist movement."
+        "question": "What does 'correlation does not imply causation' primarily warn against?",
+        "options": [
+          "Using correlational research",
+          "Ignoring third variables and directionality problems",
+          "Computing correlation coefficients",
+          "Using non-random samples"
+        ],
+        "correctIndex": 1,
+        "explanation": "This principle warns that observed correlations may be due to third variables causing both, or the causal direction may be opposite to what's assumed."
       },
       {
         "id": "q4",
-        "question": "Which concept refers to John Locke's idea that the mind at birth is a 'blank slate'?",
-        "options": ["Dualism", "Tabula Rasa", "Introspection", "Self-Actualization"],
+        "question": "What is the conventional threshold for statistical significance (alpha level)?",
+        "options": [
+          ".10",
+          ".05",
+          ".01",
+          ".001"
+        ],
         "correctIndex": 1,
-        "explanation": "Tabula Rasa (Latin for 'blank slate') is Locke's concept that the mind at birth is empty and all knowledge comes from experience."
+        "explanation": "By convention, alpha is set at .05, meaning there's a 5% probability of a Type I error (rejecting a true null hypothesis)."
       }
     ],
     "comparisons": [
       {
-        "title": "Major Schools of Psychology Compared",
-        "description": "Key differences between the foundational schools of psychological thought",
-        "headers": ["Structuralism", "Functionalism", "Behaviorism", "Gestalt"],
+        "title": "Research Designs Compared",
+        "description": "Key characteristics of major research design approaches",
+        "headers": [
+          "Experimental",
+          "Correlational",
+          "Case Study",
+          "Survey"
+        ],
         "rows": [
-          {"label": "Founder", "values": ["Wilhelm Wundt", "William James", "John B. Watson", "Max Wertheimer"]},
-          {"label": "Focus", "values": ["Structure of consciousness", "Function of mental processes", "Observable behavior", "Whole patterns of perception"]},
-          {"label": "Method", "values": ["Introspection", "Observation & pragmatism", "Experiments on behavior", "Perceptual experiments"]},
-          {"label": "Key Idea", "values": ["Break down consciousness into elements", "Mind evolved to help us adapt", "Only study what can be observed", "The whole is greater than parts"]},
-          {"label": "Time Period", "values": ["1879-1920s", "1890s-1930s", "1913-1960s", "1912-1940s"]}
+          {
+            "label": "Manipulation",
+            "values": [
+              "Yes (IV)",
+              "No",
+              "No",
+              "No"
+            ]
+          },
+          {
+            "label": "Random Assignment",
+            "values": [
+              "Yes",
+              "No",
+              "No",
+              "No"
+            ]
+          },
+          {
+            "label": "Causal Inference",
+            "values": [
+              "Strong",
+              "Weak",
+              "Weak",
+              "Weak"
+            ]
+          },
+          {
+            "label": "Generalizability",
+            "values": [
+              "Variable",
+              "Moderate",
+              "Low",
+              "High"
+            ]
+          },
+          {
+            "label": "Ecological Validity",
+            "values": [
+              "Low to Moderate",
+              "High",
+              "High",
+              "Moderate"
+            ]
+          },
+          {
+            "label": "Sample Size",
+            "values": [
+              "Small to Moderate",
+              "Moderate to Large",
+              "Very Small",
+              "Large"
+            ]
+          }
         ]
       }
     ],
     "diagrams": [
       {
-        "id": "timeline-schools",
-        "title": "Evolution of Psychological Schools",
-        "description": "Timeline showing how major schools of psychology emerged and influenced each other",
-        "type": "timeline",
+        "id": "research-process",
+        "title": "The Research Process",
+        "description": "Steps in conducting psychological research",
+        "type": "flowchart",
         "nodes": [
-          {"id": "philosophy", "label": "Philosophical Roots", "description": "Ancient Greek philosophy through British Empiricism laid the groundwork for scientific psychology"},
-          {"id": "structuralism", "label": "Structuralism (1879)", "description": "Wundt establishes first lab; Titchener names the approach 'structuralism'"},
-          {"id": "functionalism", "label": "Functionalism (1890s)", "description": "James and Dewey shift focus to mental functions and adaptation"},
-          {"id": "psychoanalysis", "label": "Psychoanalysis (1895)", "description": "Freud develops theory of unconscious processes and treatment methods"},
-          {"id": "behaviorism", "label": "Behaviorism (1913)", "description": "Watson rejects study of consciousness; Skinner develops operant conditioning"},
-          {"id": "humanistic", "label": "Humanistic (1950s)", "description": "Maslow and Rogers emphasize human potential and self-actualization"},
-          {"id": "cognitive", "label": "Cognitive Revolution (1960s)", "description": "Mental processes return as legitimate objects of scientific study"}
+          {
+            "id": "question",
+            "label": "Research Question",
+            "description": "Identify a phenomenon of interest and formulate a specific question"
+          },
+          {
+            "id": "hypothesis",
+            "label": "Hypothesis",
+            "description": "Develop testable, falsifiable predictions"
+          },
+          {
+            "id": "design",
+            "label": "Research Design",
+            "description": "Choose methods, measures, and sampling strategy"
+          },
+          {
+            "id": "collect",
+            "label": "Data Collection",
+            "description": "Gather empirical observations systematically"
+          },
+          {
+            "id": "analyze",
+            "label": "Analysis",
+            "description": "Apply statistical techniques to test hypotheses"
+          },
+          {
+            "id": "conclude",
+            "label": "Conclusions",
+            "description": "Interpret results and consider limitations"
+          }
         ]
       }
     ],
@@ -139,29 +236,120 @@
       }
     ],
     "keyConcepts": [
-      {"term": "Structuralism", "definition": "Early school of psychology founded by Wilhelm Wundt that sought to analyze consciousness into its basic elements through trained introspection."},
-      {"term": "Functionalism", "definition": "School of psychology associated with William James that emphasized the purpose and adaptive functions of mental processes rather than their structure."},
-      {"term": "Behaviorism", "definition": "School of psychology founded by John B. Watson that focused exclusively on observable behavior and rejected the study of consciousness."},
-      {"term": "Psychoanalysis", "definition": "Theoretical framework and therapeutic approach developed by Sigmund Freud emphasizing unconscious processes, early childhood experiences, and internal conflicts."},
-      {"term": "Cognitive Revolution", "definition": "The paradigm shift in psychology during the 1950s-1960s that brought mental processes back into scientific study after decades of behaviorist dominance."},
-      {"term": "Humanistic Psychology", "definition": "The 'third force' in psychology emphasizing human potential, self-actualization, and subjective experience, developed by Maslow and Rogers."},
-      {"term": "Introspection", "definition": "The examination of one's own conscious thoughts and feelings, used as a primary method in early structural psychology."},
-      {"term": "Tabula Rasa", "definition": "John Locke's concept that the mind at birth is a 'blank slate' upon which experience writes, foundational to empiricist philosophy."},
-      {"term": "Self-Actualization", "definition": "In Maslow's hierarchy, the highest need involving the realization of one's full potential and the desire for personal growth."},
-      {"term": "Biopsychosocial Model", "definition": "Integrative framework recognizing that biological, psychological, and social factors interact to determine health and behavior."}
+      {
+        "term": "Structuralism",
+        "definition": "Early school of psychology founded by Wilhelm Wundt that sought to analyze consciousness into its basic elements through trained introspection."
+      },
+      {
+        "term": "Functionalism",
+        "definition": "School of psychology associated with William James that emphasized the purpose and adaptive functions of mental processes rather than their structure."
+      },
+      {
+        "term": "Behaviorism",
+        "definition": "School of psychology founded by John B. Watson that focused exclusively on observable behavior and rejected the study of consciousness."
+      },
+      {
+        "term": "Psychoanalysis",
+        "definition": "Theoretical framework and therapeutic approach developed by Sigmund Freud emphasizing unconscious processes, early childhood experiences, and internal conflicts."
+      },
+      {
+        "term": "Cognitive Revolution",
+        "definition": "The paradigm shift in psychology during the 1950s-1960s that brought mental processes back into scientific study after decades of behaviorist dominance."
+      },
+      {
+        "term": "Humanistic Psychology",
+        "definition": "The 'third force' in psychology emphasizing human potential, self-actualization, and subjective experience, developed by Maslow and Rogers."
+      },
+      {
+        "term": "Introspection",
+        "definition": "The examination of one's own conscious thoughts and feelings, used as a primary method in early structural psychology."
+      },
+      {
+        "term": "Tabula Rasa",
+        "definition": "John Locke's concept that the mind at birth is a 'blank slate' upon which experience writes, foundational to empiricist philosophy."
+      },
+      {
+        "term": "Self-Actualization",
+        "definition": "In Maslow's hierarchy, the highest need involving the realization of one's full potential and the desire for personal growth."
+      },
+      {
+        "term": "Biopsychosocial Model",
+        "definition": "Integrative framework recognizing that biological, psychological, and social factors interact to determine health and behavior."
+      }
     ],
     "references": [
-      {"id": "1", "authors": "Schultz, D. P., & Schultz, S. E.", "year": 2016, "title": "A History of Modern Psychology", "source": "Cengage Learning (11th ed.)"},
-      {"id": "2", "authors": "Goodwin, C. J.", "year": 2015, "title": "A History of Modern Psychology", "source": "Wiley (5th ed.)"},
-      {"id": "3", "authors": "Benjamin, L. T.", "year": 2014, "title": "A Brief History of Modern Psychology", "source": "Wiley (2nd ed.)"},
-      {"id": "4", "authors": "Fancher, R. E., & Rutherford, A.", "year": 2016, "title": "Pioneers of Psychology", "source": "W. W. Norton (5th ed.)"},
-      {"id": "5", "authors": "Pickren, W. E., & Rutherford, A.", "year": 2010, "title": "A History of Modern Psychology in Context", "source": "Wiley"},
-      {"id": "6", "authors": "Greenwood, J. D.", "year": 2015, "title": "A Conceptual History of Psychology: Exploring the Tangled Web", "source": "Cambridge University Press (2nd ed.)"},
-      {"id": "7", "authors": "Hothersall, D.", "year": 2004, "title": "History of Psychology", "source": "McGraw-Hill (4th ed.)"},
-      {"id": "8", "authors": "Leahey, T. H.", "year": 2017, "title": "A History of Psychology: From Antiquity to Modernity", "source": "Routledge (8th ed.)"},
-      {"id": "9", "authors": "Robinson, D. N.", "year": 1995, "title": "An Intellectual History of Psychology", "source": "University of Wisconsin Press (3rd ed.)"},
-      {"id": "10", "authors": "Rutherford, A.", "year": 2015, "title": "Maintaining masculinity in mid-twentieth-century American psychology: Edwin Boring, scientific eminence, and the 'woman problem'", "source": "Osiris, 30(1), 250-271"}
-    ]
+      {
+        "id": "1",
+        "authors": "Schultz, D. P., & Schultz, S. E.",
+        "year": 2016,
+        "title": "A History of Modern Psychology",
+        "source": "Cengage Learning (11th ed.)"
+      },
+      {
+        "id": "2",
+        "authors": "Goodwin, C. J.",
+        "year": 2015,
+        "title": "A History of Modern Psychology",
+        "source": "Wiley (5th ed.)"
+      },
+      {
+        "id": "3",
+        "authors": "Benjamin, L. T.",
+        "year": 2014,
+        "title": "A Brief History of Modern Psychology",
+        "source": "Wiley (2nd ed.)"
+      },
+      {
+        "id": "4",
+        "authors": "Fancher, R. E., & Rutherford, A.",
+        "year": 2016,
+        "title": "Pioneers of Psychology",
+        "source": "W. W. Norton (5th ed.)"
+      },
+      {
+        "id": "5",
+        "authors": "Pickren, W. E., & Rutherford, A.",
+        "year": 2010,
+        "title": "A History of Modern Psychology in Context",
+        "source": "Wiley"
+      },
+      {
+        "id": "6",
+        "authors": "Greenwood, J. D.",
+        "year": 2015,
+        "title": "A Conceptual History of Psychology: Exploring the Tangled Web",
+        "source": "Cambridge University Press (2nd ed.)"
+      },
+      {
+        "id": "7",
+        "authors": "Hothersall, D.",
+        "year": 2004,
+        "title": "History of Psychology",
+        "source": "McGraw-Hill (4th ed.)"
+      },
+      {
+        "id": "8",
+        "authors": "Leahey, T. H.",
+        "year": 2017,
+        "title": "A History of Psychology: From Antiquity to Modernity",
+        "source": "Routledge (8th ed.)"
+      },
+      {
+        "id": "9",
+        "authors": "Robinson, D. N.",
+        "year": 1995,
+        "title": "An Intellectual History of Psychology",
+        "source": "University of Wisconsin Press (3rd ed.)"
+      },
+      {
+        "id": "10",
+        "authors": "Rutherford, A.",
+        "year": 2015,
+        "title": "Maintaining masculinity in mid-twentieth-century American psychology: Edwin Boring, scientific eminence, and the 'woman problem'",
+        "source": "Osiris, 30(1), 250-271"
+      }
+    ],
+    "readingTime": 24
   },
   "research-methods": {
     "title": "Research Methods & Statistics",
@@ -169,7 +357,9 @@
     "lastModified": "2025-01-23",
     "author": "PsychePedia Editorial Team",
     "difficulty": "intermediate",
-    "prerequisites": ["foundations/history-and-systems"],
+    "prerequisites": [
+      "foundations/history-and-systems"
+    ],
     "caseStudies": [
       {
         "title": "The Stanford Prison Experiment",
@@ -273,29 +463,120 @@
       }
     ],
     "keyConcepts": [
-      {"term": "Independent Variable", "definition": "The factor systematically manipulated by the researcher to observe its effect on the dependent variable."},
-      {"term": "Dependent Variable", "definition": "The outcome measure observed for changes in response to manipulation of the independent variable."},
-      {"term": "Random Assignment", "definition": "Procedure ensuring each participant has an equal chance of being assigned to any condition, creating equivalent groups."},
-      {"term": "Reliability", "definition": "The consistency and stability of a measurement across time, items, or raters."},
-      {"term": "Validity", "definition": "The extent to which a measure accurately assesses the construct it claims to measure."},
-      {"term": "p-value", "definition": "The probability of obtaining results at least as extreme as observed, assuming the null hypothesis is true."},
-      {"term": "Effect Size", "definition": "A standardized measure of the magnitude of an effect, independent of sample size."},
-      {"term": "Confounding Variable", "definition": "An uncontrolled variable that varies systematically with the independent variable, threatening internal validity."},
-      {"term": "Statistical Power", "definition": "The probability of detecting an effect if one truly exists; conventionally should be at least .80."},
-      {"term": "Preregistration", "definition": "Publicly specifying hypotheses, methods, and analysis plans before data collection to distinguish confirmatory from exploratory research."}
+      {
+        "term": "Independent Variable",
+        "definition": "The factor systematically manipulated by the researcher to observe its effect on the dependent variable."
+      },
+      {
+        "term": "Dependent Variable",
+        "definition": "The outcome measure observed for changes in response to manipulation of the independent variable."
+      },
+      {
+        "term": "Random Assignment",
+        "definition": "Procedure ensuring each participant has an equal chance of being assigned to any condition, creating equivalent groups."
+      },
+      {
+        "term": "Reliability",
+        "definition": "The consistency and stability of a measurement across time, items, or raters."
+      },
+      {
+        "term": "Validity",
+        "definition": "The extent to which a measure accurately assesses the construct it claims to measure."
+      },
+      {
+        "term": "p-value",
+        "definition": "The probability of obtaining results at least as extreme as observed, assuming the null hypothesis is true."
+      },
+      {
+        "term": "Effect Size",
+        "definition": "A standardized measure of the magnitude of an effect, independent of sample size."
+      },
+      {
+        "term": "Confounding Variable",
+        "definition": "An uncontrolled variable that varies systematically with the independent variable, threatening internal validity."
+      },
+      {
+        "term": "Statistical Power",
+        "definition": "The probability of detecting an effect if one truly exists; conventionally should be at least .80."
+      },
+      {
+        "term": "Preregistration",
+        "definition": "Publicly specifying hypotheses, methods, and analysis plans before data collection to distinguish confirmatory from exploratory research."
+      }
     ],
     "references": [
-      {"id": "1", "authors": "Gravetter, F. J., & Forzano, L. B.", "year": 2018, "title": "Research Methods for the Behavioral Sciences", "source": "Cengage Learning (6th ed.)"},
-      {"id": "2", "authors": "Field, A.", "year": 2018, "title": "Discovering Statistics Using IBM SPSS Statistics", "source": "SAGE Publications (5th ed.)"},
-      {"id": "3", "authors": "Kazdin, A. E.", "year": 2017, "title": "Research Design in Clinical Psychology", "source": "Cambridge University Press (5th ed.)"},
-      {"id": "4", "authors": "Shadish, W. R., Cook, T. D., & Campbell, D. T.", "year": 2002, "title": "Experimental and Quasi-Experimental Designs for Generalized Causal Inference", "source": "Houghton Mifflin"},
-      {"id": "5", "authors": "Open Science Collaboration", "year": 2015, "title": "Estimating the reproducibility of psychological science", "source": "Science, 349(6251), aac4716"},
-      {"id": "6", "authors": "Cumming, G.", "year": 2014, "title": "The new statistics: Why and how", "source": "Psychological Science, 25(1), 7-29"},
-      {"id": "7", "authors": "Simmons, J. P., Nelson, L. D., & Simonsohn, U.", "year": 2011, "title": "False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant", "source": "Psychological Science, 22(11), 1359-1366"},
-      {"id": "8", "authors": "Cohen, J.", "year": 1988, "title": "Statistical Power Analysis for the Behavioral Sciences", "source": "Lawrence Erlbaum (2nd ed.)"},
-      {"id": "9", "authors": "Creswell, J. W., & Creswell, J. D.", "year": 2018, "title": "Research Design: Qualitative, Quantitative, and Mixed Methods Approaches", "source": "SAGE (5th ed.)"},
-      {"id": "10", "authors": "Nosek, B. A., et al.", "year": 2018, "title": "The preregistration revolution", "source": "Proceedings of the National Academy of Sciences, 115(11), 2600-2606"}
-    ]
+      {
+        "id": "1",
+        "authors": "Gravetter, F. J., & Forzano, L. B.",
+        "year": 2018,
+        "title": "Research Methods for the Behavioral Sciences",
+        "source": "Cengage Learning (6th ed.)"
+      },
+      {
+        "id": "2",
+        "authors": "Field, A.",
+        "year": 2018,
+        "title": "Discovering Statistics Using IBM SPSS Statistics",
+        "source": "SAGE Publications (5th ed.)"
+      },
+      {
+        "id": "3",
+        "authors": "Kazdin, A. E.",
+        "year": 2017,
+        "title": "Research Design in Clinical Psychology",
+        "source": "Cambridge University Press (5th ed.)"
+      },
+      {
+        "id": "4",
+        "authors": "Shadish, W. R., Cook, T. D., & Campbell, D. T.",
+        "year": 2002,
+        "title": "Experimental and Quasi-Experimental Designs for Generalized Causal Inference",
+        "source": "Houghton Mifflin"
+      },
+      {
+        "id": "5",
+        "authors": "Open Science Collaboration",
+        "year": 2015,
+        "title": "Estimating the reproducibility of psychological science",
+        "source": "Science, 349(6251), aac4716"
+      },
+      {
+        "id": "6",
+        "authors": "Cumming, G.",
+        "year": 2014,
+        "title": "The new statistics: Why and how",
+        "source": "Psychological Science, 25(1), 7-29"
+      },
+      {
+        "id": "7",
+        "authors": "Simmons, J. P., Nelson, L. D., & Simonsohn, U.",
+        "year": 2011,
+        "title": "False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant",
+        "source": "Psychological Science, 22(11), 1359-1366"
+      },
+      {
+        "id": "8",
+        "authors": "Cohen, J.",
+        "year": 1988,
+        "title": "Statistical Power Analysis for the Behavioral Sciences",
+        "source": "Lawrence Erlbaum (2nd ed.)"
+      },
+      {
+        "id": "9",
+        "authors": "Creswell, J. W., & Creswell, J. D.",
+        "year": 2018,
+        "title": "Research Design: Qualitative, Quantitative, and Mixed Methods Approaches",
+        "source": "SAGE (5th ed.)"
+      },
+      {
+        "id": "10",
+        "authors": "Nosek, B. A., et al.",
+        "year": 2018,
+        "title": "The preregistration revolution",
+        "source": "Proceedings of the National Academy of Sciences, 115(11), 2600-2606"
+      }
+    ],
+    "readingTime": 31
   },
   "ethics": {
     "title": "Ethics in Psychological Research & Practice",
@@ -387,28 +668,120 @@
       }
     ],
     "keyConcepts": [
-      {"term": "Informed Consent", "definition": "The process by which participants are fully informed about a study's purpose, procedures, risks, and benefits, and voluntarily agree to participate."},
-      {"term": "Debriefing", "definition": "The process of explaining the true purpose of a study to participants after participation, addressing any distress, and correcting misconceptions."},
-      {"term": "Institutional Review Board (IRB)", "definition": "Committee that reviews research proposals to ensure they meet ethical standards for protecting human participants."},
-      {"term": "Beneficence", "definition": "Ethical principle requiring researchers and clinicians to maximize benefits and minimize harm to participants and clients."},
-      {"term": "Confidentiality", "definition": "Ethical obligation to protect private information shared by research participants or therapy clients."},
-      {"term": "Deception", "definition": "Withholding information or misleading participants about study aspects, permitted only under strict conditions with proper debriefing."},
-      {"term": "Dual Relationship", "definition": "A situation where a psychologist has multiple roles with a client (e.g., therapist and business partner), potentially compromising objectivity."},
-      {"term": "Belmont Report", "definition": "1979 document establishing three fundamental ethical principles for research: respect for persons, beneficence, and justice."},
-      {"term": "Autonomy", "definition": "The ethical principle that individuals should be treated as capable of making their own informed decisions."},
-      {"term": "Duty to Warn", "definition": "Legal and ethical obligation to warn potential victims when a client makes credible threats of violence (from Tarasoff case)."}
+      {
+        "term": "Informed Consent",
+        "definition": "The process by which participants are fully informed about a study's purpose, procedures, risks, and benefits, and voluntarily agree to participate."
+      },
+      {
+        "term": "Debriefing",
+        "definition": "The process of explaining the true purpose of a study to participants after participation, addressing any distress, and correcting misconceptions."
+      },
+      {
+        "term": "Institutional Review Board (IRB)",
+        "definition": "Committee that reviews research proposals to ensure they meet ethical standards for protecting human participants."
+      },
+      {
+        "term": "Beneficence",
+        "definition": "Ethical principle requiring researchers and clinicians to maximize benefits and minimize harm to participants and clients."
+      },
+      {
+        "term": "Confidentiality",
+        "definition": "Ethical obligation to protect private information shared by research participants or therapy clients."
+      },
+      {
+        "term": "Deception",
+        "definition": "Withholding information or misleading participants about study aspects, permitted only under strict conditions with proper debriefing."
+      },
+      {
+        "term": "Dual Relationship",
+        "definition": "A situation where a psychologist has multiple roles with a client (e.g., therapist and business partner), potentially compromising objectivity."
+      },
+      {
+        "term": "Belmont Report",
+        "definition": "1979 document establishing three fundamental ethical principles for research: respect for persons, beneficence, and justice."
+      },
+      {
+        "term": "Autonomy",
+        "definition": "The ethical principle that individuals should be treated as capable of making their own informed decisions."
+      },
+      {
+        "term": "Duty to Warn",
+        "definition": "Legal and ethical obligation to warn potential victims when a client makes credible threats of violence (from Tarasoff case)."
+      }
     ],
     "references": [
-      {"id": "1", "authors": "American Psychological Association", "year": 2017, "title": "Ethical Principles of Psychologists and Code of Conduct", "source": "APA"},
-      {"id": "2", "authors": "National Commission for the Protection of Human Subjects", "year": 1979, "title": "The Belmont Report", "source": "U.S. Department of Health, Education, and Welfare"},
-      {"id": "3", "authors": "Knapp, S., & VandeCreek, L.", "year": 2012, "title": "Practical Ethics for Psychologists: A Positive Approach", "source": "APA (2nd ed.)"},
-      {"id": "4", "authors": "Fisher, C. B.", "year": 2017, "title": "Decoding the Ethics Code: A Practical Guide for Psychologists", "source": "SAGE (4th ed.)"},
-      {"id": "5", "authors": "Beauchamp, T. L., & Childress, J. F.", "year": 2019, "title": "Principles of Biomedical Ethics", "source": "Oxford University Press (8th ed.)"},
-      {"id": "6", "authors": "Koocher, G. P., & Keith-Spiegel, P.", "year": 2016, "title": "Ethics in Psychology and the Mental Health Professions", "source": "Oxford University Press (4th ed.)"},
-      {"id": "7", "authors": "Reverby, S. M.", "year": 2009, "title": "Examining Tuskegee: The Infamous Syphilis Study and Its Legacy", "source": "University of North Carolina Press"},
-      {"id": "8", "authors": "Milgram, S.", "year": 1974, "title": "Obedience to Authority: An Experimental View", "source": "Harper & Row"},
-      {"id": "9", "authors": "Zimbardo, P. G.", "year": 2007, "title": "The Lucifer Effect: Understanding How Good People Turn Evil", "source": "Random House"},
-      {"id": "10", "authors": "Canadian Psychological Association", "year": 2017, "title": "Canadian Code of Ethics for Psychologists", "source": "CPA (4th ed.)"}
-    ]
+      {
+        "id": "1",
+        "authors": "American Psychological Association",
+        "year": 2017,
+        "title": "Ethical Principles of Psychologists and Code of Conduct",
+        "source": "APA"
+      },
+      {
+        "id": "2",
+        "authors": "National Commission for the Protection of Human Subjects",
+        "year": 1979,
+        "title": "The Belmont Report",
+        "source": "U.S. Department of Health, Education, and Welfare"
+      },
+      {
+        "id": "3",
+        "authors": "Knapp, S., & VandeCreek, L.",
+        "year": 2012,
+        "title": "Practical Ethics for Psychologists: A Positive Approach",
+        "source": "APA (2nd ed.)"
+      },
+      {
+        "id": "4",
+        "authors": "Fisher, C. B.",
+        "year": 2017,
+        "title": "Decoding the Ethics Code: A Practical Guide for Psychologists",
+        "source": "SAGE (4th ed.)"
+      },
+      {
+        "id": "5",
+        "authors": "Beauchamp, T. L., & Childress, J. F.",
+        "year": 2019,
+        "title": "Principles of Biomedical Ethics",
+        "source": "Oxford University Press (8th ed.)"
+      },
+      {
+        "id": "6",
+        "authors": "Koocher, G. P., & Keith-Spiegel, P.",
+        "year": 2016,
+        "title": "Ethics in Psychology and the Mental Health Professions",
+        "source": "Oxford University Press (4th ed.)"
+      },
+      {
+        "id": "7",
+        "authors": "Reverby, S. M.",
+        "year": 2009,
+        "title": "Examining Tuskegee: The Infamous Syphilis Study and Its Legacy",
+        "source": "University of North Carolina Press"
+      },
+      {
+        "id": "8",
+        "authors": "Milgram, S.",
+        "year": 1974,
+        "title": "Obedience to Authority: An Experimental View",
+        "source": "Harper & Row"
+      },
+      {
+        "id": "9",
+        "authors": "Zimbardo, P. G.",
+        "year": 2007,
+        "title": "The Lucifer Effect: Understanding How Good People Turn Evil",
+        "source": "Random House"
+      },
+      {
+        "id": "10",
+        "authors": "Canadian Psychological Association",
+        "year": 2017,
+        "title": "Canadian Code of Ethics for Psychologists",
+        "source": "CPA (4th ed.)"
+      }
+    ],
+    "readingTime": 26,
+    "difficulty": "intermediate"
   }
 }

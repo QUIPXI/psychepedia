@@ -73,29 +73,255 @@
       }
     ],
     "keyConcepts": [
-      {"term": "Neuroplasticity", "definition": "The brain's ability to change and reorganize its structure and function in response to experience, learning, or injury."},
-      {"term": "Hemispheric Specialization", "definition": "The tendency for certain cognitive functions to be predominantly processed by one cerebral hemisphere."},
-      {"term": "Neurotransmitter", "definition": "Chemical messengers that transmit signals between neurons across the synaptic cleft."},
-      {"term": "Action Potential", "definition": "The electrochemical signal that travels along an axon when a neuron fires."},
-      {"term": "Cerebral Cortex", "definition": "The outer layer of the brain responsible for higher cognitive functions including perception, thought, and decision-making."},
-      {"term": "Synapse", "definition": "The junction between neurons where neurotransmitters are released to communicate signals."},
-      {"term": "Long-Term Potentiation (LTP)", "definition": "A lasting increase in synaptic strength following high-frequency stimulation, considered a cellular basis for learning and memory."},
-      {"term": "Diaschisis", "definition": "Temporary dysfunction in brain regions connected to a damaged area, even if those regions are structurally intact."},
-      {"term": "BOLD Signal", "definition": "Blood Oxygen Level Dependent signal measured in fMRI as a proxy for neural activity."},
-      {"term": "Diffuse Axonal Injury", "definition": "Widespread damage to axons throughout the brain, typically caused by rapid acceleration-deceleration in traumatic brain injury."}
+      {
+        "term": "Neuroplasticity",
+        "definition": "The brain's ability to change and reorganize its structure and function in response to experience, learning, or injury."
+      },
+      {
+        "term": "Hemispheric Specialization",
+        "definition": "The tendency for certain cognitive functions to be predominantly processed by one cerebral hemisphere."
+      },
+      {
+        "term": "Neurotransmitter",
+        "definition": "Chemical messengers that transmit signals between neurons across the synaptic cleft."
+      },
+      {
+        "term": "Action Potential",
+        "definition": "The electrochemical signal that travels along an axon when a neuron fires."
+      },
+      {
+        "term": "Cerebral Cortex",
+        "definition": "The outer layer of the brain responsible for higher cognitive functions including perception, thought, and decision-making."
+      },
+      {
+        "term": "Synapse",
+        "definition": "The junction between neurons where neurotransmitters are released to communicate signals."
+      },
+      {
+        "term": "Long-Term Potentiation (LTP)",
+        "definition": "A lasting increase in synaptic strength following high-frequency stimulation, considered a cellular basis for learning and memory."
+      },
+      {
+        "term": "Diaschisis",
+        "definition": "Temporary dysfunction in brain regions connected to a damaged area, even if those regions are structurally intact."
+      },
+      {
+        "term": "BOLD Signal",
+        "definition": "Blood Oxygen Level Dependent signal measured in fMRI as a proxy for neural activity."
+      },
+      {
+        "term": "Diffuse Axonal Injury",
+        "definition": "Widespread damage to axons throughout the brain, typically caused by rapid acceleration-deceleration in traumatic brain injury."
+      }
     ],
     "references": [
-      {"id": "1", "authors": "Kolb, B., & Whishaw, I. Q.", "year": 2021, "title": "Fundamentals of Human Neuropsychology", "source": "Worth Publishers (8th ed.)"},
-      {"id": "2", "authors": "Lezak, M. D., Howieson, D. B., Bigler, E. D., & Tranel, D.", "year": 2012, "title": "Neuropsychological Assessment", "source": "Oxford University Press (5th ed.)"},
-      {"id": "3", "authors": "Kandel, E. R., Schwartz, J. H., & Jessell, T. M.", "year": 2021, "title": "Principles of Neural Science", "source": "McGraw-Hill (6th ed.)"},
-      {"id": "4", "authors": "Purves, D., et al.", "year": 2018, "title": "Neuroscience", "source": "Oxford University Press (6th ed.)"},
-      {"id": "5", "authors": "Gazzaniga, M. S., Ivry, R. B., & Mangun, G. R.", "year": 2019, "title": "Cognitive Neuroscience: The Biology of the Mind", "source": "W. W. Norton (5th ed.)"},
-      {"id": "6", "authors": "Blumenfeld, H.", "year": 2021, "title": "Neuroanatomy Through Clinical Cases", "source": "Oxford University Press (3rd ed.)"},
-      {"id": "7", "authors": "Strauss, E., Sherman, E. M., & Spreen, O.", "year": 2006, "title": "A Compendium of Neuropsychological Tests", "source": "Oxford University Press (3rd ed.)"},
-      {"id": "8", "authors": "Doidge, N.", "year": 2007, "title": "The Brain That Changes Itself", "source": "Penguin Books"},
-      {"id": "9", "authors": "Bear, M. F., Connors, B. W., & Paradiso, M. A.", "year": 2020, "title": "Neuroscience: Exploring the Brain", "source": "Wolters Kluwer (5th ed.)"},
-      {"id": "10", "authors": "Heilman, K. M., & Valenstein, E.", "year": 2012, "title": "Clinical Neuropsychology", "source": "Oxford University Press (5th ed.)"}
-    ]
+      {
+        "id": "1",
+        "authors": "Kolb, B., & Whishaw, I. Q.",
+        "year": 2021,
+        "title": "Fundamentals of Human Neuropsychology",
+        "source": "Worth Publishers (8th ed.)"
+      },
+      {
+        "id": "2",
+        "authors": "Lezak, M. D., Howieson, D. B., Bigler, E. D., & Tranel, D.",
+        "year": 2012,
+        "title": "Neuropsychological Assessment",
+        "source": "Oxford University Press (5th ed.)"
+      },
+      {
+        "id": "3",
+        "authors": "Kandel, E. R., Schwartz, J. H., & Jessell, T. M.",
+        "year": 2021,
+        "title": "Principles of Neural Science",
+        "source": "McGraw-Hill (6th ed.)"
+      },
+      {
+        "id": "4",
+        "authors": "Purves, D., et al.",
+        "year": 2018,
+        "title": "Neuroscience",
+        "source": "Oxford University Press (6th ed.)"
+      },
+      {
+        "id": "5",
+        "authors": "Gazzaniga, M. S., Ivry, R. B., & Mangun, G. R.",
+        "year": 2019,
+        "title": "Cognitive Neuroscience: The Biology of the Mind",
+        "source": "W. W. Norton (5th ed.)"
+      },
+      {
+        "id": "6",
+        "authors": "Blumenfeld, H.",
+        "year": 2021,
+        "title": "Neuroanatomy Through Clinical Cases",
+        "source": "Oxford University Press (3rd ed.)"
+      },
+      {
+        "id": "7",
+        "authors": "Strauss, E., Sherman, E. M., & Spreen, O.",
+        "year": 2006,
+        "title": "A Compendium of Neuropsychological Tests",
+        "source": "Oxford University Press (3rd ed.)"
+      },
+      {
+        "id": "8",
+        "authors": "Doidge, N.",
+        "year": 2007,
+        "title": "The Brain That Changes Itself",
+        "source": "Penguin Books"
+      },
+      {
+        "id": "9",
+        "authors": "Bear, M. F., Connors, B. W., & Paradiso, M. A.",
+        "year": 2020,
+        "title": "Neuroscience: Exploring the Brain",
+        "source": "Wolters Kluwer (5th ed.)"
+      },
+      {
+        "id": "10",
+        "authors": "Heilman, K. M., & Valenstein, E.",
+        "year": 2012,
+        "title": "Clinical Neuropsychology",
+        "source": "Oxford University Press (5th ed.)"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "neuro_q1",
+        "question": "Which brain lobe is primarily responsible for executive functions, planning, and personality?",
+        "options": [
+          "Occipital Lobe",
+          "Temporal Lobe",
+          "Frontal Lobe",
+          "Parietal Lobe"
+        ],
+        "correctIndex": 2,
+        "explanation": "The frontal lobe, particularly the prefrontal cortex, is responsible for higher-order cognitive processes known as executive functions."
+      },
+      {
+        "id": "neuro_q2",
+        "question": "What is the primary inhibitory neurotransmitter in the central nervous system?",
+        "options": [
+          "Glutamate",
+          "GABA",
+          "Dopamine",
+          "Serotonin"
+        ],
+        "correctIndex": 1,
+        "explanation": "GABA (gamma-aminobutyric acid) is the main inhibitory neurotransmitter, while glutamate is the main excitatory one."
+      },
+      {
+        "id": "neuro_q3",
+        "question": "Which term describes the brain's ability to reorganize itself by forming new neural connections throughout life?",
+        "options": [
+          "Lateralization",
+          "Neuroplasticity",
+          "Diaschisis",
+          "Hemispheric Specialization"
+        ],
+        "correctIndex": 1,
+        "explanation": "Neuroplasticity refers to the brain's capacity to change its structure and function in response to experience or injury."
+      },
+      {
+        "id": "neuro_q4",
+        "question": "A patient who can understand language but has difficulty producing speech likely has damage to which area?",
+        "options": [
+          "Wernicke's Area",
+          "Primary Visual Cortex",
+          "Broca's Area",
+          "Basal Ganglia"
+        ],
+        "correctIndex": 2,
+        "explanation": "Broca's area, located in the left frontal lobe, is critical for speech production. Damage leads to non-fluent aphasia."
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "The Case of Phineas Gage",
+        "description": "A classic case study illustrating the role of the frontal lobes in personality and social behavior.",
+        "scenario": "In 1848, Phineas Gage survived a traumatic brain injury where an iron rod was driven through his left frontal lobe. While his intellectual abilities remained largely intact, his personality changed dramatically.",
+        "analysis": "The damage to the prefrontal cortex resulted in a loss of social inhibition and emotional regulation, demonstrating that specific brain regions are responsible for complex personality traits.",
+        "keyTakeaways": [
+          "Frontal lobes are critical for personality and social conduct",
+          "Brain damage can cause specific functional dissociations",
+          "The brain has some capacity to survive massive structural trauma"
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "title": "Hemispheric Specialization",
+        "description": "Typical functional differences between the left and right cerebral hemispheres.",
+        "headers": [
+          "Function",
+          "Left Hemisphere",
+          "Right Hemisphere"
+        ],
+        "rows": [
+          {
+            "label": "Language",
+            "values": [
+              "Production and comprehension",
+              "Emotional prosody and tone"
+            ]
+          },
+          {
+            "label": "Processing Style",
+            "values": [
+              "Analytical and sequential",
+              "Holistic and gestalt"
+            ]
+          },
+          {
+            "label": "Spatial Ability",
+            "values": [
+              "Limited",
+              "Mental rotation and navigation"
+            ]
+          },
+          {
+            "label": "Motor Control",
+            "values": [
+              "Right side of body",
+              "Left side of body"
+            ]
+          }
+        ]
+      }
+    ],
+    "diagrams": [
+      {
+        "id": "neuro_d1",
+        "title": "Neural Communication Flow",
+        "description": "The sequence of events in synaptic transmission.",
+        "type": "flowchart",
+        "nodes": [
+          {
+            "id": "1",
+            "label": "Action potential reaches axon terminal"
+          },
+          {
+            "id": "2",
+            "label": "Calcium channels open, triggering vesicle release"
+          },
+          {
+            "id": "3",
+            "label": "Neurotransmitters released into synaptic cleft"
+          },
+          {
+            "id": "4",
+            "label": "Binding to postsynaptic receptors"
+          },
+          {
+            "id": "5",
+            "label": "Excitatory or inhibitory potential generated"
+          }
+        ]
+      }
+    ],
+    "readingTime": 25,
+    "difficulty": "intermediate"
   },
   "sensation-perception": {
     "title": "Sensation & Perception",
@@ -163,29 +389,255 @@
       }
     ],
     "keyConcepts": [
-      {"term": "Transduction", "definition": "The conversion of physical energy from the environment into neural signals by sensory receptors."},
-      {"term": "Absolute Threshold", "definition": "The minimum stimulus intensity that can be detected 50% of the time."},
-      {"term": "Gestalt Principles", "definition": "Perceptual organization principles describing how elements are grouped into meaningful patterns."},
-      {"term": "Perceptual Constancy", "definition": "The tendency to perceive objects as stable despite changes in sensory input."},
-      {"term": "Bottom-Up Processing", "definition": "Data-driven perceptual analysis starting from sensory input and building to complex representations."},
-      {"term": "Top-Down Processing", "definition": "Concept-driven processing where prior knowledge and expectations influence perception."},
-      {"term": "Selective Attention", "definition": "The ability to focus on specific stimuli while filtering out irrelevant information."},
-      {"term": "Signal Detection Theory", "definition": "A framework for understanding detection that separates sensitivity from response bias."},
-      {"term": "Inattentional Blindness", "definition": "Failure to notice unexpected stimuli when attention is focused elsewhere."},
-      {"term": "Feature Integration Theory", "definition": "The theory that attention is required to bind features into coherent object representations."}
+      {
+        "term": "Transduction",
+        "definition": "The conversion of physical energy from the environment into neural signals by sensory receptors."
+      },
+      {
+        "term": "Absolute Threshold",
+        "definition": "The minimum stimulus intensity that can be detected 50% of the time."
+      },
+      {
+        "term": "Gestalt Principles",
+        "definition": "Perceptual organization principles describing how elements are grouped into meaningful patterns."
+      },
+      {
+        "term": "Perceptual Constancy",
+        "definition": "The tendency to perceive objects as stable despite changes in sensory input."
+      },
+      {
+        "term": "Bottom-Up Processing",
+        "definition": "Data-driven perceptual analysis starting from sensory input and building to complex representations."
+      },
+      {
+        "term": "Top-Down Processing",
+        "definition": "Concept-driven processing where prior knowledge and expectations influence perception."
+      },
+      {
+        "term": "Selective Attention",
+        "definition": "The ability to focus on specific stimuli while filtering out irrelevant information."
+      },
+      {
+        "term": "Signal Detection Theory",
+        "definition": "A framework for understanding detection that separates sensitivity from response bias."
+      },
+      {
+        "term": "Inattentional Blindness",
+        "definition": "Failure to notice unexpected stimuli when attention is focused elsewhere."
+      },
+      {
+        "term": "Feature Integration Theory",
+        "definition": "The theory that attention is required to bind features into coherent object representations."
+      }
     ],
     "references": [
-      {"id": "1", "authors": "Goldstein, E. B., & Brockmole, J. R.", "year": 2017, "title": "Sensation and Perception", "source": "Cengage Learning (10th ed.)"},
-      {"id": "2", "authors": "Wolfe, J. M., et al.", "year": 2021, "title": "Sensation & Perception", "source": "Oxford University Press (6th ed.)"},
-      {"id": "3", "authors": "Palmer, S. E.", "year": 1999, "title": "Vision Science: Photons to Phenomenology", "source": "MIT Press"},
-      {"id": "4", "authors": "Yantis, S., & Abrams, R. A.", "year": 2016, "title": "Sensation and Perception", "source": "Worth Publishers (2nd ed.)"},
-      {"id": "5", "authors": "Kandel, E. R., et al.", "year": 2021, "title": "Principles of Neural Science (Visual System chapters)", "source": "McGraw-Hill (6th ed.)"},
-      {"id": "6", "authors": "Simons, D. J., & Chabris, C. F.", "year": 1999, "title": "Gorillas in our midst: Sustained inattentional blindness for dynamic events", "source": "Perception, 28(9), 1059-1074"},
-      {"id": "7", "authors": "Treisman, A. M., & Gelade, G.", "year": 1980, "title": "A feature-integration theory of attention", "source": "Cognitive Psychology, 12(1), 97-136"},
-      {"id": "8", "authors": "Gibson, J. J.", "year": 1979, "title": "The Ecological Approach to Visual Perception", "source": "Houghton Mifflin"},
-      {"id": "9", "authors": "Marr, D.", "year": 1982, "title": "Vision: A Computational Investigation", "source": "W. H. Freeman"},
-      {"id": "10", "authors": "Hubel, D. H., & Wiesel, T. N.", "year": 1962, "title": "Receptive fields, binocular interaction and functional architecture in the cat's visual cortex", "source": "Journal of Physiology, 160(1), 106-154"}
-    ]
+      {
+        "id": "1",
+        "authors": "Goldstein, E. B., & Brockmole, J. R.",
+        "year": 2017,
+        "title": "Sensation and Perception",
+        "source": "Cengage Learning (10th ed.)"
+      },
+      {
+        "id": "2",
+        "authors": "Wolfe, J. M., et al.",
+        "year": 2021,
+        "title": "Sensation & Perception",
+        "source": "Oxford University Press (6th ed.)"
+      },
+      {
+        "id": "3",
+        "authors": "Palmer, S. E.",
+        "year": 1999,
+        "title": "Vision Science: Photons to Phenomenology",
+        "source": "MIT Press"
+      },
+      {
+        "id": "4",
+        "authors": "Yantis, S., & Abrams, R. A.",
+        "year": 2016,
+        "title": "Sensation and Perception",
+        "source": "Worth Publishers (2nd ed.)"
+      },
+      {
+        "id": "5",
+        "authors": "Kandel, E. R., et al.",
+        "year": 2021,
+        "title": "Principles of Neural Science (Visual System chapters)",
+        "source": "McGraw-Hill (6th ed.)"
+      },
+      {
+        "id": "6",
+        "authors": "Simons, D. J., & Chabris, C. F.",
+        "year": 1999,
+        "title": "Gorillas in our midst: Sustained inattentional blindness for dynamic events",
+        "source": "Perception, 28(9), 1059-1074"
+      },
+      {
+        "id": "7",
+        "authors": "Treisman, A. M., & Gelade, G.",
+        "year": 1980,
+        "title": "A feature-integration theory of attention",
+        "source": "Cognitive Psychology, 12(1), 97-136"
+      },
+      {
+        "id": "8",
+        "authors": "Gibson, J. J.",
+        "year": 1979,
+        "title": "The Ecological Approach to Visual Perception",
+        "source": "Houghton Mifflin"
+      },
+      {
+        "id": "9",
+        "authors": "Marr, D.",
+        "year": 1982,
+        "title": "Vision: A Computational Investigation",
+        "source": "W. H. Freeman"
+      },
+      {
+        "id": "10",
+        "authors": "Hubel, D. H., & Wiesel, T. N.",
+        "year": 1962,
+        "title": "Receptive fields, binocular interaction and functional architecture in the cat's visual cortex",
+        "source": "Journal of Physiology, 160(1), 106-154"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "sp_q1",
+        "question": "What is the process of converting physical energy into neural signals called?",
+        "options": [
+          "Perception",
+          "Transduction",
+          "Adaptation",
+          "Integration"
+        ],
+        "correctIndex": 1,
+        "explanation": "Transduction is the conversion of physical energy (like light or sound) into electrochemical signals by sensory receptors."
+      },
+      {
+        "id": "sp_q2",
+        "question": "Which Gestalt principle explains our tendency to perceive incomplete figures as whole?",
+        "options": [
+          "Proximity",
+          "Similarity",
+          "Closure",
+          "Continuity"
+        ],
+        "correctIndex": 2,
+        "explanation": "Closure is the tendency to fill in gaps to perceive a complete, whole object."
+      },
+      {
+        "id": "sp_q3",
+        "question": "Which theory of color vision proposes that color is processed in opposing pairs (e.g., red-green)?",
+        "options": [
+          "Trichromatic Theory",
+          "Opponent-Process Theory",
+          "Place Theory",
+          "Frequency Theory"
+        ],
+        "correctIndex": 1,
+        "explanation": "Opponent-Process Theory suggests that color is processed by bipolar cells that respond to opposing pairs of colors."
+      },
+      {
+        "id": "sp_q4",
+        "question": "The 'cocktail party effect' is an example of which cognitive process?",
+        "options": [
+          "Bottom-up processing",
+          "Selective attention",
+          "Sensory adaptation",
+          "Inattentional blindness"
+        ],
+        "correctIndex": 1,
+        "explanation": "The cocktail party effect demonstrates selective attention—the ability to focus on one stimulus while filtering out others."
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "The Gorilla Experiment",
+        "description": "A famous study on inattentional blindness by Simons and Chabris (1999).",
+        "scenario": "Participants were asked to count basketball passes between players in white shirts, ignoring players in black shirts. During the task, a person in a gorilla suit walked through the scene.",
+        "analysis": "Approximately 50% of participants failed to notice the gorilla, demonstrating that focused attention can make us 'blind' to unexpected but visible stimuli.",
+        "keyTakeaways": [
+          "Attention is a limited resource",
+          "Looking at something does not guarantee perceiving it",
+          "Top-down goals significantly influence what we perceive"
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "title": "Bottom-Up vs. Top-Down Processing",
+        "description": "Comparison of the two primary directions of perceptual analysis.",
+        "headers": [
+          "Feature",
+          "Bottom-Up Processing",
+          "Top-Down Processing"
+        ],
+        "rows": [
+          {
+            "label": "Starting Point",
+            "values": [
+              "Sensory input (data)",
+              "Knowledge and expectations (concepts)"
+            ]
+          },
+          {
+            "label": "Direction",
+            "values": [
+              "Simple to complex",
+              "Complex to simple"
+            ]
+          },
+          {
+            "label": "Influence",
+            "values": [
+              "Stimulus-driven",
+              "Experience-driven"
+            ]
+          },
+          {
+            "label": "Example",
+            "values": [
+              "Detecting edges and colors",
+              "Reading messy handwriting using context"
+            ]
+          }
+        ]
+      }
+    ],
+    "diagrams": [
+      {
+        "id": "sp_d1",
+        "title": "The Visual Pathway",
+        "description": "Flow of visual information from the eye to the brain.",
+        "type": "flowchart",
+        "nodes": [
+          {
+            "id": "1",
+            "label": "Retina (Photoreceptors)"
+          },
+          {
+            "id": "2",
+            "label": "Optic Nerve"
+          },
+          {
+            "id": "3",
+            "label": "Optic Chiasm"
+          },
+          {
+            "id": "4",
+            "label": "Lateral Geniculate Nucleus (Thalamus)"
+          },
+          {
+            "id": "5",
+            "label": "Primary Visual Cortex (Occipital Lobe)"
+          }
+        ]
+      }
+    ],
+    "readingTime": 19,
+    "difficulty": "beginner"
   },
   "genetics-evolution": {
     "title": "Genetics & Evolution",
@@ -253,29 +705,248 @@
       }
     ],
     "keyConcepts": [
-      {"term": "Heritability", "definition": "Proportion of variance in a trait attributable to genetic differences in a population."},
-      {"term": "Gene-Environment Interaction", "definition": "Interplay between genetic predispositions and environmental influences on behavior and development."},
-      {"term": "Natural Selection", "definition": "Process by which traits that enhance survival and reproduction become more common in populations."},
-      {"term": "Epigenetics", "definition": "Study of environmental influences on gene expression without changes to DNA sequence."},
-      {"term": "Environment of Evolutionary Adaptedness", "definition": "Ancestral environment in which human psychological adaptations evolved."},
-      {"term": "Polygenic Score", "definition": "A score aggregating effects of many genetic variants to predict individual differences in traits."},
-      {"term": "Gene-Environment Correlation", "definition": "The phenomenon where genetic factors influence exposure to environments (passive, evocative, or active)."},
-      {"term": "Differential Susceptibility", "definition": "The idea that some individuals are more sensitive to both positive and negative environments due to genetic variation."},
-      {"term": "Parental Investment Theory", "definition": "Trivers' theory that the sex investing more in offspring will be more selective about mates."},
-      {"term": "Inclusive Fitness", "definition": "An individual's reproductive success plus effects on relatives' reproduction, weighted by genetic relatedness."}
+      {
+        "term": "Heritability",
+        "definition": "Proportion of variance in a trait attributable to genetic differences in a population."
+      },
+      {
+        "term": "Gene-Environment Interaction",
+        "definition": "Interplay between genetic predispositions and environmental influences on behavior and development."
+      },
+      {
+        "term": "Natural Selection",
+        "definition": "Process by which traits that enhance survival and reproduction become more common in populations."
+      },
+      {
+        "term": "Epigenetics",
+        "definition": "Study of environmental influences on gene expression without changes to DNA sequence."
+      },
+      {
+        "term": "Environment of Evolutionary Adaptedness",
+        "definition": "Ancestral environment in which human psychological adaptations evolved."
+      },
+      {
+        "term": "Polygenic Score",
+        "definition": "A score aggregating effects of many genetic variants to predict individual differences in traits."
+      },
+      {
+        "term": "Gene-Environment Correlation",
+        "definition": "The phenomenon where genetic factors influence exposure to environments (passive, evocative, or active)."
+      },
+      {
+        "term": "Differential Susceptibility",
+        "definition": "The idea that some individuals are more sensitive to both positive and negative environments due to genetic variation."
+      },
+      {
+        "term": "Parental Investment Theory",
+        "definition": "Trivers' theory that the sex investing more in offspring will be more selective about mates."
+      },
+      {
+        "term": "Inclusive Fitness",
+        "definition": "An individual's reproductive success plus effects on relatives' reproduction, weighted by genetic relatedness."
+      }
     ],
     "references": [
-      {"id": "1", "authors": "Plomin, R., DeFries, J. C., McClearn, G. E., & Rutter, M.", "year": 2017, "title": "Behavioral Genetics", "source": "Worth Publishers (4th ed.)"},
-      {"id": "2", "authors": "Buss, D. M.", "year": 2019, "title": "Evolutionary Psychology: The New Science of the Mind", "source": "Routledge (6th ed.)"},
-      {"id": "3", "authors": "Nesse, R. M., & Williams, G. C.", "year": 2019, "title": "Why We Get Sick: The New Science of Darwinian Medicine", "source": "Times Books"},
-      {"id": "4", "authors": "Plomin, R.", "year": 2018, "title": "Blueprint: How DNA Makes Us Who We Are", "source": "MIT Press"},
-      {"id": "5", "authors": "Turkheimer, E.", "year": 2000, "title": "Three Laws of Behavior Genetics and What They Mean", "source": "Current Directions in Psychological Science, 9(5), 160-164"},
-      {"id": "6", "authors": "Cosmides, L., & Tooby, J.", "year": 2013, "title": "Evolutionary Psychology: New Perspectives on Cognition and Motivation", "source": "Annual Review of Psychology, 64, 201-229"},
-      {"id": "7", "authors": "Caspi, A., & Moffitt, T. E.", "year": 2006, "title": "Gene-Environment Interactions in Psychiatry", "source": "Nature Reviews Neuroscience, 7(7), 583-590"},
-      {"id": "8", "authors": "Meaney, M. J.", "year": 2010, "title": "Epigenetics and the Biological Definition of Gene × Environment Interactions", "source": "Child Development, 81(1), 41-79"},
-      {"id": "9", "authors": "Belsky, J., & Pluess, M.", "year": 2009, "title": "Beyond Diathesis Stress: Differential Susceptibility to Environmental Influences", "source": "Psychological Bulletin, 135(6), 885-908"},
-      {"id": "10", "authors": "Harden, K. P.", "year": 2021, "title": "The Genetic Lottery: Why DNA Matters for Social Equality", "source": "Princeton University Press"}
-    ]
+      {
+        "id": "1",
+        "authors": "Plomin, R., DeFries, J. C., McClearn, G. E., & Rutter, M.",
+        "year": 2017,
+        "title": "Behavioral Genetics",
+        "source": "Worth Publishers (4th ed.)"
+      },
+      {
+        "id": "2",
+        "authors": "Buss, D. M.",
+        "year": 2019,
+        "title": "Evolutionary Psychology: The New Science of the Mind",
+        "source": "Routledge (6th ed.)"
+      },
+      {
+        "id": "3",
+        "authors": "Nesse, R. M., & Williams, G. C.",
+        "year": 2019,
+        "title": "Why We Get Sick: The New Science of Darwinian Medicine",
+        "source": "Times Books"
+      },
+      {
+        "id": "4",
+        "authors": "Plomin, R.",
+        "year": 2018,
+        "title": "Blueprint: How DNA Makes Us Who We Are",
+        "source": "MIT Press"
+      },
+      {
+        "id": "5",
+        "authors": "Turkheimer, E.",
+        "year": 2000,
+        "title": "Three Laws of Behavior Genetics and What They Mean",
+        "source": "Current Directions in Psychological Science, 9(5), 160-164"
+      },
+      {
+        "id": "6",
+        "authors": "Cosmides, L., & Tooby, J.",
+        "year": 2013,
+        "title": "Evolutionary Psychology: New Perspectives on Cognition and Motivation",
+        "source": "Annual Review of Psychology, 64, 201-229"
+      },
+      {
+        "id": "7",
+        "authors": "Caspi, A., & Moffitt, T. E.",
+        "year": 2006,
+        "title": "Gene-Environment Interactions in Psychiatry",
+        "source": "Nature Reviews Neuroscience, 7(7), 583-590"
+      },
+      {
+        "id": "8",
+        "authors": "Meaney, M. J.",
+        "year": 2010,
+        "title": "Epigenetics and the Biological Definition of Gene × Environment Interactions",
+        "source": "Child Development, 81(1), 41-79"
+      },
+      {
+        "id": "9",
+        "authors": "Belsky, J., & Pluess, M.",
+        "year": 2009,
+        "title": "Beyond Diathesis Stress: Differential Susceptibility to Environmental Influences",
+        "source": "Psychological Bulletin, 135(6), 885-908"
+      },
+      {
+        "id": "10",
+        "authors": "Harden, K. P.",
+        "year": 2021,
+        "title": "The Genetic Lottery: Why DNA Matters for Social Equality",
+        "source": "Princeton University Press"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "ge_q1",
+        "question": "What does a heritability coefficient of 0.5 for a trait indicate?",
+        "options": [
+          "50% of an individual's trait is caused by genes",
+          "50% of the population variance in the trait is due to genetic differences",
+          "The trait is 50% unchangeable",
+          "The trait is inherited from only one parent"
+        ],
+        "correctIndex": 1,
+        "explanation": "Heritability refers to the proportion of variance in a population that is attributable to genetic differences, not the proportion of a trait in an individual."
+      },
+      {
+        "id": "ge_q2",
+        "question": "Which concept describes the ancestral environment that shaped human psychological adaptations?",
+        "options": [
+          "Natural Selection",
+          "Inclusive Fitness",
+          "Environment of Evolutionary Adaptedness (EEA)",
+          "Niche-Picking"
+        ],
+        "correctIndex": 2,
+        "explanation": "The EEA refers to the set of selection pressures (primarily during the Pleistocene) that shaped specific adaptations."
+      },
+      {
+        "id": "ge_q3",
+        "question": "Which type of gene-environment correlation occurs when an individual's genetic traits elicit specific responses from others?",
+        "options": [
+          "Passive rGE",
+          "Evocative rGE",
+          "Active rGE",
+          "Epigenetic rGE"
+        ],
+        "correctIndex": 1,
+        "explanation": "Evocative (or reactive) rGE occurs when a person's genetically influenced behavior triggers reactions from the social environment."
+      },
+      {
+        "id": "ge_q4",
+        "question": "According to Parental Investment Theory, which sex is generally more selective about mates?",
+        "options": [
+          "The sex with higher biological investment",
+          "The sex with lower biological investment",
+          "The sex that is more physically aggressive",
+          "The sex that matures faster"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trivers' theory states that the sex investing more in offspring (typically females in humans) will be more selective to ensure offspring survival."
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "The Jim Twins",
+        "description": "A famous case from the Minnesota Study of Twins Reared Apart.",
+        "scenario": "Identical twins Jim Lewis and Jim Springer were separated at 4 weeks old and reunited at age 39. Despite being raised in different families, they shared remarkable similarities in personality, interests, and even specific life choices (e.g., both had dogs named Toy, both drove Chevrolets).",
+        "analysis": "This case highlights the powerful influence of genetics on personality and behavioral tendencies, even when environments differ significantly.",
+        "keyTakeaways": [
+          "Identical twins reared apart show striking similarities",
+          "Genetics influence a wide range of psychological and behavioral traits",
+          "Shared family environment often has less impact on adult personality than genetics"
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "title": "Gene-Environment Correlation (rGE) Types",
+        "description": "The three ways genes and environments correlate.",
+        "headers": [
+          "Type",
+          "Mechanism",
+          "Example"
+        ],
+        "rows": [
+          {
+            "label": "Passive",
+            "values": [
+              "Parents provide both genes and environment",
+              "Musical parents provide instruments and 'musical' genes"
+            ]
+          },
+          {
+            "label": "Evocative",
+            "values": [
+              "Individual's traits elicit environmental responses",
+              "A happy baby receives more social stimulation"
+            ]
+          },
+          {
+            "label": "Active",
+            "values": [
+              "Individual seeks out matching environments",
+              "An athletic child joins sports teams"
+            ]
+          }
+        ]
+      }
+    ],
+    "diagrams": [
+      {
+        "id": "ge_d1",
+        "title": "Natural Selection Process",
+        "description": "The basic cycle of evolutionary change.",
+        "type": "cycle",
+        "nodes": [
+          {
+            "id": "1",
+            "label": "Genetic Variation in Population"
+          },
+          {
+            "id": "2",
+            "label": "Environmental Selection Pressures"
+          },
+          {
+            "id": "3",
+            "label": "Differential Survival and Reproduction"
+          },
+          {
+            "id": "4",
+            "label": "Inheritance of Adaptive Traits"
+          },
+          {
+            "id": "5",
+            "label": "Change in Population Gene Frequency"
+          }
+        ]
+      }
+    ],
+    "readingTime": 14,
+    "difficulty": "intermediate"
   },
   "psychopharmacology": {
     "title": "Psychopharmacology",
@@ -359,28 +1030,250 @@
       }
     ],
     "keyConcepts": [
-      {"term": "Agonist", "definition": "A drug that binds to and activates a receptor, mimicking the effect of a neurotransmitter."},
-      {"term": "Antagonist", "definition": "A drug that binds to a receptor without activating it, blocking the neurotransmitter's effect."},
-      {"term": "Half-Life", "definition": "The time required for the plasma concentration of a drug to decrease by 50%."},
-      {"term": "Therapeutic Index", "definition": "The ratio of the toxic dose to the therapeutic dose; wider index indicates greater safety."},
-      {"term": "Tolerance", "definition": "Decreased response to a drug with repeated administration, requiring higher doses for the same effect."},
-      {"term": "Blood-Brain Barrier", "definition": "A selective barrier that protects the brain by limiting which substances can enter from the bloodstream."},
-      {"term": "Pharmacokinetics", "definition": "The study of how drugs move through the body: absorption, distribution, metabolism, and excretion (ADME)."},
-      {"term": "Pharmacodynamics", "definition": "The study of how drugs affect the body through interactions with receptors and other molecular targets."},
-      {"term": "First-Pass Metabolism", "definition": "Metabolism of a drug by the liver before it reaches systemic circulation, reducing bioavailability of oral drugs."},
-      {"term": "Extrapyramidal Symptoms", "definition": "Movement disorders caused by dopamine blockade in the nigrostriatal pathway, including dystonia, akathisia, parkinsonism, and tardive dyskinesia."}
+      {
+        "term": "Agonist",
+        "definition": "A drug that binds to and activates a receptor, mimicking the effect of a neurotransmitter."
+      },
+      {
+        "term": "Antagonist",
+        "definition": "A drug that binds to a receptor without activating it, blocking the neurotransmitter's effect."
+      },
+      {
+        "term": "Half-Life",
+        "definition": "The time required for the plasma concentration of a drug to decrease by 50%."
+      },
+      {
+        "term": "Therapeutic Index",
+        "definition": "The ratio of the toxic dose to the therapeutic dose; wider index indicates greater safety."
+      },
+      {
+        "term": "Tolerance",
+        "definition": "Decreased response to a drug with repeated administration, requiring higher doses for the same effect."
+      },
+      {
+        "term": "Blood-Brain Barrier",
+        "definition": "A selective barrier that protects the brain by limiting which substances can enter from the bloodstream."
+      },
+      {
+        "term": "Pharmacokinetics",
+        "definition": "The study of how drugs move through the body: absorption, distribution, metabolism, and excretion (ADME)."
+      },
+      {
+        "term": "Pharmacodynamics",
+        "definition": "The study of how drugs affect the body through interactions with receptors and other molecular targets."
+      },
+      {
+        "term": "First-Pass Metabolism",
+        "definition": "Metabolism of a drug by the liver before it reaches systemic circulation, reducing bioavailability of oral drugs."
+      },
+      {
+        "term": "Extrapyramidal Symptoms",
+        "definition": "Movement disorders caused by dopamine blockade in the nigrostriatal pathway, including dystonia, akathisia, parkinsonism, and tardive dyskinesia."
+      }
     ],
     "references": [
-      {"id": "1", "authors": "Stahl, S. M.", "year": 2021, "title": "Stahl's Essential Psychopharmacology: Neuroscientific Basis and Practical Applications", "source": "Cambridge University Press (5th ed.)"},
-      {"id": "2", "authors": "Meyer, J. S., & Quenzer, L. F.", "year": 2018, "title": "Psychopharmacology: Drugs, the Brain, and Behavior", "source": "Oxford University Press (3rd ed.)"},
-      {"id": "3", "authors": "Schatzberg, A. F., & DeBattista, C.", "year": 2019, "title": "Manual of Clinical Psychopharmacology", "source": "American Psychiatric Publishing (9th ed.)"},
-      {"id": "4", "authors": "Brunton, L. L., Hilal-Dandan, R., & Knollmann, B. C.", "year": 2018, "title": "Goodman & Gilman's: The Pharmacological Basis of Therapeutics", "source": "McGraw-Hill (13th ed.)"},
-      {"id": "5", "authors": "Nestler, E. J., Hyman, S. E., Holtzman, D. M., & Bhatt, M.", "year": 2021, "title": "Molecular Neuropharmacology: A Foundation for Clinical Neuroscience", "source": "McGraw-Hill (4th ed.)"},
-      {"id": "6", "authors": "American Psychiatric Association", "year": 2010, "title": "Practice Guideline for the Treatment of Patients With Major Depressive Disorder", "source": "American Psychiatric Publishing (3rd ed.)"},
-      {"id": "7", "authors": "Volkow, N. D., & Morales, M.", "year": 2015, "title": "The Brain on Drugs: From Reward to Addiction", "source": "Cell, 162(3), 403-413"},
-      {"id": "8", "authors": "Koob, G. F., & Volkow, N. D.", "year": 2016, "title": "Neurobiology of Addiction: A Neurocircuitry Analysis", "source": "The Lancet Psychiatry, 3(8), 760-773"},
-      {"id": "9", "authors": "Cipriani, A., et al.", "year": 2018, "title": "Comparative Efficacy and Acceptability of 21 Antidepressant Drugs", "source": "The Lancet, 391(10128), 1357-1366"},
-      {"id": "10", "authors": "Leucht, S., et al.", "year": 2017, "title": "Sixty Years of Placebo-Controlled Antipsychotic Drug Trials in Acute Schizophrenia", "source": "American Journal of Psychiatry, 174(10), 927-942"}
-    ]
+      {
+        "id": "1",
+        "authors": "Stahl, S. M.",
+        "year": 2021,
+        "title": "Stahl's Essential Psychopharmacology: Neuroscientific Basis and Practical Applications",
+        "source": "Cambridge University Press (5th ed.)"
+      },
+      {
+        "id": "2",
+        "authors": "Meyer, J. S., & Quenzer, L. F.",
+        "year": 2018,
+        "title": "Psychopharmacology: Drugs, the Brain, and Behavior",
+        "source": "Oxford University Press (3rd ed.)"
+      },
+      {
+        "id": "3",
+        "authors": "Schatzberg, A. F., & DeBattista, C.",
+        "year": 2019,
+        "title": "Manual of Clinical Psychopharmacology",
+        "source": "American Psychiatric Association Publishing (9th ed.)"
+      },
+      {
+        "id": "4",
+        "authors": "Grilly, D. M., & Salerno, J.",
+        "year": 2016,
+        "title": "Drugs and Human Behavior",
+        "source": "Pearson (7th ed.)"
+      },
+      {
+        "id": "5",
+        "authors": "Julien, R. M., et al.",
+        "year": 2013,
+        "title": "A Primer of Drug Action",
+        "source": "Worth Publishers (13th ed.)"
+      },
+      {
+        "id": "6",
+        "authors": "Koob, G. F., Arends, M. A., & Le Moal, M.",
+        "year": 2014,
+        "title": "Drugs, Addiction, and the Brain",
+        "source": "Academic Press"
+      },
+      {
+        "id": "7",
+        "authors": "Preston, J. D., O'Neal, J. H., & Talaga, M. C.",
+        "year": 2021,
+        "title": "Handbook of Clinical Psychopharmacology for Therapists",
+        "source": "New Harbinger Publications (9th ed.)"
+      },
+      {
+        "id": "8",
+        "authors": "Iversen, L. L., et al.",
+        "year": 2019,
+        "title": "Introduction to Neuropsychopharmacology",
+        "source": "Oxford University Press"
+      },
+      {
+        "id": "9",
+        "authors": "Volkow, N. D., et al.",
+        "year": 2016,
+        "title": "Neurobiologic Advances from the Brain Disease Model of Addiction",
+        "source": "New England Journal of Medicine, 374(4), 363-371"
+      },
+      {
+        "id": "10",
+        "authors": "Nestler, E. J., Hyman, S. E., & Malenka, R. C.",
+        "year": 2020,
+        "title": "Molecular Neuropharmacology: A Foundation for Clinical Neuroscience",
+        "source": "McGraw-Hill (4th ed.)"
+      }
+    ],
+    "quiz": [
+      {
+        "id": "pp_q1",
+        "question": "What is the term for what the body does to a drug (absorption, distribution, metabolism, excretion)?",
+        "options": [
+          "Pharmacodynamics",
+          "Pharmacokinetics",
+          "Bioavailability",
+          "Therapeutic Index"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pharmacokinetics refers to the movement of drugs through the body, while pharmacodynamics refers to the drug's effect on the body."
+      },
+      {
+        "id": "pp_q2",
+        "question": "Which class of antidepressants works by blocking the reuptake of both serotonin and norepinephrine?",
+        "options": [
+          "SSRIs",
+          "MAOIs",
+          "SNRIs",
+          "TCAs"
+        ],
+        "correctIndex": 2,
+        "explanation": "SNRIs (Serotonin-Norepinephrine Reuptake Inhibitors) block the reuptake of both neurotransmitters."
+      },
+      {
+        "id": "pp_q3",
+        "question": "What is the primary mechanism of action for benzodiazepines?",
+        "options": [
+          "Dopamine antagonism",
+          "Serotonin reuptake inhibition",
+          "Positive allosteric modulation of GABA-A receptors",
+          "NMDA receptor blockade"
+        ],
+        "correctIndex": 2,
+        "explanation": "Benzodiazepines enhance the effect of GABA by binding to an allosteric site on the GABA-A receptor."
+      },
+      {
+        "id": "pp_q4",
+        "question": "Which brain pathway is most centrally involved in the rewarding effects of drugs of abuse?",
+        "options": [
+          "Nigrostriatal pathway",
+          "Mesolimbic dopamine system",
+          "Tuberoinfundibular pathway",
+          "Mesocortical pathway"
+        ],
+        "correctIndex": 1,
+        "explanation": "The mesolimbic dopamine system (VTA to Nucleus Accumbens) is the primary reward circuit in the brain."
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "The Discovery of Chlorpromazine",
+        "description": "The accidental discovery that launched modern psychopharmacology.",
+        "scenario": "In 1952, Henri Laborit was testing chlorpromazine as a way to reduce surgical shock. He noticed it produced a 'disinterest' in patients without loss of consciousness. He suggested its use in psychiatry, where it was found to dramatically reduce psychotic symptoms in patients with schizophrenia.",
+        "analysis": "This discovery shifted the treatment of mental illness from purely psychological or invasive physical methods (like lobotomy) to pharmacological ones, leading to the deinstitutionalization movement.",
+        "keyTakeaways": [
+          "Serendipity plays a major role in drug discovery",
+          "Antipsychotics revolutionized psychiatric care",
+          "Drugs can provide insights into the biological basis of mental disorders"
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "title": "Typical vs. Atypical Antipsychotics",
+        "description": "Comparison of first and second-generation antipsychotic medications.",
+        "headers": [
+          "Feature",
+          "First-Generation (Typical)",
+          "Second-Generation (Atypical)"
+        ],
+        "rows": [
+          {
+            "label": "Primary Mechanism",
+            "values": [
+              "D2 Antagonism",
+              "D2 + 5-HT2A Antagonism"
+            ]
+          },
+          {
+            "label": "EPS Risk",
+            "values": [
+              "High",
+              "Lower"
+            ]
+          },
+          {
+            "label": "Metabolic Risk",
+            "values": [
+              "Lower",
+              "Higher (weight gain, diabetes)"
+            ]
+          },
+          {
+            "label": "Effect on Negative Symptoms",
+            "values": [
+              "Minimal",
+              "Potentially better"
+            ]
+          }
+        ]
+      }
+    ],
+    "diagrams": [
+      {
+        "id": "pp_d1",
+        "title": "Drug ADME Cycle",
+        "description": "The four stages of pharmacokinetics.",
+        "type": "cycle",
+        "nodes": [
+          {
+            "id": "1",
+            "label": "Absorption (Entry into blood)"
+          },
+          {
+            "id": "2",
+            "label": "Distribution (Movement to tissues/brain)"
+          },
+          {
+            "id": "3",
+            "label": "Metabolism (Breakdown by liver)"
+          },
+          {
+            "id": "4",
+            "label": "Excretion (Removal by kidneys)"
+          }
+        ]
+      }
+    ],
+    "readingTime": 19,
+    "difficulty": "advanced"
   }
 }

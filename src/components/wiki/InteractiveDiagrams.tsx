@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Share2, ChevronRight, Circle } from "lucide-react";
+import { Share2, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { ArticleDiagram } from "@/lib/articles";
 
@@ -61,13 +61,6 @@ export function InteractiveDiagrams({
             )}
             {diagram.type === "comparison" && (
               <ComparisonDiagram 
-                diagram={diagram}
-                selectedNode={selectedNode}
-                onNodeSelect={setSelectedNode}
-              />
-            )}
-            {diagram.type === "timeline" && (
-              <TimelineDiagram 
                 diagram={diagram}
                 selectedNode={selectedNode}
                 onNodeSelect={setSelectedNode}
@@ -240,7 +233,7 @@ function ComparisonDiagram({
           key={node.id}
           onClick={() => onNodeSelect(selectedNode === node.id ? null : node.id)}
           className={cn(
-            "p-4 rounded-lg border-2 transition-all text-left",
+            "p-4 rounded-lg border-2 transition-all text-start",
             selectedNode === node.id
               ? "border-primary bg-primary/10"
               : "border-border bg-card hover:border-primary/50"
@@ -252,56 +245,6 @@ function ComparisonDiagram({
           )}
         </button>
       ))}
-    </div>
-  );
-}
-
-// Timeline Diagram Component
-function TimelineDiagram({ 
-  diagram, 
-  selectedNode, 
-  onNodeSelect 
-}: { 
-  diagram: ArticleDiagram; 
-  selectedNode: string | null;
-  onNodeSelect: (id: string | null) => void;
-}) {
-  return (
-    <div className="relative">
-      {/* Timeline Line */}
-      <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-border" />
-      
-      {/* Timeline Items */}
-      <div className="space-y-6 pl-12">
-        {diagram.nodes.map((node) => (
-          <div key={node.id} className="relative">
-            {/* Timeline Dot */}
-            <Circle 
-              className={cn(
-                "absolute -left-[38px] top-1 h-4 w-4",
-                selectedNode === node.id 
-                  ? "text-primary fill-primary" 
-                  : "text-border fill-background"
-              )} 
-            />
-            
-            <button
-              onClick={() => onNodeSelect(selectedNode === node.id ? null : node.id)}
-              className={cn(
-                "w-full p-3 rounded-lg border-2 transition-all text-left",
-                selectedNode === node.id
-                  ? "border-primary bg-primary/10"
-                  : "border-border bg-card hover:border-primary/50"
-              )}
-            >
-              <h4 className="font-medium">{node.label}</h4>
-              {node.description && (
-                <p className="text-xs text-muted-foreground mt-1">{node.description}</p>
-              )}
-            </button>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }

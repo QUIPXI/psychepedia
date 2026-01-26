@@ -395,17 +395,6 @@ body {
   line-height: 2;
 }
 
-/* RTL flex and layout adjustments */
-.rtl .flex-row {
-  flex-direction: row-reverse;
-}
-
-.rtl .flex.items-center.gap-1,
-.rtl .flex.items-center.gap-2,
-.rtl .flex.items-center.gap-4 {
-  flex-direction: row-reverse;
-}
-
 /* RTL callout */
 .rtl .callout {
   border-left: none;
@@ -418,19 +407,17 @@ body {
   flex-direction: row-reverse;
 }
 
-/* RTL button icon order */
-.rtl button .flex.items-center.gap-2 {
-  flex-direction: row-reverse;
-}
-
 /* RTL breadcrumb */
 .rtl nav[aria-label="Breadcrumb"] {
   direction: rtl;
 }
 
-/* RTL article header metadata */
-.rtl .flex.flex-wrap.items-center {
-  flex-direction: row-reverse;
+/* RTL definition list border flip */
+.rtl dl dd {
+  padding-left: 0;
+  padding-right: 1rem;
+  border-left: none;
+  border-right: 2px solid var(--primary);
 }
 
 /* Logical properties for RTL/LTR */
@@ -453,4 +440,11 @@ body {
   .prose {
     max-width: none;
   }
+}
+
+/* Hide native search clear button in Chrome/Safari/Edge */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
 }
