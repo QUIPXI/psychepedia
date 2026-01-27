@@ -17,6 +17,8 @@ export interface Article extends ArticleMeta {
   slug: string;
   content: string;
   headings: Heading[];
+  prerequisites?: string[];
+  experiment?: string;
 }
 
 export interface Heading {

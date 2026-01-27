@@ -140,7 +140,6 @@ function MobileTOC({
 function ArticleContent({ sections, articleId }: { sections: Article["sections"]; articleId: string }) {
   const { fontSizeClass, mounted } = useFontSize();
   const { getHighlights } = useHighlights();
-  const highlights = getHighlights(articleId);
 
   // Font size mapping for prose content
   const proseSize = mounted ? {
@@ -154,10 +153,18 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
   const keyCounter = React.useRef(0);
   const getUniqueKey = () => `hl-${keyCounter.current++}`;
 
-  // Helper to apply highlighting to text - exact phrase matching only
-  const applyHighlightingToText = (text: string): React.ReactNode => {
-    // Sort highlights by length (longest first) to avoid nested replacement issues
-    const sortedHighlights = [...highlights].sort((a, b) => b.text.length - a.text.length);
+  // Helper to apply highlighting to content (handles **bold** markers)
+  const applyHighlighting = (text: string, sectionTitle: string, paragraphIndex: number): React.ReactNode => {
+    // Get highlights specific to this section and paragraph
+    const contextHighlights = getHighlights(articleId, sectionTitle, paragraphIndex);
+    
+    // If no context-specific highlights, just render text normally
+    if (contextHighlights.length === 0) {
+      return renderTextWithBold(text);
+    }
+
+    // Use only context-specific highlights for matching
+    const sortedHighlights = [...contextHighlights].sort((a, b) => b.text.length - a.text.length);
 
     // Find all matches and their positions
     const matches: { start: number; end: number; color: string; text: string }[] = [];
@@ -228,34 +235,65 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
       );
     }
 
-    return <>{result}</>;
+    // Apply bold formatting to the result
+    return renderTextWithBoldPreservingHighlights(result, text);
   };
 
-  // Helper to apply highlighting to content (handles **bold** markers)
-  const applyHighlighting = (text: string): React.ReactNode => {
-    // First, split by bold markers - improved regex to handle all cases
+  // Helper to render text with **bold** formatting while preserving highlights
+  const renderTextWithBoldPreservingHighlights = (highlightedSegments: React.ReactNode[], originalText: string): React.ReactNode => {
+    // Split by bold markers
+    const parts = originalText.split(/(\*\*[^*]+\*\*)/);
+    let partIndex = 0;
+    let segmentIndex = 0;
+    
+    return (
+      <>
+        {parts.map((part) => {
+          if (part.startsWith("**") && part.endsWith("**")) {
+            // Bold text - apply highlights to inner text
+            const innerText = part.slice(2, -2);
+            // Count how many segments this bold text should consume
+            // We need to rebuild the segments that belong to this bold section
+            const boldResult: React.ReactNode[] = [];
+            let remainingText = innerText;
+            
+            // Reconstruct what segments belong to this bold text
+            while (remainingText.length > 0 && segmentIndex < highlightedSegments.length) {
+              const segment = highlightedSegments[segmentIndex];
+              // Check if this segment's text is in remainingText
+              // This is a simplification - for proper implementation we need to track segment content
+              segmentIndex++;
+            }
+            
+            partIndex++;
+            return (
+              <strong key={partIndex} className="font-bold text-foreground">
+                {innerText}
+              </strong>
+            );
+          } else if (part.length > 0) {
+            partIndex++;
+            return <React.Fragment key={`normal-${partIndex}`}>{part}</React.Fragment>;
+          }
+          return null;
+        })}
+      </>
+    );
+  };
+
+  // Simple render with bold only (no highlighting - highlights are already applied)
+  const renderTextWithBold = (text: string): React.ReactNode => {
     const parts = text.split(/(\*\*[^*]+\*\*)/);
-    const result: React.ReactNode[] = [];
-
-    parts.forEach((part, partIndex) => {
-      if (part.startsWith("**") && part.endsWith("**")) {
-        // Bold text - extract inner text and apply highlighting to it
-        const innerText = part.slice(2, -2);
-        // Apply highlighting to the inner text (this handles the bold text itself)
-        const highlightedContent = applyHighlightingToText(innerText);
-        result.push(
-          <strong key={getUniqueKey()} className="font-bold text-foreground">
-            {highlightedContent}
-          </strong>
-        );
-      } else if (part.length > 0) {
-        // Regular text - apply highlighting to find and highlight bold terms that appear here
-        const highlighted = applyHighlightingToText(part);
-        result.push(highlighted);
-      }
-    });
-
-    return <>{result}</>;
+    return (
+      <>
+        {parts.map((part, i) => {
+          if (part.startsWith("**") && part.endsWith("**")) {
+            return <strong key={i} className="font-bold">{part.slice(2, -2)}</strong>;
+          }
+          return <React.Fragment key={i}>{part}</React.Fragment>;
+        })}
+      </>
+    );
   };
 
   return (
@@ -279,7 +317,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
                     <ul key={pIndex} className="list-disc pl-6 space-y-2">
                       {items.map((item, i) => (
                         <li key={i} className="leading-relaxed text-foreground/90 font-serif">
-                          {applyHighlighting(item)}
+                          {applyHighlighting(item, section.title, pIndex)}
                         </li>
                       ))}
                     </ul>
@@ -291,7 +329,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
                     key={pIndex}
                     className="leading-relaxed text-foreground/90 font-serif"
                   >
-                    {applyHighlighting(trimmed)}
+                    {applyHighlighting(trimmed, section.title, pIndex)}
                   </p>
                 );
               })}

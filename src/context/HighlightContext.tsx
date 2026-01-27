@@ -7,6 +7,8 @@ export interface Highlight {
     text: string;
     color: string;
     articleId: string;
+    sectionTitle: string;
+    paragraphIndex: number;
     createdAt: number;
 }
 
@@ -63,12 +65,15 @@ export function HighlightProvider({ children }: { children: ReactNode }) {
         }
     }, [highlights, isLoaded]);
 
-    const addHighlight = (articleId: string, text: string, color: string) => {
+    const addHighlight = (articleId: string, text: string, color: string, sectionTitle: string = "", paragraphIndex: number = 0) => {
         if (!text.trim()) return;
 
-        // Check if this exact text already exists for this article with any color
+        // Check if this exact text already exists for this article, section, and paragraph
         const existingIndex = highlights.findIndex(
-            (h) => h.articleId === articleId && h.text.toLowerCase() === text.trim().toLowerCase()
+            (h) => h.articleId === articleId && 
+                  h.sectionTitle === sectionTitle && 
+                  h.paragraphIndex === paragraphIndex &&
+                  h.text.toLowerCase() === text.trim().toLowerCase()
         );
 
         if (existingIndex >= 0) {
@@ -80,12 +85,14 @@ export function HighlightProvider({ children }: { children: ReactNode }) {
             };
             setHighlights(updated);
         } else {
-            // Add new highlight
+            // Add new highlight with context
             const highlight: Highlight = {
                 id: crypto.randomUUID(),
                 text: text.trim(),
                 color,
                 articleId,
+                sectionTitle,
+                paragraphIndex,
                 createdAt: Date.now(),
             };
             setHighlights((prev) => [highlight, ...prev]);
@@ -102,8 +109,13 @@ export function HighlightProvider({ children }: { children: ReactNode }) {
         setHighlights((prev) => prev.filter((h) => h.articleId !== articleId));
     };
 
-    const getHighlights = (articleId: string) => {
-        return highlights.filter((h) => h.articleId === articleId);
+    const getHighlights = (articleId: string, sectionTitle?: string, paragraphIndex?: number) => {
+        return highlights.filter((h) => {
+            if (h.articleId !== articleId) return false;
+            if (sectionTitle && h.sectionTitle !== sectionTitle) return false;
+            if (paragraphIndex !== undefined && h.paragraphIndex !== paragraphIndex) return false;
+            return true;
+        });
     };
 
     return (
