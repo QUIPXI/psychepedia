@@ -235,122 +235,100 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
       );
     }
 
-    // Apply bold formatting and return the result
-    return applyBoldToHighlightedText(result, text);
+    // Apply bold formatting and return
+    return renderWithBold(result, text);
   };
 
-  // Helper to apply **bold** formatting to highlighted content
-  const applyBoldToHighlightedText = (highlightedContent: React.ReactNode[], originalText: string): React.ReactNode => {
-    // Split by ** markers
-    const parts = originalText.split(/(\*\*[^*]+\*\*)/);
-    let contentIndex = 0;
+  // Render the highlighted content with **bold** formatting
+  const renderWithBold = (highlightedParts: React.ReactNode[], originalText: string): React.ReactNode => {
+    // Find bold ranges in original text
+    const boldRanges: { start: number; end: number; content: string }[] = [];
+    const regex = /(\*\*[^*]+\*\*)/g;
+    let match;
+
+    while ((match = regex.exec(originalText)) !== null) {
+      boldRanges.push({
+        start: match.index,
+        end: match.index + match[0].length,
+        content: match[0].slice(2, -2),
+      });
+    }
+
+    if (boldRanges.length === 0) {
+      return <>{highlightedParts}</>;
+    }
+
+    // Build result by walking through text and highlighting
     const result: React.ReactNode[] = [];
+    let currentPos = 0;
 
-    parts.forEach((part, partIndex) => {
-      if (part.startsWith("**") && part.endsWith("**")) {
-        // Bold section - extract inner text
-        const innerText = part.slice(2, -2);
-        // Try to find and preserve any highlighted segments within this bold text
-        const boldContent: React.ReactNode[] = [];
-        let remainingText = innerText;
+    boldRanges.forEach((bold, i) => {
+      // Add text before bold section
+      if (bold.start > currentPos) {
+        const textBefore = originalText.slice(currentPos, bold.start);
+        result.push(<span key={`normal-${i}`}>{textBefore}</span>);
+      }
 
-        while (remainingText.length > 0 && highlightedContent.length > 0) {
-          const nextContent = highlightedContent[0];
+      // Add bold section with highlights
+      const boldWithHighlights = applyHighlightsToText(bold.content, highlightedParts);
+      result.push(<strong key={`bold-${i}`} className="font-bold text-foreground">{boldWithHighlights}</strong>);
 
-          if (nextContent && typeof nextContent === 'object' && 'props' in nextContent) {
-            // It's a highlighted span - check if its text matches
-            const spanProps = (nextContent as any).props;
-            const spanText = typeof spanProps.children === 'string' ? spanProps.children : '';
-            
-            if (remainingText.startsWith(spanText)) {
-              // Perfect match - add the highlighted span
-              boldContent.push(nextContent);
-              highlightedContent.shift();
-              remainingText = remainingText.slice(spanText.length);
-            } else if (remainingText.includes(spanText)) {
-              // Partial match - split the text
-              const parts = remainingText.split(spanText);
-              boldContent.push(<React.Fragment key={`bold-text-${boldContent.length}`}>{parts[0]}</React.Fragment>);
-              boldContent.push(nextContent);
-              highlightedContent.shift();
-              remainingText = parts.slice(1).join(spanText);
-            } else {
-              // No match - add plain text
-              const match = remainingText.match(/^[^\*]+/);
-              if (match) {
-                boldContent.push(<React.Fragment key={`bold-text-${boldContent.length}`}>{match[0]}</React.Fragment>);
-                remainingText = remainingText.slice(match[0].length);
-              } else {
-                break;
-              }
-            }
-          } else {
-            // Text fragment
-            const fragmentText = part;
-            if (remainingText.startsWith(fragmentText)) {
-              boldContent.push(<React.Fragment key={`bold-text-${boldContent.length}`}>{fragmentText}</React.Fragment>);
-              remainingText = remainingText.slice(fragmentText.length);
-            } else {
-              boldContent.push(<React.Fragment key={`bold-text-${boldContent.length}`}>{remainingText.slice(0, Math.min(10, remainingText.length))}</React.Fragment>);
-              remainingText = remainingText.slice(10);
-            }
-          }
-        }
+      currentPos = bold.end;
+    });
 
-        // Add any remaining plain text
-        if (remainingText.length > 0) {
-          boldContent.push(<React.Fragment key={`bold-remaining-${partIndex}`}>{remainingText}</React.Fragment>);
-        }
+    // Add remaining text
+    if (currentPos < originalText.length) {
+      const textAfter = originalText.slice(currentPos);
+      result.push(<span key={`normal-end`}>{textAfter}</span>);
+    }
 
-        result.push(
-          <strong key={`bold-${partIndex}`} className="font-bold text-foreground">
-            {boldContent.length > 0 ? boldContent : innerText}
-          </strong>
-        );
-      } else if (part.length > 0) {
-        // Normal text - consume highlighted content in order
-        let remainingText = part;
-        
-        while (remainingText.length > 0 && highlightedContent.length > 0) {
-          const nextContent = highlightedContent[0];
-          
-          if (nextContent && typeof nextContent === 'object' && 'props' in nextContent) {
-            const spanProps = (nextContent as any).props;
-            const spanText = typeof spanProps.children === 'string' ? spanProps.children : '';
-            
-            if (remainingText.startsWith(spanText)) {
-              result.push(nextContent);
-              highlightedContent.shift();
-              remainingText = remainingText.slice(spanText.length);
-            } else if (remainingText.includes(spanText)) {
-              const parts = remainingText.split(spanText);
-              result.push(<React.Fragment key={`normal-${result.length}`}>{parts[0]}</React.Fragment>);
-              result.push(nextContent);
-              highlightedContent.shift();
-              remainingText = parts.slice(1).join(spanText);
-            } else {
-              const match = remainingText.match(/^[^\*]+/);
-              if (match) {
-                result.push(<React.Fragment key={`normal-${result.length}`}>{match[0]}</React.Fragment>);
-                remainingText = remainingText.slice(match[0].length);
-              } else {
-                break;
-              }
-            }
+    return <>{result}</>;
+  };
+
+  // Apply highlights from the pool to text content
+  const applyHighlightsToText = (text: string, highlightedParts: React.ReactNode[]): React.ReactNode => {
+    const result: React.ReactNode[] = [];
+    let remainingText = text;
+    let partIndex = 0;
+
+    while (remainingText.length > 0 && highlightedParts.length > 0) {
+      const next = highlightedParts[0];
+      
+      if (next && typeof next === 'object' && 'props' in next) {
+        // It's a highlighted span
+        const spanText = (next as any).props.children;
+        if (typeof spanText === 'string' && remainingText.includes(spanText)) {
+          const parts = remainingText.split(spanText);
+          result.push(<span key={`hl-${partIndex++}`}>{parts[0]}</span>);
+          result.push(next);
+          highlightedParts.shift();
+          remainingText = parts.slice(1).join(spanText);
+        } else if (remainingText.startsWith(spanText)) {
+          result.push(next);
+          highlightedParts.shift();
+          remainingText = remainingText.slice(spanText.length);
+        } else {
+          const idx = remainingText.indexOf(spanText);
+          if (idx > 0) {
+            result.push(<span key={`hl-${partIndex++}`}>{remainingText.slice(0, idx)}</span>);
+            remainingText = remainingText.slice(idx);
           } else {
             break;
           }
         }
-
-        if (remainingText.length > 0) {
-          result.push(<React.Fragment key={`normal-end-${partIndex}`}>{remainingText}</React.Fragment>);
-        }
+      } else {
+        break;
       }
-    });
+    }
 
-    // Add any remaining highlighted content
-    while (highlightedContent.length > 0) {
-      result.push(highlightedContent.shift());
+    // Add remaining text
+    if (remainingText.length > 0) {
+      result.push(<span key={`hl-${partIndex++}`}>{remainingText}</span>);
+    }
+
+    // Consume any remaining highlighted parts
+    while (highlightedParts.length > 0) {
+      result.push(highlightedParts.shift());
     }
 
     return <>{result}</>;
