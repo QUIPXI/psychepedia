@@ -102,7 +102,39 @@ export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
             // Strip ** markers if present (user selected bold text)
             const cleanText = selectedText.replace(/\*\*/g, '').trim();
             if (cleanText) {
-                addHighlight(articleId, cleanText, color);
+                // Find the section and paragraph context from the selection
+                const selection = window.getSelection();
+                let sectionTitle = "";
+                let paragraphIndex = 0;
+
+                if (selection && selection.rangeCount > 0) {
+                    const range = selection.getRangeAt(0);
+                    const node = range.startContainer;
+
+                    // Find the closest section and paragraph
+                    const sectionEl = node.parentElement?.closest('section');
+                    const paragraphEl = node.parentElement?.closest('p, li');
+
+                    if (sectionEl) {
+                        const heading = sectionEl.querySelector('h2');
+                        sectionTitle = heading?.textContent || "";
+                    }
+
+                    if (paragraphEl) {
+                        const parentSection = paragraphEl.closest('section');
+                        if (parentSection) {
+                            const paragraphs = parentSection.querySelectorAll('p, li');
+                            for (let i = 0; i < paragraphs.length; i++) {
+                                if (paragraphs[i] === paragraphEl) {
+                                    paragraphIndex = i;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                addHighlight(articleId, cleanText, color, sectionTitle, paragraphIndex);
             }
             handleClearSelection();
         }

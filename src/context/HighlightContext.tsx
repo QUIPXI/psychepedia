@@ -18,10 +18,10 @@ interface HighlightContextType {
     setIsHighlightEnabled: (enabled: boolean) => void;
     selectedColor: string;
     setSelectedColor: (color: string) => void;
-    addHighlight: (articleId: string, text: string, color: string) => void;
+    addHighlight: (articleId: string, text: string, color: string, sectionTitle?: string, paragraphIndex?: number) => void;
     removeHighlight: (id: string) => void;
     clearHighlights: (articleId: string) => void;
-    getHighlights: (articleId: string) => Highlight[];
+    getHighlights: (articleId: string, sectionTitle?: string, paragraphIndex?: number) => Highlight[];
     selectedText: string | null;
     setSelectedText: (text: string | null) => void;
 }
