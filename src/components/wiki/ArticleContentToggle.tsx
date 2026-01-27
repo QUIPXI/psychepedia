@@ -150,18 +150,12 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
     "text-xl": "prose-xl",
   }[fontSizeClass] || "prose-base" : "prose-base";
 
-  // Helper to apply highlighting to content - works on the full text including ** markers
-  // This allows highlighting any selected text, whether it's bold or not
-  const applyHighlighting = (text: string): React.ReactNode => {
-    if (highlights.length === 0) {
-      // No highlights - just render the text normally with bold formatting
-      return renderTextWithBold(text);
-    }
-
+  // Helper to apply highlighting to text - exact phrase matching only
+  const applyHighlightingToText = (text: string): React.ReactNode => {
     // Sort highlights by length (longest first) to avoid nested replacement issues
     const sortedHighlights = [...highlights].sort((a, b) => b.text.length - a.text.length);
 
-    // Find all matches and their positions in the full text
+    // Find all matches and their positions
     const matches: { start: number; end: number; color: string; text: string }[] = [];
 
     for (const highlight of sortedHighlights) {
@@ -193,26 +187,28 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
     // Sort matches by position
     matches.sort((a, b) => a.start - b.start);
 
-    // Build the result - apply bold formatting AND highlighting
+    // Build the result with highlighted segments
     const result: React.ReactNode[] = [];
     let lastIndex = 0;
 
     matches.forEach((match, matchIndex) => {
       // Add non-highlighted text before this match
       if (match.start > lastIndex) {
-        const textBefore = text.slice(lastIndex, match.start);
-        result.push(renderTextWithBold(textBefore));
+        result.push(
+          <React.Fragment key={`text-${matchIndex}`}>
+            {text.slice(lastIndex, match.start)}
+          </React.Fragment>
+        );
       }
 
-      // Add highlighted text - wrap in span but also apply bold if it's within bold markers
-      const matchedText = text.slice(match.start, match.end);
+      // Add highlighted text
       result.push(
         <span
           key={`highlight-${matchIndex}`}
           className="rounded px-0.5"
           style={{ backgroundColor: match.color }}
         >
-          {matchedText}
+          {text.slice(match.start, match.end)}
         </span>
       );
 
@@ -221,26 +217,41 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
 
     // Add remaining text after last match
     if (lastIndex < text.length) {
-      const textAfter = text.slice(lastIndex);
-      result.push(renderTextWithBold(textAfter));
+      result.push(
+        <React.Fragment key="text-end">
+          {text.slice(lastIndex)}
+        </React.Fragment>
+      );
     }
 
     return <>{result}</>;
   };
 
-  // Helper to render text with **bold** formatting (no highlighting)
-  const renderTextWithBold = (text: string): React.ReactNode => {
+  // Helper to apply highlighting to content (handles **bold** markers)
+  const applyHighlighting = (text: string): React.ReactNode => {
+    // First, split by bold markers - improved regex to handle all cases
     const parts = text.split(/(\*\*[^*]+\*\*)/);
-    return (
-      <>
-        {parts.map((part, i) => {
-          if (part.startsWith("**") && part.endsWith("**")) {
-            return <strong key={i} className="font-bold">{part.slice(2, -2)}</strong>;
-          }
-          return <React.Fragment key={i}>{part}</React.Fragment>;
-        })}
-      </>
-    );
+    const result: React.ReactNode[] = [];
+
+    parts.forEach((part, partIndex) => {
+      if (part.startsWith("**") && part.endsWith("**")) {
+        // Bold text - extract inner text and apply highlighting to it
+        const innerText = part.slice(2, -2);
+        // Apply highlighting to the inner text (this handles the bold text itself)
+        const highlightedContent = applyHighlightingToText(innerText);
+        result.push(
+          <strong key={partIndex} className="font-bold text-foreground">
+            {highlightedContent}
+          </strong>
+        );
+      } else if (part.length > 0) {
+        // Regular text - apply highlighting to find and highlight bold terms that appear here
+        const highlighted = applyHighlightingToText(part);
+        result.push(highlighted);
+      }
+    });
+
+    return <>{result}</>;
   };
 
   return (
