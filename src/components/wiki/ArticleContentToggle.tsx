@@ -151,7 +151,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
   }[fontSizeClass] || "prose-base" : "prose-base";
 
   // Helper to apply highlighting to text - exact phrase matching only
-  const applyHighlightingToText = (text: string): React.ReactNode => {
+  const applyHighlightingToText = (text: string, keyPrefix: string = ""): React.ReactNode => {
     // Sort highlights by length (longest first) to avoid nested replacement issues
     const sortedHighlights = [...highlights].sort((a, b) => b.text.length - a.text.length);
 
@@ -195,7 +195,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
       // Add non-highlighted text before this match
       if (match.start > lastIndex) {
         result.push(
-          <React.Fragment key={`text-${matchIndex}`}>
+          <React.Fragment key={`${keyPrefix}text-${matchIndex}`}>
             {text.slice(lastIndex, match.start)}
           </React.Fragment>
         );
@@ -204,7 +204,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
       // Add highlighted text
       result.push(
         <span
-          key={`highlight-${matchIndex}`}
+          key={`${keyPrefix}highlight-${matchIndex}`}
           className="rounded px-0.5"
           style={{ backgroundColor: match.color }}
         >
@@ -218,7 +218,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
     // Add remaining text after last match
     if (lastIndex < text.length) {
       result.push(
-        <React.Fragment key="text-end">
+        <React.Fragment key={`${keyPrefix}text-end`}>
           {text.slice(lastIndex)}
         </React.Fragment>
       );
@@ -228,7 +228,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
   };
 
   // Helper to apply highlighting to content (handles **bold** markers)
-  const applyHighlighting = (text: string): React.ReactNode => {
+  const applyHighlighting = (text: string, keyPrefix: string = ""): React.ReactNode => {
     // First, split by bold markers - improved regex to handle all cases
     const parts = text.split(/(\*\*[^*]+\*\*)/);
     const result: React.ReactNode[] = [];
@@ -238,15 +238,15 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
         // Bold text - extract inner text and apply highlighting to it
         const innerText = part.slice(2, -2);
         // Apply highlighting to the inner text (this handles the bold text itself)
-        const highlightedContent = applyHighlightingToText(innerText);
+        const highlightedContent = applyHighlightingToText(innerText, `${keyPrefix}b${partIndex}-`);
         result.push(
-          <strong key={partIndex} className="font-bold text-foreground">
+          <strong key={`${keyPrefix}bold-${partIndex}`} className="font-bold text-foreground">
             {highlightedContent}
           </strong>
         );
       } else if (part.length > 0) {
         // Regular text - apply highlighting to find and highlight bold terms that appear here
-        const highlighted = applyHighlightingToText(part);
+        const highlighted = applyHighlightingToText(part, `${keyPrefix}n${partIndex}-`);
         result.push(highlighted);
       }
     });
@@ -275,7 +275,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
                     <ul key={pIndex} className="list-disc pl-6 space-y-2">
                       {items.map((item, i) => (
                         <li key={i} className="leading-relaxed text-foreground/90 font-serif">
-                          {applyHighlighting(item)}
+                          {applyHighlighting(item, `p${pIndex}-li${i}-`)}
                         </li>
                       ))}
                     </ul>
@@ -287,7 +287,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
                     key={pIndex}
                     className="leading-relaxed text-foreground/90 font-serif"
                   >
-                    {applyHighlighting(trimmed)}
+                    {applyHighlighting(trimmed, `p${pIndex}-`)}
                   </p>
                 );
               })}
