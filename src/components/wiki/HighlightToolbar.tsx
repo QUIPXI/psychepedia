@@ -99,7 +99,11 @@ export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
     // Apply highlight with selected color
     const handleHighlight = useCallback((color: string) => {
         if (selectedText) {
-            addHighlight(articleId, selectedText, color);
+            // Strip ** markers if present (user selected bold text)
+            const cleanText = selectedText.replace(/\*\*/g, '').trim();
+            if (cleanText) {
+                addHighlight(articleId, cleanText, color);
+            }
             handleClearSelection();
         }
     }, [articleId, selectedText, addHighlight, handleClearSelection]);
