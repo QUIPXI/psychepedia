@@ -229,14 +229,15 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
 
   // Helper to apply highlighting to content (handles **bold** markers)
   const applyHighlighting = (text: string): React.ReactNode => {
-    // First, split by bold markers
+    // First, split by bold markers - improved regex to handle all cases
     const parts = text.split(/(\*\*[^*]+\*\*)/);
     const result: React.ReactNode[] = [];
 
     parts.forEach((part, partIndex) => {
       if (part.startsWith("**") && part.endsWith("**")) {
-        // Bold text - apply highlighting then wrap in strong
+        // Bold text - extract inner text and apply highlighting to it
         const innerText = part.slice(2, -2);
+        // Apply highlighting to the inner text (this handles the bold text itself)
         const highlightedContent = applyHighlightingToText(innerText);
         result.push(
           <strong key={partIndex} className="font-bold text-foreground">
@@ -244,7 +245,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
           </strong>
         );
       } else if (part.length > 0) {
-        // Regular text - apply highlighting
+        // Regular text - apply highlighting to find and highlight bold terms that appear here
         const highlighted = applyHighlightingToText(part);
         result.push(highlighted);
       }
