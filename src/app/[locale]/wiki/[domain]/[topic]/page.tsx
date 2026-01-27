@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { useLocale } from "next-intl";
 import { Clock, Calendar, User } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { KeyConcepts } from "@/components/wiki/KeyConcepts";
@@ -14,11 +15,27 @@ import { ComparisonTables } from "@/components/wiki/ComparisonTables";
 import { InteractiveDiagrams } from "@/components/wiki/InteractiveDiagrams";
 import { CiteButton } from "@/components/wiki/CiteButton";
 import { HighlightToggle } from "@/components/wiki/HighlightToggle";
+import { useHighlights } from "@/context/HighlightContext";
 import { getArticle, loadArticles } from "@/lib/articles";
 import { locales } from "@/i18n/config";
 import { ArticleHighlighter } from "@/components/wiki/ArticleHighlighter";
 import { CollapsibleExperiment } from "@/components/wiki/CollapsibleExperiment";
 import StroopTest from "@/components/experiments/StroopTest";
+
+// Client component for highlight helper text
+function HighlightHelperText() {
+    const { isHighlightEnabled } = useHighlights();
+    const locale = useLocale();
+    const isRtl = locale === "ar";
+
+    if (!isHighlightEnabled) return null;
+
+    return (
+        <span className="text-xs text-muted-foreground ml-2">
+            ({isRtl ? "النصوص الغامقة تحتاج لتظليل منفصل" : "Bold texts need to be highlighted separately"})
+        </span>
+    );
+}
 
 interface TopicPageProps {
   params: Promise<{ locale: string; domain: string; topic: string }>;
@@ -116,6 +133,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
                 </span>
                 <CiteButton title={article.title} domain={domain} topic={topic} locale={locale} />
                 <HighlightToggle />
+                <HighlightHelperText />
               </div>
             </header>
 
