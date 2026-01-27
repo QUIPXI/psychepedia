@@ -150,39 +150,66 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
     "text-xl": "prose-xl",
   }[fontSizeClass] || "prose-base" : "prose-base";
 
-  // Helper to apply highlighting to text
+  // Helper to apply highlighting to text - splits text and wraps highlighted parts
   const applyHighlighting = (text: string): React.ReactNode => {
+    // First, split by bold markers
     const parts = text.split(/(\*\*[^*]+\*\*)/);
+    const result: React.ReactNode[] = [];
 
-    return parts.map((part, i) => {
+    parts.forEach((part, partIndex) => {
       if (part.startsWith("**") && part.endsWith("**")) {
-        return (
-          <strong key={i} className="font-bold text-foreground">
+        // Bold text
+        result.push(
+          <strong key={partIndex} className="font-bold text-foreground">
             {part.slice(2, -2)}
           </strong>
         );
+      } else if (part.length > 0) {
+        // Regular text - apply highlights word by word
+        const words = part.split(/(\s+)/);
+        words.forEach((word, wordIndex) => {
+          if (word.trim().length === 0) {
+            // Whitespace
+            result.push(<React.Fragment key={`${partIndex}-${wordIndex}`}>{word}</React.Fragment>);
+          } else {
+            // Check if this word/phrase matches any highlight
+            let highlighted = false;
+            let highlightColor = "";
+
+            for (const highlight of highlights) {
+              const highlightText = highlight.text.toLowerCase().trim();
+              const wordLower = word.toLowerCase();
+
+              // Check if the word contains or is contained in the highlight text
+              // This allows word-by-word and phrase matching
+              if (wordLower.includes(highlightText) ||
+                  (highlightText.includes(wordLower) && word.trim().length > 2)) {
+                highlighted = true;
+                highlightColor = highlight.color;
+                break;
+              }
+            }
+
+            if (highlighted) {
+              const colorInfo = HIGHLIGHT_COLORS.find((c) => c.hex === highlightColor) || HIGHLIGHT_COLORS[0];
+              result.push(
+                <span
+                  key={`${partIndex}-${wordIndex}`}
+                  className="rounded px-0.5"
+                  style={{ backgroundColor: highlightColor }}
+                >
+                  {word}
+                </span>
+              );
+            } else {
+              result.push(<React.Fragment key={`${partIndex}-${wordIndex}`}>{word}</React.Fragment>);
+            }
+          }
+        });
       }
-
-      // Check for highlights within this part
-      let content = part;
-      highlights.forEach((highlight) => {
-        if (content.toLowerCase().includes(highlight.text.toLowerCase())) {
-          const colorInfo = HIGHLIGHT_COLORS.find((c) => c.hex === highlight.color) || HIGHLIGHT_COLORS[0];
-          // Simple case-insensitive replace
-          const regex = new RegExp(`(${highlight.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-          content = content.replace(regex, `<span style="background-color: ${highlight.color}; padding: 0 2px; border-radius: 2px;">$1</span>`);
-        }
-      });
-
-      // Render the content with highlights
-      return (
-        <span
-          key={i}
-          dangerouslySetInnerHTML={{ __html: content }}
-          className="highlighted-text"
-        />
-      );
     });
+
+    return <>{result}</>;
   };
 
   return (

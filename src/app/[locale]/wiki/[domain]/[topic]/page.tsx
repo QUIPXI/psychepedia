@@ -16,6 +16,7 @@ import { CiteButton } from "@/components/wiki/CiteButton";
 import { getArticle, loadArticles } from "@/lib/articles";
 import { locales } from "@/i18n/config";
 import { ArticleHighlighter } from "@/components/wiki/ArticleHighlighter";
+import { CollapsibleExperiment } from "@/components/wiki/CollapsibleExperiment";
 import StroopTest from "@/components/experiments/StroopTest";
 
 interface TopicPageProps {
@@ -116,18 +117,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
               </div>
             </header>
 
-            {/* Experiment Trigger */}
-            {(article as any).experiment === "stroop" && (
-              <div className="mb-8 p-6 bg-secondary/20 rounded-xl border-primary/20 border flex flex-col md:flex-row items-center justify-between gap-4">
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{locale === "ar" ? "تجربة تفاعلية" : "Interactive Experiment"}</h3>
-                  <p className="text-muted-foreground">{locale === "ar" ? "اختبر تركيزك وسرعة رد فعلك مع اختبار ستروب." : "Test your focus and reaction speed with the Stroop Test."}</p>
-                </div>
-                <StroopTest />
-              </div>
-            )}
-
-            {/* Prerequisites */}
+            {/* Case Studies */}
             {article.prerequisites && article.prerequisites.length > 0 && (
               <Prerequisites
                 prerequisites={article.prerequisites}
@@ -179,6 +169,18 @@ export default async function TopicPage({ params }: TopicPageProps) {
                 caseStudies={article.caseStudies}
                 locale={locale}
               />
+            )}
+
+            {/* Collapsible Experiment - Stroop Test */}
+            {(article as any).experiment === "stroop" && (
+              <CollapsibleExperiment
+                experimentType="stroop"
+                title={locale === "ar" ? "تأثير ستروب" : "Stroop Effect"}
+                description={locale === "ar" ? "اختبر تركيزك وسرعة رد فعلك" : "Test your focus and reaction speed"}
+                locale={locale}
+              >
+                <StroopTest />
+              </CollapsibleExperiment>
             )}
 
             {/* Quiz */}

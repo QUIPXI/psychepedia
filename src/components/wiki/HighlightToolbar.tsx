@@ -5,6 +5,7 @@ import { useHighlights, HIGHLIGHT_COLORS } from "@/context/HighlightContext";
 import { Button } from "@/components/ui/button";
 import { Highlighter, Trash2 } from "lucide-react";
 import { useLocale } from "next-intl";
+import { cn } from "@/lib/utils";
 
 interface HighlightToolbarProps {
     articleId: string;
@@ -13,13 +14,20 @@ interface HighlightToolbarProps {
 export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
     const locale = useLocale();
     const isRtl = locale === "ar";
-    const { selectedColor, setSelectedColor, addHighlight, selectedText, setSelectedText, getHighlights, removeHighlight } = useHighlights();
+    const { selectedColor, setSelectedColor, addHighlight, selectedText, setSelectedText, getHighlights, removeHighlight, isHighlightEnabled, setIsHighlightEnabled } = useHighlights();
     const [position, setPosition] = useState({ top: 0, left: 0, visible: false });
 
     const existingHighlights = getHighlights(articleId);
     const hasSelectedText = selectedText && selectedText.trim().length > 0;
 
     useEffect(() => {
+        if (!isHighlightEnabled) {
+            setPosition((prev) => ({ ...prev, visible: false }));
+            setSelectedText(null);
+            window.getSelection()?.removeAllRanges();
+            return;
+        }
+
         const handleSelectionChange = () => {
             const selection = window.getSelection();
 
@@ -42,7 +50,7 @@ export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
 
         document.addEventListener("selectionchange", handleSelectionChange);
         return () => document.removeEventListener("selectionchange", handleSelectionChange);
-    }, [hasSelectedText, setSelectedText]);
+    }, [isHighlightEnabled, hasSelectedText, setSelectedText]);
 
     const handleHighlight = (color: string) => {
         if (selectedText) {
@@ -55,7 +63,32 @@ export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
         window.getSelection()?.removeAllRanges();
     };
 
-    if (!position.visible) return null;
+    // Don't render if highlight mode is disabled
+    if (!isHighlightEnabled) return null;
+
+    if (!position.visible) {
+        return (
+            <div
+                className="fixed top-24 z-50 bg-background rounded-lg shadow-lg border p-2 flex items-center gap-2"
+                style={{
+                    [isRtl ? "right" : "left"]: "1rem",
+                }}
+            >
+                <Highlighter className="w-4 h-4 text-primary" />
+                <span className="text-sm text-muted-foreground mr-2">
+                    {isRtl ? "حدد نصاً للتظليل" : "Select text to highlight"}
+                </span>
+                <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setIsHighlightEnabled(false)}
+                    className="ml-2"
+                >
+                    {isRtl ? "إلغاء" : "Cancel"}
+                </Button>
+            </div>
+        );
+    }
 
     return (
         <>
@@ -101,7 +134,7 @@ export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
             {/* Selected text indicator */}
             {hasSelectedText && (
                 <div
-                    className="fixed inset-0 z-40"
+                    className="fixed inset-0 z-40 cursor-default"
                     onClick={handleClearSelection}
                     aria-hidden="true"
                 />

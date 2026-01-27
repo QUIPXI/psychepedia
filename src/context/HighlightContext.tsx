@@ -12,6 +12,8 @@ export interface Highlight {
 
 interface HighlightContextType {
     highlights: Highlight[];
+    isHighlightEnabled: boolean;
+    setIsHighlightEnabled: (enabled: boolean) => void;
     selectedColor: string;
     setSelectedColor: (color: string) => void;
     addHighlight: (articleId: string, text: string, color: string) => void;
@@ -36,6 +38,7 @@ const HighlightContext = createContext<HighlightContextType | undefined>(undefin
 
 export function HighlightProvider({ children }: { children: ReactNode }) {
     const [highlights, setHighlights] = useState<Highlight[]>([]);
+    const [isHighlightEnabled, setIsHighlightEnabled] = useState(false);
     const [selectedColor, setSelectedColor] = useState(DEFAULT_COLOR);
     const [selectedText, setSelectedText] = useState<string | null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -63,15 +66,31 @@ export function HighlightProvider({ children }: { children: ReactNode }) {
     const addHighlight = (articleId: string, text: string, color: string) => {
         if (!text.trim()) return;
 
-        const highlight: Highlight = {
-            id: crypto.randomUUID(),
-            text: text.trim(),
-            color,
-            articleId,
-            createdAt: Date.now(),
-        };
+        // Check if this exact text already exists for this article with any color
+        const existingIndex = highlights.findIndex(
+            (h) => h.articleId === articleId && h.text.toLowerCase() === text.trim().toLowerCase()
+        );
 
-        setHighlights((prev) => [highlight, ...prev]);
+        if (existingIndex >= 0) {
+            // Update existing highlight's color
+            const updated = [...highlights];
+            updated[existingIndex] = {
+                ...updated[existingIndex],
+                color: color,
+            };
+            setHighlights(updated);
+        } else {
+            // Add new highlight
+            const highlight: Highlight = {
+                id: crypto.randomUUID(),
+                text: text.trim(),
+                color,
+                articleId,
+                createdAt: Date.now(),
+            };
+            setHighlights((prev) => [highlight, ...prev]);
+        }
+
         setSelectedText(null);
     };
 
@@ -91,6 +110,8 @@ export function HighlightProvider({ children }: { children: ReactNode }) {
         <HighlightContext.Provider
             value={{
                 highlights,
+                isHighlightEnabled,
+                setIsHighlightEnabled,
                 selectedColor,
                 setSelectedColor,
                 addHighlight,

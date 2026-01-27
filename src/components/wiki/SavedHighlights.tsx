@@ -14,7 +14,7 @@ interface SavedHighlightsProps {
 export function SavedHighlights({ articleId }: SavedHighlightsProps) {
     const locale = useLocale();
     const isRtl = locale === "ar";
-    const { getHighlights, removeHighlight, clearHighlights, selectedText, setSelectedText } = useHighlights();
+    const { getHighlights, removeHighlight, clearHighlights, isHighlightEnabled, setIsHighlightEnabled } = useHighlights();
     const [isOpen, setIsOpen] = React.useState(false);
 
     const highlights = getHighlights(articleId);
@@ -34,7 +34,10 @@ export function SavedHighlights({ articleId }: SavedHighlightsProps) {
         removeHighlight(id);
     };
 
-    if (!hasHighlights) return null;
+    const handleToggleHighlightMode = () => {
+        setIsHighlightEnabled(!isHighlightEnabled);
+        setIsOpen(false);
+    };
 
     return (
         <>
@@ -44,12 +47,13 @@ export function SavedHighlights({ articleId }: SavedHighlightsProps) {
                 size="icon"
                 className={cn(
                     "fixed top-24 z-40 shadow-md bg-background/80 backdrop-blur-sm border-primary/20",
+                    isHighlightEnabled && "bg-primary/10 border-primary",
                     isRtl ? "left-4" : "right-4"
                 )}
                 onClick={() => setIsOpen(!isOpen)}
-                aria-label={isRtl ? "التظليلات المحفوظة" : "Saved Highlights"}
+                aria-label={isRtl ? "التظليلات" : "Highlights"}
             >
-                <Highlighter className="h-5 w-5 text-primary" />
+                <Highlighter className={`h-5 w-5 ${isHighlightEnabled ? "text-primary" : ""}`} />
                 {highlights.length > 0 && (
                     <span className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-primary text-[10px] text-primary-foreground flex items-center justify-center border-2 border-background">
                         {highlights.length}
@@ -76,50 +80,75 @@ export function SavedHighlights({ articleId }: SavedHighlightsProps) {
                         </Button>
                     </div>
 
+                    {/* Highlight Mode Toggle */}
+                    <Button
+                        className="w-full mb-4"
+                        variant={isHighlightEnabled ? "default" : "outline"}
+                        onClick={handleToggleHighlightMode}
+                    >
+                        <Highlighter className="w-4 h-4 mr-2" />
+                        {isHighlightEnabled
+                            ? (isRtl ? "إيقاف التظليل" : "Disable Highlight")
+                            : (isRtl ? "تفعيل التظليل" : "Enable Highlight")}
+                    </Button>
+
                     {/* Clear All Button */}
-                    <div className="flex justify-end mb-4">
-                        <Button
-                            variant="ghost"
-                            size="sm"
-                            className="text-muted-foreground hover:text-destructive"
-                            onClick={handleClearAll}
-                        >
-                            <Trash2 className="w-4 h-4 mr-1" />
-                            {isRtl ? "حذف الكل" : "Clear All"}
-                        </Button>
-                    </div>
+                    {hasHighlights && (
+                        <div className="flex justify-end mb-4">
+                            <Button
+                                variant="ghost"
+                                size="sm"
+                                className="text-muted-foreground hover:text-destructive"
+                                onClick={handleClearAll}
+                            >
+                                <Trash2 className="w-4 h-4 mr-1" />
+                                {isRtl ? "حذف الكل" : "Clear All"}
+                            </Button>
+                        </div>
+                    )}
 
                     {/* Highlights List */}
                     <div className="flex-1 overflow-y-auto space-y-3 -mx-2 px-2">
-                        {highlights.map((highlight) => {
-                            const colorInfo = getColorInfo(highlight.color);
-                            return (
-                                <div
-                                    key={highlight.id}
-                                    className="p-3 rounded-lg border bg-card text-card-foreground shadow-sm group relative"
-                                    style={{
-                                        borderLeftWidth: "4px",
-                                        borderLeftColor: colorInfo.borderHex,
-                                        backgroundColor: `${highlight.color}20`,
-                                    }}
-                                >
-                                    <Button
-                                        variant="ghost"
-                                        size="icon"
-                                        className="absolute top-1 right-1 h-6 w-6 opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-                                        onClick={() => handleRemove(highlight.id)}
+                        {!hasHighlights ? (
+                            <div className="text-center text-muted-foreground py-10">
+                                <Highlighter className="h-10 w-10 mx-auto mb-2 opacity-20" />
+                                <p className="text-sm">
+                                    {isRtl
+                                        ? "لا توجد تظليلات بعد. قم بتفعيل التظليل وتحديد النص."
+                                        : "No highlights yet. Enable highlight mode and select text."}
+                                </p>
+                            </div>
+                        ) : (
+                            highlights.map((highlight) => {
+                                const colorInfo = getColorInfo(highlight.color);
+                                return (
+                                    <div
+                                        key={highlight.id}
+                                        className="p-3 rounded-lg border bg-card text-card-foreground shadow-sm group relative"
+                                        style={{
+                                            borderLeftWidth: "4px",
+                                            borderLeftColor: colorInfo.borderHex,
+                                            backgroundColor: `${highlight.color}20`,
+                                        }}
                                     >
-                                        <Trash2 className="h-3 w-3" />
-                                    </Button>
+                                        <Button
+                                            variant="ghost"
+                                            size="icon"
+                                            className="absolute top-1 right-1 h-6 w-6 opacity-0 group-hover:opacity-100 transition-opacity text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                                            onClick={() => handleRemove(highlight.id)}
+                                        >
+                                            <Trash2 className="h-3 w-3" />
+                                        </Button>
 
-                                    <p className="text-sm italic pr-6">{highlight.text}</p>
+                                        <p className="text-sm italic pr-6">{highlight.text}</p>
 
-                                    <span className="text-xs text-muted-foreground mt-2 block">
-                                        {new Date(highlight.createdAt).toLocaleDateString()}
-                                    </span>
-                                </div>
-                            );
-                        })}
+                                        <span className="text-xs text-muted-foreground mt-2 block">
+                                            {new Date(highlight.createdAt).toLocaleDateString()}
+                                        </span>
+                                    </div>
+                                );
+                            })
+                        )}
                     </div>
                 </div>
             </div>
