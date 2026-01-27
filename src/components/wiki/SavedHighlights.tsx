@@ -14,7 +14,7 @@ interface SavedHighlightsProps {
 export function SavedHighlights({ articleId }: SavedHighlightsProps) {
     const locale = useLocale();
     const isRtl = locale === "ar";
-    const { getHighlights, removeHighlight, clearHighlights, isHighlightEnabled, setIsHighlightEnabled } = useHighlights();
+    const { getHighlights, removeHighlight, clearHighlights } = useHighlights();
     const [isOpen, setIsOpen] = React.useState(false);
 
     const highlights = getHighlights(articleId);
@@ -34,26 +34,20 @@ export function SavedHighlights({ articleId }: SavedHighlightsProps) {
         removeHighlight(id);
     };
 
-    const handleToggleHighlightMode = () => {
-        setIsHighlightEnabled(!isHighlightEnabled);
-        setIsOpen(false);
-    };
-
     return (
         <>
-            {/* Toggle Button */}
+            {/* Toggle Button - only shows count, no toggle functionality */}
             <Button
                 variant="outline"
                 size="icon"
                 className={cn(
                     "fixed top-24 z-40 shadow-md bg-background/80 backdrop-blur-sm border-primary/20",
-                    isHighlightEnabled && "bg-primary/10 border-primary",
                     isRtl ? "left-4" : "right-4"
                 )}
                 onClick={() => setIsOpen(!isOpen)}
-                aria-label={isRtl ? "التظليلات" : "Highlights"}
+                aria-label={isRtl ? "التظليلات المحفوظة" : "Saved Highlights"}
             >
-                <Highlighter className={`h-5 w-5 ${isHighlightEnabled ? "text-primary" : ""}`} />
+                <Highlighter className="h-5 w-5 text-primary" />
                 {highlights.length > 0 && (
                     <span className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-primary text-[10px] text-primary-foreground flex items-center justify-center border-2 border-background">
                         {highlights.length}
@@ -80,18 +74,6 @@ export function SavedHighlights({ articleId }: SavedHighlightsProps) {
                         </Button>
                     </div>
 
-                    {/* Highlight Mode Toggle */}
-                    <Button
-                        className="w-full mb-4"
-                        variant={isHighlightEnabled ? "default" : "outline"}
-                        onClick={handleToggleHighlightMode}
-                    >
-                        <Highlighter className="w-4 h-4 mr-2" />
-                        {isHighlightEnabled
-                            ? (isRtl ? "إيقاف التظليل" : "Disable Highlight")
-                            : (isRtl ? "تفعيل التظليل" : "Enable Highlight")}
-                    </Button>
-
                     {/* Clear All Button */}
                     {hasHighlights && (
                         <div className="flex justify-end mb-4">
@@ -114,8 +96,8 @@ export function SavedHighlights({ articleId }: SavedHighlightsProps) {
                                 <Highlighter className="h-10 w-10 mx-auto mb-2 opacity-20" />
                                 <p className="text-sm">
                                     {isRtl
-                                        ? "لا توجد تظليلات بعد. قم بتفعيل التظليل وتحديد النص."
-                                        : "No highlights yet. Enable highlight mode and select text."}
+                                        ? "لا توجد تظليلات بعد. استخدم زر التظليل في المقالة."
+                                        : "No highlights yet. Use the Highlight button in the article."}
                                 </p>
                             </div>
                         ) : (

@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useHighlights, HIGHLIGHT_COLORS } from "@/context/HighlightContext";
 import { Button } from "@/components/ui/button";
-import { Highlighter, Trash2 } from "lucide-react";
+import { Highlighter, X } from "lucide-react";
 import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 
@@ -14,62 +14,104 @@ interface HighlightToolbarProps {
 export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
     const locale = useLocale();
     const isRtl = locale === "ar";
-    const { selectedColor, setSelectedColor, addHighlight, selectedText, setSelectedText, getHighlights, removeHighlight, isHighlightEnabled, setIsHighlightEnabled } = useHighlights();
-    const [position, setPosition] = useState({ top: 0, left: 0, visible: false });
+    const { selectedColor, setSelectedColor, addHighlight, selectedText, setSelectedText, isHighlightEnabled } = useHighlights();
 
-    const existingHighlights = getHighlights(articleId);
-    const hasSelectedText = selectedText && selectedText.trim().length > 0;
+    const [position, setPosition] = useState<{ top: number; left: number } | null>(null);
+    const [hasSelection, setHasSelection] = useState(false);
 
-    useEffect(() => {
+    // Handle text selection
+    const handleSelectionChange = useCallback(() => {
         if (!isHighlightEnabled) {
-            setPosition((prev) => ({ ...prev, visible: false }));
-            setSelectedText(null);
-            window.getSelection()?.removeAllRanges();
+            setPosition(null);
+            setHasSelection(false);
             return;
         }
 
-        const handleSelectionChange = () => {
-            const selection = window.getSelection();
+        const selection = window.getSelection();
 
-            if (selection && selection.toString().trim().length > 0) {
-                const range = selection.getRangeAt(0);
-                const rect = range.getBoundingClientRect();
+        // Check if we have a valid selection within the document
+        if (selection && selection.toString().trim().length > 0) {
+            const selectionStr = selection.toString().trim();
 
-                setSelectedText(selection.toString().trim());
+            // Only proceed if selection is different from current
+            if (selectionStr !== selectedText) {
+                setSelectedText(selectionStr);
+                setHasSelection(true);
 
-                // Calculate toolbar position
-                setPosition({
-                    top: rect.top - 50,
-                    left: rect.left + (rect.width / 2) - 100,
-                    visible: true,
-                });
-            } else if (!hasSelectedText) {
-                setPosition((prev) => ({ ...prev, visible: false }));
+                // Get the bounding rect of the selection
+                try {
+                    const range = selection.getRangeAt(0);
+                    const rect = range.getBoundingClientRect();
+
+                    // Calculate toolbar position above the selection
+                    setPosition({
+                        top: rect.top - 48, // Position above the selection
+                        left: rect.left + (rect.width / 2) - 100, // Center horizontally
+                    });
+                } catch (e) {
+                    // Fallback if we can't get the range
+                    setPosition(null);
+                }
             }
+        } else {
+            // No selection - only clear if we already had a selection
+            if (hasSelection) {
+                setHasSelection(false);
+                setPosition(null);
+            }
+        }
+    }, [isHighlightEnabled, selectedText, setSelectedText, hasSelection]);
+
+    // Set up selection change listener
+    useEffect(() => {
+        if (!isHighlightEnabled) return;
+
+        // Use a timeout to debounce rapid selection changes
+        let timeoutId: NodeJS.Timeout | null = null;
+
+        const handleChange = () => {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+            timeoutId = setTimeout(() => {
+                handleSelectionChange();
+            }, 10);
         };
 
-        document.addEventListener("selectionchange", handleSelectionChange);
-        return () => document.removeEventListener("selectionchange", handleSelectionChange);
-    }, [isHighlightEnabled, hasSelectedText, setSelectedText]);
+        document.addEventListener("selectionchange", handleChange);
 
-    const handleHighlight = (color: string) => {
+        return () => {
+            document.removeEventListener("selectionchange", handleChange);
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+        };
+    }, [isHighlightEnabled, handleSelectionChange]);
+
+    // Clear selection and hide toolbar
+    const handleClearSelection = useCallback(() => {
+        setSelectedText(null);
+        setHasSelection(false);
+        setPosition(null);
+        window.getSelection()?.removeAllRanges();
+    }, [setSelectedText]);
+
+    // Apply highlight with selected color
+    const handleHighlight = useCallback((color: string) => {
         if (selectedText) {
             addHighlight(articleId, selectedText, color);
+            handleClearSelection();
         }
-    };
-
-    const handleClearSelection = () => {
-        setSelectedText(null);
-        window.getSelection()?.removeAllRanges();
-    };
+    }, [articleId, selectedText, addHighlight, handleClearSelection]);
 
     // Don't render if highlight mode is disabled
     if (!isHighlightEnabled) return null;
 
-    if (!position.visible) {
+    // Show hint when no selection
+    if (!hasSelection || !position) {
         return (
             <div
-                className="fixed top-24 z-50 bg-background rounded-lg shadow-lg border p-2 flex items-center gap-2"
+                className="fixed top-20 z-50 bg-background rounded-lg shadow-lg border p-2 flex items-center gap-2"
                 style={{
                     [isRtl ? "right" : "left"]: "1rem",
                 }}
@@ -78,21 +120,14 @@ export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
                 <span className="text-sm text-muted-foreground mr-2">
                     {isRtl ? "حدد نصاً للتظليل" : "Select text to highlight"}
                 </span>
-                <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setIsHighlightEnabled(false)}
-                    className="ml-2"
-                >
-                    {isRtl ? "إلغاء" : "Cancel"}
-                </Button>
             </div>
         );
     }
 
+    // Show color picker when selection exists
     return (
         <>
-            {/* Highlight Color Toolbar */}
+            {/* Color picker toolbar */}
             <div
                 className="fixed z-50 bg-background rounded-lg shadow-lg border p-2 flex items-center gap-2 animate-in fade-in slide-in-from-bottom-2 duration-200"
                 style={{
@@ -107,38 +142,27 @@ export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
                     <button
                         key={color.name}
                         onClick={() => handleHighlight(color.hex)}
-                        className={`w-7 h-7 rounded-full border-2 transition-transform hover:scale-110 ${
+                        className={cn(
+                            "w-7 h-7 rounded-full border-2 transition-transform hover:scale-110",
                             selectedColor === color.hex ? "border-foreground scale-110" : "border-transparent"
-                        }`}
+                        )}
                         style={{ backgroundColor: color.hex }}
                         title={color.name}
                     />
                 ))}
 
-                {hasSelectedText && (
-                    <>
-                        <div className="w-px h-6 bg-border mx-1" />
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            className="h-7 w-7"
-                            onClick={handleClearSelection}
-                            title={isRtl ? "إلغاء" : "Cancel"}
-                        >
-                            <Trash2 className="w-4 h-4" />
-                        </Button>
-                    </>
-                )}
-            </div>
+                <div className="w-px h-6 bg-border mx-1" />
 
-            {/* Selected text indicator */}
-            {hasSelectedText && (
-                <div
-                    className="fixed inset-0 z-40 cursor-default"
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-7 w-7"
                     onClick={handleClearSelection}
-                    aria-hidden="true"
-                />
-            )}
+                    title={isRtl ? "إلغاء" : "Cancel"}
+                >
+                    <X className="w-4 h-4" />
+                </Button>
+            </div>
         </>
     );
 }

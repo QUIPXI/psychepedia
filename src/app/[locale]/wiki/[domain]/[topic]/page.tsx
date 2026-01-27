@@ -13,6 +13,7 @@ import { CaseStudies } from "@/components/wiki/CaseStudies";
 import { ComparisonTables } from "@/components/wiki/ComparisonTables";
 import { InteractiveDiagrams } from "@/components/wiki/InteractiveDiagrams";
 import { CiteButton } from "@/components/wiki/CiteButton";
+import { HighlightToggle } from "@/components/wiki/HighlightToggle";
 import { getArticle, loadArticles } from "@/lib/articles";
 import { locales } from "@/i18n/config";
 import { ArticleHighlighter } from "@/components/wiki/ArticleHighlighter";
@@ -114,6 +115,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
                   {article.author}
                 </span>
                 <CiteButton title={article.title} domain={domain} topic={topic} locale={locale} />
+                <HighlightToggle />
               </div>
             </header>
 

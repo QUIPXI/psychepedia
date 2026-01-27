@@ -150,7 +150,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
     "text-xl": "prose-xl",
   }[fontSizeClass] || "prose-base" : "prose-base";
 
-  // Helper to apply highlighting to text - splits text and wraps highlighted parts
+  // Helper to apply highlighting to text - exact phrase matching only
   const applyHighlighting = (text: string): React.ReactNode => {
     // First, split by bold markers
     const parts = text.split(/(\*\*[^*]+\*\*)/);
@@ -158,54 +158,87 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
 
     parts.forEach((part, partIndex) => {
       if (part.startsWith("**") && part.endsWith("**")) {
-        // Bold text
+        // Bold text - also apply highlighting within it
+        const innerText = part.slice(2, -2);
         result.push(
           <strong key={partIndex} className="font-bold text-foreground">
-            {part.slice(2, -2)}
+            {innerText}
           </strong>
         );
       } else if (part.length > 0) {
-        // Regular text - apply highlights word by word
-        const words = part.split(/(\s+)/);
-        words.forEach((word, wordIndex) => {
-          if (word.trim().length === 0) {
-            // Whitespace
-            result.push(<React.Fragment key={`${partIndex}-${wordIndex}`}>{word}</React.Fragment>);
-          } else {
-            // Check if this word/phrase matches any highlight
-            let highlighted = false;
-            let highlightColor = "";
+        // Regular text - apply exact phrase highlighting
+        let remaining = part;
+        let offset = 0;
 
-            for (const highlight of highlights) {
-              const highlightText = highlight.text.toLowerCase().trim();
-              const wordLower = word.toLowerCase();
+        // Sort highlights by length (longest first) to avoid nested replacement issues
+        const sortedHighlights = [...highlights].sort((a, b) => b.text.length - a.text.length);
 
-              // Check if the word contains or is contained in the highlight text
-              // This allows word-by-word and phrase matching
-              if (wordLower.includes(highlightText) ||
-                  (highlightText.includes(wordLower) && word.trim().length > 2)) {
-                highlighted = true;
-                highlightColor = highlight.color;
-                break;
-              }
-            }
+        // Find all matches and their positions
+        const matches: { start: number; end: number; color: string; text: string }[] = [];
 
-            if (highlighted) {
-              const colorInfo = HIGHLIGHT_COLORS.find((c) => c.hex === highlightColor) || HIGHLIGHT_COLORS[0];
-              result.push(
-                <span
-                  key={`${partIndex}-${wordIndex}`}
-                  className="rounded px-0.5"
-                  style={{ backgroundColor: highlightColor }}
-                >
-                  {word}
-                </span>
-              );
-            } else {
-              result.push(<React.Fragment key={`${partIndex}-${wordIndex}`}>{word}</React.Fragment>);
+        for (const highlight of sortedHighlights) {
+          const highlightText = highlight.text.trim();
+          if (!highlightText) continue;
+
+          // Create regex for exact phrase match (case-insensitive)
+          const escapedText = highlightText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const regex = new RegExp(escapedText, 'gi');
+          let match;
+
+          while ((match = regex.exec(part)) !== null) {
+            // Check if this position is already covered by a longer match
+            const isOverlapping = matches.some(
+              (m) => match!.index >= m.start && match!.index < m.end
+            );
+
+            if (!isOverlapping) {
+              matches.push({
+                start: match.index,
+                end: match.index + match[0].length,
+                color: highlight.color,
+                text: match[0],
+              });
             }
           }
+        }
+
+        // Sort matches by position
+        matches.sort((a, b) => a.start - b.start);
+
+        // Build the result with highlighted segments
+        let lastIndex = 0;
+        matches.forEach((match, matchIndex) => {
+          // Add non-highlighted text before this match
+          if (match.start > lastIndex) {
+            result.push(
+              <span key={`${partIndex}-text-${matchIndex}`}>
+                {part.slice(lastIndex, match.start)}
+              </span>
+            );
+          }
+
+          // Add highlighted text
+          result.push(
+            <span
+              key={`${partIndex}-highlight-${matchIndex}`}
+              className="rounded px-0.5"
+              style={{ backgroundColor: match.color }}
+            >
+              {part.slice(match.start, match.end)}
+            </span>
+          );
+
+          lastIndex = match.end;
         });
+
+        // Add remaining text after last match
+        if (lastIndex < part.length) {
+          result.push(
+            <span key={`${partIndex}-text-end`}>
+              {part.slice(lastIndex)}
+            </span>
+          );
+        }
       }
     });
 
