@@ -76,11 +76,6 @@ export function Footer() {
             <h3 className="font-semibold mb-3">{t("interactiveTests")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/experiments/big-five" className="hover:text-foreground transition-colors">
-                  {locale === "ar" ? "السمات الخمس الكبرى" : "Big Five Personality"}
-                </Link>
-              </li>
-              <li>
                 <Link href="/experiments/iq" className="hover:text-foreground transition-colors">
                   {locale === "ar" ? "اختبار الذكاء" : "IQ Test"}
                 </Link>
@@ -93,11 +88,6 @@ export function Footer() {
               <li>
                 <Link href="/experiments/gad7" className="hover:text-foreground transition-colors">
                   {locale === "ar" ? "مقياس القلق" : "GAD-7"}
-                </Link>
-              </li>
-              <li>
-                <Link href="/experiments/phq9" className="hover:text-foreground transition-colors">
-                  {locale === "ar" ? "مقياس الاكتئاب" : "PHQ-9"}
                 </Link>
               </li>
             </ul>
