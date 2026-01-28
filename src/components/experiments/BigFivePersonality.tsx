@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback, useMemo } from "react";
 import { Button } from "@/components/ui/button";
-import { Play, RefreshCw, User, Info } from "lucide-react";
+import { Play, RefreshCw, User, Info, Brain, Heart, Shield, BookOpen, Briefcase, Users, ChevronDown } from "lucide-react";
 import { useLocale } from "next-intl";
 
 interface BigFiveQuestion {
@@ -14,6 +14,26 @@ interface BigFiveQuestion {
 interface BigFiveTrait {
   facets: string[];
   questions: BigFiveQuestion[];
+  description: {
+    en: string;
+    ar: string;
+  };
+  highDescription: {
+    en: string;
+    ar: string;
+  };
+  lowDescription: {
+    en: string;
+    ar: string;
+  };
+  careers: {
+    high: string[];
+    low: string[];
+  };
+  relationships: {
+    en: string;
+    ar: string;
+  };
 }
 
 // Trait and facet structure following Big Five best practices
@@ -31,7 +51,27 @@ const bigFiveStructure: Record<string, BigFiveTrait> = {
       { text: "I use difficult words.", key: "positive" },
       { text: "I spend time reflecting on things.", key: "positive" },
       { text: "I am not interested in art or music.", key: "negative", reverse: true },
-    ]
+    ],
+    description: {
+      en: "Reflects imagination, creativity, and preference for variety and new experiences.",
+      ar: "يعكس الخيال والإبداع وتفضيل التنوع والتجارب الجديدة."
+    },
+    highDescription: {
+      en: "You have a rich inner world and love exploring new ideas, art, and experiences. You're curious, creative, and open to unconventional perspectives.",
+      ar: "لديك عالم داخلي غني وتحب استكشاف الأفكار والفن والتجارب الجديدة. أنت فضولي ومبدع ومنفتح على وجهات النظر غير التقليدية."
+    },
+    lowDescription: {
+      en: "You prefer practical solutions and familiar routines. You focus on concrete facts and may find abstract thinking challenging.",
+      ar: "تفضل الحلول العملية والروتين المألوف. تركز على الحقائق الملموسة وقد تجد التفكير التجريدي صعباً."
+    },
+    careers: {
+      high: ["Artist", "Writer", "Scientist", "Designer", "Researcher", "Philosopher"],
+      low: ["Accountant", "Manager", "Administrator", "Security Officer", "Quality Control"]
+    },
+    relationships: {
+      en: "You appreciate partners who share your intellectual interests and enjoy trying new activities together.",
+      ar: "تتقد伙伴 الذين يشاركونك اهتماماتك الفكرية ويستمتعون بتجربة أنشطة جديدة معاً."
+    }
   },
   Conscientiousness: {
     facets: ["Self-Efficacy", "Orderliness", "Achievement Striving", "Self-Discipline"],
@@ -46,7 +86,27 @@ const bigFiveStructure: Record<string, BigFiveTrait> = {
       { text: "I feel competent.", key: "positive" },
       { text: "I am efficient.", key: "positive" },
       { text: "I often leave things undone.", key: "negative", reverse: true },
-    ]
+    ],
+    description: {
+      en: "Reflects self-discipline, organization, and goal-directed behavior.",
+      ar: "يعكس الانضباط الذاتي والتنظيم والسلوك الموجّه نحو الأهداف."
+    },
+    highDescription: {
+      en: "You're organized, responsible, and achievement-oriented. You plan ahead, meet deadlines, and take your commitments seriously.",
+      ar: "منظم ومسؤول وموجه نحو الإنجاز. تخطط للمستقبل وتلتزم بالمواعيد النهائية وتأخذ التزاماتك على محمل الجد."
+    },
+    lowDescription: {
+      en: "You're flexible and spontaneous, but may struggle with deadlines and organization. You prefer to keep your options open.",
+      ar: "مرن وعفوي، لكن قد تواجه صعوبة في المواعيد النهائية والتنظيم. تفضل إبقاء خياراتك مفتوحة."
+    },
+    careers: {
+      high: ["Executive", "Surgeon", "Project Manager", "Accountant", "Engineer", "Lawyer"],
+      low: ["Artist", "Entrepreneur", "Consultant", "Travel Guide", "Freelancer"]
+    },
+    relationships: {
+      en: "You value reliability and keep your promises. Partners appreciate your stability.",
+      ar: "تتقد الموثوقية وتفي بوعودك. يقدرك партнерات على ثباتك."
+    }
   },
   Extraversion: {
     facets: ["Friendliness", "Gregariousness", "Assertiveness", "Activity Level"],
@@ -61,7 +121,27 @@ const bigFiveStructure: Record<string, BigFiveTrait> = {
       { text: "I don't like to draw attention to myself.", key: "negative", reverse: true },
       { text: "I don't mind being the center of attention.", key: "positive" },
       { text: "I am quiet around strangers.", key: "negative", reverse: true },
-    ]
+    ],
+    description: {
+      en: "Reflects sociability, energy, and tendency to seek stimulation from others.",
+      ar: "يعكس الاجتماعية والطاقة والميل إلى البحث عن التحفيز من الآخرين."
+    },
+    highDescription: {
+      en: "You're energetic, outgoing, and draw energy from social interactions. You enjoy being around people and are comfortable in group settings.",
+      ar: "نشط و общиم وتجذب الطاقة من التفاعلات الاجتماعية. تستمتع Being around people and are comfortable in group settings."
+    },
+    lowDescription: {
+      en: "You prefer quieter environments and one-on-one interactions. You may find large gatherings draining but value deep connections.",
+      ar: "تفضل البيئات الهادئة والتفاعلات الثنائية. قد تجد التجمعات الكبيرة مُنهكة لكنك تقدر الروابط العميقة."
+    },
+    careers: {
+      high: ["Salesperson", "Politician", "Teacher", "Manager", "PR Specialist", "Marketing"],
+      low: ["Writer", "Researcher", "Librarian", "Accountant", "Software Developer", "Artist"]
+    },
+    relationships: {
+      en: "You thrive on social interaction and may need partners who can match your energy.",
+      ar: "تزدهر على التفاعل الاجتماعي وقد تحتاج إلى شركاء يمكنهم مواكبة طاقتك."
+    }
   },
   Agreeableness: {
     facets: ["Trust", "Straightforwardness", "Altruism", "Compliance"],
@@ -76,7 +156,27 @@ const bigFiveStructure: Record<string, BigFiveTrait> = {
       { text: "I feel others' emotions.", key: "positive" },
       { text: "I make people feel at ease.", key: "positive" },
       { text: "I tend to be critical of others.", key: "negative", reverse: true },
-    ]
+    ],
+    description: {
+      en: "Reflects tendency to be compassionate, cooperative, and trusting toward others.",
+      ar: "يعكس الميل إلى التعاطف والتعاون والثقة تجاه الآخرين."
+    },
+    highDescription: {
+      en: "You're warm, empathetic, and value harmony in relationships. You go out of your way to help others and avoid conflict.",
+      ar: "دافئ ومتempatique وتقدر الانسجام في العلاقات. تبذل جهداً إضافي لمساعدة الآخرين وتتجنب الصراعات."
+    },
+    lowDescription: {
+      en: "You're direct and competitive. You prioritize your own goals and aren't afraid to engage in healthy debate.",
+      ar: "مباشر وتنافسي. تعطي الأولوية لأهدافك ولا تخشى المشاركة في نقاش صحي."
+    },
+    careers: {
+      high: ["Counselor", "Nurse", "Social Worker", "Teacher", "Human Resources", "Volunteer Coordinator"],
+      low: ["Lawyer", "Judge", "Business Executive", "Military Officer", "Critic"]
+    },
+    relationships: {
+      en: "You value cooperation and compromise. Partners appreciate your empathy.",
+      ar: "تتقد التعاون والتنازل. يقدرك партнерات على تعاطفك."
+    }
   },
   Neuroticism: {
     facets: ["Anxiety", "Depression", "Self-Consciousness", "Vulnerability"],
@@ -91,7 +191,27 @@ const bigFiveStructure: Record<string, BigFiveTrait> = {
       { text: "I often feel blue.", key: "positive" },
       { text: "I am alarmed by negative events.", key: "positive" },
       { text: "I handle stress well.", key: "negative", reverse: true },
-    ]
+    ],
+    description: {
+      en: "Reflects emotional instability and tendency to experience negative emotions.",
+      ar: "يعكس عدم الاستقرار العاطفي والميل إلى experiencing المشاعر السلبية."
+    },
+    highDescription: {
+      en: "You're emotionally sensitive and may experience mood swings, anxiety, or stress more intensely. You have rich emotional experiences.",
+      ar: "حساس عاطفياً وقد تعاني من تقلبات المزاج والقلق أو التوتر بشكل أكثر كثافة. لديك تجارب عاطفية غنية."
+    },
+    lowDescription: {
+      en: "You're emotionally stable and resilient. You handle stress well and don't get easily upset by setbacks.",
+      ar: "مستقر عاطفياً ومرن. تتعامل مع التوتر جيداً ولا تنزعج بسهولة من الانتكاسات."
+    },
+    careers: {
+      high: ["Artist", "Writer", "Counselor", "Therapist", "Creative Professional", "Caregiver"],
+      low: ["Surgeon", "Pilot", "Emergency Responder", "Judge", "Executive", "Engineer"]
+    },
+    relationships: {
+      en: "You may need partners who understand your emotional needs and provide support during difficult times.",
+      ar: "قد تحتاج إلى شركاء يفهمون احتياجاتك العاطفية ويقدمون الدعم خلال الأوقات الصعبة."
+    }
   }
 };
 
@@ -103,6 +223,14 @@ const responseOptions: { value: number; label: { en: string; ar: string } }[] = 
   { value: 5, label: { en: "Agree Strongly", ar: "أوافق بشدة" } },
 ];
 
+const traitIcons: Record<string, React.ReactNode> = {
+  Openness: <Brain className="w-5 h-5" />,
+  Conscientiousness: <Shield className="w-5 h-5" />,
+  Extraversion: <Heart className="w-5 h-5" />,
+  Agreeableness: <Users className="w-5 h-5" />,
+  Neuroticism: <Heart className="w-5 h-5" />,
+};
+
 export default function BigFivePersonality() {
   const locale = useLocale();
   const isRtl = locale === "ar";
@@ -113,6 +241,7 @@ export default function BigFivePersonality() {
   const [showResult, setShowResult] = useState(false);
   const [responseTimes, setResponseTimes] = useState<Record<string, number>>({});
   const [startTime, setStartTime] = useState<number>(0);
+  const [showDetail, setShowDetail] = useState<string | null>(null);
 
   const traits = Object.keys(bigFiveStructure);
   const currentTraitName = traits[currentTrait];
@@ -134,7 +263,7 @@ export default function BigFivePersonality() {
     const questionKey = `${currentTraitName}-${currentQuestion}`;
     const now = Date.now();
     const timeKey = `${questionKey}-time`;
-    
+
     setResponses(prev => ({ ...prev, [questionKey]: value }));
     setResponseTimes(prev => ({ ...prev, [timeKey]: now }));
 
@@ -157,12 +286,13 @@ export default function BigFivePersonality() {
     setResponses({});
     setResponseTimes({});
     setShowResult(false);
+    setShowDetail(null);
   };
 
   // Calculate trait scores (simple percentage 0-100)
   const traitScores = useMemo(() => {
-    const scores: Record<string, { percentage: number; label: string }> = {};
-    
+    const scores: Record<string, { percentage: number; label: string; level: 'high' | 'average' | 'low' }> = {};
+
     for (const trait of traits) {
       const traitResponses = bigFiveStructure[trait].questions.map((q: BigFiveQuestion, i: number) => {
         const value = responses[`${trait}-${i}`];
@@ -174,14 +304,27 @@ export default function BigFivePersonality() {
       const raw = traitResponses.reduce((a: number, b: number) => a + b, 0) / traitResponses.length;
       const percentage = Math.round((raw / 5) * 100);
 
-      // Get label based on percentage
-      let label = "Low";
-      if (percentage >= 80) label = "Very High";
-      else if (percentage >= 65) label = "High";
-      else if (percentage >= 45) label = "Average";
-      else if (percentage >= 35) label = "Low";
+      // Get level based on percentage
+      let level: 'high' | 'average' | 'low' = 'average';
+      let label = "Average";
+      if (percentage >= 75) {
+        level = 'high';
+        label = "Very High";
+      } else if (percentage >= 60) {
+        level = 'high';
+        label = "High";
+      } else if (percentage >= 40) {
+        level = 'average';
+        label = "Average";
+      } else if (percentage >= 25) {
+        level = 'low';
+        label = "Low";
+      } else {
+        level = 'low';
+        label = "Very Low";
+      }
 
-      scores[trait] = { percentage, label };
+      scores[trait] = { percentage, label, level };
     }
 
     return scores;
@@ -194,77 +337,167 @@ export default function BigFivePersonality() {
     return Math.round((Math.max(...times) - startTime) / 1000 / 60);
   }, [responseTimes, startTime]);
 
+  // Get dominant traits
+  const dominantTraits = useMemo(() => {
+    return Object.entries(traitScores)
+      .sort((a, b) => b[1].percentage - a[1].percentage)
+      .slice(0, 2)
+      .map(([trait, data]) => ({ trait, ...data }));
+  }, [traitScores]);
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 max-w-4xl mx-auto">
       {/* Header */}
-      <div className="text-center">
-        <User className="w-12 h-12 mx-auto mb-4 text-primary" />
-        <h3 className="text-lg font-semibold mb-2">
-          {isRtl ? "اختبار السمات الخمس الكبرى" : "Big Five Personality Test"}
-        </h3>
+      <div className="text-center border-b border-border pb-4">
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+            <User className="w-5 h-5 text-primary" />
+          </div>
+          <h3 className="text-xl font-semibold">
+            {isRtl ? "اختبار السمات الخمس الكبرى" : "Big Five Personality Test"}
+          </h3>
+        </div>
         <p className="text-muted-foreground text-sm">
-          {isRtl 
-            ? "قيّم شخصيتك على الأبعاد الخمسة الرئيسية بناءً على عينة معيارية"
-            : "Assess your personality on the five major dimensions based on a normative sample"}
+          {isRtl
+            ? "قيّم شخصيتك على الأبعاد الخمسة الرئيسية"
+            : "Assess your personality on the five major dimensions"}
         </p>
       </div>
 
       {!isStarted ? (
         /* Start Screen */
-        <div className="text-center py-8 space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        <div className="space-y-6 py-4">
+          {/* Intro */}
+          <div className="bg-muted/30 border border-border rounded-lg p-5">
+            <h4 className="font-medium mb-2 flex items-center gap-2">
+              <Info className="w-4 h-4 text-primary" />
+              {isRtl ? "حول الاختبار" : "About the Test"}
+            </h4>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {isRtl
+                ? "يُعد اختبار السمات الخمس الكبرى (OCEAN) الأكثر استخداماً في علم النفس لقياس شخصية الإنسان. يتكون من 50 سؤالاً يقيس خمسة أبعاد رئيسية تؤثر على السلوك والعلاقات والنجاح المهني."
+                : "The Big Five Personality Test (OCEAN) is the most widely used psychological assessment for measuring human personality. It consists of 50 questions measuring five major dimensions that influence behavior, relationships, and career success."}
+            </p>
+          </div>
+
+          {/* Trait Overview */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {traits.map((trait) => (
-              <div key={trait} className="p-4 bg-muted/50 rounded-lg">
-                <p className="font-medium text-sm">{isRtl ? trait : trait}</p>
-                <p className="text-xs text-muted-foreground mt-1">
+              <div
+                key={trait}
+                className="bg-card border border-border rounded-lg p-4 hover:border-primary/30 hover:shadow-sm transition-all"
+              >
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                    {traitIcons[trait]}
+                  </div>
+                  <h5 className="font-medium text-sm">{isRtl ? trait : trait}</h5>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  {isRtl ? bigFiveStructure[trait as keyof typeof bigFiveStructure].description.ar : bigFiveStructure[trait as keyof typeof bigFiveStructure].description.en}
+                </p>
+                <p className="text-xs text-muted-foreground mt-2 pt-2 border-t border-border/50">
                   {bigFiveStructure[trait as keyof typeof bigFiveStructure].questions.length} {isRtl ? "أسئلة" : "questions"}
                 </p>
               </div>
             ))}
           </div>
-          
-          <p className="text-sm text-muted-foreground max-w-lg mx-auto">
-            {isRtl 
-              ? "يتكون الاختبار من 50 سؤالاً ويستغرق حوالي 10 دقائق. أجب بصدق عن كل سؤال."
-              : "The test consists of 50 questions and takes approximately 10 minutes. Answer each question honestly."}
-          </p>
 
-          <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 p-4 rounded-lg max-w-lg mx-auto">
-            <div className="flex items-start gap-2">
-              <Info className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5" />
-              <p className="text-sm text-blue-800 dark:text-blue-200 text-left">
-                <strong>{isRtl ? "ملاحظة مهمة:" : "Important Note:"}</strong><br/>
-                {isRtl 
-                  ? "النتائج تمثل تقديرات سمة الشخصية بناءً على استجاباتك. هذا اختبار ذاتي ولا يشمل تشخيص أي حالة صحية نفسية."
-                  : "Results represent trait estimates based on your responses. This is a self-report tool and does not diagnose any psychological condition."}
-              </p>
+          {/* Test Details */}
+          <div className="bg-muted/20 border border-border rounded-lg p-4">
+            <div className="grid grid-cols-4 gap-4 mb-4">
+              <div className="text-center">
+                <div className="text-xl font-semibold">50</div>
+                <p className="text-xs text-muted-foreground">{isRtl ? "سؤال" : "Questions"}</p>
+              </div>
+              <div className="text-center">
+                <div className="text-xl font-semibold">5</div>
+                <p className="text-xs text-muted-foreground">{isRtl ? "سمات" : "Traits"}</p>
+              </div>
+              <div className="text-center">
+                <div className="text-xl font-semibold">~10</div>
+                <p className="text-xs text-muted-foreground">{isRtl ? "دقيقة" : "Minutes"}</p>
+              </div>
+              <div className="text-center">
+                <div className="text-xl font-semibold">5</div>
+                <p className="text-xs text-muted-foreground">{isRtl ? "خيارات" : "Options"}</p>
+              </div>
             </div>
+            <p className="text-xs text-muted-foreground text-center">
+              {isRtl ? "أجب بصدق عن كل سؤال للحصول على نتائج دقيقة" : "Answer each question honestly for accurate results"}
+            </p>
           </div>
 
-          <Button onClick={handleStart} className="gap-2">
-            <Play className="w-4 h-4" />
-            {isRtl ? "ابدأ الاختبار" : "Start Test"}
-          </Button>
+          {/* Disclaimer */}
+          <div className="bg-primary/5 border border-primary/10 rounded-lg p-4">
+            <p className="text-xs text-muted-foreground text-justify leading-relaxed">
+              {isRtl
+                ? "ملاحظة: النتائج تمثل تقديرات سمة الشخصية بناءً على استجاباتك الذاتية. هذا اختبار تقييمي ذاتي ولا يُستخدم لتشخيص أي حالة صحية نفسية. للحصول على تقييم مهني، يرجى استشارة أخصائي صحة نفسية مرخص."
+                : "Note: Results represent personality trait estimates based on your self-reported responses. This is a self-assessment tool and should not be used to diagnose any psychological condition. For professional assessment, please consult a licensed mental health professional."}
+            </p>
+          </div>
+
+          {/* Start Button */}
+          <div className="flex justify-center">
+            <Button onClick={handleStart} className="gap-2 px-8">
+              <Play className="w-4 h-4" />
+              {isRtl ? "ابدأ الاختبار" : "Start Test"}
+            </Button>
+          </div>
         </div>
       ) : !showResult ? (
         /* Questions */
         <div className="space-y-4">
           {/* Progress */}
-          <div className="flex justify-between items-center text-sm text-muted-foreground">
-            <span>{currentTraitName}</span>
-            <span>{isRtl ? "السؤال" : "Q"} {currentQuestionIndex + 1} {isRtl ? "من" : "of"} {totalQuestions}</span>
+          <div className="flex justify-between items-center text-sm border-b border-border pb-2">
+            <div className="flex items-center gap-2">
+              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                {traitIcons[currentTraitName]}
+              </div>
+              <span className="font-medium">{currentTraitName}</span>
+            </div>
+            <span className="text-muted-foreground">
+              {isRtl ? `السؤال ${currentQuestionIndex + 1} من ${totalQuestions}` : `Question ${currentQuestionIndex + 1} of ${totalQuestions}`}
+            </span>
           </div>
 
           <div className="w-full bg-muted rounded-full h-2">
-            <div 
+            <div
               className="bg-primary h-2 rounded-full transition-all"
               style={{ width: `${((currentQuestionIndex) / totalQuestions) * 100}%` }}
             />
           </div>
 
+          {/* Trait Progress */}
+          <div className="flex gap-1 justify-center">
+            {traits.map((trait, traitIndex) => {
+              const traitQuestions = bigFiveStructure[trait].questions.length;
+              const traitStartIndex = traits.slice(0, traitIndex).reduce((sum, t) => sum + bigFiveStructure[t].questions.length, 0);
+              const isCompleted = traitIndex < currentTrait;
+              const isCurrent = traitIndex === currentTrait;
+
+              return (
+                <div key={trait} className="flex flex-col items-center">
+                  <div className="flex gap-0.5">
+                    {Array.from({ length: Math.min(traitQuestions, 5) }).map((_, i) => (
+                      <div
+                        key={i}
+                        className={`w-2 h-2 rounded-full transition-colors ${
+                          isCompleted ? "bg-primary" :
+                          isCurrent && (traitStartIndex + i) < currentQuestionIndex ? "bg-primary" :
+                          isCurrent && (traitStartIndex + i) === currentQuestionIndex ? "bg-primary/60" : "bg-muted"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
           {/* Question */}
-          <div className="p-6 bg-muted/30 rounded-lg">
-            <p className="font-semibold text-lg mb-6">
+          <div className="bg-card border border-border rounded-lg p-6">
+            <p className="font-medium text-base mb-6 leading-relaxed">
               {currentQuestions[currentQuestion].text}
             </p>
 
@@ -273,86 +506,152 @@ export default function BigFivePersonality() {
                 <button
                   key={option.value}
                   onClick={() => handleAnswer(option.value)}
-                  className="w-full p-4 text-left border rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
+                  className="w-full p-3 text-left border border-border rounded hover:bg-muted hover:border-primary/30 transition-colors"
                 >
-                  <span className="font-medium">{option.value}. </span>
-                  {isRtl ? option.label.ar : option.label.en}
+                  <span className="font-medium text-sm">{option.value}. </span>
+                  <span className="text-sm">{isRtl ? option.label.ar : option.label.en}</span>
                 </button>
               ))}
             </div>
-          </div>
-
-          {/* Progress indicator for current trait */}
-          <div className="flex gap-1 justify-center">
-            {currentQuestions.map((_, i) => (
-              <div 
-                key={i}
-                className={`w-2 h-2 rounded-full ${
-                  i < currentQuestion ? "bg-primary" : 
-                  i === currentQuestion ? "bg-primary/50" : "bg-muted"
-                }`}
-              />
-            ))}
           </div>
         </div>
       ) : (
         /* Results */
         <div className="space-y-6">
           {/* Header */}
-          <div className="text-center">
-            <h3 className="text-xl font-semibold mb-2">
-              {isRtl ? "نتيجة شخصيتك" : "Your Personality Result"}
+          <div className="text-center border-b border-border pb-4">
+            <div className="w-14 h-14 mx-auto rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+              <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold mb-1">
+              {isRtl ? "نتيجة الاختبار" : "Test Results"}
             </h3>
             <p className="text-sm text-muted-foreground">
-              {isRtl 
+              {isRtl
                 ? `وقت الإكمال: ${completionTime} دقيقة`
                 : `Completion time: ${completionTime} minutes`}
             </p>
           </div>
 
-          {/* Trait Scores */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-            {Object.entries(traitScores).map(([trait, data]) => (
-              <div key={trait} className="p-5 bg-muted/30 rounded-lg">
-                <div className="flex justify-between items-start mb-3">
-                  <div>
-                    <p className="font-medium">{isRtl ? trait : trait}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {data.label}
-                    </p>
+          {/* Dominant Traits */}
+          {dominantTraits.length > 0 && (
+            <div className="bg-primary/5 border border-primary/10 rounded-lg p-4">
+              <h4 className="font-medium mb-3 text-sm flex items-center gap-2">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+                {isRtl ? "السمات البارزة" : "Dominant Traits"}
+              </h4>
+              <div className="grid grid-cols-2 gap-3">
+                {dominantTraits.map(({ trait, percentage, label }) => (
+                  <div key={trait} className="flex items-center gap-3 bg-card border border-border rounded-lg p-3">
+                    <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                      {traitIcons[trait]}
+                    </div>
+                    <div>
+                      <p className="font-medium text-sm">{isRtl ? trait : trait}</p>
+                      <p className="text-xs text-muted-foreground">{label} ({percentage}%)</p>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-2xl font-bold">{data.percentage}%</p>
-                  </div>
-                </div>
+                ))}
+              </div>
+            </div>
+          )}
 
-                {/* Percentage bar */}
-                <div className="relative mb-2">
-                  <div className="h-3 bg-muted rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-primary rounded-full transition-all"
-                      style={{ width: `${data.percentage}%` }}
-                    />
+          {/* Trait Details */}
+          <div className="space-y-3">
+            <h4 className="font-medium text-sm">
+              {isRtl ? "تفاصيل السمات" : "Trait Details"}
+            </h4>
+            {Object.entries(traitScores).map(([trait, data]) => (
+              <div key={trait} className="bg-card border border-border rounded-lg overflow-hidden">
+                <button
+                  onClick={() => setShowDetail(showDetail === trait ? null : trait)}
+                  className="w-full p-4 text-left hover:bg-muted/30 transition-colors"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      {traitIcons[trait]}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between mb-1">
+                        <p className="font-medium text-sm">{isRtl ? trait : trait}</p>
+                        <p className="text-sm font-medium">{data.percentage}%</p>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-1.5">
+                        <div
+                          className="bg-primary h-1.5 rounded-full transition-all"
+                          style={{ width: `${data.percentage}%` }}
+                        />
+                      </div>
+                    </div>
+                    <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform ${showDetail === trait ? "rotate-180" : ""}`} />
                   </div>
-                </div>
+                </button>
+
+                {showDetail === trait && (
+                  <div className="px-4 pb-4 space-y-3 border-t border-border pt-3">
+                    {/* Description */}
+                    <div className="bg-muted/30 rounded-lg p-3">
+                      <p className="text-xs text-muted-foreground">
+                        {data.level === 'high'
+                          ? (isRtl ? bigFiveStructure[trait as keyof typeof bigFiveStructure].highDescription.ar : bigFiveStructure[trait as keyof typeof bigFiveStructure].highDescription.en)
+                          : data.level === 'low'
+                          ? (isRtl ? bigFiveStructure[trait as keyof typeof bigFiveStructure].lowDescription.ar : bigFiveStructure[trait as keyof typeof bigFiveStructure].lowDescription.en)
+                          : (isRtl ? bigFiveStructure[trait as keyof typeof bigFiveStructure].description.ar : bigFiveStructure[trait as keyof typeof bigFiveStructure].description.en)
+                        }
+                      </p>
+                    </div>
+
+                    {/* Facets */}
+                    <div>
+                      <p className="text-xs text-muted-foreground mb-2">
+                        <span className="font-medium">{isRtl ? "الجوانب الفرعية:" : "Facets:"}</span> {bigFiveStructure[trait as keyof typeof bigFiveStructure].facets.join(", ")}
+                      </p>
+                    </div>
+
+                    {/* Career Paths */}
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="bg-muted/30 rounded-lg p-2">
+                        <p className="text-xs font-medium mb-1">{isRtl ? "عند الدرجة العالية:" : "High Score:"}</p>
+                        <p className="text-xs text-muted-foreground">
+                          {bigFiveStructure[trait as keyof typeof bigFiveStructure].careers.high.join(", ")}
+                        </p>
+                      </div>
+                      <div className="bg-muted/30 rounded-lg p-2">
+                        <p className="text-xs font-medium mb-1">{isRtl ? "عند الدرجة المنخفضة:" : "Low Score:"}</p>
+                        <p className="text-xs text-muted-foreground">
+                          {bigFiveStructure[trait as keyof typeof bigFiveStructure].careers.low.join(", ")}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Relationships */}
+                    <div className="bg-muted/30 rounded-lg p-2">
+                      <p className="text-xs font-medium mb-1">{isRtl ? "في العلاقات:" : "In Relationships:"}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {isRtl ? bigFiveStructure[trait as keyof typeof bigFiveStructure].relationships.ar : bigFiveStructure[trait as keyof typeof bigFiveStructure].relationships.en}
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
 
           {/* Disclaimer */}
-          <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 p-4 rounded-lg">
-            <div className="flex items-start gap-2">
-              <Info className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5" />
-              <p className="text-sm text-blue-800 dark:text-blue-200 text-justify">
-                {isRtl 
-                  ? "هذا الاختبار يقيس سمات الشخصية الذاتية. للحصول على تقييم احترافي، يرجى استشارة أخصائي صحة نفسية مرخص."
-                  : "This test measures self-reported personality traits. For professional assessment, please consult a licensed mental health professional."}
-              </p>
-            </div>
+          <div className="bg-primary/5 border border-primary/10 rounded-lg p-4">
+            <p className="text-xs text-muted-foreground text-justify leading-relaxed">
+              {isRtl
+                ? "هذا الاختبار يقيس السمات الشخصية بناءً على التقرير الذاتي. قد تختلف النتائج حسب الحالة المزاجية والسياق. للحصول على تقييم احترافي، يرجى استشارة أخصائي صحة نفسية مرخص."
+                : "This test measures personality traits based on self-report. Results may vary depending on mood and context. For a comprehensive professional assessment, please consult a licensed mental health professional."}
+            </p>
           </div>
 
-          {/* Retake */}
-          <div className="flex justify-center gap-4">
+          {/* Actions */}
+          <div className="flex justify-center">
             <Button onClick={handleReset} variant="outline" className="gap-2">
               <RefreshCw className="w-4 h-4" />
               {isRtl ? "إعادة الاختبار" : "Retake Test"}

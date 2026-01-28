@@ -55,6 +55,15 @@ export interface ArticleDiagram {
   connections?: { from: string; to: string; label?: string }[];
 }
 
+export interface ArticleExperiment {
+  id: string;
+  type: "stroop" | "memory" | "attention" | "reaction" | "perception" | "cognition" | "decision" | "learning";
+  title: string;
+  description: string;
+  duration: string; // e.g., "5-10 minutes"
+  instructions: string;
+}
+
 export interface Article {
   title: string;
   description: string;
@@ -72,6 +81,7 @@ export interface Article {
   caseStudies?: ArticleCaseStudy[];
   comparisons?: ArticleComparison[];
   diagrams?: ArticleDiagram[];
+  experiments?: ArticleExperiment[];
 }
 
 export interface DomainArticles {

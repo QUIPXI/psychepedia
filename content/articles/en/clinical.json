@@ -323,7 +323,80 @@
       "lastModified": "2025-01-22",
       "author": "PsychePedia Editorial Team",
       "readingTime": 23,
-      "experiment": "stroop",
+      "experiments": [
+        {
+          "id": "big-five-personality",
+          "type": "personality",
+          "title": "Big Five Personality Test",
+          "description": "Assess your standing on the five major personality dimensions.",
+          "duration": "10-15 minutes",
+          "instructions": "Rate how much you agree with each statement describing yourself. There are no right or wrong answers—just be honest about your typical behavior and preferences."
+        },
+        {
+          "id": "stroop-effect",
+          "type": "stroop",
+          "title": "Stroop Effect Test",
+          "description": "Test your focus and reaction speed by naming the color of the word while ignoring the word's meaning.",
+          "duration": "3-5 minutes",
+          "instructions": "You will see color words printed in different colors. Your task is to click the button matching the INK COLOR, not the word meaning. Work as quickly as possible without making mistakes."
+        },
+        {
+          "id": "motion-detection",
+          "type": "motion",
+          "title": "Motion Detection Test",
+          "description": "Assess your ability to perceive visual motion and detect moving objects.",
+          "duration": "5-7 minutes",
+          "instructions": "Watch the screen for moving dots or patterns. Indicate when you detect motion by pressing the button. The test will vary the speed and direction of movement."
+        },
+        {
+          "id": "finger-tapping",
+          "type": "motor",
+          "title": "Finger Tapping Test",
+          "description": "Measure your motor speed, coordination, and rhythm by tapping as fast as you can.",
+          "duration": "3-5 minutes",
+          "instructions": "Press the button as many times as you can in 10 seconds. Repeat several times with each hand. Maintain a steady rhythm and tap as quickly as possible."
+        },
+        {
+          "id": "phq9-screening",
+          "type": "phq9",
+          "title": "PHQ-9 Depression Screening",
+          "description": "A brief screening tool to assess the severity of depressive symptoms over the past two weeks.",
+          "duration": "5-7 minutes",
+          "instructions": "Answer each question about how often you have been bothered by each symptom. Select the option that best describes your experience over the past two weeks."
+        },
+        {
+          "id": "gad7-screening",
+          "type": "gad7",
+          "title": "GAD-7 Anxiety Screening",
+          "description": "A screening tool to assess the severity of generalized anxiety symptoms.",
+          "duration": "3-5 minutes",
+          "instructions": "Answer questions about how often you have been bothered by anxiety-related symptoms over the past two weeks. Be honest in your responses for accurate results."
+        },
+        {
+          "id": "mmse-screening",
+          "type": "mmse",
+          "title": "MMSE Cognitive Screening",
+          "description": "A brief cognitive screening tool assessing orientation, memory, attention, and language.",
+          "duration": "7-10 minutes",
+          "instructions": "You will be asked a series of questions testing memory, attention, language, and orientation. Answer each question to the best of your ability."
+        },
+        {
+          "id": "adhd-rating",
+          "type": "adhd",
+          "title": "ADHD Rating Scale",
+          "description": "Screening tool for attention-deficit/hyperactivity disorder symptoms in adults.",
+          "duration": "5-8 minutes",
+          "instructions": "Rate how often you have experienced each symptom over the past six months. Consider both home and work/school situations."
+        },
+        {
+          "id": "autism-spectrum",
+          "type": "autism",
+          "title": "Autism Spectrum Quotient (AQ)",
+          "description": "A screening tool to assess autistic traits in adults with normal intelligence.",
+          "duration": "7-10 minutes",
+          "instructions": "Indicate how much you agree or disagree with each statement about your behaviors, interests, and social preferences."
+        }
+      ],
       "sections": [
         {
           "title": "Introduction to Psychological Assessment",

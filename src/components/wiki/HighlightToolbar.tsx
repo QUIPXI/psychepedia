@@ -30,17 +30,28 @@ export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
         const selection = window.getSelection();
 
         // Check if we have a valid selection within the document
-        if (selection && selection.toString().trim().length > 0) {
+        if (selection && selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            const container = range.startContainer;
+            
+            // Check if selection is in an editable area or proper content
+            if (!container.textContent) {
+                if (hasSelection) {
+                    setHasSelection(false);
+                    setPosition(null);
+                }
+                return;
+            }
+
             const selectionStr = selection.toString().trim();
 
-            // Only proceed if selection is different from current
-            if (selectionStr !== selectedText) {
+            // Only proceed if we have actual text selected
+            if (selectionStr.length > 0) {
                 setSelectedText(selectionStr);
                 setHasSelection(true);
 
                 // Get the bounding rect of the selection
                 try {
-                    const range = selection.getRangeAt(0);
                     const rect = range.getBoundingClientRect();
 
                     // Calculate toolbar position above the selection
@@ -52,15 +63,17 @@ export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
                     // Fallback if we can't get the range
                     setPosition(null);
                 }
-            }
-        } else {
-            // No selection - only clear if we already had a selection
-            if (hasSelection) {
+            } else if (hasSelection) {
+                // Clear selection when no text is selected
                 setHasSelection(false);
                 setPosition(null);
             }
+        } else if (hasSelection) {
+            // No valid range - clear selection
+            setHasSelection(false);
+            setPosition(null);
         }
-    }, [isHighlightEnabled, selectedText, setSelectedText, hasSelection]);
+    }, [isHighlightEnabled, hasSelection, setSelectedText]);
 
     // Set up selection change listener
     useEffect(() => {
@@ -73,9 +86,10 @@ export function HighlightToolbar({ articleId }: HighlightToolbarProps) {
             if (timeoutId) {
                 clearTimeout(timeoutId);
             }
+            // Slightly longer timeout for smoother selection experience
             timeoutId = setTimeout(() => {
                 handleSelectionChange();
-            }, 10);
+            }, 50);
         };
 
         document.addEventListener("selectionchange", handleChange);

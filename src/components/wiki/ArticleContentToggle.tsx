@@ -151,202 +151,142 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
 
   // Counter for unique keys
   const keyCounter = React.useRef(0);
-  const getUniqueKey = () => `hl-${keyCounter.current++}`;
+  const getUniqueKey = () => `seg-${keyCounter.current++}`;
 
-  // Helper to apply highlighting to content (handles **bold** markers)
-  const applyHighlighting = (text: string, sectionTitle: string, paragraphIndex: number): React.ReactNode => {
-    // Get highlights specific to this section and paragraph
-    const contextHighlights = getHighlights(articleId, sectionTitle, paragraphIndex);
+  // Robust segmentation-based rendering
+  const renderSegmentedText = (originalText: string, sectionTitle: string, paragraphIndex: number): React.ReactNode => {
+    // 1. Preprocessing: Identify Bold Ranges in Plain Text
+    // We need to map positions in originalText (with **) to positions in plainText (without **)
+    const plainTextBuilder: string[] = [];
+    const boldRanges: { start: number; end: number }[] = [];
     
-    // If no context-specific highlights, just render text normally
-    if (contextHighlights.length === 0) {
-      return renderTextWithBold(text);
-    }
-
-    // Use only context-specific highlights for matching
-    const sortedHighlights = [...contextHighlights].sort((a, b) => b.text.length - a.text.length);
-
-    // Find all matches and their positions
-    const matches: { start: number; end: number; color: string; text: string }[] = [];
-
-    for (const highlight of sortedHighlights) {
-      const highlightText = highlight.text.trim();
-      if (!highlightText) continue;
-
-      // Create regex for exact phrase match (case-insensitive)
-      const escapedText = highlightText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const regex = new RegExp(escapedText, 'gi');
-      let match;
-
-      while ((match = regex.exec(text)) !== null) {
-        // Check if this position is already covered by a longer match
-        const isOverlapping = matches.some(
-          (m) => match!.index >= m.start && match!.index < m.end
-        );
-
-        if (!isOverlapping) {
-          matches.push({
-            start: match.index,
-            end: match.index + match[0].length,
-            color: highlight.color,
-            text: match[0],
-          });
-        }
-      }
-    }
-
-    // Sort matches by position
-    matches.sort((a, b) => a.start - b.start);
-
-    // Build the result with highlighted segments
-    const result: React.ReactNode[] = [];
-    let lastIndex = 0;
-
-    matches.forEach((match) => {
-      // Add non-highlighted text before this match
-      if (match.start > lastIndex) {
-        result.push(
-          <React.Fragment key={getUniqueKey()}>
-            {text.slice(lastIndex, match.start)}
-          </React.Fragment>
-        );
-      }
-
-      // Add highlighted text
-      result.push(
-        <span
-          key={getUniqueKey()}
-          className="rounded px-0.5"
-          style={{ backgroundColor: match.color }}
-        >
-          {text.slice(match.start, match.end)}
-        </span>
-      );
-
-      lastIndex = match.end;
-    });
-
-    // Add remaining text after last match
-    if (lastIndex < text.length) {
-      result.push(
-        <React.Fragment key={getUniqueKey()}>
-          {text.slice(lastIndex)}
-        </React.Fragment>
-      );
-    }
-
-    // Apply bold formatting and return
-    return renderWithBold(result, text);
-  };
-
-  // Render the highlighted content with **bold** formatting
-  const renderWithBold = (highlightedParts: React.ReactNode[], originalText: string): React.ReactNode => {
-    // Find bold ranges in original text
-    const boldRanges: { start: number; end: number; content: string }[] = [];
-    const regex = /(\*\*[^*]+\*\*)/g;
+    let originalIdx = 0;
+    let plainIdx = 0;
+    
+    const boldRegex = /(\*\*[^*]+\*\*)/g;
     let match;
-
-    while ((match = regex.exec(originalText)) !== null) {
-      boldRanges.push({
-        start: match.index,
-        end: match.index + match[0].length,
-        content: match[0].slice(2, -2),
-      });
-    }
-
-    if (boldRanges.length === 0) {
-      return <>{highlightedParts}</>;
-    }
-
-    // Build result by walking through text and highlighting
-    const result: React.ReactNode[] = [];
-    let currentPos = 0;
-
-    boldRanges.forEach((bold, i) => {
-      // Add text before bold section
-      if (bold.start > currentPos) {
-        const textBefore = originalText.slice(currentPos, bold.start);
-        result.push(<span key={`normal-${i}`}>{textBefore}</span>);
-      }
-
-      // Add bold section with highlights
-      const boldWithHighlights = applyHighlightsToText(bold.content, highlightedParts);
-      result.push(<strong key={`bold-${i}`} className="font-bold text-foreground">{boldWithHighlights}</strong>);
-
-      currentPos = bold.end;
-    });
-
-    // Add remaining text
-    if (currentPos < originalText.length) {
-      const textAfter = originalText.slice(currentPos);
-      result.push(<span key={`normal-end`}>{textAfter}</span>);
-    }
-
-    return <>{result}</>;
-  };
-
-  // Apply highlights from the pool to text content
-  const applyHighlightsToText = (text: string, highlightedParts: React.ReactNode[]): React.ReactNode => {
-    const result: React.ReactNode[] = [];
-    let remainingText = text;
-    let partIndex = 0;
-
-    while (remainingText.length > 0 && highlightedParts.length > 0) {
-      const next = highlightedParts[0];
+    let lastMatchEnd = 0;
+    
+    // Find all bold matches
+    while ((match = boldRegex.exec(originalText)) !== null) {
+      // Add text before match
+      const textBefore = originalText.slice(lastMatchEnd, match.index);
+      plainTextBuilder.push(textBefore);
+      plainIdx += textBefore.length;
       
-      if (next && typeof next === 'object' && 'props' in next) {
-        // It's a highlighted span
-        const spanText = (next as any).props.children;
-        if (typeof spanText === 'string' && remainingText.includes(spanText)) {
-          const parts = remainingText.split(spanText);
-          result.push(<span key={`hl-${partIndex++}`}>{parts[0]}</span>);
-          result.push(next);
-          highlightedParts.shift();
-          remainingText = parts.slice(1).join(spanText);
-        } else if (remainingText.startsWith(spanText)) {
-          result.push(next);
-          highlightedParts.shift();
-          remainingText = remainingText.slice(spanText.length);
-        } else {
-          const idx = remainingText.indexOf(spanText);
-          if (idx > 0) {
-            result.push(<span key={`hl-${partIndex++}`}>{remainingText.slice(0, idx)}</span>);
-            remainingText = remainingText.slice(idx);
-          } else {
-            break;
-          }
+      // Add match content (without **)
+      const content = match[0].slice(2, -2);
+      const boldStart = plainIdx;
+      plainTextBuilder.push(content);
+      plainIdx += content.length;
+      const boldEnd = plainIdx;
+      
+      boldRanges.push({ start: boldStart, end: boldEnd });
+      
+      lastMatchEnd = match.index + match[0].length;
+      originalIdx = lastMatchEnd;
+    }
+    
+    // Add remaining text
+    const remaining = originalText.slice(lastMatchEnd);
+    plainTextBuilder.push(remaining);
+    
+    const plainText = plainTextBuilder.join("");
+    
+    // 2. Identify Highlights on Plain Text
+    const contextHighlights = getHighlights(articleId, sectionTitle, paragraphIndex);
+    const highlightRanges: { start: number; end: number; color: string }[] = [];
+    
+    if (contextHighlights.length > 0) {
+      // Sort highlights by length (longest first) to prioritize specific matches
+      const sortedHighlights = [...contextHighlights].sort((a, b) => b.text.length - a.text.length);
+      
+      for (const highlight of sortedHighlights) {
+        const highlightText = highlight.text.trim();
+        if (!highlightText) continue;
+
+        // Escape regex special characters
+        const escapedText = highlightText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(escapedText, 'gi');
+        let hMatch;
+
+        while ((hMatch = regex.exec(plainText)) !== null) {
+            const start = hMatch.index;
+            const end = start + hMatch[0].length;
+            
+            // basic overlap check - if this range is already fully covered don't add
+            // (A more complex merge logic could be added if we supported overlapping highlights of different colors, 
+            // but for now simplest wins or we can merge overlapping same-colored ones)
+             const isOverlapping = highlightRanges.some(
+              (m) => (start >= m.start && start < m.end) || (end > m.start && end <= m.end) || (start <= m.start && end >= m.end)
+            );
+
+            if (!isOverlapping) {
+               highlightRanges.push({ start, end, color: highlight.color });
+            }
         }
-      } else {
-        break;
       }
     }
 
-    // Add remaining text
-    if (remainingText.length > 0) {
-      result.push(<span key={`hl-${partIndex++}`}>{remainingText}</span>);
+    // 3. Segmentation
+    // Collect all boundaries
+    const boundaries = new Set<number>();
+    boundaries.add(0);
+    boundaries.add(plainText.length);
+    
+    boldRanges.forEach(r => {
+        boundaries.add(r.start);
+        boundaries.add(r.end);
+    });
+    
+    highlightRanges.forEach(r => {
+        boundaries.add(r.start);
+        boundaries.add(r.end);
+    });
+    
+    const sortedBoundaries = Array.from(boundaries).sort((a, b) => a - b);
+    
+    // Create Segments
+    const result: React.ReactNode[] = [];
+    
+    for (let i = 0; i < sortedBoundaries.length - 1; i++) {
+        const start = sortedBoundaries[i];
+        const end = sortedBoundaries[i+1];
+        if (start >= end) continue;
+        
+        const segmentText = plainText.slice(start, end);
+        
+        // Determine styles
+        const isBold = boldRanges.some(r => start >= r.start && end <= r.end);
+        const highlight = highlightRanges.find(r => start >= r.start && end <= r.end);
+        
+        const key = getUniqueKey();
+        
+        let content: React.ReactNode = segmentText;
+        let wrapperClass = "";
+        let wrapperStyle = {};
+        
+        if (isBold) {
+            wrapperClass += "font-bold text-foreground ";
+        }
+        
+        if (highlight) {
+            wrapperClass += "rounded px-0.5 ";
+            wrapperStyle = { backgroundColor: highlight.color };
+        }
+        
+        if (isBold || highlight) {
+             result.push(
+                <span key={key} className={wrapperClass} style={wrapperStyle}>
+                    {content}
+                </span>
+             );
+        } else {
+            result.push(<React.Fragment key={key}>{content}</React.Fragment>);
+        }
     }
-
-    // Consume any remaining highlighted parts
-    while (highlightedParts.length > 0) {
-      result.push(highlightedParts.shift());
-    }
-
+    
     return <>{result}</>;
-  };
-
-  // Simple render with bold only (no highlighting - highlights are already applied)
-  const renderTextWithBold = (text: string): React.ReactNode => {
-    const parts = text.split(/(\*\*[^*]+\*\*)/);
-    return (
-      <>
-        {parts.map((part, i) => {
-          if (part.startsWith("**") && part.endsWith("**")) {
-            return <strong key={i} className="font-bold">{part.slice(2, -2)}</strong>;
-          }
-          return <React.Fragment key={i}>{part}</React.Fragment>;
-        })}
-      </>
-    );
   };
 
   return (
@@ -370,7 +310,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
                     <ul key={pIndex} className="list-disc pl-6 space-y-2">
                       {items.map((item, i) => (
                         <li key={i} className="leading-relaxed text-foreground/90 font-serif">
-                          {applyHighlighting(item, section.title, pIndex)}
+                          {renderSegmentedText(item, section.title, pIndex)}
                         </li>
                       ))}
                     </ul>
@@ -382,7 +322,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
                     key={pIndex}
                     className="leading-relaxed text-foreground/90 font-serif"
                   >
-                    {applyHighlighting(trimmed, section.title, pIndex)}
+                    {renderSegmentedText(trimmed, section.title, pIndex)}
                   </p>
                 );
               })}

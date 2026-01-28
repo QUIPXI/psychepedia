@@ -13,6 +13,7 @@ import {
   ArrowRight,
   Search,
   Sparkles,
+  FlaskConical,
 } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
@@ -28,6 +29,7 @@ const domainIcons = {
   clinical: BookOpen,
   applied: Briefcase,
   "new-and-now": Sparkles,
+  experiments: FlaskConical,
 };
 
 const domainColors = {
@@ -39,6 +41,7 @@ const domainColors = {
   clinical: "text-teal-600 dark:text-teal-400",
   applied: "text-violet-600 dark:text-violet-400",
   "new-and-now": "text-orange-600 dark:text-orange-400",
+  experiments: "text-blue-600 dark:text-blue-400",
 };
 
 const domainKeys = [
@@ -50,6 +53,7 @@ const domainKeys = [
   "clinical",
   "applied",
   "new-and-now",
+  "experiments",
 ] as const;
 
 export default function HomePage() {
@@ -102,11 +106,12 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {domainKeys.map((domainKey) => {
+              {domainKeys.map((domainKey) => {
               const Icon = domainIcons[domainKey];
               const color = domainColors[domainKey];
+              const href = domainKey === "experiments" ? "/experiments" : `/wiki/${domainKey}`;
               return (
-                <Link key={domainKey} href={`/wiki/${domainKey}`} className="group">
+                <Link key={domainKey} href={href} className="group">
                   <Card className="h-full transition-all duration-200 hover:shadow-lg hover:border-primary/20 group-hover:-translate-y-1">
                     <CardHeader>
                       <Icon className={`h-8 w-8 mb-4 ${color}`} />
