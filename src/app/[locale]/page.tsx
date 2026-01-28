@@ -23,7 +23,6 @@ import { openSearchDialog } from "@/lib/events";
 const domainIcons = {
   foundations: GraduationCap,
   biological: Brain,
-  cognitive: Lightbulb,
   developmental: Users,
   "social-personality": Heart,
   clinical: BookOpen,
@@ -35,7 +34,6 @@ const domainIcons = {
 const domainColors = {
   foundations: "text-slate-600 dark:text-slate-400",
   biological: "text-emerald-600 dark:text-emerald-400",
-  cognitive: "text-indigo-600 dark:text-indigo-400",
   developmental: "text-amber-600 dark:text-amber-400",
   "social-personality": "text-rose-600 dark:text-rose-400",
   clinical: "text-teal-600 dark:text-teal-400",
@@ -47,7 +45,6 @@ const domainColors = {
 const domainKeys = [
   "foundations",
   "biological",
-  "cognitive",
   "developmental",
   "social-personality",
   "clinical",
