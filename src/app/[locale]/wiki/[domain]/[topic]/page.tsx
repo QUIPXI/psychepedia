@@ -16,10 +16,11 @@ import { InteractiveDiagrams } from "@/components/wiki/InteractiveDiagrams";
 import { CiteButton } from "@/components/wiki/CiteButton";
 import { HighlightToggle } from "@/components/wiki/HighlightToggle";
 import { HighlightHelperText } from "@/components/wiki/HighlightHelperText";
+import { FontSizeSelector } from "@/components/layout/FontSizeSelector";
 import { getArticle, loadArticles } from "@/lib/articles";
 import { locales } from "@/i18n/config";
 import { ArticleHighlighter } from "@/components/wiki/ArticleHighlighter";
-import { CollapsibleExperiment } from "@/components/wiki/CollapsibleExperiment";
+import { TestsTabs } from "@/components/wiki/TestsTabs";
 import StroopTest from "@/components/experiments/StroopTest";
 
 interface TopicPageProps {
@@ -119,6 +120,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
                 <CiteButton title={article.title} domain={domain} topic={topic} locale={locale} />
                 <HighlightToggle />
                 <HighlightHelperText />
+                <FontSizeSelector locale={locale} />
               </div>
             </header>
 
@@ -176,16 +178,9 @@ export default async function TopicPage({ params }: TopicPageProps) {
               />
             )}
 
-            {/* Collapsible Experiment - Stroop Test */}
-            {(article as any).experiment === "stroop" && (
-              <CollapsibleExperiment
-                experimentType="stroop"
-                title={locale === "ar" ? "تأثير ستروب" : "Stroop Effect"}
-                description={locale === "ar" ? "اختبر تركيزك وسرعة رد فعلك" : "Test your focus and reaction speed"}
-                locale={locale}
-              >
-                <StroopTest />
-              </CollapsibleExperiment>
+            {/* Interactive Tests */}
+            {article.experiments && article.experiments.length > 0 && (
+              <TestsTabs experiments={article.experiments} locale={locale} />
             )}
 
             {/* Quiz */}
