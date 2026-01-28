@@ -19,8 +19,6 @@ const sentryBuildOptions = {
   widenClientFileUpload: true,
   // Hide source maps from generated client bundles
   hideSourceMaps: true,
-  // Disable logger in production
-  disableLogger: true,
 };
 
 export default withSentryConfig(withNextIntl(nextConfig), sentryBuildOptions);
