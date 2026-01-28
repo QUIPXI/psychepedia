@@ -42,6 +42,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/wiki/cognitive" className="hover:text-foreground transition-colors">
+                  {tDomains("cognitive.title")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/wiki/developmental" className="hover:text-foreground transition-colors">
                   {tDomains("developmental.title")}
                 </Link>
