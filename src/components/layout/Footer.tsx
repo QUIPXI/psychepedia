@@ -76,23 +76,34 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* About */}
+          {/* Interactive Tests */}
           <div>
-            <h3 className="font-semibold mb-3">{t("about")}</h3>
+            <h3 className="font-semibold mb-3">{t("interactiveTests")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <span className="text-muted-foreground">
-                  {locale === "ar" 
-                    ? "مُعد لطلاب البكالوريوس والماجستير في علم النفس"
-                    : "Built for Bachelor's and Master's psychology students"}
-                </span>
+                <Link href="/experiments/big-five" className="hover:text-foreground transition-colors">
+                  {locale === "ar" ? "السمات الخمس الكبرى" : "Big Five Personality"}
+                </Link>
               </li>
               <li>
-                <span className="text-muted-foreground">
-                  {locale === "ar"
-                    ? "محتوى أكاديمي موضوعي مبني على الأدلة"
-                    : "Academic, objective, and evidence-based"}
-                </span>
+                <Link href="/experiments/iq" className="hover:text-foreground transition-colors">
+                  {locale === "ar" ? "اختبار الذكاء" : "IQ Test"}
+                </Link>
+              </li>
+              <li>
+                <Link href="/experiments/mmse" className="hover:text-foreground transition-colors">
+                  {locale === "ar" ? "فحص الحالة العقلية" : "MMSE"}
+                </Link>
+              </li>
+              <li>
+                <Link href="/experiments/gad7" className="hover:text-foreground transition-colors">
+                  {locale === "ar" ? "مقياس القلق" : "GAD-7"}
+                </Link>
+              </li>
+              <li>
+                <Link href="/experiments/phq9" className="hover:text-foreground transition-colors">
+                  {locale === "ar" ? "مقياس الاكتئاب" : "PHQ-9"}
+                </Link>
               </li>
             </ul>
           </div>
