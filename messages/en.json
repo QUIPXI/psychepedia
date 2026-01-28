@@ -27,7 +27,7 @@
     "hero": {
       "title": "The Psychology Encyclopedia",
       "subtitle": "Your comprehensive resource for psychological science",
-      "description": "Explore foundational concepts, clinical applications, and research methods across all domains of psychology. Written for students, by experts.",
+      "description": "Explore foundational concepts, clinical applications, and research methods across all domains of psychology. Written for students, by a student.",
       "cta": "Start Exploring",
       "browse": "Browse All Topics"
     },
@@ -82,6 +82,10 @@
     "new-and-now": {
       "title": "New & Now",
       "description": "Cutting-edge research and emerging trends in psychology"
+    },
+    "experiments": {
+      "title": "Interactive Tests",
+      "description": "Engage with psychological concepts through interactive tests and experiments"
     }
   },
   "article": {
@@ -133,6 +137,14 @@
     "stroopTest": {
       "title": "Stroop Effect",
       "description": "Test your reaction time and attention with this classic cognitive experiment."
+    },
+    "motionDetection": {
+      "title": "Motion Detection",
+      "description": "Test your ability to detect subtle movements and changes in visual stimuli."
+    },
+    "brainExplorer": {
+      "title": "Brain Explorer",
+      "description": "Explore the brain's structure and function through an interactive 3D model."
     }
   }
 }
