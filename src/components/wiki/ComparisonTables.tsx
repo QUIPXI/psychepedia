@@ -12,7 +12,7 @@ interface ComparisonTablesProps {
 }
 
 // List of header names that indicate the first column is for row labels
-const LABEL_COLUMN_HEADERS = ["feature", "function", "dimension", "attribute", "characteristic", "property", "aspect", "category"];
+const LABEL_COLUMN_HEADERS = ["feature", "function", "dimension", "attribute", "characteristic", "property", "aspect", "category", "style", "type"];
 
 export function ComparisonTables({ 
   comparisons, 
@@ -52,11 +52,11 @@ export function ComparisonTables({
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-muted/50">
-                    <th className="px-4 py-3 text-left font-semibold border-b border-border"></th>
+                    <th className="px-4 py-3 text-left font-semibold border-b border-border w-[120px]"></th>
                     {displayHeaders.map((header, i) => (
                       <th 
                         key={i} 
-                        className="px-4 py-3 text-left font-semibold border-b border-border min-w-[150px]"
+                        className="px-4 py-3 text-left font-semibold border-b border-border min-w-[140px]"
                       >
                         {header}
                       </th>

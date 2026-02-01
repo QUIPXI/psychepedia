@@ -305,7 +305,7 @@ function ArticleContent({ sections, articleId, locale }: { sections: Article["se
               {section.title}
             </h2>
             <div className="space-y-4">
-              {section.content.split("\n\n").map((paragraph, pIndex) => {
+              {section.content.map((paragraph, pIndex) => {
                 const trimmed = paragraph.trim();
                 if (!trimmed) return null;
 

@@ -4,7 +4,7 @@ import { getReadingTime } from "./utils";
 
 export interface ArticleSection {
   title: string;
-  content: string;
+  content: string[];
   practiceLink?: {
     href: string;
     label: {
