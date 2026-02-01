@@ -209,7 +209,19 @@
       "percentage": "النسبة المئوية",
       "clickToAnswer": "انقر للإجابة",
       "seeResults": "عرض النتائج",
-      "backToTop": "العودة للأعلى"
+      "backToTop": "العودة للأعلى",
+      "purposeClinicalContext": "الغرض والتطبيق السريري",
+      "targetPopulation": "السكان المستهدفون",
+      "administrationMethod": "طريقة التطبيق",
+      "duration": "المدة",
+      "format": "الصيغة",
+      "items": "عدد البنود",
+      "scoringInterpretation": "قواعد التفسير",
+      "scoreRange": "نطاق الدرجات",
+      "additionalNotes": "ملاحظات إضافية",
+      "strengths": "نقاط القوة",
+      "limitations": "القيود",
+      "relatedWikiArticles": "المقالات ذات الصلة"
     },
     "stroopTest": {
       "title": "تأثير ستروب",
