@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { BookOpen, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -9,13 +10,17 @@ import { useReadingPosition } from "@/context/ReadingPositionContext";
 interface ReadingPositionBannerProps {
   articleId: string;
   locale?: string;
+  domain?: string;
+  topic?: string;
 }
 
-export function ReadingPositionBanner({ articleId, locale = "en" }: ReadingPositionBannerProps) {
+export function ReadingPositionBanner({ articleId, locale = "en", domain, topic }: ReadingPositionBannerProps) {
   const { getPosition, resumePosition, clearPosition, hasPosition, savePosition } = useReadingPosition();
   const [showBanner, setShowBanner] = React.useState(false);
   const [dismissed, setDismissed] = React.useState(false);
   const saveTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const isRtl = locale === "ar";
   const position = getPosition(articleId);
@@ -56,8 +61,25 @@ export function ReadingPositionBanner({ articleId, locale = "en" }: ReadingPosit
   }, [articleId, savePosition]);
 
   const handleResume = () => {
-    resumePosition(articleId);
-    setShowBanner(false);
+    // If they were reading the full version, navigate to it with version=full
+    if (position?.isFullVersion && domain && topic) {
+      const currentPath = pathname || `/${locale}/wiki/${domain}/${topic}`;
+      // Check if already on full version
+      if (currentPath.includes("version=full")) {
+        // Already on full version, just scroll
+        resumePosition(articleId);
+      } else {
+        // Navigate to full version
+        const separator = currentPath.includes("?") ? "&" : "?";
+        const fullVersionUrl = `${currentPath}${separator}version=full`;
+        router.push(fullVersionUrl);
+      }
+      setShowBanner(false);
+    } else {
+      // Regular resume on current page
+      resumePosition(articleId);
+      setShowBanner(false);
+    }
   };
 
   const handleDismiss = () => {

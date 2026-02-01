@@ -8,6 +8,7 @@ import { useScrollSpy, useScrollToHeading, useFontSize } from "@/lib/hooks";
 import type { Article } from "@/lib/articles";
 import { useHighlights } from "@/context/HighlightContext";
 import { HIGHLIGHT_COLORS } from "@/context/HighlightContext";
+import { useReadingPosition } from "@/context/ReadingPositionContext";
 import Link from "next/link";
 
 interface ArticleContentToggleProps {
@@ -375,9 +376,35 @@ export function ArticleContentToggle({
   domain,
   topic,
 }: ArticleContentToggleProps) {
+  // Check URL for version=full query param
   const [showFull, setShowFull] = React.useState(false);
+  const { savePosition } = useReadingPosition();
   const hasFullVersion = article.fullSections && article.fullSections.length > 0;
   const isRtl = locale === "ar";
+
+  // Create articleId from domain and topic props
+  const articleId = React.useMemo(() => {
+    return `${domain || "unknown"}/${topic || "unknown"}`;
+  }, [domain, topic]);
+
+  // Check for version=full in URL on mount
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("version") === "full") {
+        setShowFull(true);
+      }
+    }
+  }, []);
+
+  // Save position with isFullVersion when toggling
+  const handleToggleFull = React.useCallback((value: boolean) => {
+    setShowFull(value);
+    // Save position with full version state
+    if (articleId && articleId !== "unknown/unknown") {
+      savePosition(articleId, value);
+    }
+  }, [articleId, savePosition]);
 
   const currentSections = showFull && hasFullVersion 
     ? article.fullSections! 
@@ -386,11 +413,6 @@ export function ArticleContentToggle({
   const currentReadingTime = showFull && hasFullVersion
     ? article.readingTime
     : article.shortReadingTime || article.readingTime;
-
-  // Create articleId from domain and topic props
-  const articleId = React.useMemo(() => {
-    return `${domain || "unknown"}/${topic || "unknown"}`;
-  }, [domain, topic]);
 
   return (
     <div>
@@ -410,7 +432,7 @@ export function ArticleContentToggle({
             <Button
               variant={showFull ? "outline" : "default"}
               size="sm"
-              onClick={() => setShowFull(false)}
+              onClick={() => handleToggleFull(false)}
               className="flex items-center gap-2"
             >
               <FileText className="h-4 w-4" />
@@ -419,7 +441,7 @@ export function ArticleContentToggle({
             <Button
               variant={showFull ? "default" : "outline"}
               size="sm"
-              onClick={() => setShowFull(true)}
+              onClick={() => handleToggleFull(true)}
               className="flex items-center gap-2"
             >
               <BookOpen className="h-4 w-4" />

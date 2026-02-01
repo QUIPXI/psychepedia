@@ -9,10 +9,11 @@ interface ReadingPosition {
   scrollPercent: number;
   sectionId?: string;
   timestamp: number;
+  isFullVersion?: boolean;
 }
 
 interface ReadingPositionContextType {
-  savePosition: (articleId: string) => void;
+  savePosition: (articleId: string, isFullVersion?: boolean) => void;
   getPosition: (articleId: string) => ReadingPosition | null;
   clearPosition: (articleId: string) => void;
   resumePosition: (articleId: string) => void;
@@ -49,7 +50,7 @@ export function ReadingPositionProvider({ children }: { children: React.ReactNod
     }
   }, [positions, mounted]);
 
-  const savePosition = useCallback((articleId: string) => {
+  const savePosition = useCallback((articleId: string, isFullVersion?: boolean) => {
     const scrollY = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = docHeight > 0 ? Math.round((scrollY / docHeight) * 100) : 0;
@@ -77,6 +78,7 @@ export function ReadingPositionProvider({ children }: { children: React.ReactNod
         scrollPercent,
         sectionId: currentSectionId,
         timestamp: Date.now(),
+        isFullVersion,
       },
     }));
   }, []);

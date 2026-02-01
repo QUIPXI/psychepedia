@@ -203,7 +203,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
       
       {/* Floating UI Elements */}
       <BackToTop locale={locale} />
-      <ReadingPositionBanner articleId={articleId} locale={locale} />
+      <ReadingPositionBanner articleId={articleId} locale={locale} domain={domain} topic={topic} />
     </ArticleHighlighter>
   );
 }
