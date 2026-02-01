@@ -6,6 +6,7 @@ import { BookOpen, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useReadingPosition } from "@/context/ReadingPositionContext";
+import { useTranslations } from "next-intl";
 
 interface ReadingPositionBannerProps {
   articleId: string;
@@ -21,6 +22,7 @@ export function ReadingPositionBanner({ articleId, locale = "en", domain, topic 
   const saveTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
   const router = useRouter();
   const pathname = usePathname();
+  const t = useTranslations("experiments.readingPosition");
 
   const isRtl = locale === "ar";
   const position = getPosition(articleId);
@@ -107,13 +109,10 @@ export function ReadingPositionBanner({ articleId, locale = "en", domain, topic 
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-sm font-medium text-foreground">
-            {isRtl ? "استئناف القراءة؟" : "Resume reading?"}
+            {t("title")}
           </p>
           <p className="text-xs text-muted-foreground truncate">
-            {isRtl 
-              ? `${position.scrollPercent}% مكتمل • ${timeAgo}`
-              : `${position.scrollPercent}% complete • ${timeAgo}`
-            }
+            {t("complete", { percent: position.scrollPercent })} • {getTimeAgo(position.timestamp, locale)}
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -122,7 +121,7 @@ export function ReadingPositionBanner({ articleId, locale = "en", domain, topic 
             onClick={handleResume}
             className="h-8"
           >
-            {isRtl ? "استئناف" : "Resume"}
+            {t("resume")}
           </Button>
           <Button
             variant="ghost"
@@ -140,22 +139,34 @@ export function ReadingPositionBanner({ articleId, locale = "en", domain, topic 
 
 function getTimeAgo(timestamp: number, locale: string): string {
   const seconds = Math.floor((Date.now() - timestamp) / 1000);
-  const isRtl = locale === "ar";
+  const t = (key: string, params?: Record<string, number>) => {
+    const translations: Record<string, string> = {
+      justNow: locale === "ar" ? "الآن" : "just now",
+      minutesAgo: locale === "ar" ? "منذ {minutes} دقيقة" : "{minutes}m ago",
+      hoursAgo: locale === "ar" ? "منذ {hours} ساعة" : "{hours}h ago",
+      daysAgo: locale === "ar" ? "منذ {days} يوم" : "{days}d ago",
+    };
+    const template = translations[key] || key;
+    if (params) {
+      return template.replace(/\{(\w+)\}/g, (_, key) => String(params[key] || ""));
+    }
+    return template;
+  };
 
   if (seconds < 60) {
-    return isRtl ? "الآن" : "just now";
+    return t("justNow");
   }
   
   const minutes = Math.floor(seconds / 60);
   if (minutes < 60) {
-    return isRtl ? `منذ ${minutes} دقيقة` : `${minutes}m ago`;
+    return t("minutesAgo", { minutes });
   }
   
   const hours = Math.floor(minutes / 60);
   if (hours < 24) {
-    return isRtl ? `منذ ${hours} ساعة` : `${hours}h ago`;
+    return t("hoursAgo", { hours });
   }
   
   const days = Math.floor(hours / 24);
-  return isRtl ? `منذ ${days} يوم` : `${days}d ago`;
+  return t("daysAgo", { days });
 }

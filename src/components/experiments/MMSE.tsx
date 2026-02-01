@@ -233,7 +233,7 @@ export default function MMSE() {
   const totalScore = Object.values(tempScores).reduce((a, b) => a + b, 0);
   const currentKey = `${currentSection}-${currentQuestion}`;
   const currentScore = tempScores[currentKey];
-  const maxScore = 20;
+  const maxScore = 30;
 
   const getInterpretation = (score: number) => {
     if (score >= 24) return {
