@@ -314,7 +314,57 @@
           ]
         }
       ],
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "quiz": [
+        {
+          "id": "child-q1",
+          "question": "What did Piaget's theory identify as the stage where children develop symbolic thinking and language (ages 2-7)?",
+          "options": [
+            "Sensorimotor stage",
+            "Preoperational stage",
+            "Concrete operational stage",
+            "Formal operational stage"
+          ],
+          "correctIndex": 1,
+          "explanation": "The preoperational stage (ages 2-7) is characterized by development of language and symbolic thinking, but children are still egocentric and lack conservation abilities."
+        },
+        {
+          "id": "child-q2",
+          "question": "What is 'theory of mind'?",
+          "options": [
+            "A scientific theory about brain development",
+            "Understanding that others have beliefs, desires, and knowledge different from one's own",
+            "The ability to solve mathematical problems",
+            "A stage in Freud's psychosexual development"
+          ],
+          "correctIndex": 1,
+          "explanation": "Theory of mind is the ability to understand that others have mental states (beliefs, desires, knowledge) that may differ from one's own, typically developing around age 4-5."
+        },
+        {
+          "id": "child-q3",
+          "question": "According to Vygotsky, what is the Zone of Proximal Development (ZPD)?",
+          "options": [
+            "The physical space where children learn best",
+            "The gap between what a child can do alone and what they can do with guidance",
+            "A stage of brain development",
+            "The time period when learning is impossible"
+          ],
+          "correctIndex": 1,
+          "explanation": "The ZPD represents the difference between what a child can accomplish independently and what they can achieve with guidance from a more skilled person (scaffolding)."
+        },
+        {
+          "id": "child-q4",
+          "question": "What does 'conservation' mean in Piagetian terms?",
+          "options": [
+            "Protecting the environment",
+            "Understanding that quantity remains the same despite changes in appearance",
+            "Saving energy for later tasks",
+            "Being careful with resources"
+          ],
+          "correctIndex": 1,
+          "explanation": "Conservation is the understanding that properties like quantity, volume, and number remain the same despite changes in form or appearance. Children typically develop this in the concrete operational stage."
+        }
+      ]
     },
     "adolescent-psychology": {
       "title": "Adolescent Psychology",
@@ -488,7 +538,57 @@
           "source": "PublicAffairs"
         }
       ],
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "quiz": [
+        {
+          "id": "adol-q1",
+          "question": "Why do adolescents often engage in risky behavior according to neuroscience research?",
+          "options": [
+            "They lack intelligence",
+            "The limbic system matures before the prefrontal cortex",
+            "They have fully developed brains",
+            "They cannot understand consequences"
+          ],
+          "correctIndex": 1,
+          "explanation": "The limbic system (emotional/reward processing) matures earlier than the prefrontal cortex (impulse control/decision-making), creating an imbalance that contributes to risk-taking behavior."
+        },
+        {
+          "id": "adol-q2",
+          "question": "What did Erikson identify as the primary psychosocial crisis of adolescence?",
+          "options": [
+            "Trust vs. Mistrust",
+            "Industry vs. Inferiority",
+            "Identity vs. Role Confusion",
+            "Intimacy vs. Isolation"
+          ],
+          "correctIndex": 2,
+          "explanation": "Erikson proposed that adolescents face the crisis of Identity vs. Role Confusion, where they work to develop a coherent sense of self and personal identity."
+        },
+        {
+          "id": "adol-q3",
+          "question": "What is the 'imaginary audience' phenomenon in adolescence?",
+          "options": [
+            "Adolescents having imaginary friends",
+            "Believing others are constantly observing and judging them",
+            "Difficulty distinguishing reality from fantasy",
+            "Fear of public speaking"
+          ],
+          "correctIndex": 1,
+          "explanation": "The imaginary audience is adolescent egocentrism where teenagers believe others are constantly watching and evaluating them, contributing to heightened self-consciousness."
+        },
+        {
+          "id": "adol-q4",
+          "question": "What is the 'personal fable' in adolescent thinking?",
+          "options": [
+            "A story adolescents write about themselves",
+            "Belief in one's uniqueness and invulnerability",
+            "A type of learning disability",
+            "Difficulty remembering personal history"
+          ],
+          "correctIndex": 1,
+          "explanation": "The personal fable is the adolescent belief that their experiences are unique and that they are somehow special or invulnerable to harm that affects others."
+        }
+      ]
     },
     "prenatal-infant": {
       "title": "Prenatal & Infant Psychology",
@@ -828,7 +928,57 @@
           "source": "Annual Review of Psychology, 62, 215-241"
         }
       ],
-      "difficulty": "intermediate"
+      "difficulty": "intermediate",
+      "quiz": [
+        {
+          "id": "adult-q1",
+          "question": "According to Erikson, what is the primary psychosocial crisis of young adulthood?",
+          "options": [
+            "Identity vs. Role Confusion",
+            "Intimacy vs. Isolation",
+            "Generativity vs. Stagnation",
+            "Integrity vs. Despair"
+          ],
+          "correctIndex": 1,
+          "explanation": "Erikson identified Intimacy vs. Isolation as the crisis of young adulthood, where individuals work to form close, committed relationships with others."
+        },
+        {
+          "id": "adult-q2",
+          "question": "What is 'generativity' in Erikson's theory?",
+          "options": [
+            "The ability to generate income",
+            "Concern for establishing and guiding the next generation",
+            "Creating art and music",
+            "Physical reproduction only"
+          ],
+          "correctIndex": 1,
+          "explanation": "Generativity involves concern for guiding the next generation through parenting, mentoring, teaching, or other contributions to society that leave a lasting legacy."
+        },
+        {
+          "id": "adult-q3",
+          "question": "What is the 'midlife crisis' according to research?",
+          "options": [
+            "A universal dramatic crisis in middle age",
+            "An outdated concept with little empirical support",
+            "A medical condition requiring treatment",
+            "A guaranteed phase of adult development"
+          ],
+          "correctIndex": 1,
+          "explanation": "Research suggests the dramatic 'midlife crisis' is not universal. While some adults experience increased reflection or changes in middle age, major crises are not typical."
+        },
+        {
+          "id": "adult-q4",
+          "question": "What is crystallized intelligence?",
+          "options": [
+            "Intelligence measured by speed of processing",
+            "Accumulated knowledge and skills from experience",
+            "The ability to solve novel problems",
+            "Memory for recent events"
+          ],
+          "correctIndex": 1,
+          "explanation": "Crystallized intelligence refers to accumulated knowledge, skills, and expertise gained through education and experience. It tends to remain stable or increase through adulthood."
+        }
+      ]
     },
     "geriatric-psychology": {
       "title": "Geriatric Psychology",
@@ -998,7 +1148,57 @@
           "source": "Oxford University Press"
         }
       ],
-      "difficulty": "intermediate"
+      "difficulty": "intermediate",
+      "quiz": [
+        {
+          "id": "geri-q1",
+          "question": "What is the 'socioemotional selectivity theory' of aging?",
+          "options": [
+            "Older adults become socially isolated",
+            "Older adults prioritize emotionally meaningful relationships as time becomes limited",
+            "Emotions decline with age",
+            "Older adults prefer solitary activities"
+          ],
+          "correctIndex": 1,
+          "explanation": "Socioemotional selectivity theory proposes that as people perceive time as limited, they prioritize emotionally meaningful goals and relationships over acquiring new information or expanding social networks."
+        },
+        {
+          "id": "geri-q2",
+          "question": "What is the difference between normal aging and dementia?",
+          "options": [
+            "There is no difference",
+            "Normal aging involves some cognitive decline; dementia involves progressive impairment affecting daily functioning",
+            "Dementia is just extreme normal aging",
+            "Normal aging does not affect cognition at all"
+          ],
+          "correctIndex": 1,
+          "explanation": "Normal aging may involve some cognitive slowing, but dementia represents pathological decline that progressively impairs memory, thinking, and the ability to perform everyday activities."
+        },
+        {
+          "id": "geri-q3",
+          "question": "What is 'successful aging' according to Rowe and Kahn?",
+          "options": [
+            "Living to 100 years old",
+            "Avoiding all disease and maintaining high function and engagement",
+            "Having wealth in old age",
+            "Being able to live independently"
+          ],
+          "correctIndex": 1,
+          "explanation": "Rowe and Kahn's model defines successful aging as low probability of disease and disability, high cognitive and physical functioning, and active engagement with life."
+        },
+        {
+          "id": "geri-q4",
+          "question": "What is Erikson's psychosocial crisis for late adulthood?",
+          "options": [
+            "Generativity vs. Stagnation",
+            "Industry vs. Inferiority",
+            "Integrity vs. Despair",
+            "Identity vs. Role Confusion"
+          ],
+          "correctIndex": 2,
+          "explanation": "Integrity vs. Despair is the final psychosocial stage, where older adults reflect on their lives and either achieve a sense of meaning and acceptance (integrity) or experience regret and fear of death (despair)."
+        }
+      ]
     }
   }
 }

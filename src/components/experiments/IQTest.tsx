@@ -58,10 +58,10 @@ const verbalQuestions: IQQuestion[] = [
   {
     id: 4,
     type: 'verbal',
-    question: "Select the pair that best completes: ______ is to SMALL as GIANT is to LARGE",
-    options: ["Tiny - Huge", "Little - Big", "Petite - Enormous", "Minute - Vast", "Dwarf - Colossal"],
+    question: "Select the pair that best completes: DWARF is to GIANT as WHISPER is to ______",
+    options: ["Speak", "Shout", "Talk", "Murmur", "Silence"],
     correctAnswer: 1,
-    explanation: "Little and big are direct antonyms, just as giant and large are synonyms (both mean very large)."
+    explanation: "Dwarf and giant are opposites in size. Whisper and shout are opposites in volume. Both pairs represent extremes on a spectrum."
   },
   {
     id: 5,
@@ -76,8 +76,8 @@ const verbalQuestions: IQQuestion[] = [
     type: 'verbal',
     question: "If all BLOOMS are FLOWERS, and some FLOWERS are ROSES, which must be true?",
     options: ["Some BLOOMS are ROSES", "Some ROSES are BLOOMS", "All ROSES are BLOOMS", "No BLOOMS are ROSES", "Cannot be determined"],
-    correctAnswer: 1,
-    explanation: "If some flowers are roses and all blooms are flowers, then some roses must be blooms (since roses are flowers)."
+    correctAnswer: 4,
+    explanation: "We know blooms are a subset of flowers and roses overlap with flowers, but we cannot determine if roses and blooms overlap. The roses could be flowers that are not blooms."
   },
   {
     id: 7,
@@ -232,8 +232,8 @@ const sequenceQuestions: IQQuestion[] = [
     type: 'sequence',
     question: "What letter should replace the question mark: A, C, E, G, I, K, M, ?, Q",
     options: ["N", "O", "P", "R", "S"],
-    correctAnswer: 2,
-    explanation: "Pattern: every other letter (odd positions): A, C, E, G, I, K, M, O, Q. Skip one each time."
+    correctAnswer: 1,
+    explanation: "Pattern: every other letter (odd positions): A(1), C(3), E(5), G(7), I(9), K(11), M(13), O(15), Q(17). The answer is O."
   },
   {
     id: 4,
@@ -258,18 +258,18 @@ const spatialQuestions: IQQuestion[] = [
   {
     id: 2,
     type: 'spatial',
-    question: "If you fold a square piece of paper in half twice (both times horizontally), and cut off the corners, how many corners does the unfolded paper have?",
-    options: ["0", "2", "4", "8", "12"],
-    correctAnswer: 1,
-    explanation: "Folding twice creates 4 layers. Cutting corners through all layers affects multiple corners. After unfolding, 2 original corners remain uncut while 2 are modified."
+    question: "If you look at a standard six-sided die (dice) and place it so 6 is on top, which number is on the bottom?",
+    options: ["1", "2", "3", "4", "5"],
+    correctAnswer: 0,
+    explanation: "On a standard die, opposite faces always sum to 7. So if 6 is on top, then 1 (7-6=1) is on the bottom."
   },
   {
     id: 3,
     type: 'spatial',
     question: "A cube has all faces painted. If you cut it into 8 smaller equal cubes, how many have paint on exactly 1 face?",
     options: ["0", "1", "2", "4", "6"],
-    correctAnswer: 3,
-    explanation: "8 smaller cubes from 2×2×2 cut. All are corner cubes with 3 faces painted. For 27 cubes (3×3×3), 6 would have exactly 1 face painted (center of each face)."
+    correctAnswer: 0,
+    explanation: "When cutting a cube into 8 smaller cubes (2×2×2), all 8 cubes are corner cubes. Each corner cube has exactly 3 painted faces. Therefore, 0 cubes have exactly 1 painted face."
   }
 ];
 
@@ -669,7 +669,7 @@ export default function IQTest() {
               <li>• {isRtl ? "أجب على جميع الأسئلة بأفضل ما يمكنك" : "Answer all questions to the best of your ability"}</li>
               <li>• {isRtl ? "لا توجد عقوبة للإجابات الخاطئة، لذا خمن إذا لم تكن متأكداً" : "No penalty for wrong answers, so guess if unsure"}</li>
               <li>• {isRtl ? "يمكنك العودة لتغيير الإجابات خلال كل قسم" : "You can go back to change answers within each section"}</li>
-              <li>• {isRtl ? "النتائج تقريبية وللتسلية فقط" : "Results are approximate and for entertainment only"}</li>
+              <li>• {isRtl ? "النتائج تقريبية ولأغراض تعليمية فقط" : "Results are approximate and for educational purposes only"}</li>
             </ul>
           </div>
 
@@ -677,8 +677,8 @@ export default function IQTest() {
           <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
             <p className="text-xs text-amber-700 dark:text-amber-300 text-justify leading-relaxed">
               {isRtl
-                ? "⚠️ تنبيه مهم: هذا اختبار ترفيهي تقريبي ولا يحل محل اختبار الذكاء المهني. لا يُستخدم لتشخيص أي حالة.IQ الفعلي يتطلب تقييماً من أخصائي مرخص."
-                : "⚠️ Important Notice: This is an approximate entertainment test and does not replace a professional IQ assessment. It should not be used for any diagnostic purposes. Actual IQ requires assessment by a licensed professional."}
+                ? "⚠️ تنبيه مهم: هذا محاكاة تعليمية لتقيس القدرات المعرفية. لا يُستخدم لتشخيص أي حالة. للحصول على تقييم دقيق، استشر أخصائياً مرخصاً."
+                : "⚠️ Important Notice: This is an educational simulation designed to measure cognitive abilities. It is not a diagnostic tool and should not be used for clinical purposes. For accurate assessment, consult a licensed professional."}
             </p>
           </div>
 

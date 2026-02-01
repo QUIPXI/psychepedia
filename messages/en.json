@@ -83,6 +83,22 @@
       "title": "New & Now",
       "description": "Cutting-edge research and emerging trends in psychology"
     },
+    "positive": {
+      "title": "Positive Psychology",
+      "description": "Well-being, happiness, character strengths, and human flourishing"
+    },
+    "consumer-environmental": {
+      "title": "Consumer & Environmental",
+      "description": "Consumer behavior, marketing psychology, and environmental psychology"
+    },
+    "relationships-family": {
+      "title": "Relationships & Family",
+      "description": "Attachment, romantic relationships, and parenting psychology"
+    },
+    "gender-sexuality": {
+      "title": "Gender & Sexuality",
+      "description": "Psychology of gender, sexual identity, and human sexuality"
+    },
     "experiments": {
       "title": "Interactive Tests",
       "description": "Engage with psychological concepts through interactive tests and experiments"
@@ -98,11 +114,30 @@
     "copied": "Citation copied!",
     "relatedTopics": "Related Topics",
     "tableOfContents": "Table of Contents",
+    "onThisPage": "On This Page",
     "shortVersion": "Short Version",
     "fullVersion": "Full Version",
     "readingFull": "Reading full version",
     "readingShort": "Reading short version",
     "min": "min"
+  },
+  "search": {
+    "placeholder": "Search articles...",
+    "noResults": "No results found",
+    "tryDifferent": "Try a different search term",
+    "recentSearches": "Recent Searches",
+    "popularTopics": "Popular Topics"
+  },
+  "accessibility": {
+    "switchLanguage": "Switch language",
+    "breadcrumb": "Breadcrumb navigation",
+    "home": "Home"
+  },
+  "screening": {
+    "notAtAll": "Not at all",
+    "severalDays": "Several days",
+    "moreThanHalf": "More than half the days",
+    "nearlyEveryDay": "Nearly every day"
   },
   "wiki": {
     "title": "Psychology Wiki",
@@ -133,8 +168,10 @@
   },
   "experiments": {
     "title": "Interactive Experiments",
-    "description": "Engage with psychological concepts through interactive simulations and models.",
-    "startExperiment": "Start Experiment",
+    "description": "Practice with psychological assessment tools and cognitive experiments. These simulations are designed for educational purposes to help psychology students learn about psychological testing, scoring, and interpretation.",
+    "startExperiment": "Start Simulation",
+    "educationalNote": "These tools are educational simulations for psychology students to learn about assessment instruments. They are not diagnostic tools.",
+    "learnMore": "Learn about this assessment",
     "stroopTest": {
       "title": "Stroop Effect",
       "description": "Test your reaction time and attention with this classic cognitive experiment."

@@ -180,6 +180,36 @@
           "source": "The Lancet Digital Health"
         }
       ],
+      "quiz": [
+        {
+          "id": "ai_mh_q1",
+          "question": "According to the 2025 JMIR meta-analysis, which mental health outcome showed the largest effect size for AI chatbots?",
+          "options": ["Anxiety symptoms", "Stress symptoms", "Depressive symptoms", "Sleep quality"],
+          "correctIndex": 2,
+          "explanation": "The meta-analysis found depressive symptoms had the largest standardized mean difference (SMD = -0.43), followed by stress (-0.41) and anxiety (-0.37)."
+        },
+        {
+          "id": "ai_mh_q2",
+          "question": "What was a key finding of the 2025 Therabot RCT published in NEJM AI?",
+          "options": ["AI therapy was ineffective for depression", "Participants showed 51% reduction in depression symptoms", "Therapeutic alliance was impossible with AI", "Only rule-based chatbots showed benefits"],
+          "correctIndex": 1,
+          "explanation": "The Therabot trial showed a 51% average reduction in depression symptoms after 4 weeks, with therapeutic alliance ratings comparable to human therapists."
+        },
+        {
+          "id": "ai_mh_q3",
+          "question": "What is the 'Black Box Problem' in AI mental health applications?",
+          "options": ["The high cost of AI systems", "The opacity of AI decision-making that prevents explanation of outputs", "The tendency of AI to give incorrect diagnoses", "The physical appearance of AI devices"],
+          "correctIndex": 1,
+          "explanation": "The Black Box Problem refers to the opacity of modern machine learning systems, making it impossible to fully explain how they arrive at specific outputs or recommendations."
+        },
+        {
+          "id": "ai_mh_q4",
+          "question": "What is 'digital phenotyping' in the context of AI mental health?",
+          "options": ["Creating digital avatars for therapy", "Using data from digital devices to infer mental health states", "Matching patients with digital therapists", "Recording therapy sessions digitally"],
+          "correctIndex": 1,
+          "explanation": "Digital phenotyping uses data from smartphones and wearables (like typing speed, GPS patterns, or sleep data) to passively infer mental health states."
+        }
+      ],
       "difficulty": "intermediate"
     },
     "psychedelic-therapy": {
@@ -362,6 +392,36 @@
           "source": "Australian Government TGA"
         }
       ],
+      "quiz": [
+        {
+          "id": "psychedelic_q1",
+          "question": "What brain network does psilocybin primarily affect to produce its therapeutic effects?",
+          "options": ["Motor cortex network", "Default Mode Network (DMN)", "Basal ganglia network", "Peripheral nervous system"],
+          "correctIndex": 1,
+          "explanation": "Psilocybin disrupts the Default Mode Network (DMN), which is associated with self-referential thought and rumination, creating enhanced neuroplasticity."
+        },
+        {
+          "id": "psychedelic_q2",
+          "question": "Why did the FDA decline to approve MDMA-assisted therapy in August 2024?",
+          "options": ["No therapeutic benefit was demonstrated", "Concerns about functional unblinding and data reliability", "MDMA was too expensive to manufacture", "No pharmaceutical company applied for approval"],
+          "correctIndex": 1,
+          "explanation": "The FDA cited concerns about functional unblinding (participants knowing they received the drug), data reliability issues, and ethical violations at trial sites."
+        },
+        {
+          "id": "psychedelic_q3",
+          "question": "In the December 2024 psilocybin trial for treatment-resistant depression, what percentage met response criteria at 3 weeks?",
+          "options": ["25%", "41.7%", "66.7%", "90%"],
+          "correctIndex": 2,
+          "explanation": "The trial showed 66.7% of patients with severely treatment-resistant depression met response criteria at 3 weeks, with 41.7% achieving full remission."
+        },
+        {
+          "id": "psychedelic_q4",
+          "question": "What is 'set and setting' in psychedelic-assisted therapy?",
+          "options": ["The drug dosage and timing", "The combination of mindset and physical/social environment", "The therapeutic integration sessions", "The regulatory approval process"],
+          "correctIndex": 1,
+          "explanation": "Set and setting refers to the participant's mindset (set) and the physical and social environment (setting), which are considered crucial to therapeutic outcomes."
+        }
+      ],
       "difficulty": "advanced"
     },
     "eco-anxiety": {
@@ -538,6 +598,36 @@
           "year": 2024,
           "title": "Toward a Taxonomy of Climate Emotions",
           "source": "Frontiers in Climate"
+        }
+      ],
+      "quiz": [
+        {
+          "id": "eco_q1",
+          "question": "What does the term 'Solastalgia' describe?",
+          "options": ["Fear of future climate disasters", "Distress from environmental change while still connected to home", "Anxiety about losing one's job due to climate policy", "Depression caused by moving to a new environment"],
+          "correctIndex": 1,
+          "explanation": "Solastalgia, coined by philosopher Glenn Albrecht, describes the distress caused by environmental change impacting people while they are still connected to their home environment—essentially 'homesickness while you are still at home.'"
+        },
+        {
+          "id": "eco_q2",
+          "question": "According to the December 2025 systematic review, when does eco-anxiety typically peak in young people?",
+          "options": ["Early childhood (ages 5-8)", "Pre-adolescence (ages 10-12)", "Late teens and early adulthood", "Middle age (ages 40-50)"],
+          "correctIndex": 2,
+          "explanation": "The review found that eco-anxiety generally increases with age during adolescence, peaking in late teens and early adulthood."
+        },
+        {
+          "id": "eco_q3",
+          "question": "What is 'Active Hope' in the context of eco-anxiety therapy?",
+          "options": ["Denying that climate change is real", "Practicing optimism that technology will solve everything", "Identifying desired outcomes and taking specific community-based actions", "Avoiding all climate-related news and information"],
+          "correctIndex": 2,
+          "explanation": "Active Hope, developed by Joanna Macy and Chris Johnstone, involves identifying desired outcomes and taking specific, community-based actions to achieve them—transforming eco-anxiety from paralysis into a catalyst for engagement."
+        },
+        {
+          "id": "eco_q4",
+          "question": "According to research, what serves as a protective buffer against the paralyzing effects of climate grief?",
+          "options": ["Avoiding all environmental news", "Collective action and community engagement", "Taking anti-anxiety medication", "Moving to a less affected region"],
+          "correctIndex": 1,
+          "explanation": "Research suggests that collective action serves as a protective buffer against the paralyzing effects of climate grief, providing both agency and community connection."
         }
       ],
       "difficulty": "beginner"
@@ -722,6 +812,36 @@
           "source": "Penguin Press"
         }
       ],
+      "quiz": [
+        {
+          "id": "algo_q1",
+          "question": "What term was named Oxford Word of the Year 2024 to describe cognitive decline from overconsuming trivial online content?",
+          "options": ["Doomscrolling", "Brain Rot", "Digital Dementia", "Attention Deficit"],
+          "correctIndex": 1,
+          "explanation": "'Brain Rot' was named Oxford Word of the Year 2024, reflecting widespread cultural concern over cognitive decline from excessive consumption of low-quality online content."
+        },
+        {
+          "id": "algo_q2",
+          "question": "What psychological principle used in slot machines also drives compulsive engagement with short-form video platforms?",
+          "options": ["Classical Conditioning", "Variable Ratio Reinforcement", "Systematic Desensitization", "Operant Extinction"],
+          "correctIndex": 1,
+          "explanation": "Variable Ratio Reinforcement—the unpredictability of rewards (will the next video be boring or exciting?)—creates a 'seeking' state that drives compulsive engagement, the same principle used in slot machines."
+        },
+        {
+          "id": "algo_q3",
+          "question": "According to the October 2024 systematic review, what was the overall finding about TikTok's impact on adolescent mental health?",
+          "options": ["Universally positive effects", "No significant effects either way", "Overall negative impact", "Effects only on sleep quality"],
+          "correctIndex": 2,
+          "explanation": "Most reviewed articles in the European Child & Adolescent Psychiatry journal indicated an overall negative impact on youth mental health, including lower life satisfaction, increased depressive symptoms, and body image concerns."
+        },
+        {
+          "id": "algo_q4",
+          "question": "What is the 'flow experience' in the context of TikTok use, and how does it relate to addiction?",
+          "options": ["A feeling of boredom that makes users leave the app", "A state of enjoyment, concentration, and time distortion that mediates addiction", "A therapeutic state that improves mental health", "A feature that limits daily usage time"],
+          "correctIndex": 1,
+          "explanation": "Research found that TikTok's algorithm contributes to a 'flow experience'—a state of enjoyment, concentration, and time distortion—which mediates the relationship between platform environment and addiction behavior."
+        }
+      ],
       "difficulty": "beginner"
     },
     "exercise-vs-medication": {
@@ -904,6 +1024,36 @@
           "source": "NICE Guidelines"
         }
       ],
+      "quiz": [
+        {
+          "id": "exercise_q1",
+          "question": "According to the 2024 BMJ meta-analysis, which exercise modality showed the largest effect size for treating depression?",
+          "options": ["Swimming", "Walking or jogging", "Cycling", "Team sports"],
+          "correctIndex": 1,
+          "explanation": "Walking or jogging showed the largest effect size (g = -0.63) in the BMJ meta-analysis, followed by yoga (g = -0.55) and strength training (g = -0.49)."
+        },
+        {
+          "id": "exercise_q2",
+          "question": "What does BDNF stand for, and why is it important in exercise's antidepressant effect?",
+          "options": ["Basic Dopamine Neurotransmitter Function - regulates mood hormones", "Brain-Derived Neurotrophic Factor - supports neuron growth and survival", "Behavioral Depression Neutralization Factor - blocks negative thoughts", "Blood-Derived Neurological Fluid - improves brain circulation"],
+          "correctIndex": 1,
+          "explanation": "BDNF (Brain-Derived Neurotrophic Factor) is a protein that supports neuron growth, survival, and repair. It's often depleted in depression and increased by exercise."
+        },
+        {
+          "id": "exercise_q3",
+          "question": "According to the 2025 Nature Scientific Reports ranking, which exercise type was rated highest for treating depression?",
+          "options": ["Aerobic exercise", "Resistance training", "Mind-body exercise (yoga, tai chi)", "High-intensity interval training"],
+          "correctIndex": 2,
+          "explanation": "Mind-body exercise (yoga, tai chi, qigong) ranked highest at 94.1%, followed by resistance training at 81.0%, and aerobic exercise at 63.9%."
+        },
+        {
+          "id": "exercise_q4",
+          "question": "What did the BMJ meta-analysis conclude about exercise compared to SSRIs for depression treatment?",
+          "options": ["SSRIs were significantly more effective", "Exercise modalities could be considered alongside antidepressants as core treatments", "Exercise should only be used when medication fails", "There was no measurable difference"],
+          "correctIndex": 1,
+          "explanation": "The BMJ meta-analysis concluded that exercise modalities like walking, yoga, and strength training 'could be considered alongside psychotherapy and antidepressants as core treatments for depression.'"
+        }
+      ],
       "difficulty": "beginner"
     },
     "teen-sleep-patterns": {
@@ -1080,6 +1230,36 @@
           "year": 2014,
           "title": "Insufficient Sleep in Adolescents and Young Adults: An Update on Causes and Consequences",
           "source": "Pediatrics"
+        }
+      ],
+      "quiz": [
+        {
+          "id": "sleep_q1",
+          "question": "According to the 2026 University of Oregon study, what was the depression risk reduction for teens who slept in on weekends?",
+          "options": ["15% lower risk", "25% lower risk", "41% lower risk", "60% lower risk"],
+          "correctIndex": 2,
+          "explanation": "The study found that teens who 'slept in' on weekends to catch up on lost weekday sleep had a 41% lower risk for daily depressive symptoms compared to those who did not."
+        },
+        {
+          "id": "sleep_q2",
+          "question": "What biological change during puberty causes teenagers to become 'night owls'?",
+          "options": ["Increased caffeine sensitivity", "Circadian phase delay", "Reduced melatonin production", "Faster metabolism"],
+          "correctIndex": 1,
+          "explanation": "During puberty, the circadian rhythm naturally shifts later (phase delay), causing teenagers to fall asleep later and wake up later—they become biological 'night owls.'"
+        },
+        {
+          "id": "sleep_q3",
+          "question": "According to the SLEEP 2025 study, what is the optimal 'sweet spot' for weekend catch-up sleep in adolescents?",
+          "options": ["No extra sleep", "Up to about 2 extra hours per weekend day", "4-5 extra hours per weekend day", "As much as possible"],
+          "correctIndex": 1,
+          "explanation": "Moderate catch-up sleep (up to about 2 extra hours per weekend day) was associated with fewer anxiety symptoms, while excessive catch-up sleep was linked to higher anxiety."
+        },
+        {
+          "id": "sleep_q4",
+          "question": "What does 'social jetlag' refer to, and what is the new understanding for adolescents?",
+          "options": ["Fatigue from social media use - always harmful", "Sleep timing gap between weekdays and weekends - moderate amounts may be protective for teens", "Jet lag from traveling - unrelated to teens", "Sleep problems from social anxiety - requires medication"],
+          "correctIndex": 1,
+          "explanation": "Social jetlag refers to the discrepancy in sleep timing between school days and free days. New research suggests that while extreme social jetlag is disruptive, moderate catch-up sleep acts as a protective buffer for adolescents."
         }
       ],
       "difficulty": "beginner"

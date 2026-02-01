@@ -184,10 +184,92 @@
           "title": "Educational & School Psychology",
           "href": "/wiki/applied/educational-school"
         },
-        {
-          "id": "sports-performance",
+{
+        "id": "sports-performance",
           "title": "Sports & Performance Psychology",
           "href": "/wiki/applied/sports-performance"
+        }
+      ]
+    },
+    {
+      "id": "positive",
+      "title": "Positive Psychology",
+      "icon": "Sun",
+      "href": "/wiki/positive",
+      "topics": [
+        {
+          "id": "well-being",
+          "title": "Well-Being & Happiness",
+          "href": "/wiki/positive/well-being"
+        },
+        {
+          "id": "character-strengths",
+          "title": "Character Strengths & Virtues",
+          "href": "/wiki/positive/character-strengths"
+        },
+        {
+          "id": "resilience",
+          "title": "Resilience & Post-Traumatic Growth",
+          "href": "/wiki/positive/resilience"
+        }
+      ]
+    },
+    {
+      "id": "consumer-environmental",
+      "title": "Consumer & Environmental Psychology",
+      "icon": "ShoppingCart",
+      "href": "/wiki/consumer-environmental",
+      "topics": [
+        {
+          "id": "consumer-behavior",
+          "title": "Consumer Psychology & Behavior",
+          "href": "/wiki/consumer-environmental/consumer-behavior"
+        },
+        {
+          "id": "environmental-psychology",
+          "title": "Environmental Psychology",
+          "href": "/wiki/consumer-environmental/environmental-psychology"
+        }
+      ]
+    },
+    {
+      "id": "relationships-family",
+      "title": "Relationships & Family Psychology",
+      "icon": "Users",
+      "href": "/wiki/relationships-family",
+      "topics": [
+        {
+          "id": "attachment-theory",
+          "title": "Attachment Theory & Adult Relationships",
+          "href": "/wiki/relationships-family/attachment-theory"
+        },
+        {
+          "id": "romantic-relationships",
+          "title": "Romantic Relationships & Marriage",
+          "href": "/wiki/relationships-family/romantic-relationships"
+        },
+        {
+          "id": "parenting-psychology",
+          "title": "Parenting Psychology",
+          "href": "/wiki/relationships-family/parenting-psychology"
+        }
+      ]
+    },
+    {
+      "id": "gender-sexuality",
+      "title": "Gender & Sexuality Psychology",
+      "icon": "Heart",
+      "href": "/wiki/gender-sexuality",
+      "topics": [
+        {
+          "id": "gender-psychology",
+          "title": "Psychology of Gender",
+          "href": "/wiki/gender-sexuality/gender-psychology"
+        },
+        {
+          "id": "human-sexuality",
+          "title": "Psychology of Human Sexuality",
+          "href": "/wiki/gender-sexuality/human-sexuality"
         }
       ]
     }

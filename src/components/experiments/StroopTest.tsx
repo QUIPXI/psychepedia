@@ -2,9 +2,46 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { Play, RotateCcw, Brain } from "lucide-react";
+import { Play, RotateCcw, Brain, GraduationCap } from "lucide-react";
 import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
+import { TestOverview } from "./TestOverview";
+import { AcknowledgmentDialog } from "./AcknowledgmentDialog";
+
+const stroopOverviewData = {
+  testName: { en: "Stroop Color-Word Test", ar: "اختبار ستروب للألوان والكلمات" },
+  testAbbreviation: "Stroop",
+  purpose: {
+    en: "Measures selective attention, cognitive flexibility, and processing speed by asking participants to name the ink color of color words.",
+    ar: "يقيس الانتباه الانتقائي والمرونة المعرفية وسرعة المعالجة من خلال مطالبة المشاركين بتسمية لون الحبر لكلمات الألوان."
+  },
+  targetPopulation: {
+    en: "Children (6+) and adults for cognitive assessment and research.",
+    ar: "الأطفال (6+) والبالغون للتقييم المعرفي والبحث."
+  },
+  administration: { time: "5-10 minutes", format: "Computer-based", items: "10 trials" },
+  scoring: {
+    range: "Reaction time in milliseconds",
+    interpretationBands: [
+      { range: "<500ms", label: { en: "Excellent", ar: "ممتاز" }, description: { en: "Very fast processing", ar: "معالجة سريعة جداً" } },
+      { range: "500-800ms", label: { en: "Average", ar: "متوسط" }, description: { en: "Normal processing speed", ar: "سرعة معالجة طبيعية" } },
+      { range: ">800ms", label: { en: "Below Average", ar: "أقل من المتوسط" }, description: { en: "Slower processing", ar: "معالجة أبطأ" } }
+    ],
+    notes: { en: "Lower times indicate better performance.", ar: "الأوقات المنخفضة تشير إلى أداء أفضل." }
+  },
+  strengths: {
+    en: ["Quick and easy to administer", "Well-established validity", "Sensitive to attention deficits", "Cross-cultural applicability"],
+    ar: ["سريع وسهل التطبيق", "صدق راسخ", "حساس لعجز الانتباه", "قابلية التطبيق عبر الثقافات"]
+  },
+  limitations: {
+    en: ["Practice effects possible", "Color blindness affects results", "Not diagnostic alone"],
+    ar: ["تأثيرات التمرين ممكنة", "عمى الألوان يؤثر على النتائج", "ليس تشخيصياً بمفرده"]
+  },
+  wikiLinks: [
+    { en: "Cognitive Psychology", ar: "علم النفس المعرفي", href: "/wiki/cognitive/cognitive-psychology" },
+    { en: "Attention", ar: "الانتباه", href: "/wiki/cognitive/attention-memory" }
+  ]
+};
 
 const COLORS = [
     { name: "red", hex: "#EF4444", label: { en: "RED", ar: "أحمر" } },
@@ -17,6 +54,8 @@ export default function StroopTest() {
     const locale = useLocale();
     const isRtl = locale === "ar";
 
+    const [showOverview, setShowOverview] = useState(true);
+    const [isAcknowledgmentOpen, setIsAcknowledgmentOpen] = useState(false);
     const [gameState, setGameState] = useState<"idle" | "playing" | "finished">("idle");
     const [currentRound, setCurrentRound] = useState(0);
     const [startTime, setStartTime] = useState(0);
@@ -47,6 +86,18 @@ export default function StroopTest() {
         setStartTime(Date.now());
     }, [isRtl]);
 
+    const handleStart = () => {
+        setIsAcknowledgmentOpen(true);
+    };
+
+    const handleAcknowledgmentConfirm = () => {
+        setShowOverview(false);
+        setGameState("playing");
+        setResults([]);
+        setCurrentRound(0);
+        generateStimulus();
+    };
+
     const startGame = () => {
         setGameState("playing");
         setResults([]);
@@ -72,6 +123,7 @@ export default function StroopTest() {
     };
 
     const handleReset = () => {
+        setShowOverview(true);
         setGameState("idle");
         setResults([]);
         setCurrentRound(0);
@@ -92,26 +144,38 @@ export default function StroopTest() {
 
     return (
         <div className="space-y-6">
-            {gameState === "idle" ? (
-                <div className="text-center py-8">
-                    <Brain className="w-12 h-12 mx-auto mb-4 text-primary" />
-                    <h3 className="text-lg font-semibold mb-2">
-                        {isRtl ? "تأثير ستروب" : "Stroop Effect Test"}
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                        {isRtl 
-                            ? "اختبر تركيزك وسرعة رد فعلك"
-                            : "Test your focus and reaction speed"}
-                    </p>
-                    <div className="text-sm text-muted-foreground mb-4 space-y-2 text-left max-w-md mx-auto">
-                        <p>{isRtl ? "• سترى كلمات ألوان مطبوعة بألوان مختلفة" : "• You will see color words printed in different colors"}</p>
-                        <p>{isRtl ? "• مهمتك هي الضغط على لون الحبر، وليس معنى الكلمة" : "• Your task is to click the INK COLOR, not the word meaning"}</p>
-                        <p>{isRtl ? "• اضغط بأسرع ما يمكنك دون ارتكاب أخطاء" : "• Work as quickly as possible without making mistakes"}</p>
+            <AcknowledgmentDialog
+                open={isAcknowledgmentOpen}
+                onOpenChange={setIsAcknowledgmentOpen}
+                testName={stroopOverviewData.testName}
+                testAbbreviation={stroopOverviewData.testAbbreviation}
+                onConfirm={handleAcknowledgmentConfirm}
+            />
+
+            {showOverview ? (
+                <div className="space-y-6 py-4">
+                    <div className="text-center border-b border-border pb-4">
+                        <div className="flex items-center justify-center gap-3 mb-2">
+                            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                                <Brain className="w-5 h-5 text-primary" />
+                            </div>
+                            <h3 className="text-xl font-semibold">
+                                {isRtl ? stroopOverviewData.testName.ar : stroopOverviewData.testName.en} ({stroopOverviewData.testAbbreviation})
+                            </h3>
+                        </div>
+                        <p className="text-muted-foreground text-sm">
+                            {isRtl ? "محاكاة تعليمية للطلاب" : "Educational Simulation for Students"}
+                        </p>
                     </div>
-                    <Button onClick={startGame} className="gap-2">
-                        <Play className="w-4 h-4" />
-                        {isRtl ? "ابدأ الاختبار" : "Start Test"}
-                    </Button>
+
+                    <div className="flex justify-center">
+                        <Button onClick={handleStart} className="gap-2 px-8">
+                            <GraduationCap className="w-4 h-4" />
+                            {isRtl ? "ابدأ المحاكاة التعليمية" : "Start Educational Simulation"}
+                        </Button>
+                    </div>
+
+                    <TestOverview {...stroopOverviewData} />
                 </div>
             ) : gameState === "playing" && currentStimulus ? (
                 <div className="space-y-4">

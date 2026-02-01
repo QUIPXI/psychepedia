@@ -11,6 +11,10 @@ import {
   Lightbulb,
   ArrowRight,
   Sparkles,
+  Sun,
+  ShoppingCart,
+  HeartHandshake,
+  PersonStanding,
 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
@@ -80,11 +84,39 @@ const domainConfig = [
     topicCount: 4,
   },
   {
+    id: "positive",
+    icon: Sun,
+    href: "/wiki/positive",
+    color: "text-yellow-600 dark:text-yellow-400",
+    topicCount: 3,
+  },
+  {
+    id: "consumer-environmental",
+    icon: ShoppingCart,
+    href: "/wiki/consumer-environmental",
+    color: "text-cyan-600 dark:text-cyan-400",
+    topicCount: 2,
+  },
+  {
+    id: "relationships-family",
+    icon: HeartHandshake,
+    href: "/wiki/relationships-family",
+    color: "text-pink-600 dark:text-pink-400",
+    topicCount: 3,
+  },
+  {
+    id: "gender-sexuality",
+    icon: PersonStanding,
+    href: "/wiki/gender-sexuality",
+    color: "text-purple-600 dark:text-purple-400",
+    topicCount: 2,
+  },
+  {
     id: "new-and-now",
     icon: Sparkles,
     href: "/wiki/new-and-now",
     color: "text-orange-600 dark:text-orange-400",
-    topicCount: 4,
+    topicCount: 6,
   },
 ];
 

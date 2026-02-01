@@ -2,18 +2,57 @@
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import { Play, RefreshCw, Hand } from "lucide-react";
+import { Play, RefreshCw, Hand, GraduationCap } from "lucide-react";
 import { useLocale } from "next-intl";
+import { TestOverview } from "./TestOverview";
+import { AcknowledgmentDialog } from "./AcknowledgmentDialog";
+
+const fingerTappingOverviewData = {
+  testName: { en: "Finger Tapping Test", ar: "اختبار النقر بالأصابع" },
+  testAbbreviation: "FTT",
+  purpose: {
+    en: "Measures motor speed, manual dexterity, and lateralized brain function by counting finger taps over a set time period.",
+    ar: "يقيس السرعة الحركية والبراعة اليدوية ووظيفة الدماغ الجانبية من خلال عد نقرات الأصابع خلال فترة زمنية محددة."
+  },
+  targetPopulation: {
+    en: "Children and adults for neuropsychological assessment.",
+    ar: "الأطفال والبالغون للتقييم النفسي العصبي."
+  },
+  administration: { time: "5 minutes", format: "Manual tapping", items: "2 trials (left and right hand)" },
+  scoring: {
+    range: "Taps per 10 seconds",
+    interpretationBands: [
+      { range: ">50 taps", label: { en: "Above Average", ar: "فوق المتوسط" }, description: { en: "Excellent motor speed", ar: "سرعة حركية ممتازة" } },
+      { range: "35-50 taps", label: { en: "Average", ar: "متوسط" }, description: { en: "Normal motor function", ar: "وظيفة حركية طبيعية" } },
+      { range: "<35 taps", label: { en: "Below Average", ar: "أقل من المتوسط" }, description: { en: "May indicate motor impairment", ar: "قد يشير إلى ضعف حركي" } }
+    ],
+    notes: { en: "Dominant hand typically faster. Large asymmetry may indicate lateralized dysfunction.", ar: "اليد المهيمنة عادة أسرع. عدم التماثل الكبير قد يشير إلى خلل جانبي." }
+  },
+  strengths: {
+    en: ["Simple and quick", "Objective measurement", "Sensitive to neurological changes", "Good test-retest reliability"],
+    ar: ["بسيط وسريع", "قياس موضوعي", "حساس للتغيرات العصبية", "موثوقية جيدة لإعادة الاختبار"]
+  },
+  limitations: {
+    en: ["Affected by fatigue", "Practice effects", "Not specific to one condition"],
+    ar: ["يتأثر بالإرهاق", "تأثيرات التمرين", "غير محدد لحالة واحدة"]
+  },
+  wikiLinks: [
+    { en: "Neuropsychology", ar: "علم النفس العصبي", href: "/wiki/biological/neuropsychology" },
+    { en: "Motor Control", ar: "التحكم الحركي", href: "/wiki/biological/brain-behavior" }
+  ]
+};
 
 export default function FingerTappingTest() {
   const locale = useLocale();
   const isRtl = locale === "ar";
+  const [showOverview, setShowOverview] = useState(true);
+  const [isAcknowledgmentOpen, setIsAcknowledgmentOpen] = useState(false);
   const [phase, setPhase] = useState<"instructions" | "left" | "rest" | "right" | "finished">("instructions");
   const [taps, setTaps] = useState(0);
   const [leftScore, setLeftScore] = useState(0);
   const [rightScore, setRightScore] = useState(0);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const lastTapRef = useRef<number>(0);
+  const lastTapRef = useRef(0);
   
   // Use refs for timer to keep it independent from React state updates
   const timeLeftRef = useRef(10);
@@ -27,6 +66,11 @@ export default function FingerTappingTest() {
   }, [phase]);
 
   const handleStart = () => {
+    setIsAcknowledgmentOpen(true);
+  };
+
+  const handleAcknowledgmentConfirm = () => {
+    setShowOverview(false);
     setPhase("left");
     timeLeftRef.current = 10;
     tapsRef.current = 0;
@@ -86,6 +130,7 @@ export default function FingerTappingTest() {
     if (timerRef.current) {
       clearInterval(timerRef.current);
     }
+    setShowOverview(true);
     setPhase("instructions");
     setLeftScore(0);
     setRightScore(0);
@@ -96,7 +141,40 @@ export default function FingerTappingTest() {
 
   return (
     <div className="space-y-6">
-      {phase === "instructions" ? (
+      <AcknowledgmentDialog
+        open={isAcknowledgmentOpen}
+        onOpenChange={setIsAcknowledgmentOpen}
+        testName={fingerTappingOverviewData.testName}
+        testAbbreviation={fingerTappingOverviewData.testAbbreviation}
+        onConfirm={handleAcknowledgmentConfirm}
+      />
+
+      {showOverview ? (
+        <div className="space-y-6 py-4">
+          <div className="text-center border-b border-border pb-4">
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Hand className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">
+                {isRtl ? fingerTappingOverviewData.testName.ar : fingerTappingOverviewData.testName.en} ({fingerTappingOverviewData.testAbbreviation})
+              </h3>
+            </div>
+            <p className="text-muted-foreground text-sm">
+              {isRtl ? "محاكاة تعليمية للطلاب" : "Educational Simulation for Students"}
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <Button onClick={handleStart} className="gap-2 px-8">
+              <GraduationCap className="w-4 h-4" />
+              {isRtl ? "ابدأ المحاكاة التعليمية" : "Start Educational Simulation"}
+            </Button>
+          </div>
+
+          <TestOverview {...fingerTappingOverviewData} />
+        </div>
+      ) : phase === "instructions" ? (
         <div className="text-center py-8">
           <Hand className="w-12 h-12 mx-auto mb-4 text-primary" />
           <h3 className="text-lg font-semibold mb-2">

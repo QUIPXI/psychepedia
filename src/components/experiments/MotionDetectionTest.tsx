@@ -2,12 +2,51 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Play, RefreshCw, Eye } from "lucide-react";
+import { Play, RefreshCw, Eye, GraduationCap } from "lucide-react";
 import { useLocale } from "next-intl";
+import { TestOverview } from "./TestOverview";
+import { AcknowledgmentDialog } from "./AcknowledgmentDialog";
+
+const motionDetectionOverviewData = {
+  testName: { en: "Motion Detection Test", ar: "اختبار اكتشاف الحركة" },
+  testAbbreviation: "MDT",
+  purpose: {
+    en: "Assesses visual motion perception and perceptual sensitivity by detecting movement in random dot patterns.",
+    ar: "يقيّم إدراك الحركة البصرية والحساسية الإدراكية من خلال اكتشاف الحركة في أنماط النقاط العشوائية."
+  },
+  targetPopulation: {
+    en: "All ages for visual perception assessment and research.",
+    ar: "جميع الأعمار لتقييم الإدراك البصري والبحث."
+  },
+  administration: { time: "3-5 minutes", format: "Computer-based", items: "10 trials" },
+  scoring: {
+    range: "0-100% accuracy",
+    interpretationBands: [
+      { range: "90-100%", label: { en: "Excellent", ar: "ممتاز" }, description: { en: "Superior motion detection", ar: "اكتشاف حركة متفوق" } },
+      { range: "70-89%", label: { en: "Average", ar: "متوسط" }, description: { en: "Normal motion perception", ar: "إدراك حركة طبيعي" } },
+      { range: "<70%", label: { en: "Below Average", ar: "أقل من المتوسط" }, description: { en: "May indicate visual processing difficulties", ar: "قد يشير إلى صعوبات في المعالجة البصرية" } }
+    ],
+    notes: { en: "Performance affected by attention and visual acuity.", ar: "الأداء يتأثر بالانتباه وحدة البصر." }
+  },
+  strengths: {
+    en: ["Quick administration", "Objective measurement", "Sensitive to visual processing deficits", "Research-validated paradigm"],
+    ar: ["تطبيق سريع", "قياس موضوعي", "حساس لعجز المعالجة البصرية", "نموذج مثبت بالبحث"]
+  },
+  limitations: {
+    en: ["Requires adequate vision", "Screen quality affects results", "Not diagnostic alone"],
+    ar: ["يتطلب رؤية كافية", "جودة الشاشة تؤثر على النتائج", "ليس تشخيصياً بمفرده"]
+  },
+  wikiLinks: [
+    { en: "Sensation and Perception", ar: "الإحساس والإدراك", href: "/wiki/cognitive/sensation-perception" },
+    { en: "Visual Processing", ar: "المعالجة البصرية", href: "/wiki/cognitive/cognitive-psychology" }
+  ]
+};
 
 export default function MotionDetectionTest() {
   const locale = useLocale();
   const isRtl = locale === "ar";
+  const [showOverview, setShowOverview] = useState(true);
+  const [isAcknowledgmentOpen, setIsAcknowledgmentOpen] = useState(false);
   const [isStarted, setIsStarted] = useState(false);
   const [score, setScore] = useState(0);
   const [trials, setTrials] = useState(0);
@@ -22,6 +61,11 @@ export default function MotionDetectionTest() {
   };
 
   const handleStart = () => {
+    setIsAcknowledgmentOpen(true);
+  };
+
+  const handleAcknowledgmentConfirm = () => {
+    setShowOverview(false);
     setIsStarted(true);
     setScore(0);
     setTrials(0);
@@ -98,7 +142,40 @@ export default function MotionDetectionTest() {
 
   return (
     <div className="space-y-6">
-      {!isStarted ? (
+      <AcknowledgmentDialog
+        open={isAcknowledgmentOpen}
+        onOpenChange={setIsAcknowledgmentOpen}
+        testName={motionDetectionOverviewData.testName}
+        testAbbreviation={motionDetectionOverviewData.testAbbreviation}
+        onConfirm={handleAcknowledgmentConfirm}
+      />
+
+      {showOverview ? (
+        <div className="space-y-6 py-4">
+          <div className="text-center border-b border-border pb-4">
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Eye className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">
+                {isRtl ? motionDetectionOverviewData.testName.ar : motionDetectionOverviewData.testName.en} ({motionDetectionOverviewData.testAbbreviation})
+              </h3>
+            </div>
+            <p className="text-muted-foreground text-sm">
+              {isRtl ? "محاكاة تعليمية للطلاب" : "Educational Simulation for Students"}
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <Button onClick={handleStart} className="gap-2 px-8">
+              <GraduationCap className="w-4 h-4" />
+              {isRtl ? "ابدأ المحاكاة التعليمية" : "Start Educational Simulation"}
+            </Button>
+          </div>
+
+          <TestOverview {...motionDetectionOverviewData} />
+        </div>
+      ) : !isStarted ? (
         <div className="text-center py-8">
           <Eye className="w-12 h-12 mx-auto mb-4 text-primary" />
           <h3 className="text-lg font-semibold mb-2">

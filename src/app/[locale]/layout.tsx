@@ -5,6 +5,8 @@ import { locales, localeDirection, Locale } from "@/i18n/config";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FontSizeProvider } from "@/context/FontSizeContext";
+import { ReadingPositionProvider } from "@/context/ReadingPositionContext";
+import { ScrollToTop } from "@/components/layout/ScrollToTop";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -38,11 +40,14 @@ export default async function LocaleLayout({
     <div lang={locale} dir={dir} className={dir === "rtl" ? "rtl" : "ltr"}>
       <NextIntlClientProvider messages={messages}>
         <FontSizeProvider>
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <ReadingPositionProvider>
+            <ScrollToTop />
+            <div className="min-h-screen flex flex-col">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </ReadingPositionProvider>
         </FontSizeProvider>
       </NextIntlClientProvider>
     </div>

@@ -2,8 +2,11 @@
 
 import React, { useState, useCallback, useMemo } from "react";
 import { Button } from "@/components/ui/button";
-import { Play, RefreshCw, User, Info, Brain, Heart, Shield, BookOpen, Briefcase, Users, ChevronDown } from "lucide-react";
+import { Play, RefreshCw, User, Info, Brain, Heart, Shield, BookOpen, Briefcase, Users, ChevronDown, GraduationCap } from "lucide-react";
 import { useLocale } from "next-intl";
+import { TestOverview } from "./TestOverview";
+import { AcknowledgmentDialog } from "./AcknowledgmentDialog";
+import { TeachingFeedback } from "./TeachingFeedback";
 
 interface BigFiveQuestion {
   text: string;
@@ -231,9 +234,111 @@ const traitIcons: Record<string, React.ReactNode> = {
   Neuroticism: <Heart className="w-5 h-5" />,
 };
 
+// Big Five Test Overview Data
+const bigFiveOverviewData = {
+  testName: {
+    en: "Big Five Personality Inventory",
+    ar: "مقياس السمات الخمس الكبرى للشخصية"
+  },
+  testAbbreviation: "Big Five",
+  purpose: {
+    en: "Comprehensive personality assessment measuring five major dimensions of human personality. The most widely validated model in personality psychology, also known as OCEAN (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism).",
+    ar: "تقييم شامل للشخصية يقيس الأبعاد الخمسة الرئيسية للشخصية البشرية. النموذج الأكثر تحققاً في علم نفس الشخصية، المعروف أيضاً بـ OCEAN."
+  },
+  targetPopulation: {
+    en: "Adults (18+) for personality assessment in research, clinical, and organizational settings. Not validated for clinical diagnosis of personality disorders.",
+    ar: "البالغون (18+) لتقييم الشخصية في البيئات البحثية والسريرية والتنظيمية. لم يتم التحقق منه للتشخيص السريري لاضطرابات الشخصية."
+  },
+  administration: {
+    time: "10-15 minutes",
+    format: "Self-administered questionnaire",
+    items: "50 items (10 per trait)"
+  },
+  scoring: {
+    range: "0-100% per trait (composite score)",
+    interpretationBands: [
+      { range: "0-20%", label: { en: "Very Low", ar: "منخفض جداً" }, description: { en: "Extremely low on this trait dimension", ar: "منخفض جداً على هذا البعد من السمات" } },
+      { range: "21-40%", label: { en: "Low", ar: "منخفض" }, description: { en: "Below average on this trait dimension", ar: "أقل من المتوسط على هذا البعد" } },
+      { range: "41-60%", label: { en: "Average", ar: "متوسط" }, description: { en: "Average range on this trait dimension", ar: "نطاق متوسط على هذا البعد" } },
+      { range: "61-80%", label: { en: "High", ar: "مرتفع" }, description: { en: "Above average on this trait dimension", ar: "أعلى من المتوسط على هذا البعد" } },
+      { range: "81-100%", label: { en: "Very High", ar: "مرتفع جداً" }, description: { en: "Extremely high on this trait dimension", ar: "مرتفع جداً على هذا البعد" } }
+    ],
+    notes: {
+      en: "Scores should be interpreted as continuous dimensions, not categories. Each trait exists on a spectrum.",
+      ar: "يجب تفسير الدرجات كأبعاد مستمرة، وليس فئات. كل سمة موجودة على طيف."
+    }
+  },
+  strengths: {
+    en: [
+      "Most validated personality model in psychological research",
+      "Captures broad personality dimensions",
+      "Useful across cultures when properly adapted",
+      "Predicts various life outcomes (job performance, relationships, health)",
+      "Comprehensive yet efficient"
+    ],
+    ar: [
+      "النموذج الأكثر تحققاً للشخصية في البحث النفسي",
+      "يلقط أبعاد الشخصية الرئيسية",
+      "مفيد عبر الثقافات عند التكييف المناسب",
+      "يتنبأ بنتائج الحياة المختلفة",
+      "شامل وفعال"
+    ]
+  },
+  limitations: {
+    en: [
+      "Does not capture all personality dimensions (e.g., honesty-humility from HEXACO)",
+      "Self-report bias",
+      "May not reflect actual behavior",
+      "Not a diagnostic tool for personality disorders",
+      "Cultural differences in trait expression"
+    ],
+    ar: [
+      "لا يلتقط جميع أبعاد الشخصية",
+      "تحيز التقرير الذاتي",
+      "قد لا يعكس السلوك الفعلي",
+      "ليست أداة تشخيصية لاضطرابات الشخصية",
+      "اختلافات ثقافية في تعبير السمات"
+    ]
+  },
+  wikiLinks: [
+    { en: "Personality Psychology", ar: "علم نفس الشخصية", href: "/wiki/foundations/personality" },
+    { en: "Personality Traits", ar: "سمات الشخصية", href: "/wiki/social-personality/traits" },
+    { en: "Psychological Assessment", ar: "التقييم النفسي", href: "/wiki/clinical/assessment" }
+  ]
+};
+
+const bigFiveFeedbackData = {
+  exampleInterpretation: {
+    en: "A profile showing high Openness (85%), moderate Conscientiousness (55%), high Extraversion (78%), moderate Agreeableness (52%), and low Neuroticism (35%) suggests someone who is creative, curious, organized, socially confident, cooperative, and emotionally stable. In clinical interpretation, this pattern is associated with openness to experience and emotional stability.",
+    ar: "ملف شخصي يُظهر انفتاحاً عالياً (85%)، ضميرية معتدلة (55%)، انفتاحاً اجتماعياً عالياً (78%)، توافقاً معتدلاً (52%)، وعصابية منخفضة (35%) يقترح شخصاً مبدعاً، فضولياً، منظماً، واثقاً اجتماعياً، متعاوناً، ومستقراً عاطفياً."
+  },
+  commonMistakes: {
+    en: [
+      "Interpreting scores as fixed personality types rather than dimensions",
+      "Forgetting to reverse-score negatively-keyed items",
+      "Interpreting single traits in isolation without considering the full profile",
+      "Assuming high/low scores are inherently better/worse",
+      "Using for employment decisions without considering legal/ethical implications"
+    ],
+    ar: [
+      "تفسير الدرئات كأنواع شخصية ثابتة بدلاً من الأبعاد",
+      "نسيان عكس تسجيل البنود سلبية التوجيه",
+      "تفسير السمات المفردة بمعزل عن الملف الكامل",
+      "افتراض أن الدرجات العالية/المنخفضة أفضل/أسوأ بطبيعتها",
+      "الاستخدام لقرارات التوظيف دون النظر في الآثار القانونية والأخلاقية"
+    ]
+  },
+  clinicalInappropriatenessNotes: {
+    en: "Big Five is inappropriate for clinical use when: (1) Used as sole assessment for personality disorders, (2) Making high-stakes personnel decisions without validation, (3) Ignoring cultural differences in response patterns, (4) Diagnosing mental illness based on trait profiles, (5) Using without proper training in psychological assessment.",
+    ar: "يُعد Big Five غير مناسب للاستخدام السريري عندما: (1) يُستخدم كالتقييم الوحيد لاضطرابات الشخصية، (2) اتخاذ قرارات شخصية عالية المخاطر، (3) تجاهل الاختلافات الثقافية، (4) تشخيص الأمراض النفسية بناءً على ملفات السمات، (5) الاستخدام بدون التدريب المناسب."
+  }
+};
+
 export default function BigFivePersonality() {
   const locale = useLocale();
   const isRtl = locale === "ar";
+  const [showOverview, setShowOverview] = useState(true);
+  const [isAcknowledgmentOpen, setIsAcknowledgmentOpen] = useState(false);
   const [isStarted, setIsStarted] = useState(false);
   const [currentTrait, setCurrentTrait] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -250,6 +355,11 @@ export default function BigFivePersonality() {
   const currentQuestionIndex = traits.slice(0, currentTrait).reduce((sum, t) => sum + bigFiveStructure[t].questions.length, 0) + currentQuestion;
 
   const handleStart = () => {
+    setIsAcknowledgmentOpen(true);
+  };
+
+  const handleAcknowledgmentConfirm = () => {
+    setShowOverview(false);
     setIsStarted(true);
     setResponses({});
     setResponseTimes({});
@@ -280,6 +390,7 @@ export default function BigFivePersonality() {
   }, [currentTrait, currentQuestion, currentQuestions.length, currentTraitName]);
 
   const handleReset = () => {
+    setShowOverview(true);
     setIsStarted(false);
     setCurrentTrait(0);
     setCurrentQuestion(0);
@@ -347,105 +458,42 @@ export default function BigFivePersonality() {
 
   return (
     <div className="space-y-6 max-w-4xl mx-auto">
-      {/* Header */}
-      <div className="text-center border-b border-border pb-4">
-        <div className="flex items-center justify-center gap-3 mb-2">
-          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-            <User className="w-5 h-5 text-primary" />
-          </div>
-          <h3 className="text-xl font-semibold">
-            {isRtl ? "اختبار السمات الخمس الكبرى" : "Big Five Personality Test"}
-          </h3>
-        </div>
-        <p className="text-muted-foreground text-sm">
-          {isRtl
-            ? "قيّم شخصيتك على الأبعاد الخمسة الرئيسية"
-            : "Assess your personality on the five major dimensions"}
-        </p>
-      </div>
+      <AcknowledgmentDialog
+        open={isAcknowledgmentOpen}
+        onOpenChange={setIsAcknowledgmentOpen}
+        testName={bigFiveOverviewData.testName}
+        testAbbreviation={bigFiveOverviewData.testAbbreviation}
+        onConfirm={handleAcknowledgmentConfirm}
+      />
 
-      {!isStarted ? (
-        /* Start Screen */
+      {showOverview ? (
         <div className="space-y-6 py-4">
-          {/* Intro */}
-          <div className="bg-muted/30 border border-border rounded-lg p-5">
-            <h4 className="font-medium mb-2 flex items-center gap-2">
-              <Info className="w-4 h-4 text-primary" />
-              {isRtl ? "حول الاختبار" : "About the Test"}
-            </h4>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {isRtl
-                ? "يُعد اختبار السمات الخمس الكبرى (OCEAN) الأكثر استخداماً في علم النفس لقياس شخصية الإنسان. يتكون من 50 سؤالاً يقيس خمسة أبعاد رئيسية تؤثر على السلوك والعلاقات والنجاح المهني."
-                : "The Big Five Personality Test (OCEAN) is the most widely used psychological assessment for measuring human personality. It consists of 50 questions measuring five major dimensions that influence behavior, relationships, and career success."}
-            </p>
-          </div>
-
-          {/* Trait Overview */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {traits.map((trait) => (
-              <div
-                key={trait}
-                className="bg-card border border-border rounded-lg p-4 hover:border-primary/30 hover:shadow-sm transition-all"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                    {traitIcons[trait]}
-                  </div>
-                  <h5 className="font-medium text-sm">{isRtl ? trait : trait}</h5>
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  {isRtl ? bigFiveStructure[trait as keyof typeof bigFiveStructure].description.ar : bigFiveStructure[trait as keyof typeof bigFiveStructure].description.en}
-                </p>
-                <p className="text-xs text-muted-foreground mt-2 pt-2 border-t border-border/50">
-                  {bigFiveStructure[trait as keyof typeof bigFiveStructure].questions.length} {isRtl ? "أسئلة" : "questions"}
-                </p>
+          {/* Header */}
+          <div className="text-center border-b border-border pb-4">
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <User className="w-5 h-5 text-primary" />
               </div>
-            ))}
-          </div>
-
-          {/* Test Details */}
-          <div className="bg-muted/20 border border-border rounded-lg p-4">
-            <div className="grid grid-cols-4 gap-4 mb-4">
-              <div className="text-center">
-                <div className="text-xl font-semibold">50</div>
-                <p className="text-xs text-muted-foreground">{isRtl ? "سؤال" : "Questions"}</p>
-              </div>
-              <div className="text-center">
-                <div className="text-xl font-semibold">5</div>
-                <p className="text-xs text-muted-foreground">{isRtl ? "سمات" : "Traits"}</p>
-              </div>
-              <div className="text-center">
-                <div className="text-xl font-semibold">~10</div>
-                <p className="text-xs text-muted-foreground">{isRtl ? "دقيقة" : "Minutes"}</p>
-              </div>
-              <div className="text-center">
-                <div className="text-xl font-semibold">5</div>
-                <p className="text-xs text-muted-foreground">{isRtl ? "خيارات" : "Options"}</p>
-              </div>
+              <h3 className="text-xl font-semibold">
+                {isRtl ? bigFiveOverviewData.testName.ar : bigFiveOverviewData.testName.en} ({bigFiveOverviewData.testAbbreviation})
+              </h3>
             </div>
-            <p className="text-xs text-muted-foreground text-center">
-              {isRtl ? "أجب بصدق عن كل سؤال للحصول على نتائج دقيقة" : "Answer each question honestly for accurate results"}
-            </p>
-          </div>
-
-          {/* Disclaimer */}
-          <div className="bg-primary/5 border border-primary/10 rounded-lg p-4">
-            <p className="text-xs text-muted-foreground text-justify leading-relaxed">
-              {isRtl
-                ? "ملاحظة: النتائج تمثل تقديرات سمة الشخصية بناءً على استجاباتك الذاتية. هذا اختبار تقييمي ذاتي ولا يُستخدم لتشخيص أي حالة صحية نفسية. للحصول على تقييم مهني، يرجى استشارة أخصائي صحة نفسية مرخص."
-                : "Note: Results represent personality trait estimates based on your self-reported responses. This is a self-assessment tool and should not be used to diagnose any psychological condition. For professional assessment, please consult a licensed mental health professional."}
+            <p className="text-muted-foreground text-sm">
+              {isRtl ? "محاكاة تعليمية للطلاب" : "Educational Simulation for Students"}
             </p>
           </div>
 
           {/* Start Button */}
           <div className="flex justify-center">
             <Button onClick={handleStart} className="gap-2 px-8">
-              <Play className="w-4 h-4" />
-              {isRtl ? "ابدأ الاختبار" : "Start Test"}
+              <GraduationCap className="w-4 h-4" />
+              {isRtl ? "ابدأ المحاكاة التعليمية" : "Start Educational Simulation"}
             </Button>
           </div>
+
+          <TestOverview {...bigFiveOverviewData} />
         </div>
-      ) : !showResult ? (
+      ) : isStarted && !showResult ? (
         /* Questions */
         <div className="space-y-4">
           {/* Progress */}

@@ -60,9 +60,13 @@ export default async function ExperimentsPage({ params }: ExperimentsPageProps) 
         <div className="container mx-auto px-4 py-12">
             <header className="mb-12 text-center max-w-2xl mx-auto">
                 <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
-                <p className="text-xl text-muted-foreground font-serif">
+                <p className="text-xl text-muted-foreground font-serif mb-4">
                     {t("description")}
                 </p>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-muted rounded-lg text-sm">
+                    <span className="text-amber-600 dark:text-amber-400">📚</span>
+                    <span className="text-muted-foreground">{t("educationalNote")}</span>
+                </div>
             </header>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -5,6 +5,17 @@ import { getReadingTime } from "./utils";
 export interface ArticleSection {
   title: string;
   content: string;
+  practiceLink?: {
+    href: string;
+    label: {
+      en: string;
+      ar: string;
+    };
+    description: {
+      en: string;
+      ar: string;
+    };
+  };
 }
 
 export interface ArticleReference {

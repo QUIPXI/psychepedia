@@ -2,8 +2,45 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Play, RefreshCw, Brain } from "lucide-react";
+import { Play, RefreshCw, Brain, GraduationCap } from "lucide-react";
 import { useLocale } from "next-intl";
+import { TestOverview } from "./TestOverview";
+import { AcknowledgmentDialog } from "./AcknowledgmentDialog";
+
+const autismOverviewData = {
+  testName: { en: "Autism Spectrum Quotient", ar: "حاصل طيف التوحد" },
+  testAbbreviation: "AQ",
+  purpose: {
+    en: "Self-report screening instrument to assess autistic traits in adults, measuring social skills, attention switching, attention to detail, communication, and imagination.",
+    ar: "أداة فحص ذاتي لتقييم سمات التوحد لدى البالغين، تقيس المهارات الاجتماعية وتبديل الانتباه والاهتمام بالتفاصيل والتواصل والخيال."
+  },
+  targetPopulation: {
+    en: "Adults (16+) for autism spectrum screening.",
+    ar: "البالغون (16+) لفحص طيف التوحد."
+  },
+  administration: { time: "10-15 minutes", format: "Self-report questionnaire", items: "30 items" },
+  scoring: {
+    range: "0-90 points",
+    interpretationBands: [
+      { range: "0-31", label: { en: "Low Probability", ar: "احتمالية منخفضة" }, description: { en: "Few autistic traits", ar: "سمات توحد قليلة" } },
+      { range: "32-49", label: { en: "Medium Score", ar: "درجة متوسطة" }, description: { en: "Some autistic traits present", ar: "بعض سمات التوحد موجودة" } },
+      { range: "50-90", label: { en: "High Probability", ar: "احتمالية مرتفعة" }, description: { en: "Many autistic traits, professional evaluation recommended", ar: "سمات توحد كثيرة، يوصى بتقييم مهني" } }
+    ],
+    notes: { en: "This is a screening tool only, not a diagnostic instrument.", ar: "هذه أداة فحص فقط، وليست أداة تشخيصية." }
+  },
+  strengths: {
+    en: ["Quick self-administration", "Well-researched validity", "Identifies broad autism phenotype", "Available in multiple languages"],
+    ar: ["تطبيق ذاتي سريع", "صدق مدروس جيداً", "يحدد النمط الظاهري الواسع للتوحد", "متاح بلغات متعددة"]
+  },
+  limitations: {
+    en: ["Self-report bias possible", "Not diagnostic", "Cultural factors may affect scores", "Does not differentiate autism subtypes"],
+    ar: ["تحيز التقرير الذاتي ممكن", "ليس تشخيصياً", "العوامل الثقافية قد تؤثر على الدرجات", "لا يميز بين أنواع التوحد الفرعية"]
+  },
+  wikiLinks: [
+    { en: "Autism Spectrum Disorders", ar: "اضطرابات طيف التوحد", href: "/wiki/clinical/neurodevelopmental" },
+    { en: "Neurodevelopmental Disorders", ar: "الاضطرابات النمائية العصبية", href: "/wiki/clinical/neurodevelopmental" }
+  ]
+};
 
 const autismQuestions = [
   "I prefer to do things with others rather than on my own.",
@@ -48,10 +85,24 @@ const autismOptions = [
 export default function AutismSpectrum() {
   const locale = useLocale();
   const isRtl = locale === "ar";
+  const [showOverview, setShowOverview] = useState(true);
+  const [isAcknowledgmentOpen, setIsAcknowledgmentOpen] = useState(false);
   const [isStarted, setIsStarted] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [showResult, setShowResult] = useState(false);
+
+  const handleStart = () => {
+    setIsAcknowledgmentOpen(true);
+  };
+
+  const handleAcknowledgmentConfirm = () => {
+    setShowOverview(false);
+    setIsStarted(true);
+    setCurrentQuestion(0);
+    setAnswers([]);
+    setShowResult(false);
+  };
 
   const handleAnswer = (value: number) => {
     const newAnswers = [...answers, value];
@@ -65,6 +116,7 @@ export default function AutismSpectrum() {
   };
 
   const handleReset = () => {
+    setShowOverview(true);
     setIsStarted(false);
     setCurrentQuestion(0);
     setAnswers([]);
@@ -82,7 +134,40 @@ export default function AutismSpectrum() {
 
   return (
     <div className="space-y-6">
-      {!isStarted ? (
+      <AcknowledgmentDialog
+        open={isAcknowledgmentOpen}
+        onOpenChange={setIsAcknowledgmentOpen}
+        testName={autismOverviewData.testName}
+        testAbbreviation={autismOverviewData.testAbbreviation}
+        onConfirm={handleAcknowledgmentConfirm}
+      />
+
+      {showOverview ? (
+        <div className="space-y-6 py-4">
+          <div className="text-center border-b border-border pb-4">
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Brain className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">
+                {isRtl ? autismOverviewData.testName.ar : autismOverviewData.testName.en} ({autismOverviewData.testAbbreviation})
+              </h3>
+            </div>
+            <p className="text-muted-foreground text-sm">
+              {isRtl ? "محاكاة تعليمية للطلاب" : "Educational Simulation for Students"}
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <Button onClick={handleStart} className="gap-2 px-8">
+              <GraduationCap className="w-4 h-4" />
+              {isRtl ? "ابدأ المحاكاة التعليمية" : "Start Educational Simulation"}
+            </Button>
+          </div>
+
+          <TestOverview {...autismOverviewData} />
+        </div>
+      ) : !isStarted ? (
         <div className="text-center py-8">
           <Brain className="w-12 h-12 mx-auto mb-4 text-primary" />
           <h3 className="text-lg font-semibold mb-2">{isRtl ? "مقياس طيف التوحد (AQ)" : "Autism Spectrum Quotient (AQ)"}</h3>

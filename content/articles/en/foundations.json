@@ -576,7 +576,57 @@
         "source": "Proceedings of the National Academy of Sciences, 115(11), 2600-2606"
       }
     ],
-    "readingTime": 31
+    "readingTime": 31,
+    "quiz": [
+      {
+        "id": "rm-q1",
+        "question": "What is the main advantage of experimental research over correlational research?",
+        "options": [
+          "Experiments are faster to conduct",
+          "Experiments can establish cause-and-effect relationships",
+          "Experiments require fewer participants",
+          "Experiments are less expensive"
+        ],
+        "correctIndex": 1,
+        "explanation": "Random assignment in experiments controls for confounding variables, allowing researchers to infer that changes in the independent variable caused changes in the dependent variable."
+      },
+      {
+        "id": "rm-q2",
+        "question": "What is a confounding variable?",
+        "options": [
+          "The variable being measured",
+          "A variable that varies systematically with the IV and could explain the results",
+          "The variable manipulated by the researcher",
+          "A variable that never changes"
+        ],
+        "correctIndex": 1,
+        "explanation": "A confounding variable is an extraneous variable that varies systematically with the independent variable, making it impossible to determine which variable caused the observed effect."
+      },
+      {
+        "id": "rm-q3",
+        "question": "What does a correlation coefficient of -0.85 indicate?",
+        "options": [
+          "A weak positive relationship",
+          "No relationship",
+          "A strong negative relationship",
+          "A perfect positive relationship"
+        ],
+        "correctIndex": 2,
+        "explanation": "A correlation of -0.85 indicates a strong negative relationship - as one variable increases, the other tends to decrease. The magnitude (0.85) indicates strength; the sign indicates direction."
+      },
+      {
+        "id": "rm-q4",
+        "question": "What is statistical significance (p < .05)?",
+        "options": [
+          "The result is practically important",
+          "There is less than 5% probability the result occurred by chance if null hypothesis is true",
+          "The effect size is large",
+          "The study is replicable"
+        ],
+        "correctIndex": 1,
+        "explanation": "Statistical significance (p < .05) means there is less than a 5% probability of obtaining results this extreme by chance alone, assuming the null hypothesis is true."
+      }
+    ]
   },
   "ethics": {
     "title": "Ethics in Psychological Research & Practice",
@@ -785,6 +835,56 @@
       }
     ],
     "readingTime": 26,
-    "difficulty": "intermediate"
+    "difficulty": "intermediate",
+    "quiz": [
+      {
+        "id": "eth-q1",
+        "question": "What is informed consent in research?",
+        "options": [
+          "Participants must sign any document given to them",
+          "Participants must understand and voluntarily agree to participate after being informed of procedures and risks",
+          "Researchers must get permission from their university",
+          "Participants must be paid for their time"
+        ],
+        "correctIndex": 1,
+        "explanation": "Informed consent requires that participants be given complete information about the study, understand it, and voluntarily agree to participate. They must also be able to withdraw at any time."
+      },
+      {
+        "id": "eth-q2",
+        "question": "When is deception allowed in psychological research?",
+        "options": [
+          "Never",
+          "Only when the research could not be conducted otherwise and participants are debriefed",
+          "Whenever the researcher decides",
+          "Only in medical research"
+        ],
+        "correctIndex": 1,
+        "explanation": "Deception is permitted only when the research cannot be conducted without it, the potential benefits justify it, and participants are fully debriefed afterward about the true nature of the study."
+      },
+      {
+        "id": "eth-q3",
+        "question": "What is an Institutional Review Board (IRB)?",
+        "options": [
+          "A group that funds research",
+          "A committee that reviews research proposals to protect participant welfare",
+          "A team that publishes research",
+          "A board that hires researchers"
+        ],
+        "correctIndex": 1,
+        "explanation": "IRBs are committees that review research proposals to ensure they meet ethical standards and adequately protect the rights and welfare of human participants."
+      },
+      {
+        "id": "eth-q4",
+        "question": "What is debriefing in research?",
+        "options": [
+          "Collecting data from participants",
+          "Explaining the true purpose of the study and addressing any concerns after participation",
+          "Recruiting participants",
+          "Analyzing results"
+        ],
+        "correctIndex": 1,
+        "explanation": "Debriefing occurs after participation and involves explaining the study's true purpose, especially if deception was used, and addressing any concerns or negative effects from participation."
+      }
+    ]
   }
 }

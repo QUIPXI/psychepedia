@@ -17,6 +17,8 @@ import { CiteButton } from "@/components/wiki/CiteButton";
 import { HighlightToggle } from "@/components/wiki/HighlightToggle";
 import { HighlightHelperText } from "@/components/wiki/HighlightHelperText";
 import { FontSizeSelector } from "@/components/layout/FontSizeSelector";
+import { BackToTop } from "@/components/wiki/BackToTop";
+import { ReadingPositionBanner } from "@/components/wiki/ReadingPositionBanner";
 import { getArticle, loadArticles } from "@/lib/articles";
 import { locales } from "@/i18n/config";
 import { ArticleHighlighter } from "@/components/wiki/ArticleHighlighter";
@@ -198,6 +200,10 @@ export default async function TopicPage({ params }: TopicPageProps) {
           </div>
         </div>
       </div>
+      
+      {/* Floating UI Elements */}
+      <BackToTop locale={locale} />
+      <ReadingPositionBanner articleId={articleId} locale={locale} />
     </ArticleHighlighter>
   );
 }

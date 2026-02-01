@@ -188,7 +188,69 @@
           "source": "Prentice-Hall"
         }
       ],
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "quiz": [
+        {
+          "id": "sp-q1",
+          "question": "What is the Fundamental Attribution Error?",
+          "options": [
+            "Overemphasizing situational factors when explaining others' behavior",
+            "Overemphasizing dispositional factors when explaining others' behavior",
+            "Underestimating one's own abilities",
+            "Attributing success to luck"
+          ],
+          "correctIndex": 1,
+          "explanation": "The Fundamental Attribution Error is the tendency to overemphasize dispositional (internal) factors and underemphasize situational (external) factors when explaining others' behavior."
+        },
+        {
+          "id": "sp-q2",
+          "question": "In Milgram's obedience studies, what percentage of participants administered the maximum shock level?",
+          "options": [
+            "About 10%",
+            "About 35%",
+            "About 65%",
+            "About 90%"
+          ],
+          "correctIndex": 2,
+          "explanation": "Approximately 65% of participants in Milgram's original study administered the maximum 450-volt shock, demonstrating the powerful influence of authority on obedience."
+        },
+        {
+          "id": "sp-q3",
+          "question": "What does the Elaboration Likelihood Model describe?",
+          "options": [
+            "How memories are formed",
+            "Two routes to persuasion: central and peripheral",
+            "The stages of group development",
+            "How stereotypes are maintained"
+          ],
+          "correctIndex": 1,
+          "explanation": "The Elaboration Likelihood Model proposes two routes to persuasion: the central route (careful processing of arguments) and peripheral route (reliance on heuristic cues)."
+        },
+        {
+          "id": "sp-q4",
+          "question": "What is the bystander effect?",
+          "options": [
+            "People help more when others are present",
+            "People help less when others are present",
+            "Bystanders remember events more accurately",
+            "Witnesses always intervene in emergencies"
+          ],
+          "correctIndex": 1,
+          "explanation": "The bystander effect is the phenomenon where individuals are less likely to help in an emergency when other bystanders are present, due to diffusion of responsibility and pluralistic ignorance."
+        },
+        {
+          "id": "sp-q5",
+          "question": "According to Festinger's Cognitive Dissonance Theory, what happens when attitudes and behaviors conflict?",
+          "options": [
+            "People ignore the conflict",
+            "People experience psychological discomfort and seek to reduce it",
+            "Behavior always changes to match attitudes",
+            "Attitudes remain permanently unchanged"
+          ],
+          "correctIndex": 1,
+          "explanation": "Cognitive dissonance theory proposes that inconsistency between cognitions creates psychological discomfort, motivating people to change attitudes or behaviors to restore consistency."
+        }
+      ]
     },
     "personality-theories": {
       "title": "Personality Theories",
@@ -220,6 +282,17 @@
         {
           "title": "Biological Perspectives",
           "content": "**Eysenck's Biological Theory**:\n- Extraversion: Cortical arousal levels\n- Neuroticism: Limbic system reactivity\n- Psychoticism: Testosterone levels\n\n**Behavioral Genetics**:\n- Twin studies show heritability of traits\n- Shared environment has minimal effect in adulthood\n- Non-shared environment matters more\n\n**Temperament**: Early-appearing, biologically based individual differences in reactivity and self-regulation.\n\n**Evolutionary Personality Psychology**: Traits as adaptations to ancestral environments."
+        },
+        {
+          "title": "Practice with Personality Assessment",
+          "content": "Apply your knowledge of personality psychology by practicing with these educational simulations. These tools are designed for psychology students to learn about personality test structure, scoring, and interpretation.",
+          "relatedTests": [
+            {
+              "name": "Big Five Personality Test",
+              "description": "Practice administering and interpreting the Big Five personality inventory",
+              "href": "/experiments/big-five"
+            }
+          ]
         }
       ],
       "fullSections": [
@@ -374,7 +447,69 @@
           "source": "Annual Review of Psychology, 65, 719-742"
         }
       ],
-      "difficulty": "intermediate"
+      "difficulty": "intermediate",
+      "quiz": [
+        {
+          "id": "pt-q1",
+          "question": "What are the five factors in the Big Five personality model?",
+          "options": [
+            "Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism",
+            "Intelligence, Creativity, Sociability, Honesty, Ambition",
+            "Id, Ego, Superego, Libido, Thanatos",
+            "Sensing, Intuition, Thinking, Feeling, Judging"
+          ],
+          "correctIndex": 0,
+          "explanation": "The Big Five (OCEAN) model includes Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism - five broad dimensions that capture most personality variation."
+        },
+        {
+          "id": "pt-q2",
+          "question": "According to Freud, which component of personality operates on the reality principle?",
+          "options": [
+            "Id",
+            "Ego",
+            "Superego",
+            "Libido"
+          ],
+          "correctIndex": 1,
+          "explanation": "The Ego operates on the reality principle, mediating between the Id's desires and the constraints of reality, while the Id operates on the pleasure principle."
+        },
+        {
+          "id": "pt-q3",
+          "question": "What is self-efficacy according to Bandura?",
+          "options": [
+            "General self-esteem",
+            "Beliefs about one's ability to succeed in specific situations",
+            "The ideal self one aspires to become",
+            "Unconscious defense mechanisms"
+          ],
+          "correctIndex": 1,
+          "explanation": "Self-efficacy refers to beliefs about one's capability to execute behaviors necessary to produce specific outcomes. It is situation-specific and influences motivation and performance."
+        },
+        {
+          "id": "pt-q4",
+          "question": "What does Rogers mean by 'unconditional positive regard'?",
+          "options": [
+            "Accepting someone only when they meet certain standards",
+            "Complete acceptance and valuing of a person without conditions",
+            "Providing constructive criticism",
+            "Setting boundaries in relationships"
+          ],
+          "correctIndex": 1,
+          "explanation": "Unconditional positive regard means accepting and valuing a person without conditions, which Rogers believed promotes healthy personality development and therapeutic change."
+        },
+        {
+          "id": "pt-q5",
+          "question": "What is the estimated heritability of Big Five personality traits?",
+          "options": [
+            "0-10%",
+            "20-30%",
+            "40-60%",
+            "80-100%"
+          ],
+          "correctIndex": 2,
+          "explanation": "Twin studies consistently show heritability estimates of 40-60% for Big Five traits, indicating substantial genetic influence while leaving room for environmental factors."
+        }
+      ]
     },
     "cross-cultural": {
       "title": "Cross-Cultural Psychology",
@@ -560,7 +695,69 @@
           "source": "International Journal of Behavioral Development, 31(5), 478-490"
         }
       ],
-      "difficulty": "intermediate"
+      "difficulty": "intermediate",
+      "quiz": [
+        {
+          "id": "cc-q1",
+          "question": "What is the key distinction between individualist and collectivist cultures?",
+          "options": [
+            "Economic development levels",
+            "Emphasis on personal goals vs. group harmony and interdependence",
+            "Religious beliefs",
+            "Geographic location"
+          ],
+          "correctIndex": 1,
+          "explanation": "Individualist cultures emphasize personal goals, autonomy, and self-expression, while collectivist cultures prioritize group harmony, interdependence, and social obligations."
+        },
+        {
+          "id": "cc-q2",
+          "question": "What is acculturation?",
+          "options": [
+            "Forgetting one's original culture completely",
+            "The process of adapting to a new culture",
+            "Teaching culture to children",
+            "Rejecting all foreign influences"
+          ],
+          "correctIndex": 1,
+          "explanation": "Acculturation is the process of cultural and psychological change that results from contact between cultures, often experienced by immigrants and minorities."
+        },
+        {
+          "id": "cc-q3",
+          "question": "What is a culture-bound syndrome?",
+          "options": [
+            "A mental disorder found in all cultures",
+            "A pattern of symptoms recognized as an illness only in specific cultures",
+            "A personality trait unique to one culture",
+            "A communication barrier between cultures"
+          ],
+          "correctIndex": 1,
+          "explanation": "Culture-bound syndromes are patterns of aberrant behavior and experience that are recognized as illnesses in specific cultures but may not be recognized in others (e.g., taijin-kyofusho in Japan)."
+        },
+        {
+          "id": "cc-q4",
+          "question": "What criticism does cross-cultural psychology raise about mainstream psychology?",
+          "options": [
+            "It uses too much statistical analysis",
+            "It relies too heavily on Western, educated, industrialized samples (WEIRD)",
+            "It ignores biological factors",
+            "It focuses too much on abnormal behavior"
+          ],
+          "correctIndex": 1,
+          "explanation": "Cross-cultural psychology critiques mainstream psychology for over-relying on WEIRD (Western, Educated, Industrialized, Rich, Democratic) samples and assuming findings generalize universally."
+        },
+        {
+          "id": "cc-q5",
+          "question": "Which acculturation strategy involves maintaining heritage culture while also adopting the new culture?",
+          "options": [
+            "Assimilation",
+            "Separation",
+            "Integration",
+            "Marginalization"
+          ],
+          "correctIndex": 2,
+          "explanation": "Integration involves maintaining one's heritage culture while also participating in the larger society, and is generally associated with the best psychological outcomes."
+        }
+      ]
     }
   }
 }

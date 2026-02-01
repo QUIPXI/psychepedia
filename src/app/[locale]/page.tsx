@@ -14,6 +14,10 @@ import {
   Search,
   Sparkles,
   FlaskConical,
+  Sun,
+  ShoppingCart,
+  HeartHandshake,
+  PersonStanding,
 } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
@@ -28,6 +32,10 @@ const domainIcons = {
   "social-personality": Heart,
   clinical: BookOpen,
   applied: Briefcase,
+  positive: Sun,
+  "consumer-environmental": ShoppingCart,
+  "relationships-family": HeartHandshake,
+  "gender-sexuality": PersonStanding,
   "new-and-now": Sparkles,
   experiments: FlaskConical,
 };
@@ -40,6 +48,10 @@ const domainColors = {
   "social-personality": "text-rose-600 dark:text-rose-400",
   clinical: "text-teal-600 dark:text-teal-400",
   applied: "text-violet-600 dark:text-violet-400",
+  positive: "text-yellow-600 dark:text-yellow-400",
+  "consumer-environmental": "text-cyan-600 dark:text-cyan-400",
+  "relationships-family": "text-pink-600 dark:text-pink-400",
+  "gender-sexuality": "text-purple-600 dark:text-purple-400",
   "new-and-now": "text-orange-600 dark:text-orange-400",
   experiments: "text-blue-600 dark:text-blue-400",
 };
@@ -52,6 +64,10 @@ const domainKeys = [
   "social-personality",
   "clinical",
   "applied",
+  "positive",
+  "consumer-environmental",
+  "relationships-family",
+  "gender-sexuality",
   "new-and-now",
   "experiments",
 ] as const;

@@ -1,13 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { BookOpen, FileText, List } from "lucide-react";
+import { BookOpen, FileText, List, ArrowRight, FlaskConical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useScrollSpy, useScrollToHeading, useFontSize } from "@/lib/hooks";
 import type { Article } from "@/lib/articles";
 import { useHighlights } from "@/context/HighlightContext";
 import { HIGHLIGHT_COLORS } from "@/context/HighlightContext";
+import Link from "next/link";
 
 interface ArticleContentToggleProps {
   article: Article;
@@ -137,9 +138,10 @@ function MobileTOC({
   );
 }
 
-function ArticleContent({ sections, articleId }: { sections: Article["sections"]; articleId: string }) {
+function ArticleContent({ sections, articleId, locale }: { sections: Article["sections"]; articleId: string; locale: string }) {
   const { fontSizeClass, mounted } = useFontSize();
   const { getHighlights } = useHighlights();
+  const isRtl = locale === "ar";
 
   // Font size mapping for prose content
   const proseSize = mounted ? {
@@ -148,6 +150,9 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
     "text-lg": "prose-lg",
     "text-xl": "prose-xl",
   }[fontSizeClass] || "prose-base" : "prose-base";
+
+  // Default font family for content
+  const fontFamily = "font-serif";
 
   // Counter for unique keys
   const keyCounter = React.useRef(0);
@@ -290,7 +295,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
   };
 
   return (
-    <div className={cn("prose prose-slate dark:prose-invert max-w-none", proseSize)}>
+    <div className={cn("prose prose-slate dark:prose-invert max-w-none", proseSize, fontFamily)}>
       {sections.map((section, index) => {
         const id = slugify(section.title);
         return (
@@ -309,7 +314,7 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
                   return (
                     <ul key={pIndex} className="list-disc pl-6 space-y-2">
                       {items.map((item, i) => (
-                        <li key={i} className="leading-relaxed text-foreground/90 font-serif">
+                        <li key={i} className="leading-relaxed text-foreground/90">
                           {renderSegmentedText(item, section.title, pIndex)}
                         </li>
                       ))}
@@ -320,12 +325,36 @@ function ArticleContent({ sections, articleId }: { sections: Article["sections"]
                 return (
                   <p
                     key={pIndex}
-                    className="leading-relaxed text-foreground/90 font-serif"
+                    className="leading-relaxed text-foreground/90"
                   >
                     {renderSegmentedText(trimmed, section.title, pIndex)}
                   </p>
                 );
               })}
+              
+              {/* Render practice link button if present */}
+              {section.practiceLink && (
+                <div className="mt-6 pt-4 border-t border-border">
+                  <Link href={`/${locale}${section.practiceLink.href}`}>
+                    <div className="group bg-primary/5 hover:bg-primary/10 border border-primary/20 hover:border-primary/40 rounded-lg p-4 transition-all cursor-pointer">
+                      <div className={cn("flex items-center gap-3", isRtl && "flex-row-reverse")}>
+                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                          <FlaskConical className="w-5 h-5 text-primary" />
+                        </div>
+                        <div className={cn("flex-1", isRtl && "text-right")}>
+                          <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                            {isRtl ? section.practiceLink.label.ar : section.practiceLink.label.en}
+                          </p>
+                          <p className="text-sm text-muted-foreground">
+                            {isRtl ? section.practiceLink.description.ar : section.practiceLink.description.en}
+                          </p>
+                        </div>
+                        <ArrowRight className={cn("w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors", isRtl && "rotate-180")} />
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              )}
             </div>
           </section>
         );
@@ -406,7 +435,7 @@ export function ArticleContentToggle({
       {/* Content with Desktop TOC */}
       <div className={cn("flex", isRtl ? "flex-row-reverse" : "flex-row")}>
         <div className="flex-1 min-w-0">
-          <ArticleContent sections={currentSections} articleId={articleId} />
+          <ArticleContent sections={currentSections} articleId={articleId} locale={locale} />
         </div>
         
         {/* Desktop TOC Sidebar */}

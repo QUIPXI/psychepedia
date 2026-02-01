@@ -504,7 +504,69 @@
           "source": "Putnam"
         }
       ],
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "quiz": [
+        {
+          "id": "em-q1",
+          "question": "According to the James-Lange theory of emotion, what is the relationship between physiological arousal and emotional experience?",
+          "options": [
+            "Emotions cause physiological arousal",
+            "Physiological arousal causes emotional experience",
+            "Emotions and arousal occur simultaneously",
+            "Cognition mediates between arousal and emotion"
+          ],
+          "correctIndex": 1,
+          "explanation": "The James-Lange theory proposes that we experience emotion as a result of perceiving our physiological responses - we feel afraid because we tremble, not the reverse."
+        },
+        {
+          "id": "em-q2",
+          "question": "What does Maslow's hierarchy of needs suggest about human motivation?",
+          "options": [
+            "All needs are equally important",
+            "Lower-level needs must be satisfied before higher-level needs become motivating",
+            "Self-actualization is the most basic need",
+            "Physiological needs are optional"
+          ],
+          "correctIndex": 1,
+          "explanation": "Maslow proposed that needs are arranged hierarchically, with basic physiological and safety needs at the bottom. Higher needs like belonging, esteem, and self-actualization become motivating only after lower needs are met."
+        },
+        {
+          "id": "em-q3",
+          "question": "What is the difference between intrinsic and extrinsic motivation?",
+          "options": [
+            "Intrinsic motivation comes from external rewards",
+            "Extrinsic motivation involves doing activities for their own sake",
+            "Intrinsic motivation involves internal satisfaction; extrinsic involves external rewards",
+            "There is no meaningful difference"
+          ],
+          "correctIndex": 2,
+          "explanation": "Intrinsic motivation involves engaging in activities for inherent satisfaction and enjoyment, while extrinsic motivation involves performing behaviors to obtain external rewards or avoid punishments."
+        },
+        {
+          "id": "em-q4",
+          "question": "According to Schachter-Singer's two-factor theory, what two components are required for emotion?",
+          "options": [
+            "Behavior and memory",
+            "Physiological arousal and cognitive interpretation",
+            "Facial expression and vocal tone",
+            "Stimulus and response"
+          ],
+          "correctIndex": 1,
+          "explanation": "The two-factor theory proposes that emotion requires both physiological arousal AND cognitive interpretation of that arousal based on situational context."
+        },
+        {
+          "id": "em-q5",
+          "question": "What is the facial feedback hypothesis?",
+          "options": [
+            "Emotions cause facial expressions",
+            "Facial expressions can influence emotional experience",
+            "People cannot control their facial expressions",
+            "Facial expressions are universal"
+          ],
+          "correctIndex": 1,
+          "explanation": "The facial feedback hypothesis suggests that facial expressions can influence emotional experience - forcing a smile may actually make you feel happier."
+        }
+      ]
     },
     "psycholinguistics": {
       "title": "Psycholinguistics",
@@ -686,7 +748,69 @@
           "source": "Harvard University Press"
         }
       ],
-      "difficulty": "intermediate"
+      "difficulty": "intermediate",
+      "quiz": [
+        {
+          "id": "pl-q1",
+          "question": "What is the critical period hypothesis in language acquisition?",
+          "options": [
+            "Language can be learned equally well at any age",
+            "There is a biologically determined window for optimal language acquisition",
+            "Children learn language faster with explicit instruction",
+            "Second languages must be learned before age 5"
+          ],
+          "correctIndex": 1,
+          "explanation": "The critical period hypothesis proposes that there is a biologically determined period (typically before puberty) during which language acquisition occurs most easily and completely."
+        },
+        {
+          "id": "pl-q2",
+          "question": "What does the Sapir-Whorf hypothesis (linguistic relativity) propose?",
+          "options": [
+            "All languages share the same grammar",
+            "Language influences thought and perception",
+            "Children are born with universal grammar",
+            "Language is purely learned through imitation"
+          ],
+          "correctIndex": 1,
+          "explanation": "The Sapir-Whorf hypothesis proposes that the language we speak influences how we think and perceive the world. The weak version (language influences thought) has more empirical support than the strong version (language determines thought)."
+        },
+        {
+          "id": "pl-q3",
+          "question": "What did Chomsky argue about language acquisition?",
+          "options": [
+            "Language is entirely learned through reinforcement",
+            "Children have an innate Language Acquisition Device (LAD)",
+            "Language develops purely through imitation",
+            "Grammar cannot be learned"
+          ],
+          "correctIndex": 1,
+          "explanation": "Chomsky proposed that children are born with an innate Language Acquisition Device containing universal grammar principles, explaining why children acquire language rapidly despite limited input (poverty of the stimulus)."
+        },
+        {
+          "id": "pl-q4",
+          "question": "What is a speech error like 'You have hissed all my mystery lectures' called?",
+          "options": [
+            "Freudian slip",
+            "Spoonerism",
+            "Malapropism",
+            "Neologism"
+          ],
+          "correctIndex": 1,
+          "explanation": "A spoonerism is a speech error involving the transposition of initial sounds in words (e.g., 'hissed all my mystery lectures' instead of 'missed all my history lectures'). These errors reveal stages in speech production."
+        },
+        {
+          "id": "pl-q5",
+          "question": "What is the 'tip-of-the-tongue' phenomenon?",
+          "options": [
+            "A speech impediment",
+            "Temporary inability to retrieve a known word despite partial access",
+            "Mispronunciation of foreign words",
+            "Speaking too quickly"
+          ],
+          "correctIndex": 1,
+          "explanation": "The tip-of-the-tongue phenomenon is a retrieval failure where a person cannot recall a word they know, but can often recall partial information like the first letter or number of syllables."
+        }
+      ]
     }
   }
 }

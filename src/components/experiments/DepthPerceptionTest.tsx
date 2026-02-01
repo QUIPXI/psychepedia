@@ -2,12 +2,51 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Play, RefreshCw, Eye } from "lucide-react";
+import { Play, RefreshCw, Eye, GraduationCap } from "lucide-react";
 import { useLocale } from "next-intl";
+import { TestOverview } from "./TestOverview";
+import { AcknowledgmentDialog } from "./AcknowledgmentDialog";
+
+const depthPerceptionOverviewData = {
+  testName: { en: "Depth Perception Test", ar: "اختبار إدراك العمق" },
+  testAbbreviation: "DPT",
+  purpose: {
+    en: "Assesses binocular depth perception and distance judgment ability by identifying which object appears closer.",
+    ar: "يقيّم إدراك العمق ثنائي العين والقدرة على الحكم على المسافات من خلال تحديد الجسم الذي يبدو أقرب."
+  },
+  targetPopulation: {
+    en: "All ages for visual-spatial perception assessment.",
+    ar: "جميع الأعمار لتقييم الإدراك البصري المكاني."
+  },
+  administration: { time: "3-5 minutes", format: "Computer-based", items: "10 trials" },
+  scoring: {
+    range: "0-100% accuracy",
+    interpretationBands: [
+      { range: "90-100%", label: { en: "Excellent", ar: "ممتاز" }, description: { en: "Superior depth perception", ar: "إدراك عمق متفوق" } },
+      { range: "70-89%", label: { en: "Average", ar: "متوسط" }, description: { en: "Normal depth perception", ar: "إدراك عمق طبيعي" } },
+      { range: "<70%", label: { en: "Below Average", ar: "أقل من المتوسط" }, description: { en: "May indicate depth perception difficulties", ar: "قد يشير إلى صعوبات في إدراك العمق" } }
+    ],
+    notes: { en: "Best performed with both eyes. Monocular vision affects results.", ar: "يُفضل إجراؤه بكلتا العينين. الرؤية الأحادية تؤثر على النتائج." }
+  },
+  strengths: {
+    en: ["Quick and engaging", "Objective measurement", "Assesses stereopsis indirectly", "Research-based design"],
+    ar: ["سريع وجذاب", "قياس موضوعي", "يقيّم الرؤية المجسمة بشكل غير مباشر", "تصميم قائم على البحث"]
+  },
+  limitations: {
+    en: ["Screen-based limitations", "Not clinical-grade", "Affected by display quality", "Does not replace professional vision testing"],
+    ar: ["قيود الشاشة", "ليس بمستوى سريري", "يتأثر بجودة العرض", "لا يحل محل اختبار الرؤية المهني"]
+  },
+  wikiLinks: [
+    { en: "Sensation and Perception", ar: "الإحساس والإدراك", href: "/wiki/cognitive/sensation-perception" },
+    { en: "Depth Perception", ar: "إدراك العمق", href: "/wiki/cognitive/sensation-perception" }
+  ]
+};
 
 export default function DepthPerceptionTest() {
   const locale = useLocale();
   const isRtl = locale === "ar";
+  const [showOverview, setShowOverview] = useState(true);
+  const [isAcknowledgmentOpen, setIsAcknowledgmentOpen] = useState(false);
   const [isStarted, setIsStarted] = useState(false);
   const [score, setScore] = useState(0);
   const [trials, setTrials] = useState(0);
@@ -32,11 +71,24 @@ export default function DepthPerceptionTest() {
   };
 
   const handleStart = () => {
+    setIsAcknowledgmentOpen(true);
+  };
+
+  const handleAcknowledgmentConfirm = () => {
+    setShowOverview(false);
     setIsStarted(true);
     setScore(0);
     setTrials(0);
     setShowResult(false);
     generateObjects();
+  };
+
+  const handleRetry = () => {
+    setShowOverview(true);
+    setIsStarted(false);
+    setScore(0);
+    setTrials(0);
+    setShowResult(false);
   };
 
   const handleGuess = (closerIndex: number) => {
@@ -109,7 +161,40 @@ export default function DepthPerceptionTest() {
 
   return (
     <div className="space-y-6">
-      {!isStarted ? (
+      <AcknowledgmentDialog
+        open={isAcknowledgmentOpen}
+        onOpenChange={setIsAcknowledgmentOpen}
+        testName={depthPerceptionOverviewData.testName}
+        testAbbreviation={depthPerceptionOverviewData.testAbbreviation}
+        onConfirm={handleAcknowledgmentConfirm}
+      />
+
+      {showOverview ? (
+        <div className="space-y-6 py-4">
+          <div className="text-center border-b border-border pb-4">
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Eye className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold">
+                {isRtl ? depthPerceptionOverviewData.testName.ar : depthPerceptionOverviewData.testName.en} ({depthPerceptionOverviewData.testAbbreviation})
+              </h3>
+            </div>
+            <p className="text-muted-foreground text-sm">
+              {isRtl ? "محاكاة تعليمية للطلاب" : "Educational Simulation for Students"}
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <Button onClick={handleStart} className="gap-2 px-8">
+              <GraduationCap className="w-4 h-4" />
+              {isRtl ? "ابدأ المحاكاة التعليمية" : "Start Educational Simulation"}
+            </Button>
+          </div>
+
+          <TestOverview {...depthPerceptionOverviewData} />
+        </div>
+      ) : !isStarted ? (
         <div className="text-center py-8">
           <Eye className="w-12 h-12 mx-auto mb-4 text-primary" />
           <h3 className="text-lg font-semibold mb-2">
@@ -179,7 +264,7 @@ export default function DepthPerceptionTest() {
           <p className="text-muted-foreground mb-4">
             {isRtl ? "دقة إدراك العمق" : "Depth Perception Accuracy"}
           </p>
-          <Button onClick={handleStart} variant="outline" className="gap-2">
+          <Button onClick={handleRetry} variant="outline" className="gap-2">
             <RefreshCw className="w-4 h-4" />
             {isRtl ? "إعادة المحاولة" : "Try Again"}
           </Button>

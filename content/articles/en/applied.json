@@ -180,6 +180,36 @@
           "source": "Psychological Science in the Public Interest, 10(3), 89-123"
         }
       ],
+      "quiz": [
+        {
+          "id": "forensic_q1",
+          "question": "What is the legal standard established in Dusky v. United States for competency to stand trial?",
+          "options": ["Ability to remember the crime", "Ability to understand proceedings and assist in one's defense", "Ability to testify under oath", "Ability to express remorse"],
+          "correctIndex": 1,
+          "explanation": "Dusky v. United States (1960) established that defendants must have sufficient present ability to consult with their lawyer with reasonable understanding and a rational understanding of the proceedings."
+        },
+        {
+          "id": "forensic_q2",
+          "question": "What is the 'weapon focus effect' in eyewitness testimony?",
+          "options": ["Witnesses focus on identifying the weapon used", "Attention to a weapon reduces encoding of perpetrator features", "Weapons improve memory accuracy", "Witnesses exaggerate the size of weapons"],
+          "correctIndex": 1,
+          "explanation": "The weapon focus effect refers to the tendency for witnesses to focus attention on a weapon, which reduces encoding of perpetrator features and can lead to less accurate identification."
+        },
+        {
+          "id": "forensic_q3",
+          "question": "How does psychopathy differ from Antisocial Personality Disorder (ASPD)?",
+          "options": ["They are identical diagnoses", "ASPD includes interpersonal/affective features that psychopathy lacks", "Psychopathy additionally requires interpersonal and affective features beyond ASPD", "Psychopathy is less severe than ASPD"],
+          "correctIndex": 2,
+          "explanation": "While ASPD emphasizes behavioral criteria, psychopathy additionally requires interpersonal features (manipulation, grandiosity) and affective features (lack of empathy, shallow emotions). Only 15-25% of prisoners are psychopathic, versus 50-80% meeting ASPD criteria."
+        },
+        {
+          "id": "forensic_q4",
+          "question": "What does the Risk-Need-Responsivity (RNR) model's 'Risk principle' state?",
+          "options": ["All offenders should receive equal treatment", "Intensive services should be reserved for higher-risk offenders", "Low-risk offenders benefit most from intensive treatment", "Risk assessment should be avoided in treatment planning"],
+          "correctIndex": 1,
+          "explanation": "The Risk principle states that intensive services should be reserved for higher-risk offenders. Research shows that low-risk offenders may actually worsen with intensive intervention."
+        }
+      ],
       "difficulty": "advanced"
     },
     "industrial-organizational": {
@@ -356,6 +386,36 @@
           "year": 2001,
           "title": "Job Burnout",
           "source": "Annual Review of Psychology, 52, 397-422"
+        }
+      ],
+      "quiz": [
+        {
+          "id": "io_q1",
+          "question": "What is the primary purpose of a job analysis in I-O psychology?",
+          "options": ["To determine employee salaries", "To systematically identify the tasks, duties, and requirements of a job", "To evaluate employee performance", "To conduct employee interviews"],
+          "correctIndex": 1,
+          "explanation": "Job analysis is a systematic process of identifying the tasks, duties, knowledge, skills, and abilities required for a job, serving as the foundation for selection, training, and performance management."
+        },
+        {
+          "id": "io_q2",
+          "question": "What are the three components of job burnout according to Maslach's model?",
+          "options": ["Stress, fatigue, and illness", "Emotional exhaustion, depersonalization, and reduced personal accomplishment", "Anxiety, depression, and anger", "Overwork, underpay, and poor management"],
+          "correctIndex": 1,
+          "explanation": "Maslach's model defines burnout as comprising emotional exhaustion (feeling drained), depersonalization (cynical detachment from work), and reduced personal accomplishment (feeling ineffective)."
+        },
+        {
+          "id": "io_q3",
+          "question": "What does 'validity' mean in the context of employee selection tests?",
+          "options": ["The test is legally approved", "The test measures what it claims to measure and predicts job performance", "The test is fair to all candidates", "The test is easy to administer"],
+          "correctIndex": 1,
+          "explanation": "Validity refers to whether a selection test actually measures the constructs it claims to measure and whether test scores predict relevant job performance outcomes."
+        },
+        {
+          "id": "io_q4",
+          "question": "What is transformational leadership characterized by?",
+          "options": ["Strict rules and punishment for violations", "Inspiring followers through vision, intellectual stimulation, and individualized consideration", "Maintaining the status quo", "Avoiding decision-making"],
+          "correctIndex": 1,
+          "explanation": "Transformational leadership inspires followers to transcend self-interest for collective goals through idealized influence, inspirational motivation, intellectual stimulation, and individualized consideration."
         }
       ],
       "difficulty": "intermediate"
@@ -538,6 +598,36 @@
           "year": 2014,
           "title": "The Differentiated Classroom: Responding to the Needs of All Learners",
           "source": "ASCD (2nd ed.)"
+        }
+      ],
+      "quiz": [
+        {
+          "id": "edu_q1",
+          "question": "What is Vygotsky's 'Zone of Proximal Development' (ZPD)?",
+          "options": ["The area where students work independently", "The gap between what a learner can do alone and what they can do with guidance", "The physical classroom environment", "The age range for optimal learning"],
+          "correctIndex": 1,
+          "explanation": "The Zone of Proximal Development is the distance between what a learner can do independently and what they can achieve with guidance from a more capable other, defining the optimal area for instruction."
+        },
+        {
+          "id": "edu_q2",
+          "question": "What does 'scaffolding' refer to in educational psychology?",
+          "options": ["Building classroom furniture", "Temporary support that is gradually removed as learner competence increases", "Standardized testing methods", "Classroom discipline techniques"],
+          "correctIndex": 1,
+          "explanation": "Scaffolding involves providing temporary instructional support that helps learners accomplish tasks beyond their current ability, with support gradually withdrawn as competence develops."
+        },
+        {
+          "id": "edu_q3",
+          "question": "According to Carol Dweck's research, what characterizes a 'growth mindset'?",
+          "options": ["Believing intelligence is fixed and unchangeable", "Believing abilities can be developed through effort and learning", "Focusing only on grades and test scores", "Avoiding challenging tasks"],
+          "correctIndex": 1,
+          "explanation": "A growth mindset involves believing that intelligence and abilities can be developed through effort, effective strategies, and learning from mistakes, leading to greater resilience and achievement."
+        },
+        {
+          "id": "edu_q4",
+          "question": "What is 'differentiated instruction'?",
+          "options": ["Teaching the same content to all students in the same way", "Tailoring instruction to meet individual learner needs, interests, and readiness", "Separating students by ability into different schools", "Using only one teaching method"],
+          "correctIndex": 1,
+          "explanation": "Differentiated instruction involves modifying content, process, products, or learning environment based on students' varying readiness levels, interests, and learning profiles."
         }
       ],
       "difficulty": "beginner"
