@@ -61,6 +61,7 @@ export interface SearchResult {
   href: string;
   score?: number;
   matches?: SearchMatch[];
+  type?: "article" | "experiment";
 }
 
 export interface SearchMatch {
@@ -127,6 +128,7 @@ export interface SearchIndexItem {
   keywords: string[];
   content: string;
   href: string;
+  type?: "article" | "experiment"; // Optional type field
 }
 
 // Component prop types

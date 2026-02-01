@@ -16,6 +16,11 @@ import {
   Sparkles,
   CornerDownRight,
   CornerUpLeft,
+  Sun,
+  ShoppingCart,
+  HeartHandshake,
+  PersonStanding,
+  FlaskConical,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/routing";
@@ -30,6 +35,10 @@ const domainIcons: Record<string, React.ReactNode> = {
   "social-personality": <Heart className="h-4 w-4" />,
   clinical: <BookOpen className="h-4 w-4" />,
   applied: <Briefcase className="h-4 w-4" />,
+  positive: <Sun className="h-4 w-4" />,
+  "consumer-environmental": <ShoppingCart className="h-4 w-4" />,
+  "relationships-family": <HeartHandshake className="h-4 w-4" />,
+  "gender-sexuality": <PersonStanding className="h-4 w-4" />,
   "new-and-now": <Sparkles className="h-4 w-4" />,
 };
 
@@ -101,6 +110,40 @@ const navigationItems = [
     ],
   },
   {
+    id: "positive",
+    href: "/wiki/positive",
+    topics: [
+      { id: "well-being", href: "/wiki/positive/well-being", titleEn: "Well-Being & Happiness", titleAr: "الرفاهية والسعادة" },
+      { id: "character-strengths", href: "/wiki/positive/character-strengths", titleEn: "Character Strengths", titleAr: "نقاط القوة الشخصية" },
+      { id: "resilience", href: "/wiki/positive/resilience", titleEn: "Resilience & Growth", titleAr: "المرونة والنمو" },
+    ],
+  },
+  {
+    id: "consumer-environmental",
+    href: "/wiki/consumer-environmental",
+    topics: [
+      { id: "consumer-behavior", href: "/wiki/consumer-environmental/consumer-behavior", titleEn: "Consumer Psychology", titleAr: "علم نفس المستهلك" },
+      { id: "environmental-psychology", href: "/wiki/consumer-environmental/environmental-psychology", titleEn: "Environmental Psychology", titleAr: "علم النفس البيئي" },
+    ],
+  },
+  {
+    id: "relationships-family",
+    href: "/wiki/relationships-family",
+    topics: [
+      { id: "attachment-theory", href: "/wiki/relationships-family/attachment-theory", titleEn: "Attachment Theory", titleAr: "نظرية التعلق" },
+      { id: "romantic-relationships", href: "/wiki/relationships-family/romantic-relationships", titleEn: "Romantic Relationships", titleAr: "العلاقات الرومانسية" },
+      { id: "parenting-psychology", href: "/wiki/relationships-family/parenting-psychology", titleEn: "Parenting Psychology", titleAr: "علم نفس الوالدية" },
+    ],
+  },
+  {
+    id: "gender-sexuality",
+    href: "/wiki/gender-sexuality",
+    topics: [
+      { id: "gender-psychology", href: "/wiki/gender-sexuality/gender-psychology", titleEn: "Psychology of Gender", titleAr: "علم نفس الجندر" },
+      { id: "human-sexuality", href: "/wiki/gender-sexuality/human-sexuality", titleEn: "Human Sexuality", titleAr: "النشاط الجنسي البشري" },
+    ],
+  },
+  {
     id: "new-and-now",
     href: "/wiki/new-and-now",
     topics: [
@@ -113,6 +156,14 @@ const navigationItems = [
     ],
   },
 ];
+
+// Experiments navigation item
+const experimentsNavItem = {
+  id: "experiments",
+  href: "/experiments",
+  titleEn: "Interactive Tests",
+  titleAr: "الاختبارات التفاعلية",
+};
 
 interface SidebarProps {
   isOpen: boolean; // Mobile
@@ -156,6 +207,8 @@ function SidebarNav({ currentPath, isCollapsed = false, onToggleCollapse }: { cu
       prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
     );
   };
+
+  const isExperimentsActive = cleanPath.startsWith("/experiments");
 
   return (
     <nav className="space-y-1">
@@ -227,6 +280,25 @@ function SidebarNav({ currentPath, isCollapsed = false, onToggleCollapse }: { cu
           </div>
         );
       })}
+      {/* Experiments button at bottom */}
+      <Link
+        href={experimentsNavItem.href}
+        className={cn(
+          "flex items-center rounded-md transition-colors font-semibold mt-2",
+          isCollapsed ? "justify-center w-9 h-9 mx-auto" : "w-full justify-between px-2.5 py-1.5 text-sm",
+          isExperimentsActive
+            ? "bg-emerald-500/10 text-emerald-600"
+            : "text-muted-foreground hover:bg-muted hover:text-foreground"
+        )}
+        title={isCollapsed ? experimentsNavItem.titleEn : undefined}
+      >
+        <span className={cn("flex items-center", isCollapsed ? "justify-center" : "gap-2")}>
+          <FlaskConical className="h-4 w-4" />
+          <span className={`block transition-all duration-200 ${isCollapsed ? "w-0 overflow-hidden opacity-0" : "flex-1 truncate"}`}>
+            {locale === "ar" ? experimentsNavItem.titleAr : experimentsNavItem.titleEn}
+          </span>
+        </span>
+      </Link>
     </nav>
   );
 }

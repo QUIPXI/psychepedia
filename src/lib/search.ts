@@ -63,6 +63,7 @@ export function searchArticles(
       value: match.value || "",
       indices: match.indices as [number, number][],
     })),
+    type: (result.item as any).type,
   }));
 }
 
@@ -95,6 +96,7 @@ export function searchByDomain(
       value: match.value || "",
       indices: match.indices as [number, number][],
     })),
+    type: (result.item as any).type,
   }));
 }
 

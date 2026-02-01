@@ -2,7 +2,8 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { Search, X, Clock, ArrowRight } from "lucide-react";
+import { useLocale } from "next-intl";
+import { Search, X, Clock, ArrowRight, FlaskConical } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { cn, titleCase, debounce } from "@/lib/utils";
@@ -26,6 +27,8 @@ export function SearchDialog({
   searchIndex,
 }: SearchDialogProps) {
   const router = useRouter();
+  const locale = useLocale();
+  const isRtl = locale === "ar";
   const inputRef = React.useRef<HTMLInputElement>(null);
   const [query, setQuery] = React.useState("");
   const [results, setResults] = React.useState<SearchResult[]>([]);
@@ -118,25 +121,30 @@ export function SearchDialog({
         className="max-w-2xl p-0 overflow-hidden"
       >
         {/* Search input */}
-        <div className="flex items-center border-b border-border px-4">
+        <div className="flex items-center border-b border-border px-4 py-3">
           <Search className="h-5 w-5 text-muted-foreground shrink-0" />
-          <Input
-            ref={inputRef}
-            type="text"
-            placeholder="Search articles..."
-            value={query}
-            onChange={(e) => handleQueryChange(e.target.value)}
-            onKeyDown={handleKeyDown}
-            className="border-0 focus-visible:ring-0 text-lg h-14"
-          />
-          {query && (
-            <button
-              onClick={() => handleQueryChange("")}
-              className="p-1 hover:bg-muted rounded"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
+          <div className="relative flex-1 ml-3 mr-6">
+            <Input
+              ref={inputRef}
+              type="text"
+              placeholder="Search articles..."
+              value={query}
+              onChange={(e) => handleQueryChange(e.target.value)}
+              onKeyDown={handleKeyDown}
+              className="border-0 focus-visible:ring-0 text-base h-9 pr-8"
+            />
+            {query && (
+              <button
+                onClick={() => handleQueryChange("")}
+                className={cn(
+                  "absolute top-1/2 -translate-y-1/2 p-1 hover:bg-muted rounded-full transition-colors",
+                  isRtl ? "left-1" : "right-1"
+                )}
+              >
+                <X className="h-4 w-4 text-muted-foreground" />
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Results */}
@@ -162,9 +170,16 @@ export function SearchDialog({
                   >
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium">
-                          {titleCase(result.domain)}
-                        </span>
+                        {result.type === "experiment" ? (
+                          <span className="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 font-medium flex items-center gap-1">
+                            <FlaskConical className="h-3 w-3" />
+                            {isRtl ? "اختبار" : "Test"}
+                          </span>
+                        ) : (
+                          <span className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium">
+                            {titleCase(result.domain)}
+                          </span>
+                        )}
                       </div>
                       <p className="font-medium mt-1 truncate">{result.title}</p>
                       <p className="text-sm text-muted-foreground line-clamp-1">

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { Search, Moon, Sun, BookOpen } from "lucide-react";
+import { Search, Moon, Sun, BookOpen, FlaskConical } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { ThemeSelector } from "@/components/layout/ThemeSelector";
@@ -10,8 +10,8 @@ import { SearchDialog } from "@/components/search/SearchDialog";
 import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
-// Search index for the application
-const searchIndex = [
+// Search index for articles
+const articleSearchIndex = [
   { id: "foundations/history-and-systems", title: "History & Systems", titleAr: "التاريخ والمدارس", description: "Historical development of psychology", descriptionAr: "التطور التاريخي لعلم النفس", domain: "foundations", domainTitle: "Foundations", topic: "history-and-systems", keywords: ["history", "systems", "schools"], content: "", href: "/wiki/foundations/history-and-systems" },
   { id: "foundations/research-methods", title: "Research Methods", titleAr: "مناهج البحث", description: "Scientific methods in psychology", descriptionAr: "المناهج العلمية في علم النفس", domain: "foundations", domainTitle: "Foundations", topic: "research-methods", keywords: ["research", "methods", "science"], content: "", href: "/wiki/foundations/research-methods" },
   { id: "foundations/ethics", title: "Ethics", titleAr: "الأخلاقيات", description: "Ethical principles in psychology", descriptionAr: "المبادئ الأخلاقية في علم النفس", domain: "foundations", domainTitle: "Foundations", topic: "ethics", keywords: ["ethics", "principles"], content: "", href: "/wiki/foundations/ethics" },
@@ -34,6 +34,24 @@ const searchIndex = [
   { id: "new-and-now/eco-anxiety", title: "Eco-Anxiety & Climate Psychology", titleAr: "القلق البيئي وعلم النفس المناخي", description: "Understanding the psychological impact of the climate crisis.", descriptionAr: "فهم التأثير النفسي لأزمة المناخ.", domain: "new-and-now", domainTitle: "New & Now", topic: "eco-anxiety", keywords: ["climate", "anxiety", "environment", "psychology"], content: "", href: "/wiki/new-and-now/eco-anxiety" },
   { id: "new-and-now/algorithmic-impact", title: "The Impact of Algorithmic Feeds", titleAr: "تأثير الخلاصات الخوارزمية", description: "How TikTok and Reels affect attention and self-image.", descriptionAr: "كيف يؤثر TikTok و Reels على الانتباه والصورة الذاتية.", domain: "new-and-now", domainTitle: "New & Now", topic: "algorithmic-impact", keywords: ["social media", "algorithms", "tiktok", "attention"], content: "", href: "/wiki/new-and-now/algorithmic-impact" },
 ];
+
+// Search index for interactive experiments/tests
+const experimentSearchIndex = [
+  { id: "big-five", type: "experiment", title: "Big Five Personality Test", titleAr: "اختبار السمات الخمس الكبرى", description: "Assess your personality across five major dimensions", descriptionAr: "قيّم شخصيتك عبر خمسة أبعاد رئيسية", domain: "experiments", domainTitle: "Interactive", topic: "personality", keywords: ["personality", "traits", "OCEAN", "psychology test"], content: "", href: "/experiments/big-five" },
+  { id: "iq", type: "experiment", title: "IQ Test", titleAr: "اختبار الذكاء", description: "Measure your cognitive abilities across multiple dimensions", descriptionAr: "قِس قدراتك المعرفية عبر أبعاد متعددة", domain: "experiments", domainTitle: "Interactive", topic: "intelligence", keywords: ["IQ", "intelligence", "cognitive", "reasoning"], content: "", href: "/experiments/iq" },
+  { id: "stroop", type: "experiment", title: "Stroop Effect Test", titleAr: "تأثير ستروب", description: "Test your focus and reaction speed", descriptionAr: "اختبر تركيزك وسرعة رد فعلك", domain: "experiments", domainTitle: "Interactive", topic: "attention", keywords: ["Stroop", "attention", "reaction", "cognitive flexibility"], content: "", href: "/experiments/stroop" },
+  { id: "motion", type: "experiment", title: "Motion Detection Test", titleAr: "اختبار اكتشاف الحركة", description: "Assess your visual motion perception", descriptionAr: "قيّم إدراكك البصري للحركة", domain: "experiments", domainTitle: "Interactive", topic: "perception", keywords: ["motion", "perception", "visual", "attention"], content: "", href: "/experiments/motion" },
+  { id: "finger-tapping", type: "experiment", title: "Finger Tapping Test", titleAr: "اختبار النقر بالأصابع", description: "Measure your motor speed and coordination", descriptionAr: "قِس سرعتك وتنسيقك الحركي", domain: "experiments", domainTitle: "Interactive", topic: "motor", keywords: ["motor", "coordination", "speed", "neuroscience"], content: "", href: "/experiments/finger-tapping" },
+  { id: "phq9", type: "experiment", title: "PHQ-9 Depression Screening", titleAr: "فحص الاكتئاب (PHQ-9)", description: "Brief screening for depressive symptoms", descriptionAr: "فحص موجز لأعراض الاكتئاب", domain: "experiments", domainTitle: "Interactive", topic: "depression", keywords: ["depression", "PHQ", "mental health", "screening"], content: "", href: "/experiments/phq9" },
+  { id: "gad7", type: "experiment", title: "GAD-7 Anxiety Screening", titleAr: "فحص القلق (GAD-7)", description: "Brief screening for anxiety symptoms", descriptionAr: "فحص موجز لأعراض القلق", domain: "experiments", domainTitle: "Interactive", topic: "anxiety", keywords: ["anxiety", "GAD", "mental health", "screening"], content: "", href: "/experiments/gad7" },
+  { id: "mmse", type: "experiment", title: "MMSE Cognitive Screening", titleAr: "فحص الإدراك (MMSE)", description: "Brief cognitive assessment for orientation and memory", descriptionAr: "تقييم معرفي موجز للتوجه والذاكرة", domain: "experiments", domainTitle: "Interactive", topic: "cognition", keywords: ["MMSE", "cognitive", "screening", "dementia"], content: "", href: "/experiments/mmse" },
+  { id: "adhd", type: "experiment", title: "ADHD Rating Scale", titleAr: "مقياس ADHD", description: "Screen for attention-deficit/hyperactivity symptoms", descriptionAr: "فحص أعراض اضطراب فرط الحركة ونقص الانتباه", domain: "experiments", domainTitle: "Interactive", topic: "attention", keywords: ["ADHD", "attention", "hyperactivity", "screening"], content: "", href: "/experiments/adhd" },
+  { id: "autism", type: "experiment", title: "Autism Spectrum Screening", titleAr: "فحص طيف التوحد", description: "Screen for autistic traits in adults", descriptionAr: "فحص سمات التوحد لدى البالغين", domain: "experiments", domainTitle: "Interactive", topic: "autism", keywords: ["autism", "ASD", "screening", "neurodevelopmental"], content: "", href: "/experiments/autism" },
+  { id: "depth-perception", type: "experiment", title: "Depth Perception Test", titleAr: "اختبار إدراك العمق", description: "Assess your depth perception abilities", descriptionAr: "قيّم قدرتك على إدراك العمق", domain: "experiments", domainTitle: "Interactive", topic: "perception", keywords: ["depth", "perception", "visual", "spatial"], content: "", href: "/experiments/depth-perception" },
+];
+
+// Combined search index
+const searchIndex = [...articleSearchIndex, ...experimentSearchIndex];
 
 import { OPEN_SEARCH_EVENT } from "@/lib/events";
 
