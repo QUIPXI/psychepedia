@@ -1,6 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Analytics } from "@vercel/analytics/react";
 import { locales, localeDirection, Locale } from "@/i18n/config";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -39,6 +40,7 @@ export default async function LocaleLayout({
   return (
     <div lang={locale} dir={dir} className={dir === "rtl" ? "rtl" : "ltr"}>
       <NextIntlClientProvider messages={messages}>
+        <Analytics />
         <FontSizeProvider>
           <ReadingPositionProvider>
             <ScrollToTop />
