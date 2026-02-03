@@ -62,6 +62,8 @@ export interface SearchResult {
   score?: number;
   matches?: SearchMatch[];
   type?: "article" | "experiment";
+  sections?: string[]; // Section titles for sub-section search (optional)
+  keyConcepts?: string[]; // Key concept terms for keyword search (optional)
 }
 
 export interface SearchMatch {
@@ -127,6 +129,8 @@ export interface SearchIndexItem {
   topic: string;
   keywords: string[];
   content: string;
+  sections?: string[]; // Section titles for sub-section search (optional for experiments)
+  keyConcepts?: string[]; // Key concept terms for keyword search (optional for experiments)
   href: string;
   type?: "article" | "experiment"; // Optional type field
 }

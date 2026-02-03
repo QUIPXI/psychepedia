@@ -5,9 +5,11 @@ import type { SearchIndexItem, SearchResult } from "./types";
 const fuseOptions: IFuseOptions<SearchIndexItem> = {
   keys: [
     { name: "title", weight: 0.4 },
-    { name: "description", weight: 0.25 },
-    { name: "keywords", weight: 0.2 },
-    { name: "content", weight: 0.1 },
+    { name: "keyConcepts", weight: 0.3 }, // Key concepts are highly searchable
+    { name: "sections", weight: 0.2 }, // Section titles
+    { name: "description", weight: 0.15 },
+    { name: "keywords", weight: 0.1 },
+    { name: "content", weight: 0.05 },
     { name: "domainTitle", weight: 0.05 },
   ],
   threshold: 0.3,
@@ -64,6 +66,8 @@ export function searchArticles(
       indices: match.indices as [number, number][],
     })),
     type: (result.item as any).type,
+    sections: result.item.sections,
+    keyConcepts: result.item.keyConcepts,
   }));
 }
 
@@ -97,6 +101,8 @@ export function searchByDomain(
       indices: match.indices as [number, number][],
     })),
     type: (result.item as any).type,
+    sections: result.item.sections,
+    keyConcepts: result.item.keyConcepts,
   }));
 }
 

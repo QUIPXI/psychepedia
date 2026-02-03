@@ -61,7 +61,7 @@ export interface ArticleDiagram {
   id: string;
   title: string;
   description: string;
-  type: "flowchart" | "hierarchy" | "cycle" | "comparison";
+  type: "flowchart" | "hierarchy" | "cycle" | "comparison" | "concept-map";
   nodes: { id: string; label: string; description?: string }[];
   connections?: { from: string; to: string; label?: string }[];
 }

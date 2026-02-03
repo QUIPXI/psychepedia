@@ -66,6 +66,13 @@ export function InteractiveDiagrams({
                 onNodeSelect={setSelectedNode}
               />
             )}
+            {diagram.type === "concept-map" && (
+              <ConceptMapDiagram 
+                diagram={diagram}
+                selectedNode={selectedNode}
+                onNodeSelect={setSelectedNode}
+              />
+            )}
           </div>
 
           {/* Selected Node Details */}
@@ -249,4 +256,65 @@ function ComparisonDiagram({
   );
 }
 
-export default InteractiveDiagrams;
+// Concept Map Diagram Component
+function ConceptMapDiagram({ 
+  diagram, 
+  selectedNode, 
+  onNodeSelect 
+}: { 
+  diagram: ArticleDiagram; 
+  selectedNode: string | null;
+  onNodeSelect: (id: string | null) => void;
+}) {
+  // Concept map: interconnected nodes with visual connections
+  const centerIndex = 0;
+  const centerNode = diagram.nodes[centerIndex];
+  const otherNodes = diagram.nodes.filter((_, i) => i !== centerIndex);
+  
+  return (
+    <div className="flex flex-col items-center gap-6">
+      {/* Central Node */}
+      <button
+        onClick={() => onNodeSelect(selectedNode === centerNode?.id ? null : centerNode?.id)}
+        className={cn(
+          "px-6 py-4 rounded-full border-2 transition-all font-semibold text-base min-w-[180px]",
+          selectedNode === centerNode?.id
+            ? "border-primary bg-primary text-primary-foreground shadow-lg"
+            : "border-primary/30 bg-primary/5 text-primary hover:border-primary hover:bg-primary/10"
+        )}
+      >
+        {centerNode?.label}
+      </button>
+      
+      {/* Connection Lines */}
+      {otherNodes.length > 0 && (
+        <div className="w-px h-6 bg-border" />
+      )}
+      
+      {/* Surrounding Nodes */}
+      <div className="flex flex-wrap items-center justify-center gap-4">
+        {otherNodes.map((node) => (
+          <React.Fragment key={node.id}>
+            <button
+              onClick={() => onNodeSelect(selectedNode === node.id ? null : node.id)}
+              className={cn(
+                "px-4 py-3 rounded-lg border-2 transition-all text-sm font-medium min-w-[140px]",
+                selectedNode === node.id
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "border-border bg-card hover:border-primary/50 hover:bg-muted/50"
+              )}
+            >
+              {node.label}
+            </button>
+            {/* Visual connector dots */}
+            <div className="flex items-center">
+              <div className="w-2 h-2 rounded-full bg-primary/40" />
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default InteractiveDiagrams; 

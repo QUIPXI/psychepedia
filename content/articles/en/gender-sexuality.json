@@ -750,6 +750,41 @@
             }
           ]
         }
+      ],
+      "diagrams": [
+        {
+          "id": "gender-development-map",
+          "title": "Gender Development Framework",
+          "description": "Understanding the biological, cognitive, and social factors in gender development",
+          "type": "concept-map",
+          "nodes": [
+            {
+              "id": "gender-development",
+              "label": "Gender Development",
+              "description": "The process by which individuals acquire gender identity and gendered behaviors"
+            },
+            {
+              "id": "biological",
+              "label": "Biological Factors",
+              "description": "Genetics, hormones, brain structure"
+            },
+            {
+              "id": "cognitive",
+              "label": "Cognitive Factors",
+              "description": "Gender schemas, identity formation, self-understanding"
+            },
+            {
+              "id": "social",
+              "label": "Social Factors",
+              "description": "Parenting, peers, media, cultural norms"
+            },
+            {
+              "id": "identity",
+              "label": "Gender Identity",
+              "description": "Internal sense of being male, female, both, neither, or other"
+            }
+          ]
+        }
       ]
     }
   }

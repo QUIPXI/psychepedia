@@ -104,7 +104,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center gap-4">
             <p>{t("copyright", { year: currentYear })}</p>
             <Button variant="outline" size="sm" className="h-8 text-xs" asChild>
-              <a 
+              <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdCB3eVdMACnFowqjt0SIaZ7Cqkb-_nnMJGwqpUgnMlhwkj5Q/viewform?usp=publish-editor"
                 target="_blank"
                 rel="noopener noreferrer"

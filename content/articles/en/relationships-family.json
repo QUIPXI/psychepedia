@@ -1133,6 +1133,41 @@
             }
           ]
         }
+      ],
+      "diagrams": [
+        {
+          "id": "attachment-theory-map",
+          "title": "Attachment Theory Framework",
+          "description": "Understanding the components and dimensions of attachment theory",
+          "type": "concept-map",
+          "nodes": [
+            {
+              "id": "attachment",
+              "label": "Attachment",
+              "description": "Emotional bond between child and caregiver"
+            },
+            {
+              "id": "secure",
+              "label": "Secure Attachment",
+              "description": "Confident exploration, comfortable with proximity"
+            },
+            {
+              "id": "anxious",
+              "label": "Anxious-Preoccupied",
+              "description": "Fear of abandonment, excessive reassurance-seeking"
+            },
+            {
+              "id": "avoidant",
+              "label": "Dismissive-Avoidant",
+              "description": "Self-reliant, discomfort with closeness"
+            },
+            {
+              "id": "disorganized",
+              "label": "Fearful-Avoidant",
+              "description": "Desire for connection but fear of rejection"
+            }
+          ]
+        }
       ]
     }
   }

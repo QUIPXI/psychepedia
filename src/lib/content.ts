@@ -9,6 +9,7 @@ import type {
   SearchIndexItem,
 } from "./types";
 import { extractHeadings, getReadingTime, slugify } from "./utils";
+import { loadArticles } from "./articles";
 
 const contentDirectory = path.join(process.cwd(), "content");
 const wikiDirectory = path.join(contentDirectory, "wiki");
@@ -143,27 +144,47 @@ export async function getAllArticles(): Promise<Article[]> {
 }
 
 /**
- * Build search index from all articles
+ * Build search index from all articles (JSON format with sections and keyConcepts)
  */
 export async function buildSearchIndex(): Promise<SearchIndexItem[]> {
-  const articles = await getAllArticles();
+  const articles = await loadArticles("en");
   const domains = await getDomains();
 
-  return articles.map((article) => {
-    const domain = domains.find((d) => d.id === article.domain);
+  const searchIndex: SearchIndexItem[] = [];
+
+  for (const [domainId, domainArticles] of Object.entries(articles)) {
+    const domain = domains.find((d) => d.id === domainId);
     
-    return {
-      id: `${article.domain}/${article.topic}`,
-      title: article.title,
-      description: article.description,
-      domain: article.domain,
-      domainTitle: domain?.title || article.domain,
-      topic: article.topic,
-      keywords: article.keywords || [],
-      content: article.content.slice(0, 1000), // First 1000 chars for search
-      href: `/wiki/${article.domain}/${article.topic}`,
-    };
-  });
+    for (const [topicId, article] of Object.entries(domainArticles)) {
+      // Extract section titles
+      const sections = (article.sections || []).map((s) => s.title);
+      
+      // Extract key concept terms
+      const keyConcepts = (article.keyConcepts || []).map((k) => k.term);
+      
+      // Combine all content for full-text search
+      const allContent = [
+        ...(article.sections?.flatMap((s) => s.content) || []),
+        ...(article.fullSections?.flatMap((s) => s.content) || []),
+      ].join(" ").slice(0, 2000);
+
+      searchIndex.push({
+        id: `${domainId}/${topicId}`,
+        title: article.title,
+        description: article.description,
+        domain: domainId,
+        domainTitle: domain?.title || domainId,
+        topic: topicId,
+        keywords: article.prerequisites || [],
+        content: allContent,
+        sections,
+        keyConcepts,
+        href: `/wiki/${domainId}/${topicId}`,
+      });
+    }
+  }
+
+  return searchIndex;
 }
 
 /**

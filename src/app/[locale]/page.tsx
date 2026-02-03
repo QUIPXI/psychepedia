@@ -22,6 +22,7 @@ import {
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Logo } from "@/components/layout/Logo";
 import { openSearchDialog } from "@/lib/events";
 
 const domainIcons = {
@@ -83,10 +84,8 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 rounded-full bg-primary/10">
-              <BookOpen className="h-12 w-12 text-primary" />
-            </div>
+          <div className="flex justify-center mb-8">
+            <Logo size={200} />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             {t("hero.title")}
@@ -122,7 +121,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {domainKeys.map((domainKey) => {
+            {domainKeys.map((domainKey) => {
               const Icon = domainIcons[domainKey];
               const color = domainColors[domainKey];
               const href = domainKey === "experiments" ? "/experiments" : `/wiki/${domainKey}`;

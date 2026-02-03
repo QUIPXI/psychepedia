@@ -654,6 +654,41 @@
             }
           ]
         }
+      ],
+      "diagrams": [
+        {
+          "id": "art-diagram",
+          "title": "نظرية استعادة الانتباه",
+          "description": "المكونات الأربعة للبيئات الترميمية",
+          "type": "concept-map",
+          "nodes": [
+            {
+              "id": "restoration",
+              "label": "استعادة الانتباه",
+              "description": "استعادة القدرة على الانتباه الموجّه"
+            },
+            {
+              "id": "being-away",
+              "label": "الابتعاد",
+              "description": "المسافة الجسدية أو النفسية عن المطالب"
+            },
+            {
+              "id": "extent",
+              "label": "النطاق",
+              "description": "النطاق والتماسك لإشراك العقل"
+            },
+            {
+              "id": "fascination",
+              "label": "جاذبية",
+              "description": "المثيرات التي تشرك دون جهد"
+            },
+            {
+              "id": "compatibility",
+              "label": "التوافق",
+              "description": "التطابق بين البيئة والأغراض"
+            }
+          ]
+        }
       ]
     }
   }
